@@ -1,0 +1,36 @@
+<!--
+  Generated template for the AboutPatternLoginPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <pf-header leftIcon="patternLogin">
+    <pf-header-title>ABOUT PATTERN LOGIN</pf-header-title>
+  </pf-header>
+</ion-header>
+<ion-content no-padding>
+  <ion-grid no-padding>
+    <!--<ion-row class="pattern-login-header">
+            <ion-col col-1>
+                <button (click)="popView()" class="backButton">
+          <ion-icon ios="ios-arrow-back" md="ios-arrow-back"></ion-icon>
+        </button>
+            </ion-col>
+            <ion-col col-11>
+                <ion-title class="information-title" text-left>ABOUT PATTERN LOGIN</ion-title>
+            </ion-col>
+        </ion-row>-->
+    <ion-row>
+      <!-- <ion-col> -->
+      <div [innerHTML]="'pattern.create.about.info' | aemsync : ['pattern-login'] | async" class="about-pattern-login"></div>
+      <!-- </ion-col> -->
+    </ion-row>
+    <ion-row class="pattern-footer">
+      <ion-col>
+        <button class="btn-enable-pattern-login btn-pattern" (click)="setupPattern()">ENABLE PATTERN LOGIN</button>
+
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

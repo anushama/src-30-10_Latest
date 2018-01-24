@@ -1,0 +1,64 @@
+{
+    "billPayees": {
+        "billPayee": [
+            {
+                "billPayeeId": "CSPDEFAULTPERSONAL",
+                "consumerPayeeId": "102043326",
+                "payeeNickname": "Personal Payee Test",
+                "payeeName": "Personal Payee Test",
+                "payeeAddress": {
+                    "contactType": "ADDRESS",
+                    "contactAddress": {
+                        "line1": "123 Sesame Street",
+                        "city": "Indianapolis",
+                        "stateProvince": "IL",
+                        "postalCode": "46220",
+                        "country": "US"
+                    }
+                },
+                "payeePhone": {
+                    "contactType": "PHONE",
+                    "phone": {
+                        "type": "WORK",
+                        "number": "8791234567"
+                    }
+                },
+                "billInfo": {
+                    "billerId": "999",
+                    "status": "NOBILLS",
+                    "cycle": "ONCE_A_MONTH"
+                },
+                "payeeAccountNumber": "5432985478451258",
+                "payeeCategory": "2",
+                "payeeStatus": "ACTIVE",
+                "cutOffTime": {
+                    "time": "13:0:0.000",
+                    "timeZone": "0"
+                },
+                "deliveryMethodList": {
+                    "deliveryMethod": [
+                        {
+                            "deliveryMethodType": "DIRECT_CHECK",
+                            "leadDays": 4,
+                            "isDefault": true
+                        },
+                        {
+                            "deliveryMethodType": "OVERNIGHT_CHECK",
+                            "leadDays": 1
+                        }
+                    ]
+                },
+                "billPayeeType": "BUSINESS_PERSONAL",
+                "paymentRule": {
+                    "paymentRulesId": "4",
+                    "paymentAmount": {
+                        "value": 150,
+                        "currencyCode": "USD"
+                    },
+                    "paymentRuleType": "Manual",
+                    "dueDate": 1459051200000
+                }
+            }
+        ]
+    }
+}

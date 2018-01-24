@@ -1,0 +1,14 @@
+<ion-header>
+  <pf-header leftIcon="back">
+    <pf-header-title>MOBILE DEPOSIT TERMS</pf-header-title>
+  </pf-header>
+</ion-header>
+<ion-content>
+  <h1>
+    {{"mobile.deposit.terms.title" | aemsync : ["mobile-deposit-terms"] | async}}
+    <!--  REMOTE DEPOSIT CAPTURE USER AGREEMENT-->
+  </h1>
+  <!--{{"data" | aemsync : ["mobile-deposit-terms"] | async}}-->
+  <div [innerHtml]='"data" | aemsync : ["mobile-deposit-terms"] | async'></div>
+
+</ion-content>

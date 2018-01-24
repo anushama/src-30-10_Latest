@@ -1,0 +1,45 @@
+[{
+	"ccData": [
+
+		{
+			"cardName": "Certificates",
+			"cardType": "American Express",
+			"src": "assets/img/IRA_Certificates.PNG",
+			"purchaseInfo": {
+				"purchases": "purchases",
+				"advancePurchases": "cash advance",
+				"fee": "No annual fee",
+				"mode": "Low",
+				"month": "APR"
+			},
+			"rate": "The Best Of Both Worlds"
+
+		},
+		{
+			"cardName": "Premier Accounts",
+			"cardType": "Visa Signature",
+			"src": "assets/img/IRA_Premier.PNG",
+			"purchaseInfo": {
+				"purchases": "purchases",
+				"advancePurchases": "cash advance",
+				"fee": "No annual fee",
+				"mode": "Medium",
+				"month": "Feb"
+			},
+			"rate": "Security meets Flexibility"
+		},
+		{
+			"cardName": "Share Accounts",
+			"cardType": "Visa Gold",
+			"src": "assets/img/IRA_Share.PNG",
+			"purchaseInfo": {
+				"purchases": "purchases",
+				"advancePurchases": "cash advance",
+				"fee": "No annual fee",
+				"mode": "high",
+				"month": "Jan"
+			},
+			"rate": "Smarter Retirement Savings"
+		}
+	]
+}]

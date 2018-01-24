@@ -1,0 +1,35 @@
+<ion-header>
+    <ion-row class="common-header">
+        <button ion-button navPop class="nav-icon">
+            <ion-icon ios="ios-arrow-back" md="ios-arrow-back"></ion-icon>
+        </button>
+        <ion-title class="textElipse">FINGERPRINT LOGIN</ion-title>
+    </ion-row>
+</ion-header>
+<ion-content padding>
+    <ion-grid no-padding>
+            <ion-row class="pattern-login">
+                <ion-col>
+                    <!-- <div [innerHTML]="'fingerprint.create.login.info' | aemsync : ['fingerprint-login'] | async" class="login-info"></div> -->
+                    <div class="login-info">
+                      {{"fingerprint.create.login.info" | aemsync : ["fingerprint-login"] | async}}
+                      <!--Securely access your accounts using your fingerprint instead of an alpha numeric password (no online ID or password). You always have the option to log in with your Username and Password.-->
+                    </div>
+                    <div *ngIf="isFingerprintEnabled" class="login-enabled">FINGERPRINT LOGIN IS ENABLED FOR USER: {{userName}}</div>
+                </ion-col>
+            </ion-row>
+            <!-- <div id='lockPattern' class='pattern-holder patt-holder'></div> -->
+            <ion-row>
+                <ion-col>
+                </ion-col>
+            </ion-row>
+            <ion-row class="pattern-footer">
+                <ion-col *ngIf="!isFingerprintEnabled">
+                    <button class="btn-pattern" tappable (click)="goToFingerprintLoginAgreement()">ENABLE FINGERPRINT</button>
+                </ion-col>
+                <ion-col *ngIf="isFingerprintEnabled">
+                    <button class="btn-pattern red" tappable (click)="goToDisableFingerprintLogin()">DISABLE FINGERPRINT</button>
+                </ion-col>
+            </ion-row>
+    </ion-grid>
+</ion-content>

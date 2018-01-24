@@ -1,0 +1,131 @@
+<!--<ion-header>
+  <ion-row class="common-header">
+    <button ion-button class="nav-icon" (click)="popView()">
+      <ion-icon ios="md-close" md="md-close"></ion-icon>
+    </button>
+    <ion-title>notifications</ion-title>
+     <button ion-button text-uppercase>save</button>
+</ion-row>
+</ion-header>-->
+<header leftIcon="cross" rightIcon="save">
+  <header-title>NOTIFICATIONS</header-title>
+</header>
+<ion-content no-padding>
+  <ion-grid no-padding>
+
+<ion-row class="notify-data">
+    <ion-list>
+        <ion-item class="list-item">
+        <ion-row class="notify">
+          <p>Alerts you elect to receive may be sent at any time, 24/7. The notifications preferences you set here apply to all of your devices.</p>
+        </ion-row>
+        </ion-item>
+            <ion-item class="list-item">
+                <ion-label class="item-name">Do Not Disturb
+                </ion-label>
+                <ion-toggle class="toggle-md" [(ngModel)]="doNotDisturb" (ionChange)="toggleDonotDisturb($event)"></ion-toggle>
+            </ion-item>
+
+             <ion-item class="list-item" *ngIf="doNotDisturb">
+                <ion-label class="item-name" id ="startTimeLabel">FROM
+                </ion-label>
+                 <ion-datetime type="text" displayFormat="h:mm A" [(ngModel)]="myDate">
+                </ion-datetime>
+                
+                <ion-row item-content>
+                <div class="input-group clockpicker" item-content>
+                 <input type="text" class="form-control" value="09:30">
+                 <span class="input-group-addon">
+                  <span class="glyphicon glyphicon-time"></span>
+                 </span>
+                </div>
+                </ion-row>
+              
+            </ion-item>
+
+            <ion-item-divider class="dividerHeading">
+            <div class="headingTitle" text-uppercase>Account-specific notifications</div>
+              <!-- <button (click)="popView()" class="backButton">
+               <ion-icon ios="ion-ios-circle-filled" md="ion-ios-circle-filled"></ion-icon>
+                </button>-->
+                
+            </ion-item-divider>
+  
+  <div *ngIf="accountsList">
+
+    <!--checkSaveAccounts-->
+    <div *ngIf="accountsList.checkSaveAccounts.length">
+      <ion-item class="account-content" *ngFor="let account of accountsList.checkSaveAccounts; let i = index "  (click)="toggleDetails(account)" text-wrap>
+       
+         <div item-content>
+           
+            <ion-label *ngIf="account.nickname">
+              <div class="topLabel">{{account.nickname}}
+                <span >({{account.numLast4}})</span>
+              </div>
+            </ion-label>
+            <ion-label *ngIf="!account.nickname">
+              <div class="topLabel">{{account.fullName}}
+                <span> **({{account.numLast4}})</span>
+              </div>
+            </ion-label>
+             <ion-icon *ngIf="account.showDetails" color="primary" item-right [name]="account.icon"></ion-icon>
+          </div>
+           
+        <ion-list *ngIf="account.showDetails" item-content class="specific-accounts" >
+            <ion-label >
+            Insufficient Funds
+            </ion-label>
+            <ion-toggle class="toggle-md" [(ngModel)]="doNotDisturb"  (ionChange)="toggleDonotDisturb($event)"></ion-toggle>
+            <ion-label>
+             TCS/Overdraft Advance has Posted
+            </ion-label>
+            <ion-toggle class="toggle-md" [(ngModel)]="doNotDisturb" (ionChange)="toggleDonotDisturb($event)"></ion-toggle>
+          
+        </ion-list> 
+      </ion-item>
+
+       
+    </div>
+
+    <!--creditCardAccounts-->
+   <div class="account-content" *ngIf="accountsList.creditCardAccounts.length"> 
+      <ion-item class="account-content" *ngFor="let account of accountsList.creditCardAccounts; let i = index" text-wrap>
+        <ion-label *ngIf="account.nickname">
+          <div class="topLabel">{{account.nickname}} 
+            <span>({{account.numLast4}})</span>
+          </div>
+        </ion-label>
+        <ion-label *ngIf="!account.nickname">
+          <div class="topLabel">{{account.fullName}}
+            <span> ({{account.numLast4}})</span>
+          </div>
+        </ion-label>
+      </ion-item>
+    </div>
+    <!--loanAccounts-->
+    <div class="account-content" *ngIf="accountsList.loanAccounts.length" text-wrap>
+      <ion-item class="account-content" *ngFor="let account of accountsList.loanAccounts; let i = index">
+        <ion-label *ngIf="account.nickname">
+          <div class="topLabel">{{account.nickname}} 
+            <span>({{account.numLast4}})</span>
+          </div>
+        </ion-label>
+        <ion-label *ngIf="!account.nickname">
+          <div class="topLabel">{{account.fullName}} 
+            <span>({{account.numLast4}})</span>
+          </div>
+        </ion-label>
+       </ion-item>
+     
+    </div>
+   
+  </div>
+           
+    </ion-list>
+    </ion-row>
+ 
+  </ion-grid>
+
+</ion-content>
+  

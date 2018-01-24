@@ -1,0 +1,15 @@
+{
+    "mailingAddress1": "PO Box 266",
+    "mailingAddress2": "16th Floor, Suite 1600",
+    "mailingCity": " NA",
+    "mailingState": "New York",
+    "mailingZip": "10017",
+    "mailingCountry": "United States",
+    "physicalAddress1": "370 Lexington Ave",
+    "physicalAddress2": "16th Floor, Suite 1600",
+    "physicalCity": "NA",
+    "physicalState": "New York",
+    "physicalZip": "10017",
+    "physicalCountry": "United States",
+    "token": "1"
+}

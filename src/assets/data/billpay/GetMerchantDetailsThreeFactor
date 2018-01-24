@@ -1,0 +1,26 @@
+{
+   "message": {
+      "type": "INFORMATIONAL_MESSAGE",
+      "code": "MER020",
+      "text": "A single managed payee was found.",
+      "locale": "en-US",
+      "internalCode": "MER020"
+   },
+   "merchantList": [
+      {
+         "merchantId": "400621",
+         "merchantName": "SALEM FIVE CENTS SAVINGS BANK",
+         "categoryId": "1014",
+         "billPayee": {
+            "billPayeeId": "1847527",
+            "payeeAddress": {
+               "line1": "PO BOX 840",
+               "city": "SALEM",
+               "stateProvince": "MA",
+               "postalCode": "019700940"
+            }
+         },
+         "global": false
+      }
+   ]
+}

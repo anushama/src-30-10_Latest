@@ -1,0 +1,42 @@
+<!--
+  Generated template for the PatternEnabledPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<!--<ion-header>
+    <ion-row class="pageHeader">
+        <ion-col col-2>
+            <button ion-button menuToggle>
+          <ion-icon  name="menu"></ion-icon>
+        </button>
+        </ion-col>
+        <ion-col col-8 text-center class="ion-title">
+            <ion-title>{{"pattern.create.enabled.info" | aemsync : ["pattern-login"] | async}}</ion-title>
+        </ion-col>
+        <ion-col col-2>
+            <button ion-button (click)='goToInbox()'>
+          <ion-icon ios="ios-mail" md="ios-mail" icon-right></ion-icon>
+        </button>
+        </ion-col>
+    </ion-row>
+</ion-header>-->
+<ion-header>
+  <pf-header leftIcon="toggleMenu" rightIcon="pattern-login-inbox">
+    <pf-header-title>{{"pattern.create.enabled.info" | aemsync : ["pattern-login"] | async}}</pf-header-title>
+  </pf-header>
+</ion-header>
+<ion-content padding>
+  <div class="pattern-enabled-container" text-center>
+    <div><img src="assets/img/CHECK.svg" /></div>
+    <h2>{{"pattern.create.enabled.info" | aemsync : ["pattern-login"] | async}}</h2>
+    <p>Pattern Login has been setup successfully.</p>
+    <p>You can always change your selection in <br><b>Settings.</b></p>
+  </div>
+  <div class="btn-footer">
+
+    <button class="change-pattern btn-pattern" outline (click)="changePattern()">CHANGE PATTERN</button><br>
+    <button class="btn-pattern" (click)="done()">DONE</button>
+
+  </div>
+</ion-content>

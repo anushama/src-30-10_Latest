@@ -1,0 +1,55 @@
+page-products {
+  .toolbar-title.toolbar-title-ios {
+    color: $pf-mobile-white;
+  }
+
+  .list-header.item.item-ios.list-header-ios {
+    .label.label-ios {
+      margin-bottom: 1px;
+      padding-top: 10px;
+      font-weight: bold;
+    }
+  }
+
+  .title {
+    color: $pf-mobile-white;
+    font-weight: bold;
+    text-align: center;
+    line-height: 31px;
+    font-size: 16px;
+    $pf-mobile-white-space: nowrap;
+  }
+
+  ion-icon {
+    color: $pf-mobile-white;
+    font-size: 26px;
+    font-weight: 600;
+    line-height: 23px;
+    text-align: center;
+  }
+
+  .content {
+    background-color: $pf-mobile-light-grey;
+  }
+
+  .phone-header {
+    font-family: $pf-montserrat-semi-bold !important;
+    background-color: $pf-mobile-dark-blue;
+    margin-bottom: 12px;
+  }
+
+  .backButton {
+    background-color: $pf-mobile-dark-blue;
+    margin: 19px;
+  }
+
+  .toolbar-title {
+    text-align: left;
+    margin-left: 20px;
+    font-size: 16px;
+    letter-spacing: 1px;
+    font-weight: 600;
+    line-height: 66px;
+    color: $pf-mobile-white;
+  }
+}

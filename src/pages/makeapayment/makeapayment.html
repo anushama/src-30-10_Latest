@@ -1,0 +1,99 @@
+<ion-content>
+    <ion-list>
+  
+      <ion-item (click)="itemOne()" class="account-list-height">
+        <h6 class="h-header">PAYMENT FROM</h6>
+        <div class="">
+          <p class="accountPara" *ngIf="flagFrom">Select Account</p>
+        </div>
+        <div class="" *ngIf="fromAcctSelected != null">
+          <ion-row col-12 no-padding>
+            <ion-col col-6 no-padding text-left class="accountName" *ngIf="fromAcctSelected.nickname">{{fromAcctSelected.nickname}}</ion-col>
+            <ion-col col-6 no-padding text-left class="accountName" *ngIf="!fromAcctSelected.nickname">{{fromAcctSelected.fullName}}</ion-col>
+            <ion-col no-padding text-right class="accountName accountVal" *ngIf="fromAcctSelected.parentAcctType == 'CHECKING_SAVING' && fromAcctSelected.parentAcctType != 'EXTERNAL'">${{fromAcctSelected.availableBal | formatPrice}}</ion-col>
+            <ion-col no-padding text-right class="accountName accountVal" *ngIf="fromAcctSelected.parentAcctType != 'CHECKING_SAVING' && fromAcctSelected.parentAcctType != 'EXTERNAL'">${{fromAcctSelected.availableCredit | formatPrice}}</ion-col>
+            <ion-col no-padding text-right class="accountName accountVal" *ngIf="fromAcctSelected.parentAcctType == 'EXTERNAL'"></ion-col>
+          </ion-row>
+          <ion-row col-12 no-padding>
+            <ion-col no-padding text-left class="accountNum">({{fromAcctSelected.numLast4}})</ion-col>
+            <ion-col no-padding text-right class="accountNum availableBal" *ngIf="fromAcctSelected.parentAcctType == 'CHECKING_SAVING' && fromAcctSelected.parentAcctType != 'EXTERNAL'">Available Balance</ion-col>
+            <ion-col no-padding text-right class="accountNum availableBal" *ngIf="fromAcctSelected.parentAcctType != 'CHECKING_SAVING' && fromAcctSelected.parentAcctType != 'EXTERNAL'">Available Credit</ion-col>
+            <ion-col no-padding text-right class="accountNum availableBal" *ngIf="fromAcctSelected.parentAcctType == 'EXTERNAL'"></ion-col>
+          </ion-row>
+        </div>
+        <ion-icon text-right ios="ios-arrow-forward" md="ios-arrow-forward" class="arrow arrow-forward"></ion-icon>
+      </ion-item>
+      <ion-item (click)="itemTwo()" class="account-list-height">
+        <h6 class="h-header">PAYMENT TO</h6>
+        <div class="">
+          <p class="accountPara" *ngIf="flagFrom">Select Account</p>
+        </div>
+        <div class="" *ngIf="toAcctSelected != null">
+          <ion-row col-12 no-padding>
+            <ion-col col-6 no-padding text-left class="accountName" *ngIf="toAcctSelected.nickname">{{toAcctSelected.nickname}}</ion-col>
+            <ion-col col-6 no-padding text-left class="accountName" *ngIf="!toAcctSelected.nickname">{{toAcctSelected.fullName}}</ion-col>
+            <ion-col no-padding text-right class="accountName accountVal" *ngIf="toAcctSelected.parentAcctType != 'EXTERNAL'">${{toAcctSelected.availableBal | formatPrice}}</ion-col>
+          </ion-row>
+          <ion-row col-12 no-padding>
+            <ion-col no-padding text-left class="accountNum">({{toAcctSelected.numLast4}})</ion-col>
+            <ion-col no-padding text-right class="accountNum availableBal" *ngIf="toAcctSelected.parentAcctType != 'EXTERNAL'">Available Balance</ion-col>
+          </ion-row>
+        </div>
+        <ion-icon text-right ios="ios-arrow-forward" md="ios-arrow-forward" class="arrow arrow-forward"></ion-icon>
+      </ion-item>
+      <ion-item class="item-amount" (click)="openModalPage()" class="account-list-height amount-height">
+        <ion-row no-padding>
+          <ion-col no-padding class="h-header">PAYMENT AMOUNT</ion-col>
+          <ion-col no-padding text-right class="accountPara" *ngIf="flagVal">$0.00</ion-col>
+          <ion-col no-padding text-right class="accountName amountVal" *ngIf="!flagVal">${{amount | formatPrice}}</ion-col>
+          <ion-icon text-right ios="ios-arrow-forward" md="ios-arrow-forward" class="arrow arrow-forward"></ion-icon>
+        </ion-row>
+      </ion-item>
+    </ion-list>
+    <ion-row class="date-row">
+      <ion-list col-12>
+        <h6 class="h-header">PAYMENT DATE</h6>
+        <ion-item class="my-date">
+          <ion-row col-12>
+            <ion-col col-6 *ngIf="fromAcctSelected != null? fromAcctSelected.parentAcctType == 'CHECKING_SAVING' : false"><span class="date">{{myDate | date: 'MM/dd/yyyy'}}</span></ion-col>
+            <ion-col col-6 *ngIf="fromAcctSelected != null? fromAcctSelected.parentAcctType != 'CHECKING_SAVING' : false"><span class="date">{{myDate | date: 'MM/dd/yyyy'}}</span></ion-col>
+            <ion-col col-6><span class="date">{{myDate | date: 'MM/dd/yyyy'}}</span></ion-col>
+            <ion-col col-6 text-right>
+              <button class="calender-button" [disabled]="canlenderButton"><ion-icon text-right ios="ios-calendar" md="ios-calendar" (click)="showCalendar()"></ion-icon></button>
+            </ion-col>
+          </ion-row>
+        </ion-item>
+      </ion-list>
+    </ion-row>
+    <ion-row class="segment-row">
+      <ion-segment [(ngModel)]="payTime" color="light-blue" class="segment-background">
+        <ion-segment-button value="onetime" (ionSelect)="selectedOne()" class="segbutton-background">
+          One-Time
+        </ion-segment-button>
+        <ion-segment-button value="month" (ionSelect)="selectedMonth()" [disabled]="monthButton" class="segbutton-background">
+          Monthly
+        </ion-segment-button>
+      </ion-segment>
+    </ion-row>
+    <ion-row *ngIf="this.payTime == 'month'">
+      <div class="choose-times">
+        <div class="h-header">
+          HOW MANY PAYMENTS?
+        </div>
+        <div class="over-ride-icon">
+          <ion-icon ios="ios-arrow-down" md="ios-arrow-down"></ion-icon>
+          <ion-select [selectOptions]="selectStateOptions" [(ngModel)]="timeChoose" (ngModelChange)="selectedMonth()" class="select-option" placeholder="Select">
+            <ion-option *ngFor="let time of times" [value]="time.value">{{time.name}}</ion-option>
+          </ion-select>
+        </div>
+      </div>
+    </ion-row>
+    <div class="description">
+        Please note that the debit account selected is limited to 6 transactions (check, transfer, or cash withdrawal) per statement cycle.
+      </div>
+    <div class="control-button">
+      <button ion-button class="cta-button" [disabled]="flagFrom || flagTo || flagVal || !segmentButtonStatus " (click)="confirm()">CONTINUE</button>
+    </div>
+    <p class="insured" (click)='util.displayNCUACert()'>Federally insured by NCUA</p>
+  </ion-content>
+  

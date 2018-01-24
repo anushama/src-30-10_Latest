@@ -1,0 +1,136 @@
+// App Global Sass
+// --------------------------------------------------
+// Put style rules here that you want to apply globally. These
+// styles are for the entire app and not just one component.
+// Additionally, this file can be also used as an entry point
+// to import other Sass files to be included in the output CSS.
+//
+// Shared Sass variables, which can be used to adjust Ionic's
+// default Sass variables, belong in "theme/variables.scss".
+//
+// To declare rules for a specific mode, create a child rule
+// for the .md, .ios, or .wp mode classes. The mode class is
+// automatically applied to the <body> element in the app.
+@import url( "https://fonts.googleapis.com/css?family=Montserrat");
+
+#gradientBackground {
+  background: linear-gradient(180deg, $pf-mobile-dark-blue 0%, #008FC6 100%);
+
+  // .scroll-content {
+  //   margin-top: 0 !important;
+  // }
+}
+
+#menuList {
+  margin-bottom: 0;
+  margin-top: 0px;
+  padding-top:35px;
+  min-height:100%;
+  background: linear-gradient(180deg, $pf-mobile-dark-blue 0%, #008FC6 100%);
+}
+
+.sidenav {
+  background-color: $pf-mobile-white;
+  margin: 0;
+  list-style-type: none;
+  padding: 0;
+
+  .submenu-item {
+    .item-block .item-inner,
+    .item-block .item-inner {
+      border-bottom: none;
+    }
+  }
+}
+//hide the last child border
+
+// .last-item {
+//   .app-menu-item {
+//     border-bottom: none;
+//   }
+// }
+
+.ios ion-nav > .ion-page > ion-header > .toolbar.statusbar-padding:first-child ion-title {
+  padding-top: 0;
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.loading-crescent {
+  width: 50px;
+  height: 50px;
+  margin: 0 auto;
+
+  & > * {
+    animation: spin 0.5s linear infinite;
+  }
+}
+
+.pf-mobile-block-header {
+  font-family: $pf-montserrat-semi-bold;
+  font-size: 1.6rem;
+  margin: 0 1.6rem;
+  color: $pf-mobile-dark-blue;
+  letter-spacing: 1px;
+}
+//for common input label
+
+.my-common-label-item {
+  background-color: $pf-mobile-light-grey;
+  box-shadow: none !important;
+  margin-bottom: 9px;
+
+  &.item-block > .item-inner {
+    padding-right: 16px;
+    box-shadow: none !important;
+  }
+
+  .common-label {
+    font-size: 1.2rem;
+    font-family: $pf-montserrat-regular;
+    color: $pf-mobile-dark-blue;
+    margin-bottom: 0.4rem;
+  }
+}
+// input label will not change the color
+
+.item-input-has-focus .label[stacked] {
+  color: $pf-mobile-dark-blue;
+}
+
+
+ion-app._gmaps_cdv_ .nav-decor{
+    display: none !important;
+}
+
+@media only screen and (min-height: 600px) and (min-width: 768px){
+
+div.modal-wrapper{
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  border-radius: 0px !important;
+}
+
+}
+.as-of-date {
+	font-family: $pf-montserrat-regular;
+	font-size: 12px;
+	display: inline-block;
+	color:$pf-mobile-mid-grey;
+	padding-top: 4px;
+	padding-right:16px;
+	text-transform: none;
+	span{
+		color:#777777;
+		font-family: $pf-montserrat-light;
+	}
+}

@@ -1,0 +1,82 @@
+<ion-list>
+  <div *ngIf="accountDetails.parentAcctType === 'MORTGAGE'">
+    <ion-list-header>
+      <span class="list-section-name">Tax Information</span>
+      <!-- <div class="as-of-date" float-right><span>As of</span><span>&nbsp;09/20/17</span></div> -->
+      <div class="dividerHeadingToggle" float-right>
+        <ion-icon *ngIf="dividerHeadingToggle" ios="ios-remove-circle" md="ios-remove-circle" (click)="dividerHeadingToggle = !dividerHeadingToggle"></ion-icon>
+        <ion-icon *ngIf="!dividerHeadingToggle" ios="ios-add-circle" md="ios-add-circle" (click)="dividerHeadingToggle = !dividerHeadingToggle"></ion-icon>
+      </div>
+    </ion-list-header>
+
+    <ion-row *ngIf="!dividerHeadingToggle" class="taxInstructions">
+      <ion-col col-12>
+        View tax information
+      </ion-col>
+    </ion-row>
+
+    <ion-row class="accountDetails taxInformation" >
+      <ion-col col-12 *ngIf="dividerHeadingToggle">
+        <ul *ngIf="loading">
+          <li>
+            <div class="loading-crescent"><img src="assets/load-crescent.svg" alt="Loading..." /></div>
+          </li>
+        </ul>
+        <ul *ngIf="!loading">
+          <div>
+            <li class="recentTransaction" *ngIf="transactionsResponse.taxInterestPaid"><span>Net Interest Paid</span><span>{{transactionsResponse.taxInterestPaid | formatPrice}}</span></li>
+            <li class="recentTransaction" *ngIf="transactionsResponse.taxRealEstatePaid"><span>Real Estate Taxes Paid</span><span>{{transactionsResponse.taxRealEstatePaid | formatPrice}}</span></li>
+            <li class="recentTransaction"><span>Hazard Insurance Paid</span><span>{{(transactionsResponse.taxHazardInsPaid !== null ? transactionsResponse.taxHazardInsPaid : 0) | formatPrice}}</span></li>
+            <li class="recentTransaction"><span>PMI Paid</span><span>{{(transactionsResponse.taxPmiPaid !== null ? transactionsResponse.taxPmiPaid : 0) | formatPrice}}</span></li>
+          </div>
+        </ul>
+      </ion-col>
+    </ion-row>
+  </div>
+
+  <ion-list-header>
+    <span class="list-section-name">Recent Transactions</span>
+    <div class="as-of-date" float-right><span>As of</span> {{accountDetails.asOfDate || "...Loading"}}</div>
+  </ion-list-header>
+  <ion-list-header class="pf-mobile-header-sort" item-right>
+    <button ion-button class="sort">SORT</button>
+  </ion-list-header>
+
+  <div *ngIf="loading">
+    <ion-item>
+      <div class="loading-crescent"><img src="assets/load-crescent.svg" alt="Loading..." /></div>
+    </ion-item>
+  </div>
+  <div *ngIf="!loading">
+    <ion-item *ngIf="recentTransactions.length===0" class="noTransactions">
+      <div>
+        <p>You have no transaction for this period.</p>
+      </div>
+    </ion-item>
+    <ng-container *ngIf="recentTransactions.length">
+      <ion-item *ngIf="accountDetails.parentAcctType === 'CREDITCARD'" class="list-sort">
+        <button ion-item (click)="ccSort()" text-right>SORT</button>
+      </ion-item>
+      <ion-item *ngFor="let transaction of recentTransactions | orderTransactionsBy:{accountType:accountDetails.parentAcctType, sort:filterSort.sort}">
+        <!--Note: If a check, based on if checkImage, use button UI component. -->
+        <div *ngIf="transaction.checkImage">
+          <button ion-item (click)='displayCheck(transaction)'>
+            <div class="recentDate"><span>{{transaction.transactionDate}}</span><span *ngIf="transaction.pending">PENDING</span></div>
+            <div class="recentTransaction">
+              <span class="checkLabel">{{transaction.displayName | titleCase}} {{transaction.checkNumber}}</span>
+              <span [ngClass]="{'creditTransaction':!transaction.debit}">{{transaction.amount | formatPrice | isDebit: transaction.debit}}</span>
+            </div>
+          </button>
+        </div>
+        <!--End Note  -->
+        <div *ngIf="!transaction.checkImage">
+          <div class="recentDate"><span>{{transaction.transactionDate}}</span><span *ngIf="transaction.pending">PENDING</span></div>
+          <div class="recentTransaction">
+            <span>{{transaction.displayName | titleCase}}</span>
+            <span [ngClass]="{'creditTransaction':!transaction.debit}">{{transaction.amount | formatPrice | isDebit: transaction.debit}}</span>
+          </div>
+        </div>
+      </ion-item>
+    </ng-container>
+  </div>
+</ion-list>

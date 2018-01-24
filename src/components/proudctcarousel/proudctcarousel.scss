@@ -1,0 +1,201 @@
+proudctcarousel {
+    font-family: Montserrat;
+padding:0!important;
+    /* carousel header prev, next arrow content*/
+    .navArrow{
+        padding:0!important;
+        ion-col , ion-row{
+            padding:0!important;
+        }
+        display: flex ;
+        justify-content: space-between;
+        font-size: 12px;
+color: #59606E;
+letter-spacing: 1px;
+font-weight: 700;
+text-transform: uppercase;
+.arrowPrev, .arrowNext{
+    ion-icon::before{
+        font-weight: 700;
+    }
+    .arrowText{
+text-overflow: ellipsis;
+white-space: nowrap;
+overflow: auto;
+    }
+}
+    }
+        ion-slide.swiper-slide {
+            left: -1.6% !important;
+        }
+        .thumb-img {
+            padding: 8px;
+        }
+        
+        ion-slides {
+            height: 35vh;
+                margin-top: -8px;
+            .swiper-slide-prev {
+            width: 63%!important;
+            margin: 0px 0px 0px !important;
+        }
+            .swiper-slide-active {
+                width: 77% !important;
+                padding-top:0px;
+                margin: 0px 0px 0px !important;
+            }
+            .swiper-slide-next {
+
+            width: 63%!important;
+            margin: 0px 0px 0px !important;
+        }
+        
+        }
+        
+
+        button.swiper-pagination-bullet{
+            border: 1px solid #0F2D52;
+            background: none;
+            margin-bottom:57px;
+            opacity: 1;
+                     &-active{
+               background:#0F2D52; 
+           }
+        }
+  
+
+/* carousel container */
+
+.cardScrollContainer{
+    padding:5px 0px !important;
+          .cardDetails{
+            background: #FFFFFF;
+box-shadow: 0 2px 4px 0 rgba(0,0,0,0.50);
+padding:12px 20px;
+        }
+    h5{
+        font-size: 21px;
+color: #0F2D52;
+letter-spacing: 0;
+font-weight: 600;
+text-transform: uppercase;
+    padding: 0;
+    text-align: center;
+    margin-bottom: 0px;
+    }
+h3{
+    font-size: 28px;
+color: #2BA1E1;
+letter-spacing: 0;
+//font-weight: 600;
+margin: 6px 0 0;
+}
+p{
+    font-size: 12px;
+color: #282828;
+letter-spacing: 0;
+margin: 0 3px 3px;
+&.text{
+    font-size: 15px;
+color: #282828;
+letter-spacing: 0;
+padding-bottom: 7px;
+}
+}
+   
+
+
+/*IRA product styles*/
+    .tagline {
+        font-size: 21px!important;
+        color: #0F2D52;
+        letter-spacing: 0;
+        font-family: Montserrat;
+        font-weight: 600;
+        margin-top: 2px !important;
+        
+    }
+    .rate {
+        //font-family: Montserrat-Regular;
+        font-size: 12px;
+        color: #282828;
+        letter-spacing: 0px;
+        padding-left: 5px;
+       
+        
+        strong {
+            
+            font-size: 14px;
+            color: #2BA1E1;
+            letter-spacing: 0;
+            span {
+                
+                font-size: 28px;
+                color: #2BA1E1;
+                letter-spacing: 0;
+            }
+        }
+    }
+    .features {
+        font-size: 14px!important;
+        color: #282828;
+        letter-spacing: 0.4px;
+        font-weight:700;
+        margin-top: 11px!important;
+        strong{
+             padding-left: 5px;
+        }
+           
+       
+    }
+   
+ .featureUL {
+        margin: 0px -23px 0px 5px;
+        padding:9px;
+        padding-left: 5px;
+       .featuresText{
+            //font-family: Montserrat-Regular;
+            font-size: 13px;
+            color: #282828;
+            letter-spacing: 0;
+            line-height: 24px;
+            margin:0px 0px 5px 14px;
+            padding: 0px;
+            padding-right:0px;
+        }
+            }
+/* carosule container button styles */
+ .gridBtns{
+        display: flex;
+        justify-content: space-between;
+            padding: 22px 0 4px;
+              .learnMore {
+                  width: 45%;
+                  border: 2px solid #0F2D52;
+        .button-inner {
+            
+            font-size: 14px;
+            color: #0F2D52;
+            letter-spacing: 1px;
+            font-weight: 500; 
+        }
+        
+    }
+    .applyNow {
+        width:45%;
+        background: #539C2F;
+        border-radius: 4px;
+        padding-bottom: 1px !important;
+        .button-inner {
+            font-size: 16px;
+            color: #FFFFFF;
+            letter-spacing: 1px;
+            line-height: 35px;
+            font-weight: 400;
+            
+        }
+        
+    }
+    }
+}
+}

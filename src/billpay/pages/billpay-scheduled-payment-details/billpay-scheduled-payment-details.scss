@@ -1,0 +1,84 @@
+page-billpay-scheduled-payment-details {
+    .amountDueDecor {
+        background: $pf-mobile-blue-gradient;
+        border-top: 1px solid $pf-mobile-light-blue;
+        top: 53px;
+        height: 90px;
+        padding-top: 10px;
+        .dueAmount {
+            font-family: $pf-mobile-mid-grey;
+            font-size: 16px;
+            text-align: center;
+            color: #fff;
+        }
+        .dollarSignDisplay {
+            font-size: 17px;
+            color: #fff;
+            position: relative;
+            top: -7px;
+        }
+        .amountDisplay {
+            font-family: $pf-montserrat-light;
+            font-size: 32px;
+            text-align: center;
+            color: #fff;
+        }
+        .accountBal {
+            text-align: center;
+        }
+    }
+    button.item-ios:not([detail-none]) .item-inner {
+        background-image: none !important;
+        padding: 8px;
+    }
+    button.item-md:not([detail-none]) .item-inner {
+        background-image: none !important;
+        padding: 8px;
+    }
+    .bottom_bar {
+        position: absolute;
+        bottom: 5px;
+        padding-left: 16px;
+        padding-top: 16px;
+        text-decoration: underline;
+        width: 100%;
+        color: $pf-mobile-dark-blue;
+        text-align: left;
+        background: none !important;
+    }
+    .buttonWrap {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        justify-content: flex-end;
+        margin-top: 3px;
+        word-wrap: break-word;
+        button {
+            padding: 0;
+            text-transform: uppercase;
+            font-family: $pf-montserrat-medium;
+            color: $pf-mobile-light-blue;
+            border: 1px solid #bdbdbd;
+            background: $pf-mobile-white;
+            border-radius: 5px;
+            font-size: 10px;
+            margin: 0;
+            text-decoration: none;
+            @media (max-width: 344px) {
+                min-height: 50px;
+            }
+        }
+    }
+    .item-md [item-right] {
+        margin: 0px !important;
+    }
+    .item-ios [item-right] {
+        margin: 0px !important;
+    }
+    .ion-list-viewport {
+        max-height: 345px;
+        width: 100%;
+        display: block !important;
+        overflow: scroll !important;
+    }
+}

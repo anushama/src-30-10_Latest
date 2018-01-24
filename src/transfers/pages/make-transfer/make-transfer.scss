@@ -1,0 +1,177 @@
+page-make-transfer {
+  .account-list-height {
+    height: 8rem;
+
+    &.amount-height {
+      height: 5rem;
+    }
+  }
+
+  .icon.arrow.arrow-forward {
+    display: inline-block;
+    position: absolute;
+    right: 1.6rem;
+    top: calc(50% - 1.3rem);
+    color: $pf-mobile-light-blue;
+    font-size: 2.4rem;
+  }
+
+  .icon.ion-ios-calendar.icon-md {
+    color: $pf-mobile-light-blue;
+    float: right;
+  }
+  //content======
+  .item {
+    padding-left: 0;
+
+    .input-wrapper {
+      padding-left: 1.6rem;
+    }
+  }
+
+  .h-header {
+    font-size: 1.2rem;
+    font-family: $pf-montserrat-regular;
+    color: $pf-mobile-dark-blue;
+    line-height: 2rem;
+  }
+
+  .accountPara {
+    font-family: $pf-montserrat-regular;
+    font-size: 1.8rem;
+    color: #A9B7C7;
+    margin-right: 3.9rem;
+  }
+
+  .accountName {
+    font-family: $pf-montserrat-regular;
+    font-size: 1.8rem;
+    color: $pf-mobile-dark-grey;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    &.accountVal {
+      margin-right: 3.9rem;
+      top: 50%;
+      transform: translateY(-25%);
+    }
+
+    &.amountVal {
+      margin-right: 3.9rem;
+    }
+  }
+
+  .accountNum {
+    font-family: $pf-montserrat-light;
+    font-size: 1.2rem;
+    color: $pf-mobile-dark-grey;
+
+    &.availableBal {
+      margin-right: 3.9rem;
+      top: 50%;
+      transform: translateY(-25%);
+    }
+  }
+
+  .calender-button {
+    padding: 0;
+    background-color: transparent;
+  }
+
+  .icon.ion-ios-calendar {
+    font-size: 2.4rem;
+    color: $pf-mobile-light-blue;
+  }
+
+  .date {
+    font-family: $pf-montserrat-regular;
+    font-size: 1.8rem;
+  }
+
+  .date-row {
+    margin: 0 1.1rem;
+  }
+
+  .my-date {
+    height: 5rem;
+  }
+
+  .segment.segment-background {
+    height: 4.4rem;
+  }
+
+  .segbutton-background.segment-button {
+    height: 100%;
+    line-height: 4.3rem;
+    color: $pf-mobile-light-blue;
+
+    &.segment-activated {
+      border-color: #00a0dd !important;
+      background-color: #00a0dd !important;
+      color: $pf-mobile-white ;
+    }
+
+    &.monthly-disabled{
+      opacity: 0.4;
+    }
+  }
+
+  .segment-row {
+    margin: 2.2rem 1.6rem;
+  }
+
+  .description {
+    font-family: $pf-montserrat-regular;
+    font-size: 1.1rem;
+    color: $pf-mobile-dark-blue;
+    margin: 1.6rem;
+  }
+
+  .segment-button {
+    font-family: $pf-montserrat-regular;
+    font-size: 1.5rem;
+  }
+
+  .control-button {
+    text-align: center;
+    margin-top: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .over-ride-icon {
+    position: relative;
+    background-color: $pf-mobile-white;
+    border-bottom:2px solid $pf-mobile-light-blue;
+    ion-icon[ios="ios-arrow-down"] {
+      position: absolute;
+      right: 15px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: $pf-mobile-light-blue;
+    }
+  }
+
+  .select-icon-inner {
+    display: none;
+  }
+
+  .choose-times {
+    margin: 0 auto;
+  }
+
+  .select.select-option {
+    width: 100%;
+    max-width: 100%;
+   // border-bottom:2px solid $pf-mobile-light-blue;
+
+    .select-text {
+      font-family: $pf-montserrat-regular;
+      font-size: 1.6rem;
+    }
+  }
+  .foot{
+    text-decoration: underline;
+    margin-left: 1.6rem;
+    margin-bottom: 2rem;
+  }
+}

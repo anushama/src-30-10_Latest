@@ -1,0 +1,505 @@
+{
+    "payments": [
+        {
+            "paymentId": "875739506",
+            "status": "SCHEDULED",
+            "fundingAccountIdentity": {
+                "fundingAccountId": "18681132"
+            },
+            "consumerPayeeInformation": {
+                "consumerPayeeId": "102153824",
+                "consumerPayeeName": "Amex Credit Cards",
+                "consumerPayeeNickname": "Communications",
+                "consumerPayeeAccountNumber": "379572447631004"
+            },
+            "paymentAmount": {
+                "value": 1000,
+                "currencyCode": "USD"
+            },
+            "dueDate": 1498622400000,
+            "deliverByDate": 1498622400000,
+            "paymentOptionInfo": {
+                "paymentOptionIdentity": {
+                    "fundingMethod": "ACH",
+                    "deliveryMethod": "STANDARD_ELECTRONIC"
+                }
+            },
+            "payeeCategory": "2",
+            "consumerId": "900",
+            "confirmationNumber": "FBRBDZ54",
+            "paymentRuleType": "AUTOMATIC_REGULAR_INTERVALS",
+            "paymentRuleId": "8796628",
+            "paymentOption": {
+                "paymentOptionIdentity": {
+                    "fundingMethod": "ACH",
+                    "deliveryMethod": "STANDARD_ELECTRONIC"
+                },
+                "description": "ACH for debit and standard ePay for delivery.",
+                "fundingSourceList": [
+                    "DDA"
+                ],
+                "deliveryDays": 1,
+                "cutoffTime": {
+                    "time": "13:00:00.000",
+                    "timeZone": "US/Central"
+                }
+            },
+            "paymentType": 0
+        },
+        {
+            "paymentId": "875748303",
+            "status": "SCHEDULED",
+            "fundingAccountIdentity": {
+                "fundingAccountId": "18681132"
+            },
+            "consumerPayeeInformation": {
+                "consumerPayeeId": "102153824",
+                "consumerPayeeName": "Amex Credit Cards",
+                "consumerPayeeNickname": "Communications",
+                "consumerPayeeAccountNumber": "379572447631004"
+            },
+            "paymentAmount": {
+                "value": 100,
+                "currencyCode": "USD"
+            },
+            "dueDate": 1501214400000,
+            "deliverByDate": 1501214400000,
+            "paymentOptionInfo": {
+                "paymentOptionIdentity": {
+                    "fundingMethod": "ACH",
+                    "deliveryMethod": "STANDARD_ELECTRONIC"
+                }
+            },
+            "payeeCategory": "2",
+            "consumerId": "900",
+            "confirmationNumber": "9BWB6Z54",
+            "paymentRuleType": "AUTOMATIC_REGULAR_INTERVALS",
+            "paymentRuleId": "8796628",
+            "paymentOption": {
+                "paymentOptionIdentity": {
+                    "fundingMethod": "ACH",
+                    "deliveryMethod": "STANDARD_ELECTRONIC"
+                },
+                "description": "ACH for debit and standard ePay for delivery.",
+                "fundingSourceList": [
+                    "DDA"
+                ],
+                "deliveryDays": 1,
+                "cutoffTime": {
+                    "time": "13:00:00.000",
+                    "timeZone": "US/Central"
+                }
+            },
+            "paymentType": 0
+        },
+        {
+            "paymentId": "875757298",
+            "status": "SCHEDULED",
+            "checkNumber": "9014",
+            "fundingAccountIdentity": {
+                "fundingAccountId": "18681132"
+            },
+            "consumerPayeeInformation": {
+                "consumerPayeeId": "102043363",
+                "consumerPayeeName": "Allstate Insurance",
+                "consumerPayeeNickname": "Allstate Insurance",
+                "consumerPayeeAccountNumber": "321654987"
+            },
+            "paymentAmount": {
+                "value": 200,
+                "currencyCode": "USD"
+            },
+            "dueDate": 1501646400000,
+            "deliverByDate": 1501646400000,
+            "paymentOptionInfo": {
+                "paymentOptionIdentity": {
+                    "fundingMethod": "DIRECT_CHECK",
+                    "deliveryMethod": "DIRECT_CHECK"
+                }
+            },
+            "payeeCategory": "4",
+            "consumerId": "15450869",
+            "confirmationNumber": "KB8BYZ54",
+            "paymentRuleType": "MANUAL",
+            "paymentOption": {
+                "paymentOptionIdentity": {
+                    "fundingMethod": "DIRECT_CHECK",
+                    "deliveryMethod": "DIRECT_CHECK"
+                },
+                "description": "Direct check for debit and direct check for delivery.",
+                "fundingSourceList": [
+                    "DDA"
+                ],
+                "deliveryDays": 4,
+                "cutoffTime": {
+                    "time": "13:00:00.000",
+                    "timeZone": "US/Central"
+                }
+            },
+            "paymentAddress": {
+                "line1": "1717 main street",
+                "city": "eugene",
+                "postalCode": "OR",
+                "country": "US"
+            },
+            "paymentType": 0
+        },
+        {
+            "paymentId": "875758851",
+            "status": "CANCELED",
+            "fundingAccountIdentity": {
+                "fundingAccountId": "18681132"
+            },
+            "consumerPayeeInformation": {
+                "consumerPayeeId": "102153824",
+                "consumerPayeeName": "Amex Credit Cards",
+                "consumerPayeeNickname": "Communications",
+                "consumerPayeeAccountNumber": "379572447631004"
+            },
+            "paymentAmount": {
+                "value": 100,
+                "currencyCode": "USD"
+            },
+            "dueDate": 1503892800000,
+            "deliverByDate": 1503892800000,
+            "paymentOptionInfo": {
+                "paymentOptionIdentity": {
+                    "fundingMethod": "ACH",
+                    "deliveryMethod": "STANDARD_ELECTRONIC"
+                }
+            },
+            "payeeCategory": "2",
+            "consumerId": "15450869",
+            "confirmationNumber": "4BUBLZ54",
+            "paymentRuleType": "AUTOMATIC_REGULAR_INTERVALS",
+            "paymentRuleId": "8796628",
+            "paymentOption": {
+                "paymentOptionIdentity": {
+                    "fundingMethod": "ACH",
+                    "deliveryMethod": "STANDARD_ELECTRONIC"
+                },
+                "description": "ACH for debit and standard ePay for delivery.",
+                "fundingSourceList": [
+                    "DDA"
+                ],
+                "deliveryDays": 1,
+                "cutoffTime": {
+                    "time": "13:00:00.000",
+                    "timeZone": "US/Central"
+                }
+            },
+            "paymentType": 0
+        },
+        {
+            "paymentId": "875767974",
+            "status": "SCHEDULED",
+            "checkNumber": "9015",
+            "fundingAccountIdentity": {
+                "fundingAccountId": "18681132"
+            },
+            "consumerPayeeInformation": {
+                "consumerPayeeId": "102043333",
+                "consumerPayeeName": "BOA Credit Cards",
+                "consumerPayeeNickname": "Bank of America Credit Cards",
+                "consumerPayeeAccountNumber": "4321548798658542"
+            },
+            "paymentAmount": {
+                "value": 100,
+                "currencyCode": "USD"
+            },
+            "dueDate": 1505361600000,
+            "deliverByDate": 1505361600000,
+            "paymentOptionInfo": {
+                "paymentOptionIdentity": {
+                    "fundingMethod": "DIRECT_CHECK",
+                    "deliveryMethod": "DIRECT_CHECK"
+                }
+            },
+            "payeeCategory": "2",
+            "consumerId": "15450869",
+            "confirmationNumber": "KBWBPZ54",
+            "paymentRuleType": "MANUAL",
+            "paymentOption": {
+                "paymentOptionIdentity": {
+                    "fundingMethod": "DIRECT_CHECK",
+                    "deliveryMethod": "DIRECT_CHECK"
+                },
+                "description": "Direct check for debit and direct check for delivery.",
+                "fundingSourceList": [
+                    "DDA"
+                ],
+                "deliveryDays": 4,
+                "cutoffTime": {
+                    "time": "13:00:00.000",
+                    "timeZone": "US/Central"
+                }
+            },
+            "paymentAddress": {
+                "line1": "7306 CLOVERDALE DR",
+                "city": "OXON HILL",
+                "postalCode": "MD",
+                "country": "US"
+            },
+            "paymentType": 0
+        },
+        {
+            "paymentId": "875767975",
+            "status": "SCHEDULED",
+            "checkNumber": "9016",
+            "fundingAccountIdentity": {
+                "fundingAccountId": "18681132"
+            },
+            "consumerPayeeInformation": {
+                "consumerPayeeId": "102153827",
+                "consumerPayeeName": "Mrs. Robinson",
+                "consumerPayeeNickname": "Mrs. Robinson",
+                "consumerPayeeAccountNumber": "1234"
+            },
+            "paymentAmount": {
+                "value": 25,
+                "currencyCode": "USD"
+            },
+            "dueDate": 1504238400000,
+            "deliverByDate": 1504238400000,
+            "paymentOptionInfo": {
+                "paymentOptionIdentity": {
+                    "fundingMethod": "DIRECT_CHECK",
+                    "deliveryMethod": "DIRECT_CHECK"
+                }
+            },
+            "payeeCategory": "5",
+            "consumerId": "15450869",
+            "confirmationNumber": "YBWBPZ54",
+            "paymentRuleType": "AUTOMATIC_REGULAR_INTERVALS",
+            "paymentRuleId": "8800446",
+            "paymentOption": {
+                "paymentOptionIdentity": {
+                    "fundingMethod": "DIRECT_CHECK",
+                    "deliveryMethod": "DIRECT_CHECK"
+                },
+                "description": "Direct check for debit and direct check for delivery.",
+                "fundingSourceList": [
+                    "DDA"
+                ],
+                "deliveryDays": 4,
+                "cutoffTime": {
+                    "time": "13:00:00.000",
+                    "timeZone": "US/Central"
+                }
+            },
+            "paymentAddress": {
+                "line1": "44 Redbird Lane",
+                "city": "Brooklyn",
+                "postalCode": "NY",
+                "country": "US"
+            },
+            "paymentType": 0
+        },
+        {
+            "paymentId": "875767976",
+            "status": "SCHEDULED",
+            "checkNumber": "9017",
+            "fundingAccountIdentity": {
+                "fundingAccountId": "18681132"
+            },
+            "consumerPayeeInformation": {
+                "consumerPayeeId": "102153827",
+                "consumerPayeeName": "Mrs. Robinson",
+                "consumerPayeeNickname": "Mrs. Robinson",
+                "consumerPayeeAccountNumber": "1234"
+            },
+            "paymentAmount": {
+                "value": 25,
+                "currencyCode": "USD"
+            },
+            "dueDate": 1505448000000,
+            "deliverByDate": 1505448000000,
+            "paymentOptionInfo": {
+                "paymentOptionIdentity": {
+                    "fundingMethod": "DIRECT_CHECK",
+                    "deliveryMethod": "DIRECT_CHECK"
+                }
+            },
+            "payeeCategory": "5",
+            "consumerId": "15450869",
+            "confirmationNumber": "LBWBPZ54",
+            "paymentRuleType": "AUTOMATIC_REGULAR_INTERVALS",
+            "paymentRuleId": "8800446",
+            "paymentOption": {
+                "paymentOptionIdentity": {
+                    "fundingMethod": "DIRECT_CHECK",
+                    "deliveryMethod": "DIRECT_CHECK"
+                },
+                "description": "Direct check for debit and direct check for delivery.",
+                "fundingSourceList": [
+                    "DDA"
+                ],
+                "deliveryDays": 4,
+                "cutoffTime": {
+                    "time": "13:00:00.000",
+                    "timeZone": "US/Central"
+                }
+            },
+            "paymentAddress": {
+                "line1": "44 Redbird Lane",
+                "city": "Brooklyn",
+                "postalCode": "NY",
+                "country": "US"
+            },
+            "paymentType": 0
+        },
+        {
+            "paymentId": "875768965",
+            "status": "SCHEDULED",
+            "checkNumber": "9018",
+            "fundingAccountIdentity": {
+                "fundingAccountId": "18681132"
+            },
+            "consumerPayeeInformation": {
+                "consumerPayeeId": "102153827",
+                "consumerPayeeName": "Mrs. Robinson",
+                "consumerPayeeNickname": "Mrs. Robinson",
+                "consumerPayeeAccountNumber": "1234"
+            },
+            "paymentAmount": {
+                "value": 25,
+                "currencyCode": "USD"
+            },
+            "dueDate": 1506657600000,
+            "deliverByDate": 1506657600000,
+            "paymentOptionInfo": {
+                "paymentOptionIdentity": {
+                    "fundingMethod": "DIRECT_CHECK",
+                    "deliveryMethod": "DIRECT_CHECK"
+                }
+            },
+            "payeeCategory": "5",
+            "consumerId": "900",
+            "confirmationNumber": "WBKBTZ54",
+            "paymentRuleType": "AUTOMATIC_REGULAR_INTERVALS",
+            "paymentRuleId": "8800446",
+            "paymentOption": {
+                "paymentOptionIdentity": {
+                    "fundingMethod": "DIRECT_CHECK",
+                    "deliveryMethod": "DIRECT_CHECK"
+                },
+                "description": "Direct check for debit and direct check for delivery.",
+                "fundingSourceList": [
+                    "DDA"
+                ],
+                "deliveryDays": 4,
+                "cutoffTime": {
+                    "time": "13:00:00.000",
+                    "timeZone": "US/Central"
+                }
+            },
+            "paymentAddress": {
+                "line1": "44 Redbird Lane",
+                "city": "Brooklyn",
+                "postalCode": "NY",
+                "country": "US"
+            },
+            "paymentType": 0
+        },
+        {
+            "paymentId": "875772217",
+            "status": "SCHEDULED",
+            "fundingAccountIdentity": {
+                "fundingAccountId": "18681132"
+            },
+            "consumerPayeeInformation": {
+                "consumerPayeeId": "102038575",
+                "consumerPayeeName": "Verizon Wireless",
+                "consumerPayeeNickname": "Midcontinent Comms",
+                "consumerPayeeAccountNumber": "2082400215"
+            },
+            "paymentAmount": {
+                "value": 11,
+                "currencyCode": "USD"
+            },
+            "dueDate": 1506657600000,
+            "deliverByDate": 1506657600000,
+            "paymentOptionInfo": {
+                "paymentOptionIdentity": {
+                    "fundingMethod": "ACH",
+                    "deliveryMethod": "STANDARD_ELECTRONIC"
+                }
+            },
+            "memo": "test demo",
+            "payeeCategory": "3",
+            "consumerId": "15450869",
+            "confirmationNumber": "6BHBAZG4",
+            "paymentRuleType": "AUTOMATIC_REGULAR_INTERVALS",
+            "paymentRuleId": "8800660",
+            "paymentOption": {
+                "paymentOptionIdentity": {
+                    "fundingMethod": "ACH",
+                    "deliveryMethod": "STANDARD_ELECTRONIC"
+                },
+                "description": "ACH for debit and standard ePay for delivery.",
+                "fundingSourceList": [
+                    "DDA"
+                ],
+                "deliveryDays": 1,
+                "cutoffTime": {
+                    "time": "13:00:00.000",
+                    "timeZone": "US/Central"
+                }
+            },
+            "paymentType": 0
+        },
+        {
+            "paymentId": "875773100",
+            "status": "SCHEDULED",
+            "checkNumber": "9019",
+            "fundingAccountIdentity": {
+                "fundingAccountId": "18681132"
+            },
+            "consumerPayeeInformation": {
+                "consumerPayeeId": "102153827",
+                "consumerPayeeName": "Mrs. Robinson",
+                "consumerPayeeNickname": "Mrs. Robinson",
+                "consumerPayeeAccountNumber": "1234"
+            },
+            "paymentAmount": {
+                "value": 25,
+                "currencyCode": "USD"
+            },
+            "dueDate": 1507867200000,
+            "deliverByDate": 1507867200000,
+            "paymentOptionInfo": {
+                "paymentOptionIdentity": {
+                    "fundingMethod": "DIRECT_CHECK",
+                    "deliveryMethod": "DIRECT_CHECK"
+                }
+            },
+            "payeeCategory": "5",
+            "consumerId": "900",
+            "confirmationNumber": "GBDB9ZG4",
+            "paymentRuleType": "AUTOMATIC_REGULAR_INTERVALS",
+            "paymentRuleId": "8800446",
+            "paymentOption": {
+                "paymentOptionIdentity": {
+                    "fundingMethod": "DIRECT_CHECK",
+                    "deliveryMethod": "DIRECT_CHECK"
+                },
+                "description": "Direct check for debit and direct check for delivery.",
+                "fundingSourceList": [
+                    "DDA"
+                ],
+                "deliveryDays": 4,
+                "cutoffTime": {
+                    "time": "13:00:00.000",
+                    "timeZone": "US/Central"
+                }
+            },
+            "paymentAddress": {
+                "line1": "44 Redbird Lane",
+                "city": "Brooklyn",
+                "postalCode": "NY",
+                "country": "US"
+            },
+            "paymentType": 0
+        }
+    ]
+}

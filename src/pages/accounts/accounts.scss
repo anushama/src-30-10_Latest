@@ -1,0 +1,159 @@
+page-accounts {
+  .content {
+    background-color: $pf-mobile-light-grey;
+  }
+  .fixed-content{
+     @media(min-width: 600px) and (max-width: 1100px) {
+        //background: linear-gradient(180deg, $pf-mobile-dark-blue 0%, $pf-mobile-dark-blue 10%, #2AA1E1 100%);
+      }
+  }
+  $grid-padding-width: 5px;
+  font-family: $pf-montserrat-regular !important;
+
+  ion-list {
+    & > .item {
+      padding-left: 0;
+
+      .label {
+        margin: 0;
+        padding: 0;
+      }
+
+      &:last-child {
+        border-bottom: 0;
+      }
+    }
+  }
+
+  .list {
+    margin: -1px 0 0;
+  }
+
+  // This styling is not required as overriding the default bottom-border for list.
+  .list-ios > .item-block:last-child,
+  .list-ios > .item-wrapper:last-child .item-block {
+    // border-bottom: 0;
+  }
+
+  .icon.icon-md.ion-ios-menu-outline {
+    margin: 3px 0 0 25px;
+  }
+
+  .ion-title {
+    font-size: 17px;
+    font-family: $pf-montserrat-semi-bold;
+  }
+
+  .item-divider-ios {
+    padding: 0 16px;
+  }
+
+  .item-ios.item-block .item-inner {
+    padding: 0;
+  }
+  .item-ios ion-icon[item-left],
+  .item-ios ion-icon[item-right],
+  .item-ios ion-icon[item-start],
+  .item-ios ion-icon[item-end]{
+      margin: 0px;
+      float: right;
+      font-size: 24px;
+      color:$pf-mobile-light-blue;
+  }
+
+  .accountsText {
+    padding: 0 16px;
+    font-family: $pf-montserrat-regular;
+    font-size: 14px;
+    color: $pf-mobile-mid-grey;
+  }
+
+  accounts-footer [footer] {
+    padding: 0 16px !important;
+  }
+
+  .no-scroll {
+    .scroll-content {
+      overflow-y: hidden !important;
+    }
+  }
+}
+//shared styles
+// .buttonCTA{
+//   background-color:$pf-mobile-dark-blue;
+//   font-family: $pf-montserrat-semi-bold;
+//   margin: 20px 0;
+//   padding: 0 1em;
+//   height: 2.8em;
+//   border-radius: 4px;
+//   font-size: 1.6rem;
+// }
+
+.ios {
+  ion-nav > .ion-page > ion-content.statusbar-padding:first-child .scroll-content {
+    padding-top: 0;
+  }
+}
+.pageTitle {
+  height: 48px;
+  background: linear-gradient(180deg, $pf-mobile-dark-blue 0%, #2AA1E1 100%);
+  color: $pf-mobile-white;
+  border-top: 1px solid $pf-mobile-light-blue;
+  font-weight: 600;
+  font-size: 16px;
+  text-transform: uppercase;
+  position: relative;
+  overflow: hidden;
+
+  &.account {
+    height: 91px;
+  }
+
+  &.credit-card {
+    height: 130px;
+    transition: height 0.25s;
+
+    &.active {
+      height: 250px;
+    }
+  }
+
+  .ion-title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    letter-spacing: 2px;
+    position: relative;
+    z-index: 2;
+    transition: top 0.25s;
+    // @media(min-width: 600px) and (max-width: 800px) {
+    //   top:35px;
+    // }
+    // @media(min-width: 801px) and (max-width: 1100px) {
+    //   top:60px;
+    // }
+  }
+
+  &.credit-card.active .ion-title {
+    top: 30%;
+  }
+  // @media(min-width: 600px) and (max-width: 800px) {
+  //   &.credit-card.active .ion-title{
+  //     top:145px;
+  //   }
+  // }
+  // @media(min-width: 801px) and (max-width: 1100px) {
+  //   &.credit-card.active .ion-title{
+  //     top:190px;
+  //   }
+  // }
+  &.staticPageTitle,
+  .ion-title {
+    // position: relative;
+    // top: initial;
+  }
+  .scroll-content{
+    max-width: 100% !important;
+  }
+}

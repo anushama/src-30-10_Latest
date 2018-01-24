@@ -1,0 +1,180 @@
+// Ionic Variables and Theming. For more info, please see:
+// http://ionicframework.com/docs/v2/theming/
+$font-path: "../assets/fonts";
+@import "ionic.globals";
+@import "styles/buttons";
+@import "styles/footer";
+@import "styles/headers";
+@import "styles/iconography";
+@import "styles/lists";
+@import "styles/mixins";
+@import "styles/palette";
+@import "styles/typography";
+@import "styles/global";
+@import "utilities/utilities";
+// Shared Variables
+// --------------------------------------------------
+// To customize the look and feel of this app, you can override
+// the Sass variables found in Ionic's source scss files.
+// To view all the possible Ionic variables, see:
+// http://ionicframework.com/docs/v2/theming/overriding-ionic-variables/
+// Named Color Variables
+// --------------------------------------------------
+// Named colors makes it easy to reuse colors on various components.
+// It's highly recommended to change the default colors
+// to match your app's branding. Ionic uses a Sass map of
+// colors so you can add, rename and remove colors as needed.
+// The "primary" color is the only required color in the map.
+$text-color: $pf-mobile-dark-grey;
+.item-md ion-avatar[item-left],
+.item-md ion-thumbnail[item-left],
+.item-md ion-avatar[item-start],
+.item-md ion-thumbnail[item-start] {
+    margin: 0 !important;
+}
+
+$colors: ( newpassword-button-green:#558b2F,
+main-text-color:$pf-mobile-dark-grey,
+dark-blue-text: $pf-mobile-dark-blue,
+primary : $pf-mobile-dark-blue,
+secondary : $pf-mobile-light-blue,
+danger : $pf-mobile-red,
+light : #f4f4f4,
+dark : #222,
+light-blue: #2BA1E1);
+
+//Both IOS and MD
+$background-color: $pf-mobile-light-grey;
+// Fonts
+$font-family-base: $pf-montserrat-regular;
+$font-family-ios-base: $pf-montserrat-regular;
+$font-family-md-base: $pf-montserrat-regular;
+$h1-font-size: 2.6rem;
+$h2-font-size: 2.4rem;
+$h3-font-size: 2.2rem;
+$h4-font-size: 2rem;
+$h5-font-size: 1.8rem;
+// App iOS Variables
+// --------------------------------------------------
+// iOS only Sass variables can go here
+// List Header Styles
+$list-ios-header-color: $pf-mobile-mid-grey;
+$list-ios-header-font-size: 14px;
+$list-ios-header-text-transform: uppercase;
+$list-ios-header-font-weight: 500;
+$list-ios-header-margin-bottom: 0px;
+$list-ios-header-border-top: 0px;
+$list-ios-header-border-bottom: none;
+// list elements
+$item-ios-detail-push-color: color($colors, secondary);
+$label-ios-margin:0px;
+$list-ios-background-color:$pf-mobile-white;
+$item-ios-avatar-size: 24px;
+$link-color: $pf-mobile-dark-blue;
+//Labels
+$label-ios-text-color: $pf-mobile-mid-grey;
+//Tabs
+$tabs-background: $pf-mobile-blue-gradient;
+$tabs-ios-tab-color-active: $pf-mobile-white;
+$tabs-ios-tab-font-size: 20px;
+$tabs-ios-tab-font-weight: 500;
+$tabs-ios-tab-text-color-active: $pf-mobile-white;
+//Input
+$text-input-ios-highlight-color-valid: $pf-mobile-light-grey;
+$text-input-ios-highlight-color-invalid: $pf-mobile-red;
+$text-input-ios-show-invalid-highlight: $pf-mobile-red;
+$text-input-ios-show-valid-highlight: $pf-mobile-light-blue;
+$text-input-ios-highlight-color: $pf-mobile-light-blue;
+$text-input-ios-show-focus-highlight: true;
+//ICONOGRAPHY
+//--------------
+// Toggles
+$toggle-ios-background-color-on: $pf-mobile-light-blue;
+// $toggle-ios-height: 28px;
+//Select
+$select-ios-icon-color: $pf-mobile-light-blue;
+$select-ios-placeholder-color: $pf-mobile-dark-blue;
+//Radio Buttons
+$alert-ios-radio-icon-border-color: $pf-mobile-light-blue;
+$alert-md-radio-label-text-color-checked: $pf-mobile-light-blue;
+//Checkboxes
+$alert-ios-checkbox-background-color-on: $pf-mobile-light-blue;
+$checkbox-ios-background-color-on: $pf-mobile-light-blue;
+//Alerts
+$alert-md-background: #f8f8f8;
+$alert-ios-title-font-size: 17px;
+$alert-ios-title-font-weight: 600;
+// $alert-ios-button-text-color: $pf-mobile-light-blue;
+$alert-ios-button-main-font-weight: bold;
+$alert-ios-button-font-size: 16px;
+$alert-ios-button-margin: 0;
+$alert-ios-sub-title-text-color: $pf-mobile-black;
+// App Material Design Variables
+// --------------------------------------------------
+// Material Design only Sass variables can go here
+// List Header Styles
+$list-md-header-color: $pf-mobile-mid-grey;
+$list-md-header-font-size: 14px;
+$list-md-header-text-transform: uppercase;
+$list-md-header-font-weight: 500;
+$list-md-header-margin-bottom: 0px;
+$list-md-header-border-top: 0px;
+$list-md-header-border-bottom: none;
+//list elements
+$item-md-detail-push-color: color($colors, secondary);
+$item-md-detail-push-show: true;
+$label-md-margin:0px;
+$list-md-background-color:$pf-mobile-white;
+$item-md-avatar-size: 24px;
+$label-md-text-color: $pf-mobile-mid-grey;
+//Tabs
+$tabs-md-background: $pf-mobile-blue-gradient;
+$tabs-md-tab-color-active: $pf-mobile-white;
+$tabs-md-tab-font-size: 20px;
+$tabs-md-tab-font-weight: 500;
+$tabs-md-tab-text-color-active: $pf-mobile-white;
+//Input
+$text-input-md-highlight-color-valid: $pf-mobile-light-grey;
+$text-input-md-highlight-color-invalid: $pf-mobile-red;
+$text-input-md-show-invalid-highlight: $pf-mobile-red;
+$text-input-md-show-valid-highlight: $pf-mobile-light-blue;
+$text-input-md-highlight-color: $pf-mobile-light-blue;
+$text-input-md-show-focus-highlight: true;
+//ICONOGRAPHY
+//--------------
+//Toggles
+$toggle-md-active-color: $pf-mobile-light-blue;
+//Select
+$select-md-icon-color: $pf-mobile-light-blue;
+$select-md-placeholder-color: $pf-mobile-dark-blue;
+//Radio Buttons
+$alert-md-radio-border-color-on: $pf-mobile-light-blue;
+$alert-md-radio-label-text-color-checked: $pf-mobile-light-blue;
+//Checkboxes
+$alert-md-checkbox-background-color-on: $pf-mobile-light-blue;
+$checkbox-md-icon-background-color-on: $pf-mobile-light-blue;
+//Alerts
+$alert-md-background: #f8f8f8;
+$alert-md-background-color: $pf-mobile-light-grey;
+$alert-md-button-font-weight: 600;
+// $alert-md-button-text-color: $pf-mobile-light-blue;
+$alert-md-button-main-font-weight: bold;
+$alert-md-button-font-size: 17px;
+$alert-md-button-margin: 0;
+$alert-md-button-text-align: end;
+$alert-md-sub-title-text-color: $pf-mobile-black;
+// App Windows Variables
+// --------------------------------------------------
+// Windows only Sass variables can go here
+// App Theme
+// --------------------------------------------------
+// Ionic apps can have different themes applied, which can
+// then be future customized. This import comes last
+// so that the above variables are used and Ionic's
+// default are overridden.
+@import "ionic.theme.default";
+// Ionicons
+// --------------------------------------------------
+// The premium icon font for Ionic. For more info, please see:
+// http://ionicframework.com/docs/v2/ionicons/
+@import "ionic.ionicons";

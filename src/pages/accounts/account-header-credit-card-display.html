@@ -1,0 +1,34 @@
+<ng-container *ngIf="
+(creditCardParams.payload.acctType !== 'VPS' && 
+creditCardParams.payload.acctType !== 'AMX' && 
+creditCardParams.payload.acctType !== 'VSG' && 
+creditCardParams.payload.acctType !== 'VPV' && 
+creditCardParams.payload.acctType !== 'VCR' && 
+creditCardParams.payload.acctType !== 'VDC')">
+  <div class="credit-card-background solid" [ngStyle]="{'background-image':'url(assets/Card_Outline_Blur.png)'}" [ngClass]="{'showAccountDetails':showAccountDetails}"></div>
+  <div class="credit-card-background full" [ngStyle]="{'background-image':'url(assets/Card_Outline_Full.png)'}" [ngClass]="{'showAccountDetails':showAccountDetails}"></div>
+</ng-container>
+<ng-container *ngIf="creditCardParams.payload.acctType === 'VPS'">
+  <div class="credit-card-background {{creditCardParams.payload.acctType}}" [ngStyle]="{'background-image':'url(assets/PlatinumVisa_Blur@2x.png)'}" [ngClass]="{'showAccountDetails':showAccountDetails}"></div>
+  <div class="credit-card-background full {{creditCardParams.payload.acctType}}" [ngStyle]="{'background-image':'url(assets/PlatinumVisa_Full@2x.png)'}" [ngClass]="{'showAccountDetails':showAccountDetails}"></div>
+</ng-container>
+<ng-container *ngIf="creditCardParams.payload.acctType === 'AMX'">
+  <div class="credit-card-background" [ngStyle]="{'background-image':'url(assets/TravelAmex_Blur@2x.png)'}" [ngClass]="{'showAccountDetails':showAccountDetails}"></div>
+  <div class="credit-card-background full" [ngStyle]="{'background-image':'url(assets/TravelAmex_Full@2x.png)'}" [ngClass]="{'showAccountDetails':showAccountDetails}"></div>
+</ng-container>
+<ng-container *ngIf="creditCardParams.payload.acctType === 'VSG'">
+  <div class="credit-card-background" [ngStyle]="{'background-image':'url(assets/GoldVisa_Blur@2x.png)'}" [ngClass]="{'showAccountDetails':showAccountDetails}"></div>
+  <div class="credit-card-background full" [ngStyle]="{'background-image':'url(assets/GoldVisa_Full@2x.png)'}" [ngClass]="{'showAccountDetails':showAccountDetails}"></div>
+</ng-container>
+<ng-container *ngIf="creditCardParams.payload.acctType === 'VPV'">
+  <div class="credit-card-background" [ngStyle]="{'background-image':'url(assets/PromiseVisa_Blur@2x.png)'}" [ngClass]="{'showAccountDetails':showAccountDetails}"></div>
+  <div class="credit-card-background full" [ngStyle]="{'background-image':'url(assets/PromiseVisa_Full@2x.png)'}" [ngClass]="{'showAccountDetails':showAccountDetails}"></div>
+</ng-container>
+<ng-container *ngIf="creditCardParams.payload.acctType === 'VCR'">
+  <div class="credit-card-background" [ngStyle]="{'background-image':'url(assets/PowerCash_Blur@2x.png)'}" [ngClass]="{'showAccountDetails':showAccountDetails}"></div>
+  <div class="credit-card-background full" [ngStyle]="{'background-image':'url(assets/PowerCash_Full@2x.png)'}" [ngClass]="{'showAccountDetails':showAccountDetails}"></div>
+</ng-container>
+<ng-container *ngIf="creditCardParams.payload.acctType === 'VDC'"> 
+  <div class="credit-card-background" [ngStyle]="{'background-image':'url(assets/powercash_trans.png)'}" [ngClass]="{'showAccountDetails':showAccountDetails}"></div>
+  <div class="credit-card-background full" [ngStyle]="{'background-image':'url(assets/powercash_fulldetail.png)'}" [ngClass]="{'showAccountDetails':showAccountDetails}"></div>
+</ng-container>

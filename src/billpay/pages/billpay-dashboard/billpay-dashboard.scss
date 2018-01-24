@@ -1,0 +1,25 @@
+page-billpay-dashboard {
+    overflow-y: scroll !important;
+    height: auto;
+    .tabbar.show-tabbar {
+        background: $pf-mobile-blue-gradient;
+    }
+    .tabs-md,
+    .tabs-ios {
+        .tab-button[aria-selected=true] {
+            .tab-button-text {
+                text-transform: none;
+            }
+        }
+        .tab-button-text {
+            color: $pf-mobile-white;
+            font-family: $pf-montserrat-semi-bold;
+            font-size: 1.4rem;
+        }
+    }
+    .tabbar a[aria-selected=true] {
+        span {
+            border-bottom: 2px solid $pf-mobile-white;
+        }
+    }
+}

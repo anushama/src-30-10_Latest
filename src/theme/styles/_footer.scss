@@ -1,0 +1,77 @@
+//
+// Footer
+// --------------------------------------------------
+//
+
+ion-footer::before{
+  background-image: none !important;
+}
+.terms-conditions-footer {
+  font-family: $pf-montserrat-regular !important;
+  color: $pf-mobile-legal-blue;
+  font-size: 1.2rem;
+  padding-left: 1.1rem;
+
+  p {
+    text-decoration: underline;
+  }
+}
+
+.legal {
+  font-family: $pf-montserrat-regular;
+  font-size: 12px;
+  color: $pf-mobile-legal-blue;
+
+  p {
+    //margin: 0 0 1rem;
+    line-height: auto;
+    text-decoration: underline;
+  }
+}
+
+.insured {
+  font-family: $pf-montserrat-regular;
+  font-size: 12px;
+  text-decoration: underline;
+  color: $pf-mobile-dark-blue;
+  margin-left: 1.6rem;
+}
+//Footer used on "Checking/IRAS/Savings" pages. TODO: rename the class and extract duplicate code
+.productFooter {
+  .btnContainer button {
+    padding: 0 18px 0 0;
+    font-size: 14px;
+    color: #2BA1E1;
+    letter-spacing: 0;
+    line-height: 17px;
+  }
+
+  ul {
+    font-size: 10px;
+    color: $pf-mobile-dark-blue;
+    letter-spacing: 0;
+    line-height: 12px;
+
+    li {
+      margin-bottom: 15px;
+    }
+  }
+}
+
+.footerLink {
+  font-size: 12px;
+  color: #103D65;
+  letter-spacing: 0;
+  text-decoration: underline;
+  padding-left: 0;
+  background: none;
+}
+
+accounts-footer [footer] {
+  padding: 0 4px !important;
+}
+
+.footer{
+  position:absolute;
+  bottom:0;
+}

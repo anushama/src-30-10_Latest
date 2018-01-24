@@ -1,0 +1,54 @@
+page-accounttopayto {
+    .bottom-button{
+        position: fixed;
+        bottom: 0;
+    }
+
+    .item-ios,
+    .item-md {
+      padding-left: 0;
+  
+      .item-inner {
+        padding-left: 16px;
+        padding-top: 4px;
+        padding-bottom: 0px;
+  
+        p {
+          padding-bottom: 4px;
+          font-size: 1em;
+          color: #555;
+          font-family: "montserrat400", sans-serif;
+        }
+
+        span{
+            font-size: 0.7em;
+            margin-left: 10px;
+            color: #555;
+        }
+  
+        h2 {
+          font-family: "montserrat400", sans-serif;
+          font-size: 1.8rem;
+          color: #282828;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          margin-bottom: -4px;
+        }
+      }
+    }
+  
+    p {
+      padding-bottom: 0;
+      font-size: 0.9em;
+      color: $pf-mobile-dark-blue;
+      font-family: "montserrat400", sans-serif;
+    }
+  
+    .list-header{
+        .item-inner {
+            padding-left: 16px;
+            padding-top: 0px;
+            padding-bottom: 5px;
+        }
+    }
+}

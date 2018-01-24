@@ -1,0 +1,55 @@
+{
+  "messages": [{
+    "type": "INFORMATIONAL_MESSAGE",
+    "code": "MER020",
+    "text": "Payments",
+    "locale": "en-US",
+    "internalCode": "MER020"
+  }],
+  "payments": [{
+    "paymentId": "875739506",
+    "status": "SCHEDULED",
+    "fundingAccountIdentity": {
+      "fundingAccountId": "18681132"
+    },
+    "consumerPayeeInformation": {
+      "consumerPayeeId": "102153824",
+      "consumerPayeeName": "American Express Credit Cards",
+      "consumerPayeeNickname": "Communications",
+      "consumerPayeeAccountNumber": "379572447631004"
+    },
+    "paymentAmount": {
+      "value": 100,
+      "currencyCode": "USD"
+    },
+    "dueDate": 1498622400000,
+    "deliverByDate": 1498622400000,
+    "paymentOptionInfo": {
+      "paymentOptionIdentity": {
+        "fundingMethod": "ACH",
+        "deliveryMethod": "STANDARD_ELECTRONIC"
+      }
+    },
+    "payeeCategory": "2",
+    "consumerId": "900",
+    "confirmationNumber": "FBRBDZ54",
+    "paymentRuleType": "AUTOMATIC_REGULAR_INTERVALS",
+    "paymentRuleId": "8796628",
+    "paymentOption": {
+      "paymentOptionIdentity": {
+        "fundingMethod": "ACH",
+        "deliveryMethod": "STANDARD_ELECTRONIC"
+      },
+      "description": "ACH for debit and standard ePay for delivery.",
+      "fundingSourceList": [
+        "DDA"
+      ],
+      "deliveryDays": 1,
+      "cutoffTime": {
+        "time": "13:00:00.000",
+        "timeZone": "US/Central"
+      }
+    },
+    "paymentType": 0
+  }]
+}

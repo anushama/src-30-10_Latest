@@ -1,0 +1,109 @@
+page-security-locked {
+  //for ios
+  .content.content-ios {
+    .scroll-content {
+      padding-top: 0 !important;
+    }
+  }
+
+  .content {
+    background-color: $pf-mobile-light-grey;
+  }
+
+  .security-header {
+    font-family: $pf-montserrat-semi-bold;
+    background-color: $pf-mobile-dark-blue;
+    height: 4.7rem;
+  }
+
+  .header-icon.icon-ios {
+    color: $pf-mobile-white;
+    font-size: 2.4rem;
+    font-weight: 400;
+
+    &.ion-ios-menu {
+      height: 1.4rem;
+    }
+  }
+
+  .security-title {
+    .toolbar-title {
+      margin-left: -2rem;
+      text-align: left;
+      font-size: 1.6rem;
+      letter-spacing: 1px;
+      font-weight: 600;
+      line-height: 3.7rem;
+      color: $pf-mobile-white;
+
+      &.toolbar-title-ios {
+        margin-left: -1rem;
+      }
+    }
+  }
+
+  .instruction {
+    font-family: $pf-montserrat-regular;
+    font-size: 1.5rem;
+    color: $pf-mobile-black;
+    margin-left: 1.6rem;
+    margin-top: 1rem;
+  }
+
+  .custom {
+    margin-top: 1rem;
+  }
+
+  .disable-hover.button.button-ios.button-default.button-default-ios {
+    background-color: $pf-mobile-dark-blue;
+    margin: 0;
+    height: 2.8rem;
+  }
+
+  .disable-hover.bar-buttons.bar-buttons-ios.button.button-ios.button-default.button-default-ios.button-menutoggle.button-menutoggle-ios {
+    padding-left: 1.2rem;
+    margin: 0;
+    height: 2.8rem;
+    background-color: $pf-mobile-dark-blue;
+
+    .button-inner {
+      color: $pf-mobile-white;
+    }
+  }
+  //for android
+  .header-icon.icon.icon-md {
+    color: $pf-mobile-white;
+    font-weight: 500;
+
+    &.ion-md-menu {
+      font-size: 2.4rem;
+    }
+  }
+  //common css
+  .list {
+    margin-top: 2rem;
+  }
+
+  .item.item-block {
+    padding-left: 1.5rem;
+    font-size: 1.2rem;
+    color: $pf-mobile-dark-blue;
+    background-color: $pf-mobile-light-grey;
+  }
+
+  .control-button {
+    text-align: center;
+  }
+
+  .forward-button {
+    margin-top: 4rem;
+    width: 22.5rem;
+    height: 5rem;
+    border-radius: 0.4rem;
+
+    .button-inner {
+      font-family: $pf-montserrat-medium;
+      letter-spacing: 1px;
+    }
+  }
+}

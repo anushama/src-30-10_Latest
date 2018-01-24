@@ -1,0 +1,48 @@
+page-fingerprint-login-agreement {
+    font-family: $pf-montserrat-regular;
+    .content {
+        background-color: $pf-mobile-light-grey;
+    }
+    ion-grid {
+        line-height: 1.9rem;
+        .agreement-content {
+            margin-bottom: 7.7rem;
+        }
+        .heading {
+            font-family: $pf-montserrat-medium;
+            font-size: 1.6rem;
+            color: $pf-mobile-dark-blue;//#0D2B53;
+            letter-spacing: .1rem;
+            margin: .6rem 0 .4rem;
+        }
+        .agreementText p {
+            font-family: $pf-montserrat-regular !important;
+            font-size: 15px;
+            padding-top: 1.6rem;
+            margin:0;
+        }
+        .textHighlight {
+            font-family: $pf-montserrat-medium;
+            font-size: 1.5rem;
+        }
+    }
+    .agreement-footer {
+        // position: absolute;
+        // bottom: 0;
+        // right: 0;
+        width: 100%;
+        text-align: center;
+        margin-top: 2rem;
+       .btn-agreement {
+            font-family: $pf-montserrat-medium;
+            background-color: $pf-mobile-dark-blue;
+            border-radius: .4rem;
+            font-size: 1.6rem;
+            color: $pf-mobile-white;
+            letter-spacing: .1rem;
+            // margin-bottom: 2rem;
+            min-width: 22.5rem;
+            height: 5rem;
+        }
+    }      
+}

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="15px" height="16px" viewBox="0 0 15 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 45 (43475) - http://www.bohemiancoding.com/sketch -->
+    <title>Username Icon</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Mobile" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" font-weight="400" font-family="Ionicons" font-size="24" opacity="0.702841938">
+        <g id="00A.-Login_Saved-User" transform="translate(-25.000000, -228.000000)" fill="#1B304B">
+            <text id="Username-Icon">
+                <tspan x="25" y="245"></tspan>
+            </text>
+        </g>
+    </g>
+</svg>

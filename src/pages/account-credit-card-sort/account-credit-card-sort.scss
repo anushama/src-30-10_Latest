@@ -1,0 +1,49 @@
+page-account-credit-card-sort {
+  .content{
+    background-color:$pf-mobile-light-grey;
+  }
+  .sub-page-header{
+    .backButton{
+      margin: .3rem 1.1rem 0;
+    }
+    .icon{
+      font-size: 36px;
+    }
+  }
+  ion-list.list.list-md, ion-list.list.list-ios{
+    margin-bottom: 20px;
+    &:last-of-type{
+      margin-bottom: 0px;
+    }
+    > .item-md, .item-ios {
+      padding-left: 0px;
+    }
+    ion-item{
+      .item-inner{
+        padding-left: 16px;
+        padding-right: 6px;
+      }
+    }
+    .radio-ios .radio-checked .radio-inner{
+      left: 2px;
+      top: 2px;
+      width: 8px;
+      height: 8px;
+    }
+  }
+  // .buttonCTA, .disable-hover.button.button-ios.button-default.button-default-ios{
+  //   min-width: 250px;
+  //   margin-top: 11px;
+  // }
+  .item-radio-checked.item-ios, .item-radio-checked.item-md {
+    ion-label{
+      color:$pf-mobile-light-blue;
+    }
+  }
+  .radio-md .radio-checked .radio-inner, .radio-ios .radio-checked .radio-inner, .radio-md .radio-checked, .radio-ios .radio-checked{
+    border-color: $pf-mobile-light-blue;
+  }
+  .radio-md .radio-inner, .radio-ios .radio-inner {
+    background-color: $pf-mobile-light-blue;
+  }
+}

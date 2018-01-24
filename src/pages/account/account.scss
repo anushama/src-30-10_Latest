@@ -1,0 +1,97 @@
+page-account {
+  .content {
+    background-color: $pf-mobile-light-grey;
+  }
+
+  .dividerHeading {
+    &.item-divider {
+      // background-color: $pf-mobile-light-grey;
+    }
+  }
+
+  account-footer {
+    // background-color: $pf-mobile-light-grey;
+  }
+
+  .pageTitle {
+    min-height: 91px;
+
+    .ion-title {
+      top: 10px;
+    }
+  }
+
+  .accountIcon {
+    position: absolute;
+    right: 34px;
+    top: 47px;
+    z-index: 10;
+
+    .icon {
+      font-size: 22px;
+      padding: 17px;
+    }
+  }
+
+  .pf-logo-$pf-mobile-white {
+    display: block;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  .availableBal {
+    font-family: $pf-montserrat-light;
+    font-size: 15px;
+    text-transform: capitalize;
+
+    .balance {
+      padding-left: 0;
+      margin-left: -16px;
+
+      &:before {
+        // padding-right: 16px;
+      }
+    }
+  }
+
+  .current-balance {
+    letter-spacing: normal;
+  }
+
+  .balance {
+    font-size: 32px;
+    padding-left: 16px;
+
+    &:before {
+      content: "$";
+      font-size: 14px;
+      top: -10px;
+      position: relative;
+      padding-right: 2px;
+    }
+
+    span {
+      float: right;
+    }
+
+    .icon {
+      font-size: 22px;
+      position: relative;
+      top: -9px;
+      right: 16px;
+      padding: 17px 0;
+      color: $pf-mobile-white;
+    }
+  }
+
+  .credit-card .balance .icon {
+    position: absolute;
+    top: 68px;
+  }
+
+  .accountActions {
+    background: $pf-mobile-light-grey;
+  }
+}

@@ -1,0 +1,17 @@
+
+<!--<ion-header>
+  <ion-row class="common-header">
+    <button ion-button navPop class="nav-icon"><ion-icon ios="md-close" md="md-close"></ion-icon></button>
+    <ion-title class="textElipse">{{pageTitle}}</ion-title>
+  </ion-row>
+</ion-header>-->
+<ion-header>
+<pf-header leftIcon="cross">
+    <pf-header-title class="textElipse">{{pageTitle}}</pf-header-title>
+</pf-header>
+</ion-header>
+
+<ion-content>
+  <select-account [accounts]="toAccounts" [transferType]="transferType" [externalAccounts]="externalToAccounts" [numLast4]="numLast4" (selectedAccount)="getSelectedAccount($event)"></select-account>
+  <p class="insured" tappable (click)='util.displayNCUACert()'>Federally insured by NCUA</p>
+</ion-content>

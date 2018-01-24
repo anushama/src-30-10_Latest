@@ -1,0 +1,68 @@
+select-account {
+  .item-ios,
+  .item-md {
+    // padding-left: 0;
+    .icon {
+      position: absolute;
+      right: 1.6rem;
+      top: calc(50% - .4rem);
+      color: $pf-mobile-light-blue; //#00A0DD; 
+      font-weight: 500;
+    }
+    .item-inner {
+      // padding-left: 16px;
+      // padding-top: 4px;
+      // padding-bottom: 0px;
+      p {
+        padding-bottom: 4px;
+        font-size: 1em;
+        color: $pf-mobile-dark-grey;
+        font-family: "montserrat300", sans-serif;
+      }
+      span {
+        font-size: 0.7em;
+        margin-left: 10px;
+        color: $pf-mobile-dark-grey;
+        font-family: "montserrat300", sans-serif;
+      }
+      h2 {
+        font-family: "montserrat400", sans-serif;
+        font-size: 1.2em;
+        color: $pf-mobile-dark-grey;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        margin-bottom: -4px;
+      }
+    }
+  }
+  p {
+    padding-bottom: 0;
+    font-size: 0.9em;
+    color: $pf-mobile-dark-blue;
+    font-family: "montserrat400", sans-serif;
+  }
+  .sub-header {
+    height: 43px;
+  }
+  .list-header {
+    .item-inner {
+      padding-left: 16px;
+    }
+  }
+  .show-page {
+    ion-backdrop {
+      opacity: 1 !important;
+    }
+  }
+ 
+  .item-from-account {
+    height: 80px;
+  }
+  .disc-msg {
+    font-family: Montserrat;
+    margin-left: 16px;
+    color: $pf-mobile-dark-blue;
+    font-size: 1.3em;
+    line-height: 1.5em;
+  }
+}

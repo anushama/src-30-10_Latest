@@ -1,0 +1,32 @@
+<!--
+  Generated template for the CheckDisplayPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-content id="ionContent">
+    <ion-grid no-padding>
+        <account-header [pageNameParam]="'CHECK IMAGE'"></account-header>
+    </ion-grid>
+    
+    <ion-content padding>
+      <div *ngIf="loading; else checkResponseReady">
+        <div>
+          <div class="loading-crescent"><img src="assets/load-crescent.svg" alt="Loading..."/></div>
+        </div>
+      </div>
+      <ng-template #checkResponseReady>
+          <div *ngIf="checkImageData.frontImage !== null; else noFrontImage" class="checkImage">
+            <img src="data:image/jpeg;base64,{{checkImageData.frontImage}}"/>
+          </div>
+          <ng-template #noFrontImage>
+            <div class="checkImage noCheck">
+              No Check Image Available
+            </div>
+          </ng-template>
+          <div *ngIf="checkImageData.backImage !== null" class="checkImage">
+            <img src="data:image/jpeg;base64,{{checkImageData.backImage}}"/>
+          </div>
+      </ng-template>
+    </ion-content>
+</ion-content>

@@ -1,0 +1,115 @@
+<ion-header>
+  <pf-header leftIcon="unlock">
+    <pf-header-title class="textElipse">UNLOCK ACCOUNT</pf-header-title>
+  </pf-header>
+</ion-header>
+
+<ion-content>
+
+    <p padding-left>{{"unlock.account.info" | aemsync : ["unlock-account"] | async}} </p>
+
+    <form [formGroup]="unlockAccountForm" (ngSubmit)="onSubmit()" padding>
+        <ion-row>
+            <ion-col>
+                <ion-label stacked class="input-label">USERNAME</ion-label>
+                <ion-item class="pf-mobile-form-field">
+                    <ion-input type="text" formControlName="username" name="username" placeholder="PenFed Username"></ion-input>
+                </ion-item>
+            </ion-col>
+        </ion-row>
+
+        <ion-row>
+            <ion-col>
+                <ion-label stacked class="input-label">SECURITY CODE
+                    <ion-icon ios="md-help-circle" md="md-help-circle" class="help-icon" tappable (click)="helpPopUp()"></ion-icon>
+                </ion-label>
+                <ion-item class="pf-mobile-form-field">
+                    <ion-input type="tel" style="-webkit-text-security:disc" formControlName="code" name="code" minLength="4" maxLength="6" pattern="[0-9]*" placeholder="e.g. 123456"></ion-input>
+                </ion-item>
+            </ion-col>
+        </ion-row>
+
+
+        <p text-16 text-bold>{{rotatingQuestions[unlockQuestionId-1]}}</p>
+        <ion-row>
+            <ion-col>
+                <ion-label stacked class="input-label">ANSWER</ion-label>
+                <ion-item>
+                    <ng-container *ngIf="rotatingQuestions[unlockQuestionId-1] === 'YOUR BIRTH MONTH'">
+                        <ion-row>
+                            <ion-col>
+                                <ion-select name="month" [formGroup]="unlockAccountForm" [selectOptions]="selectMonthOptions" class="pf-mobile-form-field" formControlName="answer">
+                                    <ion-option *ngFor="let month of months" [value]="month.value">{{month.name}}</ion-option>
+                                </ion-select>
+                            </ion-col>
+                        </ion-row>
+                    </ng-container>
+
+                    <ng-container *ngIf="rotatingQuestions[unlockQuestionId-1] === 'LAST 4 DIGITS OF YOUR SSN'">
+                        <ion-row>
+                            <ion-col>
+                                <ion-input type="tel" style="-webkit-text-security:disc" required pattern="[0-9]*" formControlName="answer" name="answer" placeholder="e.g. 1234"></ion-input>
+                            </ion-col>
+                        </ion-row>
+                    </ng-container>
+
+                    <ng-container *ngIf="rotatingQuestions[unlockQuestionId-1] === 'FIRST 3 DIGITS OF YOUR SSN'">
+                        <ion-row class="pf-mobile-form-field">
+                            <ion-col>
+                                <ion-input type="tel" style="-webkit-text-security:disc" required formControlName="answer" pattern="[0-9]*" name="answer" placeholder="e.g. 123"></ion-input>
+                            </ion-col>
+                        </ion-row>
+                    </ng-container>
+
+                    <ng-container *ngIf="rotatingQuestions[unlockQuestionId-1] === 'MIDDLE 2 DIGITS OF YOUR SSN'">
+                        <ion-row class="pf-mobile-form-field">
+                            <ion-col>
+                                <ion-input type="tel" style="-webkit-text-security:disc" required formControlName="answer" pattern="[0-9]*" name="answer" placeholder="e.g. 12"></ion-input>
+                            </ion-col>
+                        </ion-row>
+                    </ng-container>
+
+                    <ng-container *ngIf="rotatingQuestions[unlockQuestionId-1] === 'YOUR BIRTH YEAR'">
+                        <ion-row class="pf-mobile-form-field">
+                            <ion-col>
+                                <ion-input type="tel" style="-webkit-text-security:disc" required formControlName="answer" pattern="[0-9]*" name="answer" placeholder="e.g. 1980"></ion-input>
+                            </ion-col>
+                        </ion-row>
+                    </ng-container>
+
+                    <ng-container *ngIf="rotatingQuestions[unlockQuestionId-1] === 'YOUR BIRTH DAY'">
+                        <ion-row>
+                            <ion-col>
+                                <ion-select name="day" [selectOptions]="selectDayOptions" class="pf-mobile-form-field" formControlName="answer">
+                                    <ion-option *ngFor="let day of days" [value]="day.value">{{day.name}}</ion-option>
+                                </ion-select>
+                            </ion-col>
+                        </ion-row>
+                    </ng-container>
+
+                    <ng-container *ngIf="rotatingQuestions[unlockQuestionId-1] === 'MAILING ADDRESS STATE'">
+                        <ion-row>
+                            <ion-col>
+                                <ion-select name="state" [selectOptions]="selectStateOptions" class="pf-mobile-form-field" formControlName="answer">
+                                    <ion-option *ngFor="let state of states" [value]="state.code">{{state.name}}</ion-option>
+                                </ion-select>
+                            </ion-col>
+                        </ion-row>
+                    </ng-container>
+                </ion-item>
+
+            </ion-col>
+        </ion-row>
+
+        <ion-row>
+            <ion-col>
+                <button class="cta-button" type="submit" ion-button block tappable (click)="onSubmit()" [disabled]="unlockAccountForm.invalid">SUBMIT</button>
+            </ion-col>
+        </ion-row>
+    </form>
+
+    <div class="footer-description" padding>
+        {{"unlock.account.contact.info" | aemsync : ["unlock-account"] | async}}
+    </div>
+
+</ion-content>

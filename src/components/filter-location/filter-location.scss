@@ -1,0 +1,139 @@
+.atm-modal-wrapper {
+  .grid {
+    box-sizing: border-box;
+    background-color: $pf-mobile-white;
+  }
+  filter-location {
+    .filter-title {
+      font-size: 14px;
+      color: #59606E;
+      letter-spacing: 2px;
+      text-align: left;
+      margin-left: 10px;
+      margin-top: 10px;
+    }
+    .filter-options {
+      font-size: 15px;
+      color: #282828;
+      letter-spacing: 0;
+    }
+    .filter-list {
+      ion-col {
+        padding-left: 0;
+      }
+      ion-item {
+        padding-left: 10px;
+      }
+    }
+    .item-block:first-child {
+      border-top: 0;
+    }
+    .item-block:last-child {
+      border-top: 0;
+    }
+    .btn-filter {
+      font-family: $pf-montserrat-medium;
+      font-size: 16px;
+      color: $pf-mobile-white;
+      margin-top: 20px !important;
+      margin-bottom: 10px !important;
+      line-height: 0!important;
+    }
+    .cancel {
+      border: 2px solid rgba(0, 40, 86, 0.90)!important;
+      height: 50px !important;
+      border-radius: 4px !important;
+      background-color: transparent !important;
+      width: 95% !important;
+      bottom: 0 !important;
+      .button-inner {
+        color: $pf-mobile-line-break!important;
+        font-size: 16px!important;
+        font-family: $pf-montserrat-medium !important;
+        letter-spacing: 1px!important;
+        line-height: 19px!important;
+      }
+    }
+    .apply-filter {
+      height: 50px!important;
+      border-radius: 4px !important;
+      background: $pf-mobile-line-break!important;
+      margin-top: 4px!important;
+      margin-left: 12px !important;
+      width: 95% !important;
+      bottom: 0 !important;
+      .button-inner {
+        font-size: 16px;
+        color: $pf-mobile-white;
+        letter-spacing: 1px;
+        font-family: $pf-montserrat-medium;
+        line-height: 35px;
+      }
+    }
+  }
+  .modal-wrapper {
+    width: 88vw !important;
+    height: 45vh !important;
+    border-radius: 0;
+    margin-top: 65px;
+    button {
+      position: relative !important;
+    }
+    ion-toggle {
+      button {
+        background-color: transparent !important;
+      }
+    }
+  }
+}
+// @media (device-height : 568px) 
+//    and (device-width : 320px) 
+//    and (-webkit-min-device-pixel-ratio: 2)
+// {
+//   .modal-wrapper {
+//     height: 50vh !important;
+//   }
+// }
+
+// iphone 5
+@media screen and (device-height: 568px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+    // css here
+    .atm-modal-wrapper {
+    .modal-wrapper {
+    height: 52vh !important;
+  }
+  .grid {
+    position: fixed;
+    overflow: hidden;
+  }
+  filter-location .apply-filter {
+    margin-left: 0px !important;
+    .button-inner {
+      font-size: 15px !important;
+    }
+  }
+    }
+}
+
+// iphone 7
+
+@media only screen
+and (min-device-width : 375px)
+and (max-device-width : 667px)
+and (orientation : portrait) { 
+  .atm-modal-wrapper {
+    .modal-wrapper {
+    height: 52vh !important;
+  }
+  .grid {
+    position: fixed;
+    overflow: hidden;
+  }
+  filter-location .apply-filter {
+    margin-left: 0px !important;
+    .button-inner {
+      font-size: 15px !important;
+    }
+  }
+    }
+ }

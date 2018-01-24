@@ -1,0 +1,217 @@
+page-update-mailing-address {
+  ion-toggle{
+    padding-top: 5px !important;
+  }
+//
+// //   // form {
+// //   //   padding: 0 16px;
+// //
+// //   //   ion-item {
+// //   //     &.item {
+// //   //       padding-left: 0;
+// //   //     }
+// //
+// //   //     &.item-input-disabled {
+// //   //       background-color: transparent;
+// //   //     }
+// //   //   }
+// //   // }
+// //
+// // // .select {
+// // //   background: $pf-mobile-white;
+// // // }
+// //
+// // // .toolbar-title-md {
+// // //   // padding: 0 12px;
+// // //   font-size: 1.6rem !important;
+// // //   font-weight: 500;
+// // //   color: #424242;
+// // // }
+// //
+// // // .update-mailing-address-state-field {
+// // //   margin-right: 16px;
+// //
+// // //   &[name='mailingState'],
+// // //   &[name='physicalState'] {
+// // //     height: 46px;
+// // //   }
+// // // }
+// //
+// // .validation-failed {
+// //   font-family: $pf-montserrat-regular!important;
+// //   font-size: 1.2rem;
+// //   color: #DA0003;
+// // }
+// //
+// // .scroll-content {
+// //   background: $pf-mobile-light-grey !important;
+// //   // padding: 5px 10px 16px !important;
+// // }
+// //
+// // // ion-header {
+// // //   .toolbar-background-md {
+// // //     background-color: $pf-mobile-dark-blue;
+// // //     letter-spacing: 0.2rem;
+// // //   }
+// //
+// //   // ion-navbar {
+// //   //   button.back-button-md {
+// //   //     margin-left: 0;
+// //   //     padding-left: 0;
+// //
+// //   //     .ion-md-arrow-back:before {
+// //   //       content: "\f2c0";
+// //   //       font-family: Ionicons;
+// //   //       font-size: 20px;
+// //   //       color: $pf-mobile-white;
+// //   //       letter-spacing: 0;
+// //   //       font-weight: 600;
+// //   //     }
+// //   //   }
+// //   // }
+// // // }
+// //
+// // // .content-md {
+// // //   color: rgba(51, 51, 51, 0.72);
+// // // }
+// //
+// // // ion-col {
+// // //   &.col {
+// // //     padding: 0;
+// // //   }
+// //
+// // //   .over-ride-icon {
+// // //     position: relative;
+// //
+// // //     ion-icon[ios="ios-arrow-down"] {
+// // //       position: absolute;
+// // //       right: 32px;
+// // //       top: 50%;
+// // //       transform: translateY(-50%);
+// // //       color:$pf-mobile-light-blue;
+// // //     }
+// // //   }
+// //
+// // //   ion-select {
+// // //     max-width: none;
+// //
+// // //     .select-icon {
+// // //       display: none;
+// // //     }
+// // //   }
+// //
+// // //   .select-text {
+// // //     font-family: $pf-montserrat-regular;
+// // //     text-transform: uppercase;
+// // //     background: $pf-mobile-white;
+// // //     font-size: 18px;
+// // //     color: $pf-mobile-dark-grey;
+// // //     letter-spacing: 0.5px;
+// // //   }
+// //
+// // //   [ion-button] {
+// // //     pointer-events: none!important;
+// // //   }
+// // // }
+// //
+// // // ion-label {
+// // //   text-transform: uppercase;
+// // //   margin-top: 10px !important;
+// // //   margin-bottom: 2px !important;
+// // //   font-size: 12px;
+// // //   color: $pf-mobile-dark-blue;
+// // //   letter-spacing: 0;
+// // //   line-height: 24px;
+// // //   font-family: $pf-montserrat-regular;
+// // // }
+// //
+// // // .text-input {
+// // //   font-family: $pf-montserrat-regular;
+// // //   margin: 13px 8px;
+// // // }
+// //
+// // .POBox-wrap {
+// //   align-self: center;
+// // }
+// //
+// // .POBox {
+// //   font-size: 14px;
+// //   color: $pf-mobile-dark-blue;
+// //   font-family: $pf-montserrat-regular;
+// // }
+// //
+// // ._title {
+// //   font-weight: 700;
+// //   text-transform: uppercase;
+// //   font-size: 16px;
+// //   color: $pf-mobile-dark-blue;
+// //   letter-spacing: 1px;
+// //   padding-left: 5px;
+// //   padding-top: 0;
+// //   margin-top: 14px;
+// //   margin-bottom: 5px;
+// // }
+// //
+// // // .toggle-md {
+// // //   padding-right: 0;
+// //
+// // //   &.toggle-checked {
+// // //     .toggle-icon {
+// // //       background-color: $pf-mobile-light-blue;
+// // //     }
+// //
+// // //     .toggle-inner {
+// // //       background-color: $pf-mobile-white !important;
+// // //       border: 1px solid $pf-mobile-light-blue;
+// // //     }
+// // //   }
+// // // }
+// //
+// // .submitBtn {
+// //   text-align: center;
+// //   margin-top: 16px;
+// //
+// // //   button {
+// // //     padding: 25px 35px;
+// // //     font-weight: 500;
+// // //     background: $pf-mobile-dark-blue;
+// // //     border-radius: 4px;
+// // //     font-size: 16px;
+// // //     color: $pf-mobile-white;
+// // //     letter-spacing: 1px;
+// // //     line-height: 35px;
+// // //   }
+// // }
+// //
+// // // .select-md .select-icon .select-icon-inner {
+// // //   left: 5px;
+// // //   top: 50%;
+// // //   margin-top: -3px;
+// // //   position: absolute;
+// // //   width: 0;
+// // //   height: 0;
+// // //   border-top: 5px solid;
+// // //   border-right: 5px solid transparent;
+// // //   border-left: 5px solid transparent;
+// // //   color: $pf-mobile-light-blue;
+// // //   pointer-events: none;
+// // // }
+// //
+// // // .select-ios .select-icon .select-icon-inner {
+// // //   left: 5px;
+// // //   top: 50%;
+// // //   margin-top: -3px;
+// // //   position: absolute;
+// // //   width: 0;
+// // //   height: 0;
+// // //   border-top: 5px solid;
+// // //   border-right: 5px solid transparent;
+// // //   border-left: 5px solid transparent;
+// // //   color: $pf-mobile-light-blue;
+// // //   pointer-events: none;
+// // // }
+// //
+// // // .select-md {
+// // //   background: $pf-mobile-white;
+// // // }
+}

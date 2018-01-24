@@ -1,0 +1,27 @@
+  <ion-row class="common-header">
+      <button ion-button class="nav-icon" *ngIf="leftIcon=='settings'">
+          <ion-icon *ngIf="this.show" ios="ios-close" md="ios-close" class="header-icon"></ion-icon>
+          <ion-icon *ngIf="!this.show" menuToggle ios="md-menu" md="md-menu" ></ion-icon>
+      </button>  
+      <button *ngIf="leftIcon=='unlock'" class="nav-icon" tappable (click)="returnToLogin()">
+          <ion-icon ios="md-close" md="md-close"></ion-icon>
+      </button>
+      <button navPop tappable *ngIf="leftIcon=='terms'" class="backButton" (click)="backToLogin()">
+          <ion-icon ios="md-close" md="md-close"></ion-icon>
+      </button>   
+      <button *ngIf="leftIcon=='patternLogin'" tappable (click)="popView()" class="backButton">
+          <ion-icon ios="ios-arrow-back" md="ios-arrow-back"></ion-icon>
+          <ion-icon *ngIf="isPatternEnabled" ios="ios-close" md="ios-close"></ion-icon>
+      </button>
+      <button *ngIf="leftIcon=='fingerprint-options'" ion-button tappable (click)="dismissView()" class="nav-icon"><ion-icon ios="md-close" md="md-close"></ion-icon></button>
+      <button ion-button  *ngIf="leftIcon=='trash'" class="nav-icon"><ion-icon ios="md-trash" md="md-trash"></ion-icon></button>
+      <button ion-button  *ngIf="leftIcon=='toggleMenu'" class="nav-icon"><ion-icon menuToggle ios="md-menu" md="md-menu"></ion-icon></button>
+      <button ion-button *ngIf="leftIcon=='cross'" navPop class="nav-icon"><ion-icon ios="md-close" md="md-close"></ion-icon></button>
+      <button ion-button *ngIf="leftIcon=='back'" navPop class="nav-icon"><ion-icon ios="ios-arrow-back" md="ios-arrow-back"></ion-icon></button>
+      <ion-title><ng-content select="pf-header-title"></ng-content></ion-title>
+      <button ion-button *ngIf="rightIcon=='mail'"><ion-icon ios="ios-mail" md="ios-mail" icon-right></ion-icon></button>
+      <button ion-button *ngIf="rightIcon=='pattern-login-inbox'" tappable (click)='goToInbox()'><ion-icon ios="ios-mail" md="ios-mail" icon-right></ion-icon></button>
+      <button ion-button *ngIf="rightIcon=='save'" text-uppercase>save</button>
+      <button ion-button *ngIf="rightIcon=='share'"><ion-icon ios="md-share" md="md-share"></ion-icon></button>
+      <button ion-button *ngIf="rightIcon=='edit'" text-uppercase>EDIT</button>
+    </ion-row>

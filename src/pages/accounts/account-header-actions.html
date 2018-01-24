@@ -1,0 +1,51 @@
+<ion-grid>
+  <ion-row *ngIf="actionsParams.payload.parentAcctType === 'CHECKING_SAVING'">
+    <ion-col col-4 text-center>
+      <div class="buttonWrap">
+        <button>
+          <p class="transfer" (click)="goToTransfers()">Transfer Funds</p>
+        </button>
+      </div>
+    </ion-col>
+    <ion-col col-4 text-center>
+      <div class="buttonWrap">
+        <button>
+          <p class="mobile-deposit" (click)="goToDeposits()">Deposit</p>
+        </button>
+      </div>
+    </ion-col>
+    <ion-col col-4 text-center>
+      <div class="buttonWrap">
+        <button>
+          <p class="payment" (click)="goToPayments()">Make Payment</p>
+        </button>
+      </div>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col col-12 class="accountsText">
+      <p><!--Balances may reflect transactions that have not yet posted to your account.-->
+        {{"account.balance.note" | aemsync : ["account"] | async}}
+      </p>
+    </ion-col>
+  </ion-row>
+  <ng-container *ngIf="actionsParams.payload.parentAcctType === 'CREDITCARD'; else elseBlock">
+    <ion-row>
+      <ion-col col-12>
+        <div text-center >
+          <button *ngIf="actionsParams.payload.cardActivated" ion-button class="cta-button" text-center (click)="goToPayments()">MAKE PAYMENT</button>
+          <button *ngIf="!actionsParams.payload.cardActivated " ion-button class="cta-button" text-center (click)="gotToActivateCard()">ACTIVATE CARD</button>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ng-container>
+  <ng-template #elseBlock>
+    <ion-row *ngIf="actionsParams.payload.parentAcctType !== 'CERTIFICATE' && actionsParams.payload.parentAcctType !==  'CHECKING_SAVING' && actionsParams.payload.parentAcctType !==  'IRA'">
+      <ion-col col-12>
+        <div class="pull-top-xl" text-center>
+          <button ion-button class="cta-button" text-center (click)="goToPayments()">MAKE PAYMENT</button>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ng-template>
+</ion-grid>

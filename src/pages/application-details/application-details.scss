@@ -1,0 +1,190 @@
+//Need this css just for this page
+.list-md .item-block:last-child .item-inner,
+.list-ios > .item-block:last-child
+{
+    border-bottom:0 !important;
+}
+
+// page-application-details {
+//   .scroll-content {
+//     background: $pf-mobile-light-grey;
+//     font-family: $pf-montserrat-regular;
+//     padding: 0 !important;
+//   }
+//   /* product header styles */
+//   .sub-page-header-title {
+//     .toolbar-title {
+//       color: $pf-mobile-white;
+//       // font-family: $pf-montserrat-semi-bold;
+//       font-size: 16px;
+//       letter-spacing: 2px;
+//       padding-left: 0;
+//       text-transform: uppercase;
+
+//       &.title-ios {
+//         padding: 0 !important;
+
+//         .toolbar-title-ios {
+//           text-align: left!important;
+//         }
+//       }
+//     }
+//   }
+
+//   ion-header {
+//     .toolbar-background {
+//       background-color: $pf-mobile-dark-blue;
+//       letter-spacing: 0.2rem;
+//     }
+//   }
+
+//   .pageTitle {
+//     height: 91px;
+//     top: initial;
+//     background: -webkit-gradient(linear, left top, left bottom, from(#0F2D52), to(#2AA1E1));
+//     background: linear-gradient(180deg, #0F2D52 0%, #2AA1E1 100%);
+//     color: $pf-mobile-white;
+//     border-top: 1px solid #2BA1E1;
+//     text-transform: capitalize;
+//     overflow: hidden;
+
+//     p {
+//       font-family: $pf-montserrat-light;
+//       margin-bottom: 5px;
+//       font-size: 16px;
+//       letter-spacing: 0;
+//     }
+
+//     h2 {
+//       margin: 10px 0 25px;
+//       font-family: $pf-montserrat-medium;
+//       font-weight: normal;
+//       font-size: 24px;
+//       color: #FFFFFF;
+//       letter-spacing: 0.55px;
+//       text-transform: uppercase;
+//     }
+//   }
+
+//   ion-label {
+//     display: flex;
+//     justify-content: space-between;
+//   }
+
+//   .dividerHeading {
+//     &.item-divider {
+//       background-color: $pf-mobile-light-grey;
+//       padding: 15px 6px 0 16px;
+//     }
+
+//     .headingTitle {
+//       font-family: $pf-montserrat-semi-bold;
+//       text-transform: uppercase;
+//       display: inline-block;
+//       padding-bottom: 4px;
+//       font-size: 14px;
+//       color: #59606E;
+//       letter-spacing: 2px;
+//     }
+
+//     .app-date {
+//       font-family: $pf-montserrat-regular;
+//       font-size: 1.2rem;
+//       color: $pf-mobile-mid-grey;
+
+//       span {
+//         font-family: $pf-montserrat-light;
+//         font-size: 12px;
+//         color: #777777;
+//         letter-spacing: 0;
+//         padding-right: 3px;
+//         text-transform: capitalize;
+//       }
+//     }
+//   }
+
+//   ion-grid {
+//     ion-row {
+//       ion-col {
+//         ol {
+//           padding-left: 2.6rem;
+
+//           li {
+//             padding-left: 1rem;
+//           }
+//         }
+//       }
+//     }
+//   }
+
+//   .list-item {
+//     padding: 0;
+//     background-color: transparent;
+
+//     .item-inner {
+//       border-bottom-color: $pf-mobile-line-break-light !important;
+//     }
+
+//     ion-label {
+//       margin: 0;
+
+//       ion-col {
+//         overflow: hidden;
+//         text-overflow: ellipsis;
+
+//         &:first-child {
+//           font-family: $pf-montserrat-light;
+//           padding-left: 15px;
+//           // font-size: 16px;
+//           color: #282828;
+//           letter-spacing: 0;
+//         }
+
+//         p:first-child {
+//           color: $pf-mobile-mid-grey;
+//           font-size: 1.6rem;
+//         }
+
+//         &:last-child {
+//           p {
+//             font-size: 16px;
+//             color: #282828;
+//             letter-spacing: 0.24px;
+//             font-family: $pf-montserrat-regular;
+//           }
+//         }
+//       }
+//     }
+//   }
+
+//   .app-note {
+//     font-family: $pf-montserrat-regular;
+//     padding: 10px 15px;
+//     font-size: 13px;
+//     color: #282828;
+//     letter-spacing: 0;
+//   }
+
+//   li {
+//     font-family: $pf-montserrat-light;
+//     font-size: 16px;
+//     color: #282828;
+//     letter-spacing: 0;
+//   }
+
+//   .item-name {
+//     display: inline-flex;
+//   }
+//   /* no active appliaction css*/
+//   .no-active-appliaction {
+//     color: $pf-mobile-mid-grey;
+//     padding: 16px;
+//     display: none;
+//   }
+
+//   accounts-footer {
+//     position: absolute;
+//     left: 1rem;
+//     bottom: 1rem;
+//   }
+// }

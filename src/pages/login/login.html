@@ -1,0 +1,129 @@
+<!--
+    Generated template for the LoginPage page.
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+  @Author: Ramesh Mavuluri
+-->
+<ion-header class="pf-mobile-header-login">
+  <ion-row>
+    <ion-title>
+      <img class="title" src="assets/img/PenFedLogo.svg" />
+    </ion-title>
+  </ion-row>
+  <ion-label *ngIf="!networkConnection" class="networkBanner">{{connectionType}}</ion-label>
+</ion-header>
+
+<ion-content class="login-page {{api.backgroundImg}} flex-container" hide-back-button="true" no-bounce padding>
+  <ion-grid class="noPadding full-height vertical-align" no-padding>
+    <ion-row class="test">
+      <ion-col col-sm-6 offset-sm-3 class="greetString">
+        <span *ngIf="!welcomeMemberFlag">{{greetString}}{{greetingexcla}}</span>
+        <span *ngIf="welcomeMemberFlag">{{greetString}}{{greetingcomma}}</span>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-sm-6 offset-sm-3 class="greetString">
+        <span *ngIf="welcomeMemberFlag">{{userFirstName}}{{greetingexcla}}</span>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-sm-6 offset-sm-3 class="welcome-to-pen-fed">
+        {{welcomeString}}
+      </ion-col>
+    </ion-row>
+    <ion-row class="gap-top">
+    </ion-row>
+    <div class="login-container">
+      <form [formGroup]="loginForm" name="loginForm">
+        <ion-row>
+          <ion-col>
+            <ion-list no-lines>
+              <ion-item [ngClass]="(readonly)?'grey-user':'member-item'">
+                <ion-input type="text" placeholder="Username" [readonly]="readonly" formControlName="userName" name="userName" [(ngModel)]="userName"
+                  minlength="4" maxlength="16" inputMaxLength="16" required></ion-input>
+                <ion-icon ios="ios-person" md="md-person" item-left></ion-icon>
+              </ion-item>
+            </ion-list>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <ion-list no-lines>
+              <ion-item class="pwd-item" [hidden]="!showLoginForm">
+                <ion-input type={{type}} placeholder="Password" clearOnEdit="false" formControlName="password" name="password" minlength="6"
+                  maxlength="16" inputMaxLength="16" (ngModel)="password" required></ion-input>
+                <ion-icon name="lock" item-left></ion-icon>
+                <ion-icon name="show" item-right>
+                  <img *ngIf="!checkStatus &&  loginForm.controls.password.touched && loginForm.controls.password.dirty && loginForm.controls.password.value"
+                    (click)="showPassword()" src="assets/SHOW.png" />
+                </ion-icon>
+                <ion-icon name="hide" item-right>
+                  <img *ngIf="checkStatus" (click)="showPassword()" src="assets/HIDE.png" />
+                </ion-icon>
+              </ion-item>
+            </ion-list>
+          </ion-col>
+        </ion-row>
+        <ion-row class="padding-lr">
+          <ion-col col-5 class="save-username-col" *ngIf="appSettings.isDeviceTouchAvailable && appSettings.isUserTouchEnabled">
+            <ion-row col-12 class="function-bar">
+              <ion-col col-8 class="finger">
+                <span>Fingerprint</span>
+              </ion-col>
+              <ion-col col-4 text-left tappable (click)="loginWithTouchID()">
+                <ion-icon ios="ios-finger-print" md="ios-finger-print"></ion-icon>
+              </ion-col>
+            </ion-row>
+          </ion-col>
+          <ion-col col-7 class="function-bar-row">
+            <ion-row class="function-bar">
+              <ion-col col-8 class="save-username">
+                <span>Save Username</span>
+              </ion-col>
+              <ion-col col-4>
+                <ion-toggle name="saveUserName" formControlName="saveUserName" [disabled]="appSettings.isDeviceTouchAvailable && appSettings.isUserTouchEnabled" [(ngModel)]="saveUserName"></ion-toggle>
+              </ion-col>
+            </ion-row>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <div *ngIf="!showLoginForm">
+              <button ion-button block class="cta-button login-button light-blue" tappable [disabled]="!loginForm.controls.userName.valid"
+                (click)="beforeLogin(loginForm)">CONTINUE</button>
+            </div>
+            <div *ngIf="showLoginForm">
+              <button ion-button block class="cta-button login-button light-blue" tappable (click)="login(loginForm)" [disabled]="!loginForm.controls.password.valid">LOG IN</button>
+            </div>
+          </ion-col>
+        </ion-row>
+      </form>
+    </div>
+    <ion-row class="gap-top" *ngIf="welcomeMemberFlag || userTouchedFlag || readonly">
+      <ion-col col-sm-6 offset-sm-3 class="login-as-different-u-col">
+        <span class="login-as-different-u" tappable (click)="differentUserLogin()">Log In As a Different User</span>
+      </ion-col>
+    </ion-row>
+    <ion-row class="gap-top">
+      <ion-col col-sm-6 offset-sm-3 class="login-as-need-help-logging-in-col">
+        <span class="need-help-logging-in" tappable (click)="helpLoggingIn()">Need Help Logging In?</span>
+      </ion-col>
+    </ion-row>
+    <!-- <ion-row class="gap-top">
+        <ion-col><span class="need-help-logging-in" (click)="loginPattern()">Login Pattern</span></ion-col>
+      </ion-row> -->
+
+  </ion-grid>
+  <ion-row class="login-footer">
+    <ion-col col-sm-3 offset-sm-2 class="text-left" class="login-footer-link" tappable (click)="contactPenFed()">
+      <span class="rectangleUnderLink">CONTACT US</span>
+    </ion-col>
+    <ion-col col-sm-3 class="login-footer-linkproducts text-center" tappable (click)="productInformation()">
+      <span class="rectangleUnderLink">PRODUCTS</span>
+    </ion-col>
+    <ion-col col-sm-3 class="text-right" class="login-footer-linklocations" tappable (click)="locationsInformation()">
+      <span class="rectangleUnderLink">LOCATIONS</span>
+    </ion-col>
+  </ion-row>
+  <pf-footer (click)="gotoTermsAndConditions()">Terms &amp; Conditions and Privacy Policy</pf-footer>
+</ion-content>

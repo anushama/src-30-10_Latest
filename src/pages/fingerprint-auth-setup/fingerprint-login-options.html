@@ -1,0 +1,57 @@
+<!--
+  Generated template for the PatternLoginPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<!--<ion-header>
+    <ion-row class="common-header">
+        <button ion-button tappable (click)="dismissView()" class="nav-icon"><ion-icon ios="md-close" md="md-close"></ion-icon></button>
+        <ion-title class="textElipse">Login Options</ion-title>
+    </ion-row>
+</ion-header>-->
+<ion-header>
+  <pf-header leftIcon="fingerprint-options">
+    <pf-header-title>Login Options</pf-header-title>
+  </pf-header>
+</ion-header>
+
+
+
+<ion-content class="dark-blue-bg" padding>
+  <ion-grid no-padding>
+    <ion-row>
+      <ion-col>
+        <!-- <div class="loginOptionsText" [innerHTML]="'fingerprint.create.login.options' | aemsync : ['fingerprint-login'] | async"></div> -->
+        <div class="loginOptionsText">
+          <p>
+            <!--  Add security and convenience with Fingerprint Login or Pattern Login. You can always change your selection in -->{{"fingerprint.create.login.options" | aemsync : ["fingerprint-login"] | async}}
+            <b>{{"fingerprint.create.login.bold.options" | aemsync : ["fingerprint-login"] | async}}<!--Settings.--></b></p>
+        </div>
+      </ion-col>
+    </ion-row>
+
+    <div class="options">
+      <ion-row>
+        <ion-col class="fingerprintLogin" tappable (click)="goToFingerprintLoginPage()">
+          <img src="assets/img/symbols-icons-thumbprint.png" />
+          <!-- <div [innerHTML]="'fingerprint.create.login.options.fingerprintLogin' | aemsync : ['fingerprint-login'] | async"></div> -->
+          <div>USE FINGERPRINT LOGIN</div>
+        </ion-col>
+        <ion-col class="patternLogin" tappable (click)="goToPatternLoginPage()">
+          <img src="assets/img/PatternIcon.png" />
+          <!-- <div [innerHTML]="'fingerprint.create.login.options.patternLogin' | aemsync : ['fingerprint-login'] | async"></div> -->
+          <div>USE PATTERN LOGIN</div>
+        </ion-col>
+      </ion-row>
+    </div>
+
+    <ion-row class="login-options-footer">
+      <ion-col>
+        <!-- <button [innerHTML]="'fingerprint.create.login.options.unameandPwdLogin' | aemsync : ['fingerprint-login'] | async" class="btn-no-thanks" tappable (click)="gotoAccountsPage()"></button> -->
+        <button class="btn-no-thanks" tappable (click)="gotoAccountsPage()"><p>NO THANKS</p></button>
+      </ion-col>
+    </ion-row>
+
+  </ion-grid>
+</ion-content>

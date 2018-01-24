@@ -1,0 +1,90 @@
+<!--
+  Generated template for the PayeeDetailsPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+
+<!-- <ion-header>
+  <ion-row class="common-header">
+    <button navPop class="nav-icon"><ion-icon ios="md-close" md="md-close"></ion-icon></button>
+    <ion-title class="textElipse">STATE FARM INSURANCE<span class="accNoDecor">&nbsp;2224</span></ion-title>
+  </ion-row>
+</ion-header> -->
+
+<ion-header>
+    <ion-row class="common-header">
+        <button navPop class="nav-icon"><ion-icon ios="ios-arrow-back" md="ios-arrow-back"></ion-icon></button>
+        <ion-title class="text-truncate">{{payeeDetails.payeeName}} <span class="text-micro" *ngIf="payeeDetails.payeeAccountNumber !== 'n/a' && payeeDetails.payeeAccountNumber !== '?'">{{payeeDetails.payeeAccountNumber.substr(payeeDetails.payeeAccountNumber.length-4)}}</span></ion-title>
+    </ion-row>
+
+</ion-header>
+
+<ion-content>
+
+    <ion-list>
+        <ion-item-group class="details-info">
+            <ion-item item-left class="text-regular">Account Number
+                <ion-note item-end class="text-light" *ngIf="payeeDetails.payeeAccountNumber !== 'n/a' && payeeDetails.payeeAccountNumber !== '?'">
+                    {{payeeDetails.payeeAccountNumber}}
+                </ion-note>
+            </ion-item>
+            <ion-item item-right class="text-regular">Next Bill Due Date
+                <ion-note item-end class="text-light">
+                    {{payeeDetails.nextCycleDate}}
+                </ion-note>
+            </ion-item>
+        </ion-item-group>
+    </ion-list>
+
+    <ion-row>
+        <button ion-button block class="cta-button long">PAY BILL</button>
+    </ion-row>
+
+    <ion-row>
+        <ion-col col-4 text-center>
+            <div class="buttonWrap">
+                <button><p>EDIT PAYEE</p></button>
+            </div>
+        </ion-col>
+        <ion-col col-4 text-center>
+            <div class="buttonWrap">
+                <button><p>ADD REMINDER</p></button>
+            </div>
+        </ion-col>
+        <ion-col col-4 text-center>
+            <div class="buttonWrap">
+                <button><p>DELETE PAYEE</p></button>
+            </div>
+        </ion-col>
+    </ion-row>
+    <ion-list class="ion-list-viewport">
+        <ion-list-header>
+            PAYMENT HISTORY
+            <div class="as-of-date" float-right><span>As of</span><span>&nbsp;{{currentDate}}</span></div>
+        </ion-list-header>
+        <ion-row *ngIf="noHistoryDataFlag" padding>
+            No payment history is available.
+        </ion-row>
+        <button ion-item class="disable-chevron" *ngFor="let payeeDetailsHistoryResponse of payeeDetailsHistoryResponse; let i=index">
+            <ion-row>
+                <ion-col class="margin-none text-12 text-light" item-left>{{payeeDetailsHistoryResponse.dueDateTime | date: 'MM/dd/yyyy'}}</ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col class="margin-none text-16 text-regular" item-left>{{payeeDetailsHistoryResponse.payeeName | truncate : 20}}<span *ngIf="payeeDetailsHistoryResponse.payeeAccountNumber !== 'n/a' && payeeDetailsHistoryResponse.payeeAccountNumber !== '?'">({{payeeDetailsHistoryResponse.payeeAccountNumber.substr(payeeDetailsHistoryResponse.payeeAccountNumber.length-4)}})</span>
+                </ion-col>
+                <ion-col class="margin-none text-16 text-regular" item-right>${{payeeDetailsHistoryResponse.paymentAmount | formatPrice}}</ion-col>
+            </ion-row>
+        </button>
+    </ion-list>
+</ion-content>
+<!-- <ion-footer>
+    <div class="bottom_bar" (click)='util.displayNCUACert()'>
+        Federally insured by NCUA
+    </div>
+</ion-footer> -->
+<ion-footer>
+    <button class="bottom_bar" fab fab-bottom fab-right fab-fixed (click)='util.displayNCUACert()'>
+    Federally insured by NCUA
+  </button>
+</ion-footer>

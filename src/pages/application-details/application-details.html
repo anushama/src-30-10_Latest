@@ -1,0 +1,153 @@
+<ion-header>
+  <pf-header leftIcon="back">
+    <pf-header-title>{{applicationDetails.productName}}</pf-header-title>
+  </pf-header>
+</ion-header>
+
+
+<ion-content>
+
+    <ion-row class="detail-gradient-bg">
+        <ion-col>
+          <span class="info-label">Application # {{applicationDetails.appNumber}}</span>
+          <h2 class="info">{{applicationDetails.currentStatus}}</h2>
+        </ion-col>
+      </ion-row>
+      
+
+  <!-- <ion-grid> -->
+  <!-- <ion-row>
+      <ion-col>
+        <button (click)="popView()" class="backButton">
+          <ion-icon ios="ios-arrow-back" md="ios-arrow-back"></ion-icon>
+        </button>
+      </ion-col>
+      <ion-col>
+        <ion-title>{{applicationDetails.productName}}</ion-title>
+      </ion-col>
+    </ion-row> -->
+
+  <ion-list>
+
+    <ion-list-header>
+      LOAN DETAILS
+      <div class="as-of-date" float-right><span>As of</span> {{applicationDetails.lastUpdateDate}}</div>
+    </ion-list-header>
+    <ion-item class="no-bg">
+      <ion-row>
+        <ion-col item-left class="text-16 text-light">
+          <span>Application Date</span>
+        </ion-col>
+        <ion-col item-right class="text-16 text-regular">
+          {{applicationDetails.applicationDate}}
+        </ion-col>
+      </ion-row>
+    </ion-item>
+    <ion-item class="no-bg" *ngIf="isLoanAmount">
+      <ion-row>
+        <ion-col item-left class="text-16 text-light">
+          <span>Loan Amount</span>
+        </ion-col>
+        <ion-col item-right class="text-16 text-regular">
+          ${{applicationDetails.creditAmt | formatPrice}}
+        </ion-col>
+      </ion-row>
+    </ion-item>
+    <ion-item class="no-bg" *ngIf="isRate">
+      <ion-row>
+        <ion-col item-left class="text-16 text-light">
+          <span>Rate</span>
+        </ion-col>
+        <ion-col item-right class="text-16 text-regular">
+          {{applicationDetails.rate}}%
+        </ion-col>
+      </ion-row>
+    </ion-item>
+    <ion-item class="no-bg" *ngIf="isTerm">
+      <ion-row>
+        <ion-col item-left class="text-16 text-light">
+          <span>Term</span>
+        </ion-col>
+        <ion-col item-right class="text-16 text-regular">
+          {{applicationDetails.term}} months
+        </ion-col>
+      </ion-row>
+    </ion-item>
+  </ion-list>
+  <ion-row>
+    <ion-col>
+      <p>{{"application-details.note" | aemsync : ["application"] | async}}</p>
+    </ion-col>
+  </ion-row>
+
+
+  <!-- <ion-row>
+            <ion-col>
+                <p text-left>Application Date</p>
+            </ion-col>
+            <ion-col>
+                <p text-right>{{applicationDetails.applicationDate}}</p>
+            </ion-col>
+        </ion-row> -->
+  <!-- <ion-row *ngIf="isLoanAmount">
+            <ion-col>
+                <p text-left>Loan Amount</p>
+            </ion-col>
+            <ion-col>
+                <p text-right>${{applicationDetails.creditAmt | formatPrice}}</p>
+            </ion-col>
+        </ion-row> -->
+  <!-- <ion-row *ngIf="isRate">
+            <ion-col>
+                <p text-left>Rate</p>
+            </ion-col>
+            <ion-col>
+                <p text-right>{{applicationDetails.rate}}%</p>
+            </ion-col>
+        </ion-row>
+        <ion-row *ngIf="isTerm">
+            <ion-col>
+                <p text-left>Term</p>
+            </ion-col>
+            <ion-col>
+                <p text-right>{{applicationDetails.term}} months</p>
+            </ion-col>
+        </ion-row> -->
+  <!-- <ion-row>
+            <ion-col>
+
+                {{"application-details.note" | aemsync : ["application"] | async}}
+                <!--    The rate you receive will be the rate in effect at the time of disbursal. -->
+  <!-- </ion-col>
+        </ion-row> -->
+  <!-- </ion-list> -->
+  <ion-list *ngIf="applicationDetails?.reasonCodes.length>0">
+
+    <ion-list-header>
+      <div class="headingTitle">Comments</div>
+    </ion-list-header>
+    <ion-item class="no-bg">
+      <ol>
+        <li text-wrap *ngFor="let list of applicationDetails.reasonCodes">{{list}}</li>
+      </ol>
+    </ion-item>
+
+  </ion-list>
+  <ion-list *ngIf="applicationDetails.conditions.length > 0">
+
+    <ion-list-header>
+      <div class="headingTitle">conditions</div>
+    </ion-list-header>
+    <ion-item class="no-bg">
+      <ol>
+        <li text-wrap *ngFor="let list of applicationDetails.conditions">{{list}}</li>
+
+      </ol>
+    </ion-item>
+
+  </ion-list>
+  <pf-footer class="footer-legal" (click)='util.displayNCUACert()'>
+      Federally insured by NCUA
+  </pf-footer>
+  <!-- </ion-grid> -->
+</ion-content>

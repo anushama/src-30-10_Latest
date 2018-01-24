@@ -1,0 +1,111 @@
+<ion-header>
+  <pf-header leftIcon="cross">
+    <pf-header-title>EDIT {{fromPage}}</pf-header-title>
+  </pf-header>
+</ion-header>
+<ion-content>
+  <ion-list>
+    <!-- From Item -->
+    <ion-item class="account-item" tappable (click)="showFromAccounts()">
+      <h6 class="h-header">{{fromPage}} FROM</h6>
+      <!-- col-12 -->
+      <ion-row no-padding>
+        <!-- col-4 col-md-auto -->
+        <ion-col no-padding class="account name">{{this.scheduledTransfer.fromAccountName}}</ion-col>
+        <!-- <ion-col no-padding class="account">({{scheduledTransfer.toAccountNumberLast4}})</ion-col> -->
+        <ion-col no-padding text-right class="account amt" *ngIf="scheduledTransfer.fromParentAcctType != 'EXTERNAL'">${{this.scheduledTransfer.fromAcctAvailableBal | formatPrice}}</ion-col>
+      </ion-row>
+      <ion-row no-padding>
+        <ion-col no-padding text-left class="frequency">({{this.scheduledTransfer.fromAccountNumberLast4}})</ion-col>
+        <ion-col no-padding text-right class="frequency paydate" *ngIf="this.scheduledTransfer.fromParentAcctType != 'EXTERNAL' && scheduledTransfer.fromParentAcctType == 'CHECKING_SAVING'; else AvailCreditTemplate">Available Balance</ion-col>
+        <ng-template #availCreditTemplate>
+            <ion-col no-padding text-right class="frequency paydate">Available Credit</ion-col>
+        </ng-template>
+      </ion-row>
+      <ion-icon text-right ios="ios-arrow-forward" md="ios-arrow-forward" class="inline-block"></ion-icon>
+    </ion-item>
+    <!-- To Item -->
+    <ion-item class="account-item" tappable (click)="!this.scheduledTransfer.disableDate ? showToAccounts(): ''" [ngClass]="{'disabled': this.scheduledTransfer.disableDate}">
+      <h6 class="h-header">{{fromPage}} TO</h6>
+      <ion-row no-padding>
+        <!-- col-4 col-md-auto -->
+        <ion-col no-padding class="account name">{{this.scheduledTransfer.toAccountName}}</ion-col>
+        <!-- <ion-col no-padding class="account">({{scheduledTransfer.toAccountNumberLast4}})</ion-col> -->
+        <ion-col no-padding text-right class="account amt" *ngIf="scheduledTransfer.toParentAcctType != 'EXTERNAL'">${{this.scheduledTransfer.toAcctAvailableBal | formatPrice}}</ion-col>
+      </ion-row>
+      <ion-row no-padding>
+        <ion-col no-padding text-left class="frequency">({{this.scheduledTransfer.toAccountNumberLast4}})</ion-col>
+        <ion-col no-padding text-right class="frequency paydate" *ngIf="this.scheduledTransfer.toParentAcctType != 'EXTERNAL'">Available Balance</ion-col>
+      </ion-row>
+      <ion-icon text-right *ngIf="!this.scheduledTransfer.disableDate" ios="ios-arrow-forward" md="ios-arrow-forward" class="inline-block"></ion-icon>
+    </ion-item>
+    <ion-item tappable (click)="openModalPage()" class="amount-date-item">
+      <ion-row no-padding>
+        <ion-col no-padding class="h-header">{{fromPage}} AMOUNT</ion-col>
+        <!-- <ion-col no-padding text-right class="account amt zero" *ngIf="amountFlagVal">$0.00</ion-col> -->
+        <!-- *ngIf="!amountFlagVal" -->
+        <ion-col no-padding text-right class="account amt">${{this.scheduledTransfer.amount | formatPrice}}</ion-col>
+        <!-- arrow arrow-forward -->
+        <ion-icon text-right ios="ios-arrow-forward" md="ios-arrow-forward" class="inline-block"></ion-icon>
+      </ion-row>
+    </ion-item>
+  </ion-list>
+  <ion-row class="date-row">
+    <ion-list col-12>
+      <h6 class="h-header push-bottom-none">{{fromPage}} DATE</h6>
+      <ion-item class="amount-date-item">
+        <ion-row col-12 [ngClass]="{'disabled': this.scheduledTransfer.disableDate}">
+          <!-- myDate -->
+          <!-- <ion-col col-6><span class="date">{{ this.scheduledTransfer.nextPaymentDateDisplay | date: 'MM/dd/yyyy'}}</span></ion-col> -->
+          <!-- <ion-col col-6><span class="date">{{ this.scheduledTransfer.transferDate | date: 'MM/dd/yyyy'}}</span></ion-col> -->
+          <ion-col col-6><span class="date">{{ this.scheduledTransfer.nextPaymentDate | date: 'MM/dd/yyyy'}}</span></ion-col>
+          <ion-col col-6 text-right>
+            <button class="calender-button" [disabled]="calenderButton || this.scheduledTransfer.disableDate"><ion-icon text-right ios="ios-calendar" md="ios-calendar" (click)="showCalendar()"></ion-icon></button>
+          </ion-col>
+        </ion-row>
+      </ion-item>
+    </ion-list>
+  </ion-row>
+  <ion-row class="segment-row">
+    <!-- payTime -->
+    <ion-segment [(ngModel)]="this.scheduledTransfer.frequency" tappable (ionChange)="segmentChanged()" color="light-blue" class="segment-background">
+      <ion-segment-button value="ONETIME" class="segbutton-background">
+        One-Time
+      </ion-segment-button>
+      <ion-segment-button value="MONTHLY" [disabled]="monthButton" class="segbutton-background" [ngClass]="{'monthly-disabled': monthButton}">
+        Monthly
+      </ion-segment-button>
+    </ion-segment>
+  </ion-row>
+  <!-- payTime -->
+  <ion-row *ngIf="this.scheduledTransfer.frequency == 'MONTHLY'">
+    <div class="choose-times">
+      <div class="h-header">
+        HOW MANY {{fromPage}}S?
+      </div>
+      <div class="over-ride-icon">
+        <ion-icon ios="ios-arrow-down" md="ios-arrow-down"></ion-icon>
+        <ion-select [selectOptions]="selectStateOptions" [(ngModel)]="this.scheduledTransfer.numTransfers" class="select-option"
+          placeholder="Select">
+          <ion-option *ngFor="let time of times" [value]="time.value">{{time.name}}</ion-option>
+        </ion-select>
+      </div>
+    </div>
+  </ion-row>
+  <div class="disclaimer-row" *ngIf="this.scheduledTransfer.fromAcctType == 'RSV' || this.scheduledTransfer.fromAcctType == 'MMSA'">
+    Please note that the debit account selected is limited to 6 transactions (check, transfer, or cash withdrawal) per statement
+    cycle.
+  </div>
+  <!-- <div class="description" *ngIf="fromAcctSelected != null ? fromAcctSelected.parentAcctType != 'CREDITCARD' : false">
+    {{"transfer.money.note" | aemsync : ["move-money"] | async}}
+  </div> -->
+  <!-- <div class="control-button"> -->
+  <ion-row class="control-button">
+    <!-- [disabled]="amountFlagVal || !segmentButtonStatus" -->
+    <button ion-button class="cta-button red" tappable (click)="showConfirmation()">DELETE TRANSFER</button>
+    <button ion-button class="cta-button" [disabled] = "!this.scheduledTransfer.numTransfers" tappable (click)="validateAndContinue()">SAVE</button>
+  </ion-row>
+  <!-- </div> -->
+  <!-- flagFrom || flagTo ||  -->
+  <p class="insured" tappable (click)='util.displayNCUACert()'>Federally insured by NCUA</p>
+</ion-content>

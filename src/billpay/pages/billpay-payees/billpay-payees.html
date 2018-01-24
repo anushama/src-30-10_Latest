@@ -1,0 +1,47 @@
+<ion-content>
+    <ion-grid class="full-height" no-padding>
+        <ion-list>
+            <!-- <ion-list-header class="pf-mobile-header-sort" item-right>
+                <button ion-button class="sort" (click)="openSortOptions()">SORT</button>
+              </ion-list-header> -->
+            <ion-list-header text-right class="pf-mobile-header-sort pad-right-basic" (click)="openSortOptions()">
+                SORT
+            </ion-list-header>
+
+            <ion-item-sliding #item *ngFor="let payee of payeesResponse | orderBy:order:ascending; let i=index">
+                <!-- <ion-item (click)="showPayeeDetails(payee)"> -->
+                <button ion-item (click)="showPayeeDetails(payee)">
+                      <ion-row>
+                          <ion-col text-left>
+                            <ion-avatar item-start>
+                              <img src="assets/RecurringPayment_Icon.svg">
+                            </ion-avatar>
+                          </ion-col>
+                          <ion-col col-11>
+                              <ion-row>
+                                <ion-col class="margin-none text-16 text-regular" item-left>{{payee.payeeName | truncate : 20}}</ion-col>
+                              </ion-row>
+                              <ion-row>
+                                <ion-col class="margin-none text-12 text-light" item-left>{{payee.payeeNickName | truncate : 20}}<span *ngIf="payee.payeeAccountNumber !== 'n/a' && payee.payeeAccountNumber !== '?' && payee.payeeAccountNumber !== 'N/A'">({{payee.payeeAccountNumber.substr(payee.payeeAccountNumber.length-4)}})</span></ion-col>
+                              </ion-row>
+                        </ion-col>
+                    </ion-row>
+                  </button>
+                <!-- </ion-item> -->
+                <ion-item-options side="right">
+                    <button ion-button (click)="archive(item)"><ion-icon name="logo-usd"></ion-icon>
+              Pay  </button>
+                    <button class="editing" ion-button (click)="archive(item)"><ion-icon name="create"></ion-icon>
+              Edit  </button>
+                    <button class="trashing" ion-button (click)="archive(item)"><ion-icon name="trash"></ion-icon>
+              Delete  </button>
+                </ion-item-options>
+            </ion-item-sliding>
+
+
+        </ion-list>
+        <ion-row>
+            <button ion-button block class="cta-button" (click)="addPayee()">ADD PAYEE </button>
+        </ion-row>
+    </ion-grid>
+</ion-content>

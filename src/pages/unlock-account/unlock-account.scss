@@ -1,0 +1,124 @@
+// page-unlock-account {
+//   .scroll-content {
+//     background-color: $pf-mobile-light-grey;
+//     margin-top: 48px !important;
+//   }
+
+//   .unlock-description {
+//     font-family: $pf-montserrat-regular;
+//     font-size: 1.5rem;
+//     color: $pf-mobile-dark-blue;
+//     margin: 2.6rem 1.6rem 1rem;
+//   }
+//   //set help icon size variable
+//   $help-icon-size: 2rem;
+
+//   .help-icon.icon.ion-md-help-circle {
+//     color: rgba(26, 161, 218, 1);
+//     width: $help-icon-size;
+//     height: $help-icon-size;
+//     font-size: $help-icon-size;
+//   }
+
+//   .unlock-list.item.item-block.item-label-stacked {
+//     background-color: $pf-mobile-light-grey;
+
+//     & > .item-inner {
+//       padding-right: 0;
+//     }
+//   }
+
+//   .label {
+//     font-size: 1.2rem;
+//     font-family: $pf-montserrat-regular !important;
+//     margin-bottom: 0.4rem;
+
+//     &.label-md[floating],
+//     &.label-md[stacked] {
+//       margin-bottom: 16px;
+//     }
+//   }
+
+//   .label-row {
+//     margin: 0 16px;
+//   }
+
+//   .input {
+//     margin-top: -1.2rem;
+//     height: 5rem;
+//     background-color: $pf-mobile-white;
+//   }
+
+//   .select-text,
+//   .text-input {
+//     height: 100%;
+//     font-size: 1.8rem !important;
+//     font-family: $pf-montserrat-regular !important;
+//     margin: 0.1rem 0 0 1.5rem;
+//   }
+
+//   .col-1 {
+//     margin-bottom: 1rem;
+//   }
+
+//   .col-2 {
+//     margin-bottom: 4rem;
+//   }
+
+//   .rsa-question {
+//     font-family: $pf-montserrat-semi-bold;
+//     font-size: 1.6rem;
+//     margin: 0 1.6rem;
+//     color: $pf-mobile-dark-blue;
+//   }
+//   //
+//   // .password-match {
+//   //   font-family: $pf-montserrat-regular !important;
+//   //   font-size: 1.2rem;
+//   //   margin-left: 2rem;
+//   //   color: red;
+//   // }
+//   .control-button {
+//     text-align: center;
+//   }
+
+//   .unlock-button {
+//     margin-top: 5rem;
+//     width: 22.5rem;
+//     height: 5rem;
+//     border: 2px solid $pf-mobile-dark-blue;
+
+//     .button-inner {
+//       font-family: $pf-montserrat-medium;
+//       letter-spacing: 1px;
+//       color: $pf-mobile-white;
+//     }
+//   }
+
+//   .disable-hover.button.button-ios.button-default.button-default-ios {
+//     background-color: $pf-mobile-dark-blue;
+//     margin-top: 30px;
+//     height: 4.8rem;
+//   }
+
+//   .footer-description {
+//     font-family: $pf-montserrat-regular;
+//     font-size: 1.3rem;
+//     color: $pf-mobile-dark-blue;
+//     margin: 2.3rem 1.6rem;
+//   }
+
+//   .item.item-block {
+//     .item-inner {
+//       border-bottom: 0;
+//     }
+//   }
+
+//   ion-select {
+//     max-width: 100%;
+//   }
+
+//   ion-select.pf-mobile-form-field {
+//     background-color: $pf-mobile-white;
+//   }
+// }

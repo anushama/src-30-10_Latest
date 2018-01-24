@@ -1,0 +1,45 @@
+page-find-realty-agent {
+    .agentToggle {
+      margin-top: 10px !important;
+
+      .buying,
+      .selling {
+        position: relative;
+        display: inline;
+      
+
+        input {
+          position: absolute;
+          width: 112px;
+          height: 30px;
+          opacity: 0;
+        }
+
+        span {
+          font-family: $pf-montserrat-regular;
+          padding: 3px 15px;
+          font-size: 16px;
+          color: #282828;
+          letter-spacing: 0;
+          border: 2px solid #00A0DD;
+          border-radius: 100px;
+          text-transform: capitalize;
+          width: 112px;
+          height: 30px;
+          text-align: center;
+        }
+
+        input[type=checkbox]:checked+span {
+          background: #00A0DD;
+          color: white;
+        }
+      }
+    }
+
+  .footer-img {
+    align-self: center !important;
+    width: 66px !important;
+    height: 60px !important;
+    margin-bottom: 55px !important;
+  }
+}

@@ -1,0 +1,27 @@
+.footer-content{
+    margin-left: 1.5rem;
+    align-items: center;
+    & a {
+        color: white;
+        font-size: 12px;
+    }
+    bottom: 10px;
+}
+
+.ios-footer {
+    position: absolute;
+}
+
+.android-footer {
+    position: relative;
+}
+
+.footer-content-legal {
+    margin-left: 2.1rem;
+    color: purple;
+    align-items: center;
+    bottom: 10px;
+    & a{
+        margin-left: 1.5rem;
+    }
+}

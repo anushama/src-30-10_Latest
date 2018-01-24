@@ -1,0 +1,30 @@
+<ion-content>
+    <ion-grid class="full-height" no-padding>
+
+        <ion-list>
+            <!-- <ion-list-header class="pf-mobile-header-sort" item-right>
+                <button ion-button class="sort" (click)="openSortOptions()">SORT</button>
+            </ion-list-header> -->
+            <ion-list-header text-right class="pf-mobile-header-sort pad-right-basic" (click)="openSortOptions()">
+                SORT
+            </ion-list-header>
+            <ion-row *ngIf="noHistoryDataFlag" padding>
+                No payment history is available.
+            </ion-row>
+            <button ion-item *ngFor="let historyBillResponse of historyBillsResponse; let i=index">
+                  <ion-row>
+                    <ion-col class="margin-none text-12 text-light" item-left>{{historyBillResponse.dueDateTime | date: 'MM/dd/yyyy'}}</ion-col>
+                    <ion-col class="margin-none text-12 text-light" item-right>{{historyBillResponse.paymentStatus}}</ion-col>
+                  </ion-row>
+                  <ion-row>
+                    <ion-col class="margin-none text-16 text-regular" item-left >{{historyBillResponse.payeeName | truncate : 20}}</ion-col>
+                    <ion-col class="margin-none text-16 text-regular"  item-right>{{historyBillResponse.paymentAmount | currency:'USD':true:'2.2-2'}}</ion-col>
+                  </ion-row>
+                  <ion-row>
+                    <ion-col class="margin-none text-12 text-light" item-left>{{historyBillResponse.payeeNickName | truncate : 20}}&nbsp;<span *ngIf="historyBillResponse.payeeAccountNumber !== 'n/a' && historyBillResponse.payeeAccountNumber !== '?'">({{historyBillResponse.payeeAccountNumber.substr(historyBillResponse.payeeAccountNumber.length-4)}})</span></ion-col>
+                  </ion-row>
+            </button>
+        </ion-list>
+
+    </ion-grid>
+</ion-content>

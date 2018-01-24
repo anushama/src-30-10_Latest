@@ -1,0 +1,141 @@
+<ion-header>
+    <ion-row class="common-header">
+        <button ion-button navPop class="nav-icon">
+            <ion-icon ios="ios-arrow-back" md="ios-arrow-back"></ion-icon>
+        </button>
+        <ion-title class="text-truncate">REVIEW PAYMENT</ion-title>
+    </ion-row>
+</ion-header>
+
+<ion-content>
+    <ion-list>
+        <ion-item detail-none no-lines>
+            <ion-row>
+                <ion-col item-left class="account-date dark-blue text-12">
+                    <span>PAYMENT FROM</span>
+                </ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col col-8 class="account-name text-truncate text-18">
+                    <span>Complete Access Checking</span>
+                </ion-col>
+                <ion-col col-4 class="account-amount text-18 text-right">
+                    <span>$9,350.00</span>
+                </ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col class="account-number text-12">
+                    <span>(9969)</span>
+                </ion-col>
+                <ion-col class="account-number text-12 text-right">
+                    <span>Available Balance</span>
+                </ion-col>
+            </ion-row>
+        </ion-item>
+
+        <ion-item detail-none no-lines class="adj-down-item">
+            <ion-row>
+                <ion-col item-left class="account-date dark-blue text-12">
+                    <span>PAYMENT TO</span>
+                </ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col class="account-name text-18">
+                    <span>State Farms Insurance</span>
+                </ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col class="text-12">
+                    <span>(9969)</span>
+                </ion-col>
+            </ion-row>
+        </ion-item >
+
+        <ion-item detail-none no-lines>
+            <ion-row>
+                <ion-col item-left class="account-date text-12 dark-blue adj-down">
+                    <span>PAYMENT AMOUNT</span>
+                </ion-col>
+                <ion-col item-right class="account-amount text-18">
+                    <span item-right>$325.00</span>
+                </ion-col>
+            </ion-row>
+        </ion-item >
+
+        <ion-item detail-none no-lines>
+            <ion-row>
+                <ion-col item-left class="account-date text-12 dark-blue adj-down">
+                    <span>PAYMENT DATE</span>
+                </ion-col>
+                <ion-col item-right class="account-amount text-18">
+                    <span class="date">{{'07/22/2017' | date: 'MM/dd/yyyy'}}</span>
+                </ion-col>
+            </ion-row>
+        </ion-item >
+
+        <ion-item detail-none no-lines>
+            <ion-row>
+                <ion-col item-left class="account-date text-12 dark-blue adj-down">
+                    <span>FREQUENCY</span>
+                </ion-col>
+                <ion-col item-right class="account-amount text-18">
+                    <span item-right>One-Time</span>
+                </ion-col>
+            </ion-row>
+        </ion-item >
+
+        <ion-item detail-none no-lines>
+            <ion-row>
+                <ion-col item-left class="account-date text-12 dark-blue">
+                    <span>NUMBER OF PAYMENTS</span>
+                </ion-col>
+                <ion-col item-right class="account-amount text-18">
+                    <span>3</span>
+                </ion-col>
+            </ion-row>
+        </ion-item >
+
+        <ion-item detail-none no-lines>
+            <ion-row>
+                <ion-col class="account-date text-12 dark-blue">
+                    <span>MEMO</span>
+                </ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col class="account-name text-18">
+                        <span class="text-truncate">Insurance Payment</span>
+                    </ion-col>
+                </ion-row>
+        </ion-item >
+
+        <ion-item detail-none no-lines style="margin-top: 10px;">
+            <ion-row>
+                <ion-col class="account-date text-12 dark-blue">
+                    <span>NOTE</span>
+                </ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col class="account-name text-18">
+                        <span class="text-truncate">This is a note</span>
+                    </ion-col>
+                </ion-row>
+        </ion-item >
+    </ion-list>
+
+
+    <ion-row>
+        <button class="cta-button green" ion-button block (click)="makePayment()">MAKE PAYMENT</button>
+    </ion-row>
+            
+</ion-content>
+
+<ion-footer no-border>
+    <ion-row>
+        <ion-col col-12 class="legal">
+            <p class="insured" (click)='displayNCUACert()'>Federally insured by NCUA</p>
+        </ion-col>
+    </ion-row>
+</ion-footer>
+    
+
+

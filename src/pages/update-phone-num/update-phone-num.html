@@ -1,0 +1,56 @@
+<ion-header>
+  <pf-header leftIcon="cross">
+    <pf-header-title class="textElipse">UPDATE PHONE NUMBERS</pf-header-title>
+  </pf-header>
+</ion-header>
+<ion-content>
+  <ion-grid>
+
+    <form #signupForm="ngForm" [formGroup]="user">
+      <ion-row>
+        <ion-col>
+          <ion-label stacked class="input-label">DAYTIME PHONE NUMBER</ion-label>
+          <ion-item>
+            <ion-input type="tel" [(ngModel)]="dayTimeNum" maxlength="16" phonemask formControlName="daynumber" #mobileNumber name="daynumber"
+              clearInput="true"></ion-input>
+          </ion-item>
+          <div class="pf-form-field-error" *ngIf="user.get('daynumber').hasError('required') && user.get('daynumber').dirty">
+            Please at least input your daytime number
+          </div>
+          <div class="pf-form-field-error" *ngIf="user.get('daynumber').hasError('minlength') && user.get('daynumber').dirty">
+            The daytime number should be between 10 - 16 length
+          </div>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-label stacked class="input-label"> EVENING PHONE NUMBER</ion-label>
+          <ion-item>
+            <ion-input type="tel" [(ngModel)]="eveningNum" name="eveningnumber" phonemask maxlength="16" formControlName="eveningnumber"
+              clearInput="true" #mobileNumber1></ion-input>
+          </ion-item>
+          <div class="pf-form-field-error" *ngIf="user.get('eveningnumber').hasError('minlength') && user.get('eveningnumber').dirty">
+            The evening number should be between 10 - 16 length
+          </div>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-label stacked class="input-label">CELL PHONE NUMBER</ion-label>
+          <ion-item>
+            <ion-input type="tel" [(ngModel)]="cellNum" name="cellnumber" phonemask maxlength="16" formControlName="cellnumber" clearInput="true"
+              #mobileNumber2></ion-input>
+          </ion-item>
+          <div class="pf-form-field-error" *ngIf="user.get('cellnumber').hasError('minlength') && user.get('cellnumber').dirty">
+            The cell number should be between 10 - 16 length
+          </div>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <button class="cta-button long" type="submit" ion-button block tappable (click)="goContactInfoPage()" [disabled]="!user.get('daynumber').valid || !user.get('eveningnumber').valid || !user.get('cellnumber').valid">UPDATE PHONE NUMBERS</button>
+        </ion-col>
+      </ion-row>
+    </form>
+  </ion-grid>
+</ion-content>

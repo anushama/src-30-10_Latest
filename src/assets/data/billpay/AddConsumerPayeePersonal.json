@@ -1,0 +1,54 @@
+{
+    "billPayees": {
+        "billPayee": [
+            {
+                "consumerPayeeId": "102172591",
+                "payeeNickname": "Personal Payee Test",
+                "payeeName": "Personal Payee Test",
+                "payeeAddress": {
+                    "contactType": "ADDRESS",
+                    "contactAddress": {
+                        "line1": "123 Sesame Street",
+                        "city": "Indianapolis",
+                        "postalCode": "46220",
+                        "country": "US"
+                    }
+                },
+                "payeePhone": {
+                    "contactType": "PHONE",
+                    "phone": {
+                        "type": "WORK",
+                        "number": "8791234567"
+                    }
+                },
+                "billInfo": {
+                    "billerId": "999",
+                    "status": "NOBILLS",
+                    "cycle": "ONCE_A_MONTH"
+                },
+                "payeeAccountNumber": "n/a",
+                "payeeCategory": "1001",
+                "payeeStatus": "PENDING",
+                "cutOffTime": {
+                    "time": "13:0:0.000",
+                    "timeZone": "0"
+                },
+                "deliveryMethodList": {
+                    "deliveryMethod": [
+                        {
+                            "deliveryMethodType": "DIRECT_CHECK",
+                            "leadDays": 4,
+                            "isDefault": true
+                        },
+                        {
+                            "deliveryMethodType": "OVERNIGHT_CHECK",
+                            "leadDays": 1
+                        }
+                    ]
+                },
+                "billPayeeType": "PERSONAL",
+                "paymentRule": {}
+            }
+        ]
+    }
+}

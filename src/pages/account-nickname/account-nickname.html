@@ -1,0 +1,42 @@
+<ion-header>
+  <pf-header leftIcon="cross">
+    <pf-header-title class="textElipse">ACCOUNT NICKNAMES</pf-header-title>
+  </pf-header>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col [innerHtml]='"account.nickname.description" | aemsync : ["account"] | async'>
+        <!-- <div </div> -->
+      </ion-col>
+    </ion-row>
+    <!-- Using nicknames for your accounts provides an added layer of security. Nicknames are limited to <b>20 characters</b>.-->
+    <ion-row>
+      <ion-col>
+        <h2> SELECT AN ACCOUNT TO SET/CHANGE A NICKNAME.</h2>
+      </ion-col>
+    </ion-row>
+    <form #ff="ngForm">
+      <account-nickname-item *ngIf="!this.hideAccounts.checkSaveAccounts" [accountType]="checkSaveAccounts" [accountTypeLabel]="'CHECKING/SAVINGS ACCOUNTS'"
+        class="list-item"></account-nickname-item>
+      <account-nickname-item *ngIf="!this.hideAccounts.creditCardAccounts" [accountType]="creditCardAccounts" [accountTypeLabel]="'CREDIT CARDS'"
+        class="list-item"></account-nickname-item>
+      <account-nickname-item *ngIf="!this.hideAccounts.loanAccounts" [accountType]="loanAccounts" [accountTypeLabel]="'LOANS'"
+        class="list-item"></account-nickname-item>
+      <account-nickname-item *ngIf="!this.hideAccounts.mortgageAccounts" [accountType]="mortgageAccounts" [accountTypeLabel]="'MORTGAGES'"
+        class="list-item"></account-nickname-item>
+      <account-nickname-item *ngIf="!this.hideAccounts.externalAccounts" [accountType]="externalAccounts" [accountTypeLabel]="'EXTERNAL ACCOUNTS'"
+        class="list-item"></account-nickname-item>
+      <account-nickname-item *ngIf="this.hideAccounts.iraAccounts === false && iraAccounts.length" [accountType]="iraAccounts"
+        [accountTypeLabel]="'IRA'" class="list-item"></account-nickname-item>
+      <account-nickname-item *ngIf="this.hideAccounts.certificateAccounts === false && certificateAccounts.length" [accountType]="certificateAccounts"
+        [accountTypeLabel]="'Certificates'" class="list-item"></account-nickname-item>
+      <ion-row>
+        <ion-col>
+          <button class="cta-button" type="submit" ion-button block tappable (click)="onSubmit()" [disabled]="!ff.valid">SAVE SETTINGS</button>
+        </ion-col>
+      </ion-row>
+    </form>
+  </ion-grid>
+</ion-content>

@@ -1,0 +1,44 @@
+<ion-menu [content]="content" id="sideMenu" type="overlay" (ionClose)="resetMenu()">
+  <ion-header class="menu-header">
+    <ion-toolbar class="menu-toolbar">
+      <!-- <div class="search">
+        <ion-icon class="icon-search" ios="ios-search-outline" md="md-search" icon-left></ion-icon>
+      </div> -->
+    </ion-toolbar>
+  </ion-header>
+  <ion-content id="gradientBackground" no-bounce>
+    <ion-list id="menuList">
+      <div *ngFor="let p of pages;let last = last" [ngClass]="{'last-item':last}">
+
+          <div  class="app-menu-item" *ngIf="!p.subpages && p.title=='LOG OUT'" tappable (click)=" appLogOut(p)" >
+             <div class="list-icon">
+              <ion-icon name="{{p.iconName}}" icon-left></ion-icon>
+              <span class="list-content">{{p.title}}</span>
+            </div>
+          </div>
+
+        <div class="app-menu-item" *ngIf="!p.subpages && p.title!='LOG OUT' " tappable (click)="openPage(p)" menuClose>
+          <div class="list-icon">
+            <ion-icon name="{{p.iconName}}" icon-left></ion-icon>
+            <span class="list-content">{{p.title}}</span>
+          </div>
+        </div>
+        <div class="submenu" *ngIf="p.subpages" tappable (click)="dropDownCtrl(p)" [ngClass]="{'menu-active':getMenuActive(!p.flag)}">
+          <!--  <div class="submenu" *ngIf="p.subpages" (click)="select(i)" [ngClass]="{'menu-active':selectedIndex == i}">  -->
+          <span class="list-icon sublist">
+                        <ion-icon name="{{p.iconName}}" icon-left></ion-icon>
+                        <span class="list-content">{{p.title}}</span>
+          </span>
+          <!--  <ul class="sidenav" *ngIf="shown"> -->
+          <ul class="sidenav" *ngIf="getSideNav(!p.flag)">
+            <li class="submenu-item" *ngFor="let sub of p.subpages" tappable (click)="goToPage(sub)" menuClose>
+              {{sub.title}}
+            </li>
+          </ul>
+        </div>
+      </div>
+    </ion-list>
+  </ion-content>
+</ion-menu>
+<!-- Disable swipe-to-go-back because it's poor UX to combine STGB with side menus -->
+<ion-nav [root]="rootPage" #content swipeBackEnabled="false" tappable (click)="checkSession($event)"></ion-nav>

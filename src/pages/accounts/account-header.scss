@@ -1,0 +1,194 @@
+account-header {
+  .pageHeader {
+    background-color: $pf-mobile-dark-blue;
+    color: $pf-mobile-white !important;
+    font-size: 150%;
+    font-weight: bold;
+    height: 40px;
+    align-items: center;
+    min-height: 46px;
+    // padding: 11px 16px;
+    .ion-ios-arrow-back {
+      // padding: 3px 0px 0px 0px;
+      // width: 100%;
+    }
+
+    .ion-ios-mail,
+    .ion-md-menu {
+      font-size: 2.4rem;
+    }
+
+    .button {
+      background-color: transparent;
+      height: 3.3rem;
+      box-shadow: none;
+    }
+  }
+
+  .backButton {
+    background-color: transparent;
+
+    .icon {
+      font-size: 2.4rem;
+      font-weight: 500;
+      color: $pf-mobile-white;
+      line-height: 2.3rem;
+    }
+  }
+
+  .account-name {
+    top: 3px;
+
+    span {
+      &:first-child {
+        font-family: $pf-montserrat-semi-bold;
+        text-transform: uppercase;
+        font-size: 16px;
+        letter-spacing: 0px;
+        width: initial;
+        max-width: 68%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        float: left;
+        display: inline-block;
+        white-space: nowrap;
+        margin-right: 2%;
+        padding-left: 24px;
+      }
+
+      &:last-child {
+        font-family: $pf-montserrat-regular;
+        font-size: 13px;
+        position: relative;
+        top: 1px;
+        width: 30%;
+        float: left;
+        display: inline-block;
+      }
+    }
+  }
+}
+
+.ios {
+  account-header {
+    .pageHeader {
+      min-height: 64px;
+      padding-top: 10px;
+
+      .button-ios {
+        height: 100%;
+        margin: 0;
+      }
+
+      .icon-ios {
+        font-size: 2.4rem;
+      }
+
+      .button-menutoggle {
+        padding-left: 1.2rem;
+      }
+
+      .ion-ios-mail {
+        margin-left: 7px;
+      }
+    }
+
+    .account-name {
+      top: 4px;
+    }
+  }
+}
+
+.accountDetails {
+  background: $pf-mobile-light-grey;
+  color: $pf-mobile-dark-grey;
+  max-height: 0;
+  overflow: hidden;
+  transition: 0.25s ease-in-out;
+  @media(min-width: 600px) and (max-width: 1100px) {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .balance:before {
+    top: -2px;
+    font-size: 12px;
+  }
+
+  &.showAccountDetails {
+    max-height: 1000px;
+    transform: translateY(0px);
+  }
+
+  &.certificateDetails,
+  &.iraDetails,
+  &.loanDetails,
+  &.mortgageDetails {
+    max-height: 100%;
+  }
+
+  > ion-col {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  ul {
+    margin: 0;
+    padding: 0 11px;
+    list-style: none;
+  }
+
+  li {
+    display: block;
+    clear: both;
+    border-bottom: 1px solid $pf-mobile-line-break-light;
+    padding: 13px 0 8px;
+
+    span {
+      display: inline-block;
+      font-size: 16px;
+
+      &:first-child {
+        width: 47%;
+        font-family: $pf-montserrat-light;
+        display: inline-block;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+      }
+
+      &:last-child {
+        width: 53%;
+        text-align: right;
+        float: right;
+        font-family: $pf-montserrat-regular;
+      }
+
+      &.loading-crescent {
+        position: relative;
+        top: -5px;
+      }
+    }
+  }
+
+  &.mortgageDetails .loading-crescent {
+    width: 31px;
+  }
+}
+
+.platform-tablet {
+  account-header {
+    .pageTitle.credit-card.active .ion-title {
+      top: 36%;
+    }
+
+    .accountIcon {
+      right: 23%;
+    }
+  }
+}
+@media(min-width: 600px) and (max-width: 1100px) {
+  .pageTitle.credit-card.active {
+    height: 350px;
+  }
+}

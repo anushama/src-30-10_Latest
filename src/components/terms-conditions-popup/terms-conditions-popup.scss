@@ -1,0 +1,24 @@
+terms-conditions-popup {
+  .terms-header {
+    font-family: $pf-montserrat-semi-bold;
+    font-size: 1.6rem;
+    margin: 2.3rem 1.6rem 1.7rem 1.6rem;
+    color:$pf-mobile-dark-blue;
+  }
+
+  .termsInfo {
+    font-size: 1.5rem;
+    margin:0 1.6rem;
+    font-family: $pf-montserrat-regular;
+    color:$pf-mobile-dark-blue;
+
+    & a{
+      color:$pf-mobile-dark-blue;
+      text-decoration: underline;
+    }
+  }
+  .control-button {
+    text-align: center;
+    width: 20%;
+  }
+}

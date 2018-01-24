@@ -1,0 +1,47 @@
+<ion-content>
+  <ion-list>
+    <ion-item>
+      <h6 class="h-header">TRANSFER FROM</h6>
+      <div class="" *ngIf="!flag">
+        <p class="accountPara">Select Account</p>
+      </div>
+      <div class="" *ngIf="flag">
+        <ion-row col-12 no-padding>
+          <ion-col col-6 no-padding text-left class="accountName">Money Market Savings</ion-col>
+          <ion-col no-padding text-right class="accountName accountVal">$50.000.000.00</ion-col>
+        </ion-row>
+        <ion-row col-12 no-padding>
+          <ion-col no-padding text-left class="accountNum">(1234)</ion-col>
+          <ion-col no-padding text-right class="accountNum availableBal">Available Balance</ion-col>
+        </ion-row>
+      </div>
+      <ion-icon text-right ios="ios-arrow-forward" md="ios-arrow-forward" class="arrow arrow-forward"></ion-icon>
+    </ion-item>
+    <ion-item>
+      <h6 class="h-header">TRANSFER TO</h6>
+      <div class="" *ngIf="!flag">
+        <p class="accountPara">Select Account</p>
+      </div>
+      <div class="" *ngIf="flag">
+        <ion-row col-12 no-padding>
+          <ion-col col-6 no-padding text-left class="accountName">Money Market Savings</ion-col>
+          <ion-col no-padding text-right class="accountName accountVal">$50.000.000.00</ion-col>
+        </ion-row>
+        <ion-row col-12 no-padding>
+          <ion-col no-padding text-left class="accountNum">(1234)</ion-col>
+          <ion-col no-padding text-right class="accountNum availableBal">Available Balance</ion-col>
+        </ion-row>
+      </div>
+      <ion-icon text-right ios="ios-arrow-forward" md="ios-arrow-forward" class="arrow arrow-forward"></ion-icon>
+    </ion-item>
+    <ion-item class="item-amount" (click)="openModalPage()">
+      <ion-row no-padding>
+        <ion-col no-padding class="h-header">DEPOSIT AMOUNT</ion-col>
+        <ion-col no-padding text-right class="accountPara" *ngIf="flagVal">$0.00</ion-col>
+        <ion-col no-padding text-right class="accountName accountVal" *ngIf="!flagVal">${{value | formatPrice}}</ion-col>
+        <ion-icon text-right ios="ios-arrow-forward" md="ios-arrow-forward" class="arrow arrow-forward"></ion-icon>
+      </ion-row>
+    </ion-item>
+  </ion-list>
+  <button ionic-button (click)="showCalendar()">Show Calendar</button>
+</ion-content>

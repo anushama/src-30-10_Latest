@@ -1,0 +1,239 @@
+page-make-a-deposit {
+  .account-list-height {
+    height: 8rem;
+
+    &.amount-height {
+      height: 5rem;
+    }
+  }
+
+  .secondary-text{
+    font-size: 13px;
+    font-weight: normal;
+    font-family: $pf-montserrat-regular;
+  }
+    
+  .content {
+    background-color: $pf-mobile-light-grey;
+  }
+
+  .icon.arrow {
+    display: inline-block;
+    position: absolute;
+    right: 1.6rem;
+    top: calc(50% - 1.3rem);
+    color: $pf-mobile-light-blue;
+    font-size: 2.4rem;
+  }
+  //content======
+  .item {
+    padding-left: 0;
+
+    .input-wrapper {
+      padding-left: 1.6rem;
+    }
+  }
+
+  .h-header {
+    font-size: 1.2rem;
+    font-family: $pf-montserrat-regular;
+    color: $pf-mobile-dark-blue;
+    line-height: 2rem;
+  }
+
+  .accountPara {
+    font-family: $pf-montserrat-regular;
+    font-size: 1.8rem;
+    color: #A9B7C7;
+    margin-right: 2rem;
+  }
+
+  .accountName {
+    font-family: $pf-montserrat-regular;
+    font-size: 1.8rem;
+    color: #282828;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    &.accountVal {
+      margin-right: 2rem;
+    }
+  }
+
+  .accountNum {
+    font-family: $pf-montserrat-light;;
+    font-size: 1.2rem;
+    color: #282828;
+
+    &.availableBal {
+      margin-right: 2rem;
+    }
+  }
+
+  .description {
+    font-family: $pf-montserrat-regular;
+    font-size: 1.1rem;
+    color: $pf-mobile-dark-blue;
+    margin: 1.6rem;
+  }
+
+  .check-container {
+    margin: 0 1.6rem;
+  }
+
+  .check-img {
+    text-align: center;
+    color: $pf-mobile-dark-blue;
+    font-family: $pf-montserrat-medium,sans-serif;
+    opacity: 0.5;
+    border: 3px solid $pf-mobile-dark-blue;
+    border-radius: 5px;
+    &.img-ready{
+      opacity: 1;
+      border-color: rgba(15, 45, 82, 0.5)
+    }
+    .camera.icon.ion-md-camera {
+      font-size: 7.2rem;
+      color: $pf-mobile-dark-blue;
+    }
+  }
+  .take-photo, .review-photo{
+    position:absolute;
+    top: 0;
+    left:0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .review-photo .camera-footer{
+    position: absolute;
+    z-index: 1000;
+    bottom: 0;
+    width: 100%;
+    p{
+      padding-top:30px;
+    }
+  }
+  .usePhoto{
+    float: right;
+  }
+  .retakePhoto{
+    float: left;
+  }
+
+  .check-header {
+    font-size: 1.2rem;
+    font-family: $pf-montserrat-regular;
+    color: $pf-mobile-dark-blue;
+    line-height: 2rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .control-button {
+    text-align: center;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  .photo-controls{
+    display: none;
+  }
+}
+
+.front-back.photo-ready{
+  margin-bottom:0;
+  line-height: 0;
+}
+
+.camera-on{
+  visibility: hidden;
+  background-color: transparent!important;
+  body, .ion-app, .ion-content {
+    background-color: transparent !important;
+  }
+  .photo-controls{
+    display: block;
+    visibility: visible;
+    position: absolute;
+    z-index: 999;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    color: $pf-mobile-white;
+  }
+  page-make-a-deposit{
+    visibility:hidden;
+  }
+  .check-side-label{
+    margin: 0px;
+    font-family: $pf-montserrat-semi-bold;
+    margin-bottom:29px;
+  }
+  .check-borders{
+    position: relative;
+    height: 74vh;
+    width: 85%;
+    margin-left: 5%;
+  }
+  .camera-header{
+    background-color:$pf-mobile-dark-blue;
+    height: 12vh;
+    text-align: left;
+    h1{
+      font-size: 16px;
+      padding-top: 13px;
+    }
+    .nav-icon{
+      float: left;
+      margin-right: 1.1rem;
+      font-weight: 600;
+    }
+  }
+  .camera-controls{
+    position: relative;
+    > *{
+      position: absolute;
+      top: 25vh;
+      right: 0;
+      transform: rotate(90deg)
+    }
+  }
+  .camera-footer{
+    clear: both;
+    font-family: $pf-montserrat-medium;
+    font-size: 15px;
+    background: linear-gradient(90deg, rgba(0,0,0,0.29) 0%, rgba(40,40,40,0.7) 100%);
+    height: 20vh;
+    padding: 0 16px;
+    p{
+      margin: 0;
+      line-height: 19px;
+      padding-top: 10px;
+    }
+  }
+  .front-back {
+    font-size: 1.6rem;
+    margin-bottom: 0.8rem;
+  }
+  .top-left{
+    position: absolute;
+    top:0;
+    left:0;
+  }
+  .top-right{
+    position: absolute;
+    top:0;
+    right:0;
+  }
+  .bottom-left{
+    position: absolute;
+    bottom:0;
+    left:0;
+  }
+  .bottom-right{
+    position: absolute;
+    bottom:0;
+    right:0;
+  }
+
+}
+

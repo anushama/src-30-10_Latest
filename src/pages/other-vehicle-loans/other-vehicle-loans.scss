@@ -1,0 +1,19 @@
+page-other-vehicle-loans {
+    .pageHeader {
+        background-color: $pf-mobile-dark-blue;
+        color: $pf-mobile-white !important;
+        font-size: 130%;
+        font-weight: 500;
+        height: 40px;
+        align-items: center;
+        min-height: 70px;
+        letter-spacing: 0.2rem;
+        .toggle{
+            font-size: 100% !important;
+            padding: 2px 0px 0px 25px  !important;
+        }
+        .pull-right{
+            padding-left:2px !important;
+        }
+    }
+}

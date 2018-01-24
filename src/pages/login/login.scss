@@ -1,0 +1,527 @@
+page-login {
+  ion-row {
+    &.login-footer {
+      ion-col {
+        height: 18px;
+        width: 92px;
+        color: $pf-mobile-white;
+        font-size: 1.4rem;
+        font-weight: 600;
+        line-height: 1.7rem;
+        text-align: center;
+        margin-top: 60px;
+        margin-bottom: 30px;
+      }
+    }
+  }
+
+  .login-button {
+    width: 100% !important;
+  }
+
+  .padding-lr {
+    padding-left: 5px !important;
+    padding-right: 5px !important;
+  }
+
+  .legal {
+    margin-left: 2.1rem;
+    position: absolute;
+    // color: purple;
+    bottom: 0;
+    align-items: center;
+
+    & a {
+      color: white;
+    }
+  }
+
+  [ios='ios-finger-print'] {
+    font-size: 3.5rem;
+    color: $pf-mobile-light-blue;
+    font-weight: 600;
+  }
+
+  .login-tc {
+    margin-left: 0;
+    bottom: 1%;
+    text-decoration: underline;
+    text-align: left;
+  }
+  @media (min-width: 567px) {
+    .login-tc {
+      margin-left: 0;
+      position: absolute;
+      width: 95%;
+      bottom: 1%;
+      text-decoration: underline;
+      align-items: center;
+      text-align: center;
+    }
+
+    .login-container {
+      width: 100%;
+      max-width: 345px;
+      margin: 0 auto;
+      overflow: auto !important;
+      height: auto;
+    }
+
+    [offset-sm-2] {
+      margin-left: 13.66667%;
+    }
+
+    .login-as-different-u-col[offset-sm-3]{
+      margin-left: 20%;
+    }
+    .login-as-need-help-logging-in-col[offset-sm-3]{
+      margin-left: 24%;
+    }
+
+    .vertical-align {
+      display: flex;
+      justify-content: center;
+    }
+
+    .text-left {
+      text-align: right;
+    }
+
+    .text-right {
+      text-align: left !important;
+    }
+
+    .grid.full-height {
+      min-height: 80% !important;
+    }
+
+    .login-footer {
+      min-height: 17% !important;
+    }
+
+    .bottom ion-col {
+      text-align: center;
+    }
+  }
+
+  .login-footer {
+    min-height: 27%;
+  }
+
+  .item-md ion-icon[item-left] {
+    +.item-inner {
+      margin-left: 0;
+    }
+  }
+
+  .flex-container {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+  }
+  font-family: $pf-montserrat-regular !important;
+  // .login-header-bg{
+  //   background:$pf-mobile-white;
+  //   padding:
+  // }
+  .login-header {
+    .login-toolbar {
+      .toolbar-title {
+        margin-top: 7px;
+      }
+    }
+  }
+
+  .login-toolbar {
+    //margin-bottom: 25px;
+    .title {
+      color: $pf-mobile-white;
+      font-weight: bold;
+      text-align: center;
+      font-size: 16px;
+    }
+  }
+  //grey out username text box
+  .grey-user {
+    background-color: rgba(255, 255, 255, 0.6);
+  }
+  //For some reason, Android style must be overwritten here (needs a fix)
+  .toolbar-background-md {
+    background-color: $pf-mobile-white;
+  }
+
+  .logo-main {
+    height: 100%;
+    width: 100%;
+  }
+
+  .login-page {
+    linear-gradient: (180deg, rgba(13, 43, 83, 0.6) 0%, rgba(13, 43, 83, 0.94) 87.53%, #0d2b53 100%);
+    background: url("../assets/img/HeroImage.png") no-repeat center center fixed;
+    background-size: cover;
+  }
+  /* Background Images based on Geo Location - Start*/
+  .login-page.birthday {
+    background-image: url("../assets/login/images/phone_Login_Birthday.jpg");
+  }
+
+  .login-page.california {
+    background-image: url("../assets/login/images/phone_Login_California.jpg");
+  }
+
+  .login-page.dc {
+    background-image: url("../assets/login/images/phone_Login_DC.jpg");
+  }
+
+  .login-page.florida {
+    background-image: url("../assets/login/images/phone_Login_Florida.jpg");
+  }
+
+  .login-page.georgia {
+    background-image: url("../assets/login/images/phone_Login_Georgia.jpg");
+  }
+
+  .login-page.winter {
+    background-image: url("../assets/login/images/phone_Login_Holiday.jpg");
+  }
+
+  .login-page.independence {
+    background-image: url("../assets/login/images/phone_Login_July4th.jpg");
+  }
+
+  .login-page.labor {
+    background-image: url("../assets/login/images/phone_Login_LaborDay.jpg");
+  }
+
+  .login-page.memorial {
+    background-image: url("../assets/login/images/phone_Login_MemorialDay.jpg");
+  }
+
+  .login-page.mlk {
+    background-image: url("../assets/login/images/phone_Login_MLKDay");
+  }
+
+  .login-page.newyears {
+    background-image: url("../assets/login/images/phone_Login_NewYears.jpg");
+  }
+
+  .login-page.newyork {
+    background-image: url("../assets/login/images/phone_Login_NewYork.jpg");
+  }
+
+  .login-page.northcarolina {
+    background-image: url("../assets/login/images/phone_Login_NorthCarolina.jpg");
+  }
+
+  .login-page.presidents {
+    background-image: url("../assets/login/images/phone_Login_PresidentsDay.jpg");
+  }
+
+  .login-page.puertorico {
+    background-image: url("../assets/login/images/phone_Login_PuertoRico.jpg");
+  }
+
+  .login-page.texas {
+    background-image: url("../assets/login/images/phone_Login_Texas.jpg");
+  }
+
+  .login-page.thanksgiving {
+    background-image: url("../assets/login/images/phone_Login_Thanksgiving.jpg");
+  }
+
+  .login-page.veterans {
+    background-image: url("../assets/login/images/phone_Login_VeteransDay.jpg");
+  }
+
+  .background1 {
+    background: url("../assets/login/images/phone_Login_California.jpg");
+  }
+
+  .background2 {
+    background: url("../assets/login/images/phone_Login_DC.jpg");
+  }
+
+  .background3 {
+    background: url("../assets/login/images/phone_Login_Florida.jpg");
+  }
+
+  .background4 {
+    background: url("../assets/login/images/phone_Login_Texas.jpg");
+  }
+  /* Background Images based on Geo Location - End*/
+  .login-content {
+    font-family: $pf-montserrat-regular !important;
+  }
+
+  .greetString {
+    font-size: 2.4rem;
+    color: $pf-mobile-white;
+    font-family: $pf-montserrat-semi-bold;
+    line-height: 2.9rem;
+    margin-left: 3px;
+    @media (min-width: 567px) {
+      margin-left: 11.3rem;
+    }
+  }
+
+  .test {
+    margin-top: 20px;
+  }
+
+  .welcome-to-pen-fed {
+    font-size: 1.6rem;
+    font-weight: bold;
+    letter-spacing: 0.2rem;
+    line-height: 1.9rem;
+    color: rgb(255, 255, 255);
+    opacity: 0.7;
+    margin-left: 3px;
+    @media (min-width: 567px) {
+      margin-left: 11.3rem;
+    }
+  }
+
+  .login-as-different-u {
+    color: $pf-mobile-white;
+    font-size: 14px;
+    line-height: 17px; //padding-left: 16px;
+  }
+
+  .need-help-logging-in {
+    color: $pf-mobile-white;
+    font-size: 14px;
+    line-height: 17px;
+    @media (min-width: 567px) {
+      margin-left: -2.4rem;
+    }
+  }
+
+  .enable-touch-id,
+  .function-bar {
+    color: $pf-mobile-light-grey;
+    padding-left: 0;
+  }
+
+  .function-bar-row {
+    margin-left: auto;
+    padding-top: 6px;
+  }
+
+  // .toggle.toggle-ios {
+  //   display: block;
+  // }
+  //
+  // .toggle-md.toggle-checked .toggle-inner {
+  //   background-color: $pf-mobile-white;
+  // }
+
+  .save-username {
+    font-size: 1.2rem;
+    padding: 1.5rem 0 0 2.4rem;
+  }
+
+  .finger {
+    font-size: 1.2rem;
+    padding-top: 1.5rem;
+  }
+
+  .col.save-username-col {
+    padding-top: 0;
+    padding-left: 0;
+  }
+
+  .submit-btn {
+    background-color: $pf-mobile-light-blue;
+    height: 50px;
+  }
+
+  .button-md.button-default.button-default-md,
+  .disable-hover.button.button-md.button-default.button-default-md {
+    height: 4.8rem;
+    background-color: $pf-mobile-light-blue;
+    width: 100%;
+  }
+
+  .disable-hover.button.button-ios.button-default.button-default-ios {
+    background-color: $pf-mobile-light-blue;
+    height: 4.8rem;
+    margin: 0;
+    width: 100%;
+  }
+}
+
+.member-item {
+  opacity: 0.9;
+  background-color: $pf-mobile-white;
+}
+
+.list.list-md {
+  margin-bottom: 0;
+}
+
+.pwd-item {
+  opacity: 0.9;
+  background-color: $pf-mobile-white;
+}
+///// Same thing... Remove and use utility class
+
+.gap-top {
+  margin-top: 16px;
+  margin-left: 5px;
+}
+
+.rectangleUnderLink {
+  border-bottom: 2px solid #00A1DF;
+}
+
+.networkBanner.label {
+  margin: 0;
+  color: $pf-mobile-white;
+  background-color: $pf-mobile-red;
+  width: 100%;
+  text-align: center;
+  margin-top: -25px;
+}
+
+.terms-conditions-a {
+  height: 15px;
+  width: 330px;
+  color: $pf-mobile-white;
+  font-size: 12px;
+  line-height: 15px;
+  text-decoration: underline;
+  padding: 5px 0 -1px;
+}
+
+.fixed {
+  -webkit-align-self: flex-end;
+  align-self: flex-end;
+  margin-top: -15px;
+}
+// ?
+
+.grid.full-height {
+  min-height: 70%;
+}
+
+.list.list-ios {
+  margin: -1px 0 2px;
+}
+
+.inputIconBackground {
+  $text-input-md-highlight-color: color($colors-md, primary);
+}
+
+.noPadding {
+  position: relative;
+}
+
+.quicklinks {
+  position: relative;
+  margin-top: 65px;
+  bottom: 10px;
+}
+
+.username-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media (max-width: 700px) {
+  .username-row {
+    float: right;
+  }
+}
+
+.deviceAlertBox {
+  .alert-wrapper {
+    text-align: center;
+    max-width: 80%;
+
+    .alert-head {
+      text-align: center!important;
+
+      .alert-title {
+        color: $pf-mobile-dark-blue;
+        padding-bottom: 10px;
+        font-size: 20px;
+      }
+    }
+
+    .alert-message {
+      a {
+        text-decoration: none;
+      }
+    }
+  }
+}
+/* Password validation popup css starts*/
+.passwordAlertBox {
+  .alert-wrapper {
+    text-align: center;
+
+    .alert-head {
+      text-align: center!important;
+
+      .alert-title {
+        font-size: 20px;
+        margin-top: 4px;
+      }
+    }
+
+    // .alert-button-group {
+    //   display: flex;
+
+    //   .alert-button {
+    //     font-size: 15px;
+    //     text-transform: none;
+    //   }
+    // }
+  }
+}
+/* popup style set*/
+ion-modal.my-popup {
+  @media (min-width: 300px) and (min-height: 500px) {
+    ion-backdrop {
+      visibility: visible;
+    }
+  }
+
+  .modal-wrapper {
+    position: absolute;
+    overflow: hidden;
+    border-radius: 6px;
+    width: 95%;
+    height: 88%;
+    top: 56px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    border: 0;
+    background-color: $pf-mobile-light-grey;
+
+    button {
+      position: absolute;
+      bottom: 20px;
+      width: 80%;
+      border-radius: 4px;
+      height: 50px;
+      font-size: 15px;
+      font-family: $pf-montserrat-semi-bold;
+      background-color: $pf-mobile-dark-blue;
+      color: $pf-mobile-white;
+    }
+  }
+}
+
+.list.list-md {
+  border-bottom: none;
+}
+
+.item-md ion-icon[item-left]{
+  padding-left: 16px;
+}

@@ -1,0 +1,37 @@
+<ion-header>
+  <account-header [pageNameParam]="'ACCOUNTS'"></account-header>
+  <div class="pageTitle staticPageTitle">
+    <ion-col col-12 text-center class="ion-title">ACCOUNTS</ion-col>
+  </div>
+</ion-header>
+<ion-content id="ionContent">
+    <!-- <div class="pageTitle staticPageTitle">
+      <ion-col col-12 text-center class="ion-title">ACCOUNTS</ion-col>
+    </div> -->
+    <account-list-item *ngIf="!this.hideAccounts.checkSaveAccounts" [accountType]="checkSaveAccounts" [accountTypeLabel]="'CHECKING &amp; SAVINGS'" [accountAsOfDate]="checkSaveAccountsAsOfDate" class="list-item">Loading...</account-list-item>
+
+    <account-list-item *ngIf="!this.hideAccounts.reditCardAccounts" [accountType]="reditCardAccounts" [accountTypeLabel]="'CREDIT CARDS'" [accountAsOfDate]="reditCardAccountsAsOfDate" class="list-item">Loading...</account-list-item>
+
+    <account-list-item *ngIf="!this.hideAccounts.loanAccounts" [accountType]="loanAccounts" [accountTypeLabel]="'LOANS'" [accountAsOfDate]="loanAccountsAsOfDate" class="list-item">Loading...</account-list-item>
+
+    <account-list-item *ngIf="!this.hideAccounts.mortgageAccounts" [accountType]="mortgageAccounts" [accountTypeLabel]="'MORTGAGES'" [accountAsOfDate]="mortgageAccountsAsOfDate" class="list-item">Loading...</account-list-item>
+
+    <account-list-item *ngIf="this.hideAccounts.iraAccounts === false && iraAccounts.length" [accountType]="iraAccounts" [accountTypeLabel]="'IRA'" [accountAsOfDate]="iraAccountsAsOfDate" class="list-item"></account-list-item>
+
+    <account-list-item *ngIf="this.hideAccounts.certificateAccounts === false && certificateAccounts.length" [accountType]="certificateAccounts" [accountTypeLabel]="'Certificate'" [accountAsOfDate]="certificateAccountsAsOfDate" class="list-item"></account-list-item>
+
+    <ion-grid>
+      <ion-row>
+        <ion-col col-12 class="accountsText">
+          <p *ngIf="!hideHiddenAccountsMessage">Are you missing accounts on this list? They may be hidden. You can change their hidden status in Accounts Show/Hide Settings.</p>
+          <p *ngIf="hideHiddenAccountsMessage"><!--Balances may reflect transactions that have not yet posted to your account.-->
+          {{"account.balance.note" | aemsync : ["account"] | async}}
+          </p>
+          <div text-center>
+            <button ion-button class="cta-button" text-center (click)="goToAccountShowhide()">ACCOUNT SHOW/HIDE</button>
+          </div>
+        </ion-col>
+      </ion-row>
+      <accounts-footer></accounts-footer>
+    </ion-grid>
+</ion-content>

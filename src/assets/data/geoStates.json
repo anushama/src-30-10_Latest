@@ -1,0 +1,190 @@
+[{
+    "id": "AL",
+    "value": "ALABAMA"
+}, {
+    "id": "AK",
+    "value": "ALASKA"
+}, {
+    "id": "AS",
+    "value": "AMERICAN SAMOA"
+}, {
+    "id": "AA",
+    "value": "APO ASIA"
+}, {
+    "id": "AE",
+    "value": "APO EUROPE"
+}, {
+    "id": "AP",
+    "value": "APO PACIFIC"
+}, {
+    "id": "AZ",
+    "value": "ARIZONA"
+}, {
+    "id": "AR",
+    "value": "ARKANSAS"
+}, {
+    "id": "CA",
+    "value": "CALIFORNIA"
+}, {
+    "id": "CO",
+    "value": "COLORADO"
+}, {
+    "id": "CT",
+    "value": "CONNECTICUT"
+}, {
+    "id": "DE",
+    "value": "DELAWARE"
+}, {
+    "id": "DC",
+    "value": "DISTRICT OF COLUMBIA"
+}, {
+    "id": "FL",
+    "value": "FLORIDA"
+}, {
+    "id": "GA",
+    "value": "GEORGIA"
+}, {
+    "id": "GU",
+    "value": "GUAM"
+}, {
+    "id": "HI",
+    "value": "HAWAII"
+}, {
+    "id": "ID",
+    "value": "IDAHO"
+}, {
+    "id": "IL",
+    "value": "ILLINOIS"
+}, {
+    "id": "IN",
+    "value": "INDIANA"
+}, {
+    "id": "IA",
+    "value": "IOWA"
+}, {
+    "id": "KS",
+    "value": "KANSAS"
+}, {
+    "id": "KY",
+    "value": "KENTUCKY"
+}, {
+    "id": "LA",
+    "value": "LOUISIANA"
+}, {
+    "id": "ME",
+    "value": "MAINE"
+}, {
+    "id": "MH",
+    "value": "MARSHALL ISLANDS"
+}, {
+    "id": "MD",
+    "value": "MARYLAND"
+}, {
+    "id": "MA",
+    "value": "MASSACHUSETTS"
+}, {
+    "id": "MI",
+    "value": "MICHIGAN"
+}, {
+    "id": "FM",
+    "value": "MICRONESIA"
+}, {
+    "id": "MN",
+    "value": "MINNESOTA"
+}, {
+    "id": "MS",
+    "value": "MISSISSIPPI"
+}, {
+    "id": "MO",
+    "value": "MISSOURI"
+}, {
+    "id": "MT",
+    "value": "MONTANA"
+}, {
+    "id": "NE",
+    "value": "NEBRASKA"
+}, {
+    "id": "NV",
+    "value": "NEVADA"
+}, {
+    "id": "NH",
+    "value": "NEW HAMPSHIRE"
+}, {
+    "id": "NJ",
+    "value": "NEW JERSEY"
+}, {
+    "id": "NM",
+    "value": "NEW MEXICO"
+}, {
+    "id": "NY",
+    "value": "NEW YORK"
+}, {
+    "id": "NC",
+    "value": "NORTH CAROLINA"
+}, {
+    "id": "ND",
+    "value": "NORTH DAKOTA"
+}, {
+    "id": "MP",
+    "value": "NORTHERN MARIANA ISLANDS"
+}, {
+    "id": "OH",
+    "value": "OHIO"
+}, {
+    "id": "OK",
+    "value": "OKLAHOMA"
+}, {
+    "id": "OR",
+    "value": "OREGON"
+}, {
+    "id": "PW",
+    "value": "PALAU ISLAND"
+}, {
+    "id": "PA",
+    "value": "PENNSYLVANIA"
+}, {
+    "id": "PR",
+    "value": "PUERTO RICO"
+}, {
+    "id": "RI",
+    "value": "RHODE ISLAND"
+}, {
+    "id": "SC",
+    "value": "SOUTH CAROLINA"
+}, {
+    "id": "SD",
+    "value": "SOUTH DAKOTA"
+}, {
+    "id": "TN",
+    "value": "TENNESSEE"
+}, {
+    "id": "TX",
+    "value": "TEXAS"
+}, {
+    "id": "VI",
+    "value": "US VIRGIN ISLANDS"
+}, {
+    "id": "UT",
+    "value": "UTAH"
+}, {
+    "id": "VT",
+    "value": "VERMONT"
+}, {
+    "id": "VA",
+    "value": "VIRGINIA"
+}, {
+    "id": "VC",
+    "value": "VIRGINIA UNPRESENTED CHECKS"
+}, {
+    "id": "WA",
+    "value": "WASHINGTON"
+}, {
+    "id": "WV",
+    "value": "WEST VIRGINIA"
+}, {
+    "id": "WI",
+    "value": "WISCONSIN"
+}, {
+    "id": "WY",
+    "value": "WYOMING"
+}]

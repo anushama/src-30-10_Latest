@@ -1,0 +1,12 @@
+{
+  "pattern.create.info":"CONNECT 4 TO 9 DOTS",
+  "pattern.create.confirm.info":"TRACE YOUR PATTERN AGAIN TO CONFIRM",
+  "pattern.create.login.info":"<p>Securely access your accounts using a quick custom pattern instead of an alpha numeric password (no online ID or password). If you ever forget your pattern, you can log in with your Username and Password.<br>\r\n\r\n</p>\r\n\r\n",
+  "pattern.create.modal.disable.info":"Are you sure you want to disable pattern login? This connot be undone.",
+  "pattern.create.about.info":"<p>Use a secure pattern instead of your password for account info on the go. You'll still use your password on the web. If you ever forget your pattern, you can log in with your Username and Password.</p>\r\n\r\n<p>A 4 to 9-dot pattern has thousands of possible configurations. Your pattern sign-in will gran you access to most activities and information. For more sensitive activities such as changing your profile information, we will require additional authentication such as your security code.</p>\r\n\r\n",
+  "pattern.create.enabled.info":"PATTERN ENABLED"
+}
+
+
+
+

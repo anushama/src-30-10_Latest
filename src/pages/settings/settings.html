@@ -1,0 +1,47 @@
+<ion-header>
+  <pf-header leftIcon="settings" rightIcon="mail">
+    <pf-header-title>SETTINGS</pf-header-title>
+  </pf-header>
+</ion-header>
+<ion-content no-bounce>
+  <ion-list>
+    <ion-list-header>Security</ion-list-header>
+    <ion-item>
+      <ion-label>Stay Logged In
+        <ion-icon ios="md-help-circle" md="md-help-circle" color="secondary" tappable (click)="helpPopUp()"></ion-icon>
+      </ion-label>
+      <ion-toggle [(ngModel)]="stayLoggedIn" (ionChange)="toggleStayLoggedIn($event)"></ion-toggle>
+    </ion-item>
+    <button ion-item tappable (click)="goToSetupFingerprintLogin()" *ngIf="appSettings.isDeviceTouchAvailable">Fingerprint Login</button>
+    <button ion-item tappable (click)="goToSetupPatternLogin()">Pattern Login</button>
+  </ion-list>
+  <ion-list>
+    <ion-list-header>Accounts </ion-list-header>
+    <button ion-item tappable (click)="goToAccountShowhide()">Account Show/Hide</button>
+    <button ion-item tappable (click)="goToAccountNickname()">Account Nicknames</button>
+    <button ion-item tappable (click)="goToTravelNotifications()">Manage Your Cards</button>
+  </ion-list>
+  <ion-list>
+    <ion-list-header class="push-top-sm">Member Profile </ion-list-header>
+    <button ion-item tappable (click)="goToContactInfoPage()">Contact Information</button>
+    <button ion-item tappable (click)="goToChangePasswordPage()">Change Your Password</button>
+
+    <!-- <button ion-item tappable (click)="goToNotificationsPage('button', $event)">
+        <ion-label>Notifications
+          <ion-icon ios="md-help-circle" md="md-help-circle" color="secondary" tappable (click)="goToNotificationsPage('icon', $event)"></ion-icon>
+        </ion-label>
+      </button> -->
+ 
+  
+    <ion-item tappable detail-push (click)="goToNotificationsPage('button', $event)">
+        <ion-label>Notifications
+          <ion-icon ios="md-help-circle" md="md-help-circle" color="secondary" tappable (click)="goToNotificationsPage('icon', $event)"></ion-icon>
+        </ion-label>
+    </ion-item >
+
+  </ion-list>
+  <ion-list>
+    <ion-list-header class="">Version</ion-list-header>
+    <ion-item>2.7 Build 6181</ion-item>
+  </ion-list>
+</ion-content>

@@ -1,0 +1,113 @@
+fingerprint-login-options {
+    .content.content-ios {
+        .scroll-content {
+            padding-top: 0 !important;
+        }
+    }
+    .content {
+        background-color: $pf-mobile-dark-blue;
+        padding: 1.6rem !important;
+    }
+
+    .loginOptionsText{
+        margin-top: 60px !important;
+    }
+
+    .login-options-footer {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 100%;
+        text-align: center;
+        .btn-no-thanks {
+            border: .2rem solid $pf-mobile-white !important;
+            font-family: $pf-montserrat-medium;
+            border-radius: .5rem !important;
+            font-size: 1.6rem;
+            color: $pf-mobile-white;
+            letter-spacing: .1rem !important;
+            line-height: 1.9rem;
+            margin-bottom: 2rem;
+            min-width: 30rem;
+            background-color: transparent;
+            padding: 0rem;
+        }
+    }
+
+    .backButton {
+        //background-color: $pf-mobile-dark-blue;
+        margin: 1.1rem;
+    }
+    .information-title {
+        .toolbar-title {
+            text-align: left;
+            margin-left: 1.2rem;
+            font-size: 1.7rem;
+            letter-spacing: .1rem;
+            font-weight: 600;
+            line-height: 4.7rem;
+            color: $pf-mobile-white;
+        }
+    }
+    .icon {
+        color: $pf-mobile-white;
+        line-height: 2.3rem;
+        &.ion-ios-close {
+            font-size: 3.0rem;
+            font-weight: 700;
+        }
+    }
+
+    .loginOptionsText {
+        font-family: $pf-montserrat-regular;
+        font-size: 1.5rem;
+        color: $pf-mobile-white;
+        line-height: 1.9rem;
+    }
+    .options {
+        background-color: $pf-mobile-white;
+        border: .2rem solid $pf-mobile-light-blue !important;
+        margin-top: 20% !important;
+        border-radius: .5rem !important;
+            div {
+                font-family: $pf-montserrat-medium;
+                text-align: center !important;
+                width: 12rem !important;
+                height: 5.7rem !important;
+                font-size: 1.6rem;
+                color: $pf-mobile-dark-blue;
+                line-height: 1.9rem;
+            }
+        .fingerprintLogin {
+            width: 50% !important;
+            text-align: center;
+            margin-top: 1.05rem !important;
+            border-right: .2rem solid $pf-mobile-hint-blue !important;
+            margin-bottom: 1.05rem;
+            
+            img {
+                width: 5rem !important;
+                height: 5rem !important;
+            }
+            div{
+                padding: .4rem !important;
+                margin: auto;
+            }
+        }
+        .patternLogin {
+            width: 50% !important;
+            text-align: center;
+            margin-top: 1.05rem !important;
+            margin-bottom: 1.05rem;
+            
+            img {
+                width: 5rem !important;
+                height: 5rem !important;
+            }
+            div {
+                padding: .5rem !important;
+                margin: auto;
+            }
+        }
+    }
+}

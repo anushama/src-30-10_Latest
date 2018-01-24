@@ -1,0 +1,47 @@
+<ion-header>
+    <ion-row class="common-header">
+        <button ion-button navPop class="nav-icon"><ion-icon ios="md-close" md="md-close"></ion-icon></button>
+        <ion-title class="textElipse">ACCOUNT TO PAY FROM</ion-title>
+      </ion-row>
+  </ion-header>
+
+
+<ion-content>
+
+    <ion-list>
+      <ion-list-header>
+        PENFED ACCOUNTS
+      </ion-list-header>
+      <ion-item (click)="itemOne()">
+        <p>Money Market Savings (7039)</p>
+        <h2>$4,135.15</h2>
+        <span>Avaiable Balance</span>
+        <!-- <ion-radio item-end value="1"></ion-radio> -->
+        <!-- <ion-icon item-end ios="ios-arrow-forward" md="ios-arrow-forward"></ion-icon> -->
+      </ion-item>
+      <ion-item (click)="itemTwo()">
+        <p>Complete Access Checking (2020)</p>
+        <h2>$1,000.00</h2>
+        <span>Avaiable Balance</span>
+        <!-- <ion-radio item-end checked="true" value="2"></ion-radio> -->
+        <!-- <ion-icon item-end ios="ios-arrow-forward" md="ios-arrow-forward"></ion-icon> -->
+      </ion-item>
+      <ion-item (click)="itemTwo()">
+          <p>Account Nickname (9034)</p>
+          <h2>$25.00</h2>
+          <span>Avaiable Balance</span>
+          <!-- <ion-radio item-end value="3"></ion-radio> -->
+          <!-- <ion-icon item-end ios="ios-arrow-forward" md="ios-arrow-forward"></ion-icon> -->
+        </ion-item>
+    </ion-list>
+
+    <ion-grid class='bottom-button'>
+      <ion-row>
+        <ion-col col-md-8 offset-md-2 text-center>
+          <button ion-button color="cta-button">ADD EXTERNAL ACCOUNT</button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+
+</ion-content>

@@ -1,0 +1,116 @@
+// page-terms-conditions {
+//
+//     font-size: 1.6rem;
+//     font-family: $pf-montserrat-regular;
+//     .terms-modal {
+//         .back-button {
+//             display: block;
+//             color: $pf-mobile-mid-grey;
+//             .back-button-text {
+//                 display: none;
+//             }
+//             &:after {
+//                 border-right: 1px solid $pf-mobile-mid-grey;
+//             }
+//         }
+//     }
+//     .terms-and-conditions{
+//       h1 {
+//         margin-bottom: 2rem;
+//         text-transform: uppercase;
+//         font-size: 1.6rem;
+//         font-family: $pf-montserrat-semi-bold;
+//         color: $pf-mobile-dark-blue;//#0D2B53;
+//         letter-spacing: .1rem;
+//         line-height: 1.9rem;
+//       }
+//       h2 {
+//         font-size: 1.5rem;
+//         margin: 1rem 0;
+//         font-family: $pf-montserrat-medium;
+//         text-transform: uppercase;
+//         line-height: 1.5rem;
+//       }
+//       ol{
+//         padding-left: 16px;
+//         margin-top: 0px;
+//         li{
+//           margin-bottom: 20px;
+//         }
+//       }
+//     }
+//     .margin20-bottom{
+//       margin-bottom: 20px;
+//     }
+//     .margin10-bottom{
+//       margin-bottom: 10px;
+//     }
+//     // h1 {
+//     p {
+//         font-size: 15px;
+//         margin: 0;
+//         min-height: 100%;
+//
+//     }
+//
+//     /* Header with close button - Start*/
+//     .scroll-content {
+//       background-color: $pf-mobile-light-grey;
+//       height: 100%;
+//     }
+//
+//     .terms-header {
+//       font-family: $pf-montserrat-regular;
+//       background-color: $pf-mobile-dark-blue;
+//       height: 4.6rem;
+//       border-bottom: 1px solid $pf-mobile-light-blue;
+//     }
+//     .instruction-title {
+//       font-family: $pf-montserrat-regular;
+//       font-size: 1.5rem;
+//       color: $pf-mobile-dark-blue;
+//       margin-top: 2.6rem;
+//       margin-left: 1.6rem;
+//     }
+//     .col-content {
+//       padding: 0;
+//     }
+//     //only for ios
+//
+//     .title.title-ios {
+//       margin-left: 2rem;
+//     }
+//     //=============
+//
+//     .toolbar-title {
+//       text-align: left;
+//       font-size: 1.6rem;
+//       letter-spacing: 2px;
+//       line-height: 3.7rem;
+//       color: $pf-mobile-white;
+//     }
+//
+//     .backButton {
+//       background-color: $pf-mobile-dark-blue;
+//       margin: 1.1rem 1.1rem 1.1rem 0.5rem;
+//     }
+//
+//     .icon.ion-md-close {
+//       font-size: 2.4rem;
+//       font-weight: 500;
+//       color: $pf-mobile-white;
+//       line-height: 1.3rem;
+//     }
+//
+//     .terms-and-conditions {
+//       min-height:100%;
+//       padding-bottom:10px;
+//     }
+//     .last-paragraph{
+//       margin-bottom:40px;
+//     }
+//     /* Header with close button - End */
+//     .scroll-content{
+//       margin-top: 48px !important;
+//     }
+// }

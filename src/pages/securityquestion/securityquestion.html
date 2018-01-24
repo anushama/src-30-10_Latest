@@ -1,0 +1,47 @@
+<ion-header>
+    <pf-header leftIcon="back">
+      <pf-header-title>SECURITY QUESTION</pf-header-title>
+    </pf-header>
+</ion-header>
+
+
+
+<ion-content padding>
+  <p class="text-15 text-dark-blue push-top-none">{{"security.question.info" | aemsync : ["security-question"] | async}}</p>
+  <!-- <p class="securityDesc">To enhance your security, simply answer the following. Each question has an answer that is unique to you, which means it will provide extra protection - provided you don’t share your answers with anyone.</p> -->
+  <p class="text-16 text-bold text-dark-blue">{{this.api.securityQuestion | uppercase}}</p>
+  <!-- <p class="securityQuesSub">(FULL NAME OF CITY ONLY)</p> -->
+  <form [formGroup]="securityQuestionForm" name="securityQuestionForm">
+    <ion-row class="label-row">
+      <ion-col no-padding>
+        <ion-label class="input-label" stacked>ANSWER</ion-label>
+        <ion-item>
+          <ion-input type="text" name="secureAnswer" formControlName="secureAnswer" (ngModel)="secureAnswer"></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <button ion-button block class="cta-button" tappable (click)="submitSecurityQuestion()" [disabled]="!securityQuestionForm.controls.secureAnswer.valid">CONTINUE</button>
+    </ion-row>
+
+    <ion-row class="push-top">
+      <ion-col item-left class="text-14 text-dark-blue push-top-sm" no-padding>
+        Remember this Device
+      </ion-col>
+      <ion-col>
+        <ion-toggle name="saveDevice" formControlName="saveDevice" float-right></ion-toggle>
+      </ion-col>
+    </ion-row>
+  </form>
+
+  <ion-row class="push-bottom push-top">
+    <ion-col no-padding>
+      <a class="text-14 text-dark-blue" tappable (click)="differentUserLogin()">Login as a Different User</a>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col no-padding>
+      <a class="text-14 text-dark-blue" tappable (click)="helpLoggingIn()">Need Help Logging in?</a>
+    </ion-col>
+  </ion-row>
+</ion-content>

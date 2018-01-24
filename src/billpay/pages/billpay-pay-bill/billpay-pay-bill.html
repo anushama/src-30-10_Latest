@@ -1,0 +1,149 @@
+<!--<ion-header>
+    <ion-row class="common-header">
+        <button ion-button navPop class="nav-icon">
+            <ion-icon ios="ios-arrow-back" md="ios-arrow-back"></ion-icon>
+        </button>
+        <ion-title class="text-truncate">PAY BILL</ion-title>
+    </ion-row>
+</ion-header>-->
+<pf-header leftIcon="back">
+    <pf-header-title class="text-truncate">PAY BILL</pf-header-title>
+</pf-header>
+
+
+<ion-content>
+    <ion-list>
+        <ion-item class="summary">
+            <ion-row>
+                <ion-col item-left class="account-date dark-blue text-12 line-h24">
+                    <span>PAY FROM</span>
+                </ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col col-8 class="account-name text-truncate text-18">
+                    <span>{{fromAccount.fullName}}</span>
+                </ion-col>
+                <ion-col col-4 class="account-amount text-18 right">
+                    <span>{{fromAccount.availableBal | currency: 'USD':true:'1.2-2'}}</span>
+                </ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col class="account-number text-12">
+                    <span>({{fromAccount.numLast4}})</span>
+                </ion-col>
+                <ion-col class="account-number text-12 right">
+                    <span>Available Balance</span>
+                </ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col item-left class="account-number text-12" style="margin: 15px 0">
+                    <span>This is your default bill pay account</span>
+                </ion-col>
+            </ion-row>
+        </ion-item>
+    </ion-list>
+
+    <!-- <form [formGroup]="payBillForm" name="payBillForm"> -->
+        <div class="buttons">
+            <ion-list inset>
+                <button ion-item (click)="setPayTo(item)">
+                    <ion-row>
+                        <ion-col item-left class="account-date dark-blue text-12">
+                            <span>PAY TO</span>
+                        </ion-col>
+                    </ion-row>
+                    <ion-row class="accnt-margins">
+                        <ion-col class="account-name text-truncate text-18" style="line-height: 20px">
+                            <span>{{item.payAccount.fullName}}</span>
+                        </ion-col>
+                    </ion-row>
+                    <ion-row>
+                        <ion-col item-left class="account-number dark-blue text-12">
+                            <span>({{item.payAccount.numLast4}})</span>
+                        </ion-col>
+                    </ion-row>
+                </button>
+                <button ion-item (click)="setPaymentAmount(item)">
+                    <ion-row>
+                        <ion-col item-left class="account-date text-12 dark-blue padding-top-06">
+                            <span>PAYMENT AMOUNT</span>
+                        </ion-col>
+                        <ion-col item-right class="account-amount text-18">
+                            <span item-right>{{item.payAmount | currency: 'USD':true:'1.2-2'}}</span>
+                        </ion-col>
+                    </ion-row>
+                </button>
+                <button ion-item (click)="setFrequency(item)">
+                    <ion-row>
+                        <ion-col item-left class="account-date text-12 dark-blue padding-top-06">
+                            <span>PAYMENT FREQUENCY</span>
+                        </ion-col>
+                        <ion-col item-right class="account-amount text-18">
+                            <span item-right>{{item.frequency}}</span>
+                        </ion-col>
+                    </ion-row>
+                </button>
+            </ion-list>
+        </div>
+
+        <div *ngIf="isMonthly()" inset class="date-input-area">
+            <ion-list inset>
+                <ion-row>
+                    <ion-col item-left class="text-upper text-12 dark-blue"><span>Number of Payments</span></ion-col>
+                </ion-row>
+                <ion-row>
+                    <ion-col col-2 item-left class="">
+                        <span> <!-- formControlName="monthlyFreq" -->
+                            <ion-input type="number" class="data-box" name="monthlyFreq" [(ngModel)]="item.monthlyFreq" min="1" max="72"></ion-input>
+                        </span>
+                    </ion-col>
+                    <ion-col item-right margin-top class="text-upper text-12 dark-blue padding-left-08"><span>(Up to 72 recurring payments)</span></ion-col>
+                </ion-row>
+            </ion-list>
+        </div>
+
+        <div inset class="date-input-area">
+            <ion-list inset class="border-bottom">
+                <ion-label color="primary" class="text-12">PAYMENT DATE</ion-label>
+                <button ion-item detail-none (click)="showCalendar()">                
+                    <ion-row>
+                        <ion-col item-left class="data-box"><span>{{item.payDate | date: 'MM/dd/yyyy'}}</span></ion-col>
+                        <ion-icon ios="ios-calendar" md="ios-calendar" item-end></ion-icon>
+                    </ion-row>
+                </button>
+            </ion-list>
+        </div>
+        
+        <div inset class="date-input-area">
+            <ion-list inset>
+                <ion-label color="primary" class="text-12">MEMO (OPTIONAL)</ion-label>
+                <ion-input class="data-box" placeholder="i.e. July Rent"></ion-input>
+            </ion-list>
+        </div>
+
+        <div inset class="date-input-area">
+            <ion-list inset>
+                <ion-label color="primary" class="text-12">NOTE (OPTIONAL)</ion-label>
+                <ion-input class="data-box"></ion-input>
+            </ion-list>
+            <ion-row>
+                <ion-col no-padding class="account-amount text-12">
+                    This is for personal use and will not show  on the payment
+                </ion-col>
+            </ion-row>
+        </div>
+    <!-- </form> -->
+
+    <ion-row>
+        <button class="cta-button" ion-button block (click)="reviewPayment()">CONTINUE</button>
+    </ion-row>
+            
+</ion-content>
+
+<ion-footer no-border>
+    <ion-row>
+        <ion-col col-12 class="legal">
+            <p class="insured" (click)='displayNCUACert()'>Federally insured by NCUA</p>
+        </ion-col>
+    </ion-row>
+</ion-footer>

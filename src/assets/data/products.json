@@ -1,0 +1,229 @@
+[  
+   {  
+      "id":"AMX",
+      "categoryId":2,
+      "name":"PenFed Premium Travel Rewards American Express® Card",
+      "tagline":"For those who love travel and those who love travel rewards. Make every mile count.",
+      "imageUrl":"https://www.penfed.org/uploadedImages/Mobile/Products/Credit_Card_Images_for_Mobile/AMX_s.png",
+      "featuresText":"Earn unlimited 5X points on airfare purchases and 1X point on all other purchases. Plus, earn 20,000 bonus points when you spend $2,500 within the first 3 months of opening your account .* ",
+      "benefitsText":"Save money when you take advantage of our promotional balance transfer rate for 12 months on balance transfers. A low balance transfer fee applies to each transfer. ",
+      "considerationsText":"Waived FeesNo annual fee.No foreign transaction fee. ",
+      "penFedOrgUrl":"https://www.penfed.org/PenFed-Premium-Travel-Rewards-American-Express-Card/"
+   },
+   {  
+      "id":"AXC",
+      "categoryId":2,
+      "name":"PenFed Defender American Express® Card",
+      "tagline":"You defend. We reward. Earn Unlimited Cash Back on Everyday Purchases.",
+      "imageUrl":"https://www.penfed.org/uploadedImages/Mobile/Products/Credit_Card_Images_for_Mobile/AXC_s.png",
+      "featuresText":"Earn unlimited 1.5% cash back on all purchases. Cash back is automatically credited to your account each month. For active duty, National Guard, Reserves, retired and honorably discharged veterans.  ",
+      "benefitsText":"Save money when you take advantage of our  promotional balance transfer rate for 12 months on balance transfers. ",
+      "considerationsText":"No annual fee.No foreign transaction fee.No balance transfer fee.No cash advanced fee. No late fee.No over credit limit fee.     ",
+      "penFedOrgUrl":"https://www.penfed.org/defender-cash-rewards/"
+   },
+   {  
+      "id":"CBS",
+      "categoryId":1,
+      "name":"PenFed Car Buying Service",
+      "tagline":"Use our Certified Dealers and get a guaranteed deal on your new or used car.",
+      "featuresText":" Shop online from our inventory of cars and compare prices instantly. Free Carfax® available on most cars.  ",
+      "benefitsText":"Save an additional $1,000 or more with TrueCar® Buyer's Bonus benefits, including auto deductible reimbursement and expert certified mechanic advice.  ",
+      "considerationsText":"Price a new vehicle or find a used one.  ",
+      "penFedOrgUrl":"https://www.penfed.org/PenFed-Car-Buying-Service/"
+   },
+   {  
+      "id":"CDA",
+      "categoryId":3,
+      "name":"Money Market Certificates",
+      "tagline":"The smart money is on our certificates. Enjoy better returns with greater security.",
+      "featuresText":"Terms available from 6 months to 7 years. Automatic renewal is available. ",
+      "benefitsText":"Earn returns well above the industry average. Plus, dividends are compounded daily* and paid monthly to maximize your returns. *6-month term earns simple interest.",
+      "considerationsText":"Minimum opening deposit of $1,000 required. A penalty will be imposed for early withdrawal and will reduce earnings on the account.",
+      "penFedOrgUrl":"https://www.penfed.org/Money-Market-Certificate/"
+   },
+   {  
+      "id":"DD3",
+      "categoryId":3,
+      "name":"Money Market Savings Account",
+      "tagline":"Grow your nest egg faster. Our Money Market Savings Account offers higher yields for your long-term savings.",
+      "featuresText":"Earn high yields on balances of $100,000 and above. Enjoy easy access to your money online. Free checks available.",
+      "benefitsText":"Help your savings grow securely and quickly with our higher yields and federally insured account.  ",
+      "considerationsText":"No regular monthly service fees.<br/>There is no limit to the number of Pentagon Federal or foreign ATM withdrawals you make with our MMSA. However, government regulations restrict other types of withdrawals from your PenFed MMSA account up to six times per monthly dividend cycle. Checks are counted by the date they are paid from your account (as shown on your statement), not by the date you write them. If you exceed the permitted number of withdrawals, a fee will be assessed which may affect your earnings. Account transfers and automatic transfers are also included as part of your six withdrawals per monthly dividend cycle",
+      "penFedOrgUrl":"https://www.penfed.org/money-market-savings/"
+   },
+   {  
+      "id":"DDX",
+      "categoryId":3,
+      "name":"Access America Checking",
+      "tagline":"We put your money at your fingertips.",
+      "featuresText":"Over 56,000 free ATMs. Identity protection with Equifax® — free for one year and just $2.95 a month thereafter.* Free online bill payment. Overdraft protection†<br/>†This is a line of credit for qualified applicants.<br/>*For primary account holders, no payment is required for the first year. Twelve months after your account opening date you will be able to continue your subscription at a cost of $2.95 per month. If you agree to continue your subscription, the $2.95 fee will be charged each month to your PenFed Access America account. Access America joint account holders are offered the product for $2.95 per month. After successfully completing enrollment in the identity theft protection product, PenFed will charge your Access America account $2.95 each month you continue your subscription. You may cancel at any time; however, we do not provide partial or full refunds. A minimum $25 opening deposit is required.",
+      "benefitsText":"Earn dividends on your checking - so your money is always working harder for you. Direct deposits of $1,000 or more in a statement cycle.  ",
+      "considerationsText":"Open your account with as little as $25. No monthly service fee for daily balance or a monthly direct deposit of $500 or more.",
+      "penFedOrgUrl":"https://www.penfed.org/Access-America-Checking/"
+   },
+   {  
+      "id":"ESA",
+      "categoryId":3,
+      "name":"Coverdell Education Savings Account",
+      "tagline":"Plan for the future now. Enjoy tax-free earnings towards your child's education.",
+      "featuresText":"1-, 2-, 3-, 4-, 5-, or 7- year savings certificates available. Funds can be used for qualified elementary, secondary and college education. ",
+      "benefitsText":"Enjoy tax-free earnings with an excellent annual percentage yield (APY). Dividends are compounded daily and credited monthly.",
+      "considerationsText":"Minimum opening deposit of $500 required. A penalty will be imposed for early withdrawal and will reduce earnings on the account.",
+      "penFedOrgUrl":"https://www.penfed.org/Educational-Savings-Certificates/"
+   },
+   {  
+      "id":"NVH",
+      "categoryId":1,
+      "name":"New Auto Loan",
+      "tagline":"Our low new car financing is available for cars with the current and previous model year. Enjoy some of the lowest rates around.",
+      "featuresText":"Finance up to 110% of the MSRP. Terms up to 72 months available. Great APRs.",
+      "benefitsText":"Buy with confidence. Use our easy online application. Qualified buyers can walk into the dealership with a preapproved check.  ",
+      "considerationsText":"Once you've made at least 12 payments, you may qualify to extend your loan and lower your monthly bill ",
+      "penFedOrgUrl":"https://www.penfed.org/New-Auto-Loan/"
+   },
+   {  
+      "id":"NVL",
+      "categoryId":1,
+      "name":"Payment Saver New Auto Loan",
+      "tagline":"Go for the upgrades! Payment Saver loans offer lower monthly payments. You can sell, trade or refinance at the end of your term.",
+      "featuresText":"Enjoy great low rates with terms from 24 to 60 months. Available for never titled current and previous model year cars. At the end of your term, you can sell, trade or refinance.",
+      "benefitsText":"Better than a lease — there are no prepayment penalties and no wear and tear clauses. You get more car for your money with more flexibility once your loan is up.  ",
+      "considerationsText":"Pay the balloon payment to purchase outright, or sell, trade or refinance when your term is up.  ",
+      "penFedOrgUrl":"https://www.penfed.org/Payment-Saver-Auto-Loan/"
+   },
+   {  
+      "id":"R40",
+      "categoryId":4,
+      "name":"Traditional IRA Share Account",
+      "tagline":"An easy way to start saving for retirement",
+      "featuresText":"Contribute at any time up to IRA limits. ",
+      "benefitsText":"Enjoy tax-defferred earnings. Dividends are compounded daily and credited monthly.",
+      "considerationsText":"Minimum deposit amount of $25 required ",
+      "penFedOrgUrl":"https://www.penfed.org/Traditional-IRA-Share-Account/"
+   },
+   {  
+      "id":"REFI",
+      "categoryId":1,
+      "name":"Refinance Auto Loan",
+      "tagline":"Keep more money in your pocket each month. Our refinancing terms are flexible and our approval process is fast.",
+      "featuresText":"Finance up to 100% on your new or used vehicle. Great APRs. ",
+      "benefitsText":"Save money with a lower rate and a lower monthly payment. ",
+      "considerationsText":"Try our loan comparison tool to see how much you could save over your current loan. ",
+      "penFedOrgUrl":"https://www.penfed.org/refinance-auto-loan/"
+   },
+   {  
+      "id":"RO1",
+      "categoryId":4,
+      "name":"IRA Certificates",
+      "tagline":"Get more flexibility with a certificate that allows partial withdrawals without a penalty if you are age 59 ½ or older.",
+      "featuresText":"Available in 1- to 7-year terms. Deduct your contributions from your taxes. Consult a qualified tax advisor.",
+      "benefitsText":"Dividends are compounded daily and paid monthly for maximum returns.  ",
+      "considerationsText":"Minimum opening deposit of $1,000 required. A penalty will be imposed for early withdrawal and will reduce earnings on the account. ",
+      "penFedOrgUrl":"https://www.penfed.org/Traditional-IRA-Certificates/"
+   },
+   {  
+      "id":"RP0",
+      "categoryId":4,
+      "name":"IRA Premier Account",
+      "tagline":"Enjoy higher yields with the security of a federally insured account.",
+      "featuresText":"Two-tier account. Available for traditional and Roth IRA.    ",
+      "benefitsText":"Enjoy high-yield returns. Diversify your investment portfolio.     ",
+      "considerationsText":"Minimum opening deposit of $10,000 required. Account balances below $10,000 earn a lower return. Rates could change after account opening.",
+      "penFedOrgUrl":"https://www.penfed.org/IRA-Premier-Account/"
+   },
+   {  
+      "id":"RP3",
+      "categoryId":4,
+      "name":"Roth IRA",
+      "tagline":"Open a Roth IRA, or convert your traditional IRA and enjoy tax-free eligible withdrawls. Certain rules apply to converting a traditional IRA to a Roth IRA.",
+      "featuresText":"Dividends grow tax-free. Eligible withdrawls are tax-free.        ",
+      "benefitsText":"No requirement to take a distribution after age 70 1/2 and you can continue to make contributions.",
+      "considerationsText":"Minimum opening deposit of $25 required.",
+      "penFedOrgUrl":"https://www.penfed.org/Roth-IRA/"
+   },
+   {  
+      "id":"RSV",
+      "categoryId":3,
+      "name":"Regular Savings Account",
+      "tagline":"A great starter savings account to establish your PenFed membership. Earns dividends monthly.",
+      "featuresText":"Dividends are compounded daily and credited monthly. ",
+      "benefitsText":"Earn dividends on your entire account balance from the day of deposit to day of withdrawal.  ",
+      "considerationsText":"Open your account with as little as $5.",
+      "penFedOrgUrl":"https://www.penfed.org/regular-savings-account/"
+   },
+   {  
+      "id":"UVH",
+      "categoryId":1,
+      "name":"Used Auto Loan",
+      "tagline":"Any used car. Any model year. Our low rates and flexible terms help you get more used car for your money.",
+      "featuresText":"Borrow up to $100,000. Terms up to 72 months. Great APRs.  ",
+      "benefitsText":"No need to wait. Use our easy online application and you may even get an instant approval. ",
+      "considerationsText":"Once you've made at least 12 payments, you may qualify to extend your loan and lower your monthly bill.  ",
+      "penFedOrgUrl":"https://www.penfed.org/used-auto-loan/"
+   },
+   {  
+      "id":"UVL",
+      "categoryId":1,
+      "name":"Payment Saver Used Auto Loan",
+      "tagline":"Get even more used car for your money with a lower monthly payment on your used car.",
+      "featuresText":"Enjoy great low rates with terms from 24 to 60 months. Available for current and previous two model years' used cars. At the end of your term, you can sell, trade or refinance.  ",
+      "benefitsText":"Better than a lease — there are no prepayment penalties and no wear and tear clauses. You get more car for your money with more flexibility once your loan is up.  ",
+      "considerationsText":" Pay the final payment to purchase outright, or sell, trade or refinance when your term is up.  ",
+      "penFedOrgUrl":"https://www.penfed.org/Payment-Saver-Auto-Loan/"
+   },
+   {  
+      "id":"VPC",
+      "categoryId":2,
+      "name":"PenFed Platinum Cash Rewards Visa® Card",
+      "tagline":"A great card for those who live life on the road. Pair it with another qualifying PenFed product and earn more rewards.",
+      "imageUrl":"https://www.penfed.org/uploadedImages/Mobile/Products/Credit_Card_Images_for_Mobile/VPC_s.png",
+      "featuresText":"Earn unlimited 3% cash back on gas purchases at the pump (or 5% cash back with a qualifying PenFed product). Cash back is automatically credited to your account each month. ",
+      "benefitsText":"Save money when you take advantage of our  promotional balance transfer rate for 12 months on balance transfers. A low balance transfer fee applies to each transfer. ",
+      "considerationsText":"No foreign transaction fee.No annual fee with qualifying PenFed product. ",
+      "penFedOrgUrl":"https://www.penfed.org/Platinum-Cash-Rewards/"
+   },
+   {  
+      "id":"VPS",
+      "categoryId":2,
+      "name":"PenFed Platinum Rewards Visa Signature® Card",
+      "tagline":"Earn more points in more places with the card that has it all.",
+      "imageUrl":"https://www.penfed.org/uploadedImages/Mobile/Products/Credit_Card_Images_for_Mobile/VPR_s.png",
+      "featuresText":"Earn unlimited 5X points on gas purchases, 3X points on supermarket purchases and 1X point on all other purchases. Plus, special savings and discounts from top retailers and access to popular events. ",
+      "benefitsText":"Save money when you take advantage of our promotional balance transfer rate for 12 months on balance transfers. A low balance transfer fee applies to each transfer. ",
+      "considerationsText":"Waived FeesNo annual fee.No foreign transaction fee. ",
+      "penFedOrgUrl":"https://www.penfed.org/visasignaturepoints/"
+   },
+   {  
+      "id":"VPV",
+      "categoryId":2,
+      "name":"PenFed Promise Visa® Card",
+      "tagline":"Live worry-free with the card named \"Simplest Card in America\" by Credit.com.",
+      "imageUrl":"https://www.penfed.org/uploadedImages/Mobile/Products/Credit_Card_Images_for_Mobile/VPV_s.png",
+      "featuresText":" Simplicity, convenience and low interest rates in one card with absolutely no fees. It doesn't get any easier than this. We promise. ",
+      "benefitsText":"Save money when you take advantage of our promotional balance transfer rate for 12 months on balance transfers.",
+      "considerationsText":"No annual fee.No foreign transaction fee.No balance transfer fee.No cash advance fee. No late fee.No over credit limit fee.No penalty APR.",
+      "penFedOrgUrl":"https://www.penfed.org/Penfed-Promise/"
+   },
+   {  
+      "id":"VSD",
+      "categoryId":2,
+      "name":"PenFed Defender Visa Signature® Card",
+      "tagline":"You defend. We reward. Earn Unlimited Cash Back on Everyday Purchases.",
+      "imageUrl":"https://www.penfed.org/uploadedImages/Mobile/Products/Credit_Card_Images_for_Mobile/VSD_s.png",
+      "featuresText":"Earn unlimited 1.5% cash back on all purchases. Cash back is automatically credited to your account each month.<br/><br/>For active duty, National Guard, Reserves, retired and honorably discharged veterans.",
+      "benefitsText":"Enjoy insider access to events, special discounts from major retailers and more.",
+      "considerationsText":"Unlimited, Automatic Cash Back<br/>No Annual Fee<br/>No Foreign Transaction Fee<br/>No Balance Transfer Fee<br/>No Cash Advance Fee<br/>Chip-Enabled Security",
+      "penFedOrgUrl":"https://www.penfed.org/VisaDefender/?WT.mc_id=P0105&amp;adcode=606"
+   },
+   {  
+      "id":"VSG",
+      "categoryId":2,
+      "name":"PenFed Visa® Gold Card",
+      "tagline":"Go for Gold with this low interest rate card that's great for every day use.",
+      "imageUrl":"https://www.penfed.org/uploadedImages/Mobile/Products/Credit_Card_Images_for_Mobile/VSG_s.png",
+      "featuresText":" Enjoy emergency card replacement and $100,000 of travel accident insurance automatically. ",
+      "benefitsText":"Save money when you take advantage of our  promotional balance transfer rate for 12 months on balance transfers. A low balance transfer fee applies to each transfer. ",
+      "considerationsText":"No annual fee. No cash advance fee.",
+      "penFedOrgUrl":"https://www.penfed.org/Visa-Gold/"
+   }
+]

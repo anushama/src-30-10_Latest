@@ -1,0 +1,128 @@
+.content-ios {
+    background: $pf-mobile-light-grey !important;
+    overflow-y: scroll !important;
+}
+
+.content-md {
+    background: $pf-mobile-light-grey !important;
+    overflow-y: scroll !important;
+}
+
+.scroll-content {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    //overflow: auto !important;
+}
+
+.dark-blue-bg {
+    background: $pf-mobile-dark-blue !important;
+}
+
+.legal {
+    margin-left: 2.1rem;
+    position: absolute;
+    color: purple;
+    bottom: 40;
+    &.insured {
+        margin-left: 1.6rem;
+    }
+}
+
+ion-tabs {
+    margin-top: 20px !important;
+}
+
+.input-label {
+    font-size: 1.2rem;
+    font-family: $pf-montserrat-regular;
+    color: $pf-mobile-dark-blue;
+    margin-bottom: 0.4rem;
+    text-transform: uppercase;
+}
+
+form {
+    .item-md {
+        padding-left: 0 !important;
+    }
+    .item-ios {
+        padding-left: 0 !important;
+    }
+    .pf-form-field-error {
+        font-family: $pf-montserrat-regular !important;
+        font-size: 1.2rem;
+        color: $pf-mobile-red;
+    }
+}
+
+.toggle-label {
+    color: $pf-mobile-dark-blue;
+    font-size: 1.4rem;
+}
+
+tabber show-tabber {
+    top: 3px;
+}
+
+.disclaimer>p {
+    color: $pf-mobile-mid-grey;
+    font-size: 1.3rem;
+}
+
+.submenu .list-content {
+    margin-left: 16px;
+}
+
+.input-ios[clearInput] .text-input {
+    padding-left: 8px !important;
+}
+
+
+/* Gradient Header for details pages -  */
+
+.detail-gradient-bg {
+    height: 91px;
+    top: initial;
+    background: -webkit-gradient(linear, left top, left bottom, from(#0F2D52), to(#2AA1E1));
+    background: linear-gradient(180deg, #0F2D52 0%, #2AA1E1 100%);
+    color: $pf-mobile-white;
+    border-top: 1px solid #2BA1E1;
+    text-transform: capitalize;
+    overflow: hidden;
+    text-align: center;
+    span.info-label {
+        font-family: $pf-montserrat-light;
+        margin-bottom: 5px;
+        font-size: 16px;
+        letter-spacing: 0;
+    }
+    h2.info {
+        margin: 10px 0 25px;
+        font-family: $pf-montserrat-medium;
+        font-weight: normal;
+        font-size: 24px;
+        color: #FFFFFF;
+        letter-spacing: 0.55px;
+        text-transform: uppercase;
+    }
+}
+
+
+/* List items with no background -*/
+
+.no-bg {
+    background: none !important;
+}
+
+.logo-equal-house {
+    text-align: center;
+}
+
+.img50x50 {
+    width: 50px;
+    height: 50px;
+}
+
+.footer-legal .footer-content a {
+    color: $pf-mobile-dark-blue;
+}

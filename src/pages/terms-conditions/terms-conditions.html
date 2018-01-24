@@ -1,0 +1,10 @@
+<ion-header>
+  <pf-header leftIcon="terms">
+    <pf-header-title>TERMS &amp; CONDITIONS</pf-header-title>
+  </pf-header>
+</ion-header>
+<ion-content padding>
+  <div *ngIf="this.rxContent">
+    <div [innerHtml]="this.termsAcond"></div>
+  </div>
+</ion-content>

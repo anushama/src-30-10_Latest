@@ -1,0 +1,285 @@
+pattern-login-setup {
+  .content.content-ios {
+    .scroll-content {
+      padding-top: 0 !important;
+      /*margin-top:48px !important;*/
+    }
+  }
+
+  .content {
+    background-color: $pf-mobile-light-grey;
+  }
+
+  .create-patern-header {
+    font-family: $pf-montserrat-semi-bold !important;
+    background-color: $pf-mobile-dark-blue !important;
+    height: 4.6rem;
+  }
+
+  /*.backButton {
+    //background-color: $pf-mobile-dark-blue;
+    margin: 1.1rem;
+  }*/
+
+  .information-title {
+    .toolbar-title {
+      text-align: left;
+      margin-left: 1.2rem;
+      font-size: 1.7rem;
+      letter-spacing: 1px;
+      font-weight: 600;
+      line-height: 4.7rem;
+      color: $pf-mobile-white;
+    }
+  }
+
+  .icon {
+    color: $pf-mobile-white;
+    line-height: 2.3rem;
+
+    &.ion-ios-arrow-back {
+      font-size: 2.4rem;
+      font-weight: 700;
+    }
+
+    &.ion-ios-close {
+      font-size: 3.0rem;
+      font-weight: 700;
+    }
+  }
+
+  .dotsConnectText {
+    font-family: $pf-montserrat-medium, sans-serif !important;
+    font-size: 15px;
+    color: #282828;
+    letter-spacing: 0.5px;
+    width: 180px;
+    height: 19px;
+    text-align: center !important;
+    margin-top: 35px;
+    margin-bottom: 30px;
+    //margin-left: -7px;
+  }
+
+  .pattern-matrix {
+    align-content: center !important;
+    // margin: -6px 10px 10px -6px !important;
+    margin: 0 auto;
+
+    .pattern {
+      width: 26% !important;
+    }
+
+    .pattern div {
+      float: left;
+      width: 40%;
+      border-radius: 40px !important;
+      margin: 10px 25px !important;
+
+      ul {
+        li {
+          width: 47px;
+          //background: rgba(15,45,82,0.90);
+          background: $pf-mobile-mid-grey;
+          height: 47px;
+          border-radius: 40px !important;
+          list-style: none !important;
+        }
+      }
+    }
+  }
+
+  .patternlockContainer {
+    margin: 0 auto !important;
+    align-self: center !important;
+  }
+
+  .patternlock-div,
+  .patternlock-settings-div {
+    width: 310px;
+    height: 310px;
+    position: relative;
+    margin: 0 auto;
+  }
+
+  .patternlock-div ul.patt-wrap,
+  .patternlock-settings-div ul.patt-wrap {
+    position: relative;
+    cursor: pointer;
+    padding: 20px;
+  }
+
+  .patt-holder .patt-circ.hovered .patt-wrap ul,
+  .patt-wrap li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .patternlock-div .patt-circ,
+  .patternlock-settings-div .patt-circ {
+    position: relative;
+    float: left;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+  }
+
+  .patt-hidden .patt-circ.hovered {
+    border: 0;
+  }
+  /* the dots BEFORE you touch them */
+  .pattern-matrix {
+    margin: 0 auto !important;
+    align-content: center !important;
+  }
+
+  .patt-dots {
+    opacity: 0.5;
+    background-color: $pf-mobile-mid-grey;
+    height: 47px;
+    width: 47px;
+    border-radius: 44px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -27px;
+    margin-left: -24px;
+  }
+  /* the dots AFTER you touch them */
+  .patt-circ.hovered .patt-dots {
+    height: 47px;
+    width: 47px;
+    border-radius: 25px;
+    margin-top: -27px;
+    margin-left: -24px;
+    box-shadow: none;
+    background-color: $pf-mobile-dark-blue;
+    opacity: 1;
+    z-index: 10;
+    border: 11px solid $pf-mobile-dark-blue;
+  }
+
+  .patt-lines {
+    border-radius: 3px;
+    height: 6px;
+    background: $pf-mobile-dark-blue;
+    position: absolute;
+    transform-origin: 3px 3px;
+    -ms-transform-origin: 3px 3px;
+    -webkit-transform-origin: 3px 3px;
+    background-color: $pf-mobile-dark-blue;
+  }
+
+  .btn-pattern {
+    font-family: $pf-montserrat-medium, sans-serif;
+    font-size: 16px;
+    color: $pf-mobile-white;
+    //letter-spacing: 1px;
+    margin-top: 60px !important;
+    margin-bottom: 10px !important;
+    line-height: 0;
+  }
+
+  .clear {
+    border: 2px solid rgba(0,40,86,0.90);
+    width: 43% !important;
+    height: 50px !important;
+    border-radius: 4px;
+
+    .button-inner {
+      color: $pf-mobile-line-break;
+      font-size: 16px;
+      letter-spacing: 1px;
+      line-height: 19px;
+    }
+
+    [ion-button][disabled],
+    button[disabled] {
+      color: $pf-mobile-line-break;
+    }
+  }
+
+  .continue {
+    width: 43% !important;
+    height: 50px !important;
+    border-radius: 4px;
+    background: $pf-mobile-line-break;
+    margin-left: 12px;
+
+    .button-inner {
+      font-size: 16px;
+      letter-spacing: 1px;
+      line-height: 35px;
+    }
+
+    [ion-button][disabled],
+    button[disabled] {
+      color: $pf-mobile-white !important;
+    }
+  }
+}
+
+.app-root-ios {
+  .btn-pattern-ios {
+    margin-top: 30px !important;
+  }
+}
+
+.spinner-style {
+  .loading-wrapper {
+    z-index: 10;
+    opacity: 0.9;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    background-color: $pf-mobile-white !important;
+    height: 100%;
+    width: 100%;
+    max-height: none;
+    max-width: none;
+    border-radius: 0 !important;
+    font-size: 14px;
+    color: $pf-mobile-dark-blue !important;
+    font-family: $pf-montserrat-semi-bold;
+  }
+
+  .loading-content {
+    margin: 0 auto;
+  }
+
+  .image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 80px;
+    height: 80px;
+    margin: -100px 0 0 -40px;
+    -webkit-animation: spin 4s linear infinite;
+    -moz-animation: spin 4s linear infinite;
+    animation: spin 4s linear infinite;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  @-moz-keyframes spin {
+    100% {
+      -moz-transform: rotate(360deg);
+    }
+  }
+  @-webkit-keyframes spin {
+    100% {
+      -webkit-transform: rotate(360deg);
+    }
+  }
+  @keyframes spin {
+    100% {
+      -webkit-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
+  }
+}

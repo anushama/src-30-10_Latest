@@ -1,0 +1,86 @@
+page-billpay-pay-bill {
+    // Only 4 Android
+    .buttons {
+        .list.list-md { margin: 0px; }
+        .item-md { padding-left: 0px }
+        button.item.item-block.item-md div.input-wrapper  { padding-left: 16px}
+    }
+
+    .date-input-area {
+        .list-md { margin: 0px; }
+    }
+
+    .summary {
+        background-color: $pf-mobile-light-grey;
+        .col {
+            margin-top: 0px;
+            margin-bottom: 0px;
+        }
+    }
+
+    .dark-blue {
+        color: $pf-mobile-dark-blue;
+    }
+
+    .accnt-margins {
+        margin-top: 6px;
+    }
+
+    .right {
+        text-align: right;        
+    }
+
+    .line-h24 {
+        line-height: 24px;
+    }
+
+    .padding-left-08 {
+        padding-left: 8px;
+    }
+
+    .padding-top-06 {
+        padding-top: 6px;
+    }
+
+    .date-input-area {
+        font-family: 'montserrat400',sans-serif;
+        margin-top:20px;
+        padding: 0 16px;
+        
+        button {
+            padding-left: 0px;
+        }
+
+        // input {
+        //     margin-left: 0px !important;
+        // }
+
+        ion-row {
+            padding-top: 10px;
+        }
+        ion-label {
+            margin-bottom: 4px;
+        }
+        ion-icon {
+            color: $pf-mobile-light-blue;
+        }
+        .data-box {
+            margin: 2px 0;
+            padding: 4px;
+            line-height: 20px;
+            background-color: white;
+            font-size: 18px;
+            color: black;
+        }
+
+        ion-input, .border-bottom {
+            border-bottom: 2px solid #D0D0D0;            
+        }             
+
+    }
+    .scroll-content{
+        margin-top: 48px !important;
+    }
+
+
+}

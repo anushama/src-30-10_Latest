@@ -1,0 +1,29 @@
+{
+   "message": {},
+   "merchantList": [
+      {
+         "merchantId": "2401375",
+         "name": "American Red Cross",
+         "categoryId": "0",
+         "global": false
+      },
+      {
+         "merchantId": "300262",
+         "name": "Tampa Electric Company",
+         "categoryId": "3",
+         "global": true
+      },
+      {
+         "merchantId": "300261",
+         "name": "City of Naperville",
+         "categoryId": "3",
+         "global": false
+      },
+      {
+         "merchantId": "400000",
+         "name": "Ann Taylor",
+         "categoryId": "2",
+         "global": true
+      }
+   ]
+}

@@ -1,0 +1,147 @@
+account-recent-transactions{
+  min-height: 400px;
+  > .list{
+    @media(min-width: 600px) and (max-width: 1100px) {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+  }
+  .recentDate, .recentTransaction{
+    span:first-child{
+      display:inline-block;
+      // float: left;
+      width:70%;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      &+span:last-child{
+        display:inline-block;
+        // float: right;
+        width:29%;
+        text-align: right;
+      }
+    }
+  }
+  .recentDate{
+    font-family: $pf-montserrat-light;
+    font-size: 13px;
+    span + span:last-of-type{
+      font-family: $pf-montserrat-regular;
+      color:#9b9b9b;
+    }
+  }
+  ion-list > .item .label{
+    margin-right: 0px;
+  }
+  .recentTransaction{
+    font-family: $pf-montserrat-regular;
+    font-size: 15px;
+    color: $pf-mobile-dark-grey;
+    span:last-child{
+      &:before{
+        content:"$";
+        font-size: 14px;
+        top:-1px;
+        position: relative;
+        padding-right: 1%;
+      }
+    }
+    &.no-dollar span:last-child:before{
+        content:"";
+        padding: 0px;
+        position: static;
+      }
+  }
+  .creditTransaction{
+    color: $pf-mobile-green;
+  }
+  button.item{
+    padding:0px;
+    .label{
+      margin: 0px;
+    }
+  }
+  .list .item-block {
+    .item-inner{
+      padding-right: 16px;
+      .label{
+        margin-right: 0px;
+      }
+    }
+    &:last-of-type{
+      .item-inner{
+        margin: 0px 0px 0px -16px;
+        padding-left: 16px;
+        padding-right: 16px;
+      }
+    }
+  }
+  .list button.item-block {
+    padding-right: 0px;
+    .item-inner {
+      background-image: none;
+      border-bottom:0px;
+      padding:0px;
+    }
+  }
+  .dividerHeadingToggle {
+    padding-right:16px;
+  }
+  .checkLabel{
+    text-decoration: underline;
+  }
+  .ion-ios-add-circle, .ion-ios-remove-circle{
+    color:$pf-mobile-light-blue;
+  }
+  .taxInstructions{
+  text-align: center;
+  padding: 10px 0px;
+  font-family: $pf-montserrat-regular;
+  font-size: 13px;
+  }
+  button.item-ios:not([detail-none]) .item-inner, button.item-md:not([detail-none]) .item-inner {
+    line-height: normal;
+    background-image:none !important;
+  }
+}
+.noTransactions{
+  font-family: $pf-montserrat-light;
+}
+.accountDetails{
+  &.taxInformation{
+    height: 100%;
+    max-height: 100%;
+    background-color: $pf-mobile-white;
+    li span:first-child{
+      width:70%;
+    }
+    li span:last-child{
+      width:29%;
+    }
+    .loading-crescent{
+      text-align: center;
+      margin: 0 auto;
+    }
+  }
+  li:last-of-type{
+    margin: 0px -16px;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+.icon.icon-ios.ion-ios-arrow-back, .icon.icon-ios.ion-ios-close {
+    height: auto !important;
+}
+
+.trans-date {
+  margin-left: 3px;
+  color: $pf-mobile-black !important;
+  }
+
+  // .as-of-date {
+  //   padding-right: 7px !important;
+  //   color: $pf-mobile-mid-grey !important;
+  // }
+
+account-recent-transactions .list .list-sort.item-block .item-inner{
+  padding-right: 8px;
+}

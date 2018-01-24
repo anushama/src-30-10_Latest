@@ -1,0 +1,157 @@
+//
+// Text
+// --------------------------------------------------
+//@import 'mixins';
+
+body {
+  .h1-custom {
+    font-size: 16px;
+    color: $pf-mobile-dark-blue;
+    font-family: $pf-montserrat-semi-bold;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+  }
+
+  .h2-custom {
+    font-size: 15px;
+    color: $pf-mobile-dark-grey;
+    font-family: $pf-montserrat-semi-bold;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+  }
+
+  .h3-custom {
+    font-size: 15px;
+    color: $pf-mobile-dark-grey;
+    font-family: $pf-montserrat-regular;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+  }
+
+  .p-custom {
+    font-family: $pf-montserrat-regular;
+    font-size: 15px;
+    margin-bottom: 10px;
+  }
+
+  a {
+    font-family: $pf-montserrat-regular;
+    color: $pf-mobile-dark-blue;
+    text-decoration: underline;
+  }
+
+  .text-normal {
+    font-family: $pf-montserrat-regular;
+  }
+
+  .text-bold {
+    font-family: $pf-montserrat-semi-bold;
+  }
+
+  .text-light {
+    font-family: $pf-montserrat-light;
+  }
+
+  .text-center {
+    text-align: center;
+  }
+
+  .text-left {
+    text-align: left;
+  }
+
+  .text-right {
+    text-align: right;
+  }
+
+  .text-dark-blue {
+    color: $pf-mobile-dark-blue;
+  }
+
+  .text-light-blue {
+    color: $pf-mobile-light-blue;
+  }
+
+  .text-lg,
+  .text-md,
+  .text-sm,
+  .text-xs {
+    text-rendering: optimizeLegibility;
+  }
+
+  .text-micro {
+    font-size: 10px;
+    font-weight: normal;
+    letter-spacing: 1px;
+  }
+
+  .text-32 {
+    font-size: 32px !important;
+  }
+
+  .text-30 {
+    font-size: 30px !important;
+  }
+
+  .text-26 {
+    font-size: 26px !important;
+  }
+
+  .text-24 {
+    font-size: 24px !important;
+  }
+
+  .text-18 {
+    font-size: 18px !important;
+  }
+
+  .text-16 {
+    font-size: 16px !important;
+  }
+
+  .text-15 {
+    font-size: 15px !important;
+  }
+
+  .text-14 {
+    font-size: 14px !important;
+  }
+
+  .text-13 {
+    font-size: 13px !important;
+  }
+
+  .text-12 {
+    font-size: 12px !important;
+  }
+
+  .text-wrap {
+    white-space: normal;
+  }
+
+  .text-break {
+    word-break: break-word;
+  }
+
+  .text-upper {
+    text-transform: uppercase;
+  }
+
+  .text-lower {
+    text-transform: lowercase;
+  }
+
+  .text-caps {
+    text-transform: capitalize;
+  }
+
+  .text-truncate {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .text-nodecoration {
+    text-decoration: none;
+  }
+}

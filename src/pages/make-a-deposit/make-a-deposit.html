@@ -1,0 +1,130 @@
+<!--<ion-header>
+  <ion-row class="common-header">
+      <button ion-button navPop *ngIf="navParams.data.fromAccount; else hamburger">
+        <ion-icon ios="ios-arrow-back" md="ios-arrow-back"></ion-icon>
+      </button>
+      <ng-template #hamburger>
+          <button ion-button  class="nav-icon">
+            <ion-icon menuToggle ios="md-menu" md="md-menu"></ion-icon>
+          </button>
+      </ng-template>
+      <ion-title>MAKE DEPOSIT (1 OF 2)</ion-title>
+      <button ion-button><ion-icon ios="ios-mail" md="ios-mail" icon-right></ion-icon></button>
+  </ion-row>
+</ion-header>-->
+<ion-header>
+  <pf-header *ngIf="!navParams.data.fromAccount" leftIcon="toggleMenu" rightIcon="mail">
+    <pf-header-title>MAKE DEPOSIT <span class="secondary-text">(1 OF 2)</span></pf-header-title>
+  </pf-header>
+  <pf-header *ngIf="navParams.data.fromAccount" leftIcon="back" rightIcon="mail">
+    <pf-header-title>MAKE DEPOSIT (1 OF 2)</pf-header-title>
+  </pf-header>
+</ion-header>
+
+<ion-content no-padding [ngClass]="{'hidePage':showCameraControls}">
+  <ion-list>
+    <ion-item (click)="selectDepositAccount()" class="account-list-height">
+      <h6 class="h-header">DEPOSIT TO</h6>
+      <div class="" *ngIf="depositAccount === null">
+        <p class="accountPara">Select Account</p>
+      </div>
+      <div class="" *ngIf="depositAccount !== null">
+        <ion-row col-12 no-padding>
+          <ion-col *ngIf="!depositAccount.nickname" col-6 no-padding text-left class="accountName">{{ (depositAccount.fullName) | titleCase}}</ion-col>
+          <ion-col *ngIf="depositAccount.nickname" col-6 no-padding text-left class="accountName">{{ (depositAccount.nickname) | titleCase}}</ion-col>
+          <ion-col no-padding text-right class="accountName accountVal">${{depositAccount.availableBal | formatPrice}}</ion-col>
+        </ion-row>
+        <ion-row col-12 no-padding>
+          <ion-col no-padding text-left class="accountNum">({{depositAccount.numLast4}})</ion-col>
+          <ion-col no-padding text-right class="accountNum availableBal">Available Balance</ion-col>
+        </ion-row>
+      </div>
+      <ion-icon text-right ios="ios-arrow-forward" md="ios-arrow-forward" class="arrow"></ion-icon>
+    </ion-item>
+    <ion-item class="item-amount" (click)="selectDepositAmount()" class="account-list-height amount-height">
+      <ion-row no-padding>
+        <ion-col no-padding class="h-header">DEPOSIT AMOUNT</ion-col>
+        <ion-col no-padding text-right class="accountPara" *ngIf="depositAmount === null">$0.00</ion-col>
+        <ion-col no-padding text-right class="accountName accountVal" *ngIf="depositAmount !== null">${{depositAmount | formatPrice}}</ion-col>
+        <ion-icon text-right ios="ios-arrow-forward" md="ios-arrow-forward" class="arrow"></ion-icon>
+      </ion-row>
+    </ion-item>
+  </ion-list>
+  <div class="description">
+    <!-- You may deposit a total of <b>$5,000.00</b> today across all eligible Mobile Deposit Accounts. -->
+    {{"make.deposit.info1" | aemsync : ["move-money"] | async}}
+  </div>
+  <div class="description">
+    <!-- Please sign and note the following on the back of your check: “For PenFed deposit only.” -->
+    {{"make.deposit.info2" | aemsync : ["move-money"] | async}}
+  </div>
+  <div class="check-container">
+    <div class="check-header" (click)="launchCamera('front')">
+      FRONT OF CHECK
+      <div class="check-img" [ngClass]="{'img-ready':picture.front !== null}">
+        <ion-icon *ngIf="picture.front === null" ios="md-camera" md="md-camera" class="camera"></ion-icon>
+        <div *ngIf="picture.front === null; else pictureFront" class="front-back">
+          FRONT OF CHECK
+        </div>
+        <ng-template #pictureFront>
+          <div class="front-back photo-ready">
+            <img [src]="picture.front" />
+          </div>
+        </ng-template>
+      </div>
+    </div>
+    <div class="check-header" (click)="launchCamera('back')">
+      BACK OF CHECK
+      <div class="check-img" [ngClass]="{'img-ready':picture.back !== null}">
+        <ion-icon *ngIf="picture.back === null" ios="md-camera" md="md-camera" class="camera"></ion-icon>
+        <div *ngIf="picture.back === null; else pictureBack" class="front-back">
+          BACK OF CHECK
+        </div>
+        <ng-template #pictureBack>
+          <div class="front-back photo-ready">
+            <img [src]="picture.back" />
+          </div>
+        </ng-template>
+      </div>
+    </div>
+
+    <div class="control-button">
+      <button ion-button class="cta-button" [disabled]="updateContinueButton(picture)" (click)="confirm(picture)">CONTINUE</button>
+    </div>
+    <!-- TODO ADD FOOTER -->
+    <pf-footer class="footer-legal" (click)='utility.displayNCUACert()'>Federally insured by NCUA</pf-footer>
+    <!--<div class="insured" tappable (click)='utility.displayNCUACert()'>Federally insured by NCUA</div>-->
+  </div>
+</ion-content>
+<!-- Camera Controls. Appears Once Camera is turned via Plugin and CSS class CHanges -->
+<div class="photo-controls" *ngIf="showCameraControls && !reviewPhoto">
+  <div class="take-photo">
+    <div class="camera-header">
+      <button (click)=cancelPhoto(side) class="nav-icon"><ion-icon ios="md-close" md="md-close"></ion-icon></button>
+      <h1 class="check-side-label"> {{side | uppercase}} OF CHECK</h1>
+    </div>
+    <div class="camera-controls">
+      <div (click)=takePhoto(side)><img src="assets/deposit-capture-btn.svg" /> </div>
+    </div>
+    <div class="check-borders">
+      <img class="top-left" src="assets/top-left-crop.png" alt="" />
+      <img class="top-right" src="assets/top-right-crop.png" alt="" />
+      <img class="bottom-left" src="assets/bottom-left-crop.png" alt="" />
+      <img class="bottom-right" src="assets/bottom-right-crop.png" alt="" />
+    </div>
+    <div class="camera-footer">
+      <p>Take a clear, well-lit photo from above.<br/>Make sure all four corners of the check fit within the photo.</p>
+    </div>
+  </div>
+</div>
+
+<div class="photo-controls" *ngIf="showCameraControls && reviewPhoto">
+  <div class="review-photo">
+    <img [src]="picture[side]" />
+    <div class="camera-footer">
+      <p class="retakePhoto" (click)=retakePhoto(side)>Retake photo</p>
+      <p class="usePhoto" (click)=usePhoto(side)>Use photo</p>
+    </div>
+  </div>
+</div>
+<!-- End Camera Controls -->

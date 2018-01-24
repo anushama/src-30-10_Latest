@@ -1,0 +1,73 @@
+page-confirm-ext-acct {
+  .confirm-page {
+    position: relative;
+    top: 3%;
+  }
+
+  .confirm-list {
+    margin-top: 4rem;
+  }
+
+  .aggreement {
+    white-space: normal;
+    padding-top: 1rem;
+    font-size: 1.3rem;
+    font-family: $pf-montserrat-regular;
+    color: $pf-mobile-dark-grey;
+  }
+
+  .review-item {
+    background-color: $pf-mobile-light-grey;
+    margin-top: 2rem;
+
+    &.check-box {
+      .checkbox {
+        margin: 0 1rem 0 0;
+      }
+    }
+  }
+
+  .h-header {
+    font-size: 1.2rem;
+    font-family: $pf-montserrat-regular;
+    color: $pf-mobile-dark-blue;
+    line-height: 2rem;
+  }
+
+  .accountName {
+    font-family: $pf-montserrat-regular;
+    font-size: 1.8rem;
+    color: $pf-mobile-dark-blue;
+    white-space: normal;
+  }
+
+  .accountNum {
+    font-family: $pf-montserrat-light;
+    font-size: 1.2rem;
+    color: $pf-mobile-dark-blue;
+  }
+
+  .control-button {
+    text-align: center;
+    margin-top: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .list-md .item-block .item-inner {
+    border-bottom: none;
+  }
+
+  .list-ios {
+    .item-block .item-inner {
+      border-bottom: none;
+    }
+
+    &.item-block .item-inner {
+      border-bottom: none;
+    }
+
+    & > .item-block:last-child {
+      border-bottom: none;
+    }
+  }
+}

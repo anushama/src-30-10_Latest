@@ -1,0 +1,30 @@
+<ion-header>
+  <pf-header leftIcon="toggleMenu" rightIcon="mail">
+    <pf-header-title>Find An ATM/Branch</pf-header-title>
+  </pf-header>
+</ion-header>
+
+<ion-content padding>
+  <form>
+    <div class="search">
+      <ion-input type="search" placeholder="Search Address or Zip" [(ngModel)]="searchInput" name="searchInput" (keyup.enter)="goToInputSearchAddress($event.target.value)"
+        class="search-input" (keyup)="focus($event.target.value)"></ion-input>
+      <div *ngIf="!searchInputLength">
+        <ion-icon ios="ios-list-box" md="md-list-box" (click)="goToAtmBranchListPage()"></ion-icon>
+      </div>
+      <div *ngIf="searchInputLength">
+        <ion-icon ios="ios-close" md="md-close" (click)="clear()"></ion-icon>
+      </div>
+    </div>
+  </form>
+  <div>
+    <ion-fab class="filter" right (click)="onFilter()">
+      <ion-icon ios="ios-options" md="md-options" ion-fab mini></ion-icon>
+    </ion-fab>
+    <ion-fab class="navigate" right (click)="getDirection()">
+      <ion-icon ios="ios-navigate" md="md-navigate" ion-fab mini></ion-icon>
+    </ion-fab>
+  </div>
+  <div id="map"></div>
+
+</ion-content>

@@ -1,0 +1,77 @@
+<!--
+  Generated template for the AccountCreditCardSortPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-row class="common-header">
+    <button ion-button tappable (click)="updateSort()" class="nav-icon"><ion-icon ios="md-close" md="md-close"></ion-icon></button>
+    <ion-title>SORT TRANSACTIONS BY</ion-title>
+  </ion-row>
+</ion-header>
+
+<ion-content no-padding>
+  <ion-list radio-group no-padding [(ngModel)]="filterSort.sort">
+  
+    <ion-item>
+      <ion-label>Date: Newest First</ion-label>
+      <ion-radio value="dateNewFirst" class="radio-md"></ion-radio>
+    </ion-item>
+  
+    <ion-item>
+      <ion-label>Date: Oldest First</ion-label>
+      <ion-radio value="dateOldFirst" class="radio-md"></ion-radio>
+    </ion-item>
+    
+    <ion-item>
+      <ion-label>Amount: Low to High</ion-label>
+      <ion-radio value="amountLowHigh" class="radio-md"></ion-radio>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Amount: High to Low</ion-label>
+      <ion-radio value="amountHighLow" class="radio-md"></ion-radio>
+    </ion-item>
+  
+    <ion-item>
+      <ion-label>Merchant Name: A to Z</ion-label>
+      <ion-radio value="merchantAZ" class="radio-md"></ion-radio>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Merchant Name: Z to A</ion-label>
+      <ion-radio value="merchantZA" class="radio-md"></ion-radio>
+    </ion-item>
+  
+  </ion-list>
+
+  <ion-list radio-group no-padding [(ngModel)]="filterSort.filter">
+  
+    <ion-item>
+      <ion-label>Recent Transactions</ion-label>
+      <ion-radio value="Recent" class="radio-md"></ion-radio>
+    </ion-item>
+  
+    <ion-item>
+      <ion-label>Current Statement</ion-label>
+      <ion-radio value="Current" class="radio-md"></ion-radio>
+    </ion-item>
+  
+    <ion-item>
+      <ion-label>Previous Statement</ion-label>
+      <ion-radio value="Previous" class="radio-md"></ion-radio>
+    </ion-item>
+  
+    <ion-item>
+      <ion-label>Past Statement</ion-label>
+      <ion-radio value="Past"class="radio-md"></ion-radio>
+    </ion-item>
+  
+  </ion-list>
+  <ion-row>
+    <ion-col col-12 text-center>
+      <button ion-button block class="cta-button" (click)="updateSort()">SAVE</button>
+    </ion-col>
+  </ion-row>
+</ion-content>

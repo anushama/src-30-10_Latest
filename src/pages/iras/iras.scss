@@ -1,0 +1,72 @@
+page-iras {
+  .scroll-content {
+    background: $pf-mobile-light-grey;
+    font-family: $pf-montserrat-regular;
+    padding: 16px !important;
+  }
+  /* product header styles */
+  ion-header {
+    .toolbar-background-md {
+      background-color: $pf-mobile-dark-blue;
+      letter-spacing: 0.2rem;
+    }
+
+    ion-title {
+      .toolbar-title-md {
+        color: $pf-mobile-white;
+        font-weight: 600;
+        font-size: 16px;
+        letter-spacing: 2px;
+      }
+    }
+
+    ion-icon {
+      font-size: 28px;
+      color: $pf-mobile-white;
+      letter-spacing: 0;
+    }
+  }
+  /* product footer styles*/
+  .productFooter {
+    .btnContainer button {
+      padding: 0 18px 0 0;
+      font-size: 14px;
+      color: $pf-mobile-light-blue;
+      letter-spacing: 0;
+      line-height: 17px;
+    }
+
+    ul {
+      font-size: 10px;
+      color: $pf-mobile-dark-blue;
+      letter-spacing: 0;
+      line-height: 12px;
+      padding-left: 16px;
+
+      li {
+        margin-bottom: 15px;
+      }
+    }
+
+    .footerLink {
+      font-size: 12px;
+      color: $pf-mobile-dark-blue;
+      letter-spacing: 0;
+      text-decoration: underline;
+      padding-left: 0;
+      background: none;
+    }
+  }
+
+  .iraFooter {
+    font-size: 10px;
+    color: $pf-mobile-dark-blue;
+    letter-spacing: 0;
+    line-height: 12px;
+    padding: 0 4px !important;
+  }
+}
+
+accounts-footer [footer] {
+  padding: 0 4px !important;
+}

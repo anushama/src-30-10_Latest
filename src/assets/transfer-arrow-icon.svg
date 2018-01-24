@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="19px" height="14px" viewBox="0 0 19 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 44.1 (41455) - http://www.bohemiancoding.com/sketch -->
+    <title>Transfer Arrow</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Phone" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="ST_Account-Detail-B_Hidden-V2" transform="translate(-56.000000, -177.000000)" fill="#0F2D52">
+            <g id="Group-13" transform="translate(13.000000, 177.000000)">
+                <path d="M53.615801,8.96875 C50.8657872,8.96875 48.7173712,9.26562203 47.1704885,9.859375 C45.6236057,10.453128 44.2720567,11.74999 43.115801,13.75 C43.1783013,13.4999987 43.2642379,13.1484398 43.3736135,12.6953125 C43.482989,12.2421852 43.7954859,11.460943 44.3111135,10.3515625 C44.826741,9.24218195 45.4361099,8.2578168 46.1392385,7.3984375 C46.842367,6.5390582 47.8579818,5.75781602 49.1861135,5.0546875 C50.5142451,4.35155898 51.9907928,4 53.615801,4 L53.615801,0.25 L61.115801,7 L53.615801,13.28125 L53.615801,8.96875 Z" id="Transfer-Arrow"></path>
+            </g>
+        </g>
+    </g>
+</svg>

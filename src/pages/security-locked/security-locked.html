@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-row class="security-header">
+    <ion-col col-2>
+      <button ion-button menuToggle id="menuButton">
+        <ion-icon name="menu" class="header-icon"></ion-icon>
+      </button>
+    </ion-col>
+    <ion-col col-10>
+      <ion-title class="security-title">SECURITY CODE LOCKED</ion-title>
+    </ion-col>
+  </ion-row>
+</ion-header>
+
+
+<ion-content no-padding>
+  <div class="instruction">
+    Your security code has been locked due to three consecutive attempts. You will need to reset your seurity code before completing this transaction.
+  </div>
+  <div class="instruction">
+    Please call Member Service at 800-247-5626 or 541-225-6700 (if overseas) to reset your security code.
+  </div>
+  <div class="custom">
+    <contact-service [parentPage]="'securityLock'"></contact-service>
+  </div>
+
+  <div class="control-button">
+    <button ion-button class="forward-button" color="main-text-color" tappable (click)="goToAccountPage()">BACK TO ACCOUNTS</button>
+  </div>
+</ion-content>

@@ -1,0 +1,206 @@
+<ion-header>
+  <pf-header leftIcon="cross">
+    <pf-header-title class="textElipse">UPDATE MAILING ADDRESS</pf-header-title>
+  </pf-header>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <form *ngIf="mailingAddress" [formGroup]="mailingForm">
+      <div formGroupName="mailingAddressForm">
+        <ion-row>
+          <ion-col>
+            <ion-label stacked class="input-label">Address Line 1</ion-label>
+            <ion-item>
+              <ion-input type="text" name="mailingAddress1" [attr.maxlength]="26" maxlength="26" [(ngModel)]="mailingAddress.mailingAddress1"
+                formControlName="mailingAddress1"></ion-input>
+            </ion-item>
+            <div class="pf-form-field-error" *ngIf="mailingForm.get('mailingAddressForm').get('mailingAddress1').hasError('pattern')">
+              Please don't enter special character other than a space between words
+            </div>
+            <div class="pf-form-field-error" *ngIf="mailingForm.get('mailingAddressForm').get('mailingAddress1').hasError('required')">
+              Please enter address line 1
+            </div>
+          </ion-col>
+        </ion-row>
+
+        <ion-row>
+          <ion-col>
+            <ion-label stacked class="input-label">Address Line 2</ion-label>
+            <ion-item>
+              <ion-input type="text" name="mailingAddress2" [attr.maxlength]="26" maxlength="26" [(ngModel)]="mailingAddress.mailingAddress2"
+                formControlName="mailingAddress2"></ion-input>
+            </ion-item>
+            <div class="pf-form-field-error" *ngIf="mailingForm.get('mailingAddressForm').get('mailingAddress2').hasError('pattern')">
+              Please don't enter special character other than a space between words
+            </div>
+          </ion-col>
+        </ion-row>
+
+        <ion-row>
+          <ion-col>
+            <ion-label stacked class="input-label">City</ion-label>
+            <ion-item>
+              <ion-input type="text" name="mailingCity" [attr.maxlength]="26" maxlength="26" [(ngModel)]="mailingAddress.mailingCity" formControlName="mailingCity"></ion-input>
+            </ion-item>
+            <div class="pf-form-field-error" *ngIf="mailingForm.get('mailingAddressForm').get('mailingCity').hasError('pattern')">
+              Please don't enter special character other than a space between words
+            </div>
+            <div class="pf-form-field-error" *ngIf="mailingForm.get('mailingAddressForm').get('mailingCity').hasError('required')">
+              Please enter city
+            </div>
+          </ion-col>
+        </ion-row>
+
+        <ion-row>
+          <ion-col col-8>
+            <ion-label stacked class="input-label">state/territory</ion-label>
+            <div class="over-ride-icon">
+              <ion-icon ios="ios-arrow-down" md="ios-arrow-down"></ion-icon>
+              <ion-select [disabled]='stateDisabled' [selectOptions]="selectStateOptions" name="mailingState" [(ngModel)]="mailingAddress.mailingState"
+                class="" formControlName="mailingState" placeholder="Select">
+                <ion-option *ngFor="let state of states" [value]="state.id">{{state.value}}</ion-option>
+              </ion-select>
+            </div>
+            <div class="pf-form-field-error" *ngIf="mailingForm.get('mailingAddressForm').get('mailingState').hasError('required')">
+              Please enter state/territory
+            </div>
+          </ion-col>
+          <ion-col col-4>
+            <ion-label stacked class="input-label">zip code</ion-label>
+            <ion-item>
+              <ion-input [disabled]='stateDisabled' type="text" name="mailingZip" [attr.maxlength]="10" maxlength="10" [(ngModel)]="mailingAddress.mailingZip"
+                formControlName="mailingZip" zipcode placeholder="ex:12345"></ion-input>
+            </ion-item>
+            <div class="pf-form-field-error" *ngIf="mailingForm.get('mailingAddressForm').get('mailingZip').hasError('required')">
+              Please enter zip code
+            </div>
+            <div class="pf-form-field-error" *ngIf="mailingForm.get('mailingAddressForm').get('mailingZip').hasError('pattern') && mailingForm.get('mailingAddressForm').get('mailingZip').dirty">
+              Please enter numbers in xxxxx or xxxxx-xxxx format.
+            </div>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <ion-label stacked class="input-label">country</ion-label>
+            <div class="over-ride-icon">
+              <ion-icon ios="ios-arrow-down" md="ios-arrow-down"></ion-icon>
+              <ion-select name="mailingCountry" [selectOptions]="selectCountryOptions" [(ngModel)]="mailingAddress.mailingCountry" formControlName="mailingCountry"
+                (ionChange)="changeCountry(mailingAddress.mailingCountry)" placeholder="Select">
+                <ion-option *ngFor="let country of countries" [value]="country.id.trim()">{{country.value}}</ion-option>
+              </ion-select>
+            </div>
+          </ion-col>
+        </ion-row>
+      </div>
+
+      <ion-row class="push-top-sm">
+        <ion-col col-9 class="push-top-sm">
+          This address is a P.O. Box
+        </ion-col>
+        <ion-col col-3>
+          <ion-toggle name="POBox" (ionChange)="notify($event)" [checked]="isToggled" float-right></ion-toggle>
+        </ion-col>
+      </ion-row>
+
+      <!-- POBOX form -->
+      <div formGroupName="physicalAddressForm" *ngIf="isToggled">
+        <h1>Physical Address</h1>
+        <ion-row>
+          <ion-col style="position: initial">
+            <ion-label stacked class="input-label">Address Line 1</ion-label>
+            <ion-item>
+              <ion-input type="text" name="physicalAddress1" [attr.maxlength]="26" maxlength="26" [(ngModel)]="mailingAddress.physicalAddress1"
+                formControlName="physicalAddress1"></ion-input>
+            </ion-item>
+            <div class="pf-form-field-error" *ngIf="mailingForm.get('physicalAddressForm').get('physicalAddress1').hasError('pattern')">
+              Please don't enter special character other than a space between words
+            </div>
+            <div class="pf-form-field-error" *ngIf="mailingForm.get('physicalAddressForm').get('physicalAddress1').hasError('required')&&mailingForm.get('physicalAddressForm').get('physicalAddress1').dirty">
+              Please enter address line 1
+            </div>
+          </ion-col>
+        </ion-row>
+
+        <ion-row>
+          <ion-col style="position: initial">
+            <ion-label stacked class="input-label">Address Line 2</ion-label>
+            <ion-item>
+              <ion-input type="text" name="physicalAddress2" [attr.maxlength]="26" maxlength="26" [(ngModel)]="mailingAddress.physicalAddress2"
+                formControlName="physicalAddress2"></ion-input>
+            </ion-item>
+            <div class="pf-form-field-error" *ngIf="mailingForm.get('physicalAddressForm').get('physicalAddress2').hasError('pattern')">
+              Please don't enter special character other than a space between words
+            </div>
+          </ion-col>
+        </ion-row>
+
+        <ion-row>
+          <ion-col style="position: initial">
+            <ion-label stacked class="input-label">City</ion-label>
+            <ion-item>
+              <ion-input type="text" name="physicalCity" [attr.maxlength]="26" maxlength="26" [(ngModel)]="mailingAddress.physicalCity"
+                formControlName="physicalCity"></ion-input>
+            </ion-item>
+            <div class="pf-form-field-error" *ngIf="mailingForm.get('physicalAddressForm').get('physicalCity').hasError('pattern')">
+              Please don't enter special character other than a space between words
+            </div>
+            <div class="pf-form-field-error" *ngIf="mailingForm.get('physicalAddressForm').get('physicalCity').hasError('required')&&mailingForm.get('physicalAddressForm').get('physicalCity').dirty">
+              Please enter city
+            </div>
+          </ion-col>
+        </ion-row>
+
+        <ion-row>
+          <ion-col col-8>
+            <ion-label stacked class="input-label">state/territory</ion-label>
+            <div class="over-ride-icon">
+              <ion-icon ios="ios-arrow-down" md="ios-arrow-down"></ion-icon>
+              <ion-select [disabled]='physicalStateDisabled' [selectOptions]="selectStateOptions" name="physicalState" [(ngModel)]="mailingAddress.physicalState"
+                class="" formControlName="physicalState" placeholder="Select">
+                <ion-option *ngFor="let state of states" [value]="state.id">{{state.value}}</ion-option>
+              </ion-select>
+            </div>
+            <div class="pf-form-field-error" *ngIf="mailingForm.get('physicalAddressForm').get('physicalState').hasError('required') && mailingForm.get('physicalAddressForm').get('physicalState').dirty">
+              Please enter state/territory
+            </div>
+          </ion-col>
+          <ion-col col-4 style="position: initial">
+            <ion-label stacked class="input-label">zip code</ion-label>
+            <ion-item>
+              <ion-input [disabled]='physicalStateDisabled' type="text" name="physicalZip" [attr.maxlength]="10" maxlength="10" [(ngModel)]="mailingAddress.physicalZip"
+                formControlName="physicalZip" zipcode placeholder="ex:12345"></ion-input>
+            </ion-item>
+            <div class="pf-form-field-error" *ngIf="mailingForm.get('physicalAddressForm').get('physicalZip').hasError('required')&&mailingForm.get('physicalAddressForm').get('physicalZip').dirty">
+              Please enter zip code
+            </div>
+            <div class="pf-form-field-error" *ngIf="mailingForm.get('physicalAddressForm').get('physicalZip').hasError('pattern') && mailingForm.get('mailingAddressForm').get('mailingZip').dirty">
+              Please enter numbers in xxxxx or xxxxx-xxxx format
+            </div>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <ion-label stacked class="input-label">country</ion-label>
+            <div class="over-ride-icon">
+              <ion-icon ios="ios-arrow-down" md="ios-arrow-down"></ion-icon>
+              <ion-select name="physicalCountry" [selectOptions]="selectCountryOptions" [(ngModel)]="mailingAddress.physicalCountry" formControlName="physicalCountry"
+                (ionChange)="changePhysicalCountry(mailingAddress.physicalCountry)" placeholder="Select">
+                <ion-option *ngFor="let country of countries" [value]="country.id.trim()">{{country.value}}</ion-option>
+              </ion-select>
+            </div>
+          </ion-col>
+        </ion-row>
+      </div>
+      <ion-row>
+        <ion-col>
+          <button ion-button block class="cta-button" *ngIf="!isToggled" [disabled]="mailingForm.controls.mailingAddressForm.status === 'INVALID'"
+            tappable (click)="submitUpdateMailingAddress()">UPDATE ADDRESS</button>
+          <button ion-button block class="cta-button" *ngIf="isToggled" [disabled]="mailingForm.controls.mailingAddressForm.status === 'INVALID' || mailingForm.controls.physicalAddressForm.status === 'INVALID'"
+            tappable (click)="submitUpdateMailingAddress()">UPDATE ADDRESS</button>
+        </ion-col>
+      </ion-row>
+
+    </form>
+  </ion-grid>
+</ion-content>

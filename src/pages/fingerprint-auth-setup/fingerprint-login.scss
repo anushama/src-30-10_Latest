@@ -1,0 +1,38 @@
+page-fingerprint-login {
+    .content {
+        background-color: $pf-mobile-light-grey;
+    }
+    .pattern-login {
+        line-height: 1.9rem;
+        color: $pf-mobile-dark-grey;
+        font-size: 1.5rem; 
+        .login-info {
+            font-family: $pf-montserrat-regular;
+        }
+        .login-enabled {
+            font-family: $pf-montserrat-medium;
+            margin-top: 2.5rem;
+        }
+    }
+
+    .pattern-footer {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 100%;
+        text-align: center;
+        .btn-pattern {
+            font-family: $pf-montserrat-medium;
+            background-color: $pf-mobile-dark-blue;
+            border-radius: .4rem;
+            font-size: 1.6rem;
+            height: 5rem;
+            color: $pf-mobile-white;
+            letter-spacing: .1rem;
+            margin-bottom: 2rem;
+            min-width: 30rem;
+            line-height: 1.9rem;
+        }
+    }
+}
+

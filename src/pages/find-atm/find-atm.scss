@@ -1,0 +1,144 @@
+page-find-atm {
+  .scroll-content {
+    background: $pf-mobile-light-grey;
+    padding: 0 !important;
+  }
+
+  .icon.ion-ios-arrow-forward {
+    margin-right: 1.6rem !important;
+  }
+
+  #map {
+    height: 100%;
+    .gm-style .gm-style-cc span,
+    .gmnoprint {
+      display: none;
+    }
+
+    a[title="Click to see this area on Google Maps"] {
+      display: none;
+    }
+
+    .gm-style-cc {
+      display: none;
+    }
+  }
+
+  .search {
+    margin-top: 20px;
+    position: absolute;
+    box-shadow: 1px 2px 4px 1px rgba(0, 0, 0, 0.40);
+    border-radius: 2px;
+    font-family: $pf-montserrat-regular;
+    font-size: 16px;
+    color: #A9B7C7;
+    letter-spacing: 0.44px;
+    line-height: 24px;
+    height: 40px;
+    padding: 5px;
+    z-index: 1;
+    width: 95%;
+    margin: 10px;
+    background: #FFFFFF;
+
+    &-input {
+      border-right-width: 1px;
+      border-right-color: #D1D1D1;
+      border-right-style: solid;
+      height: 30px;
+      width: 88%;
+
+      .text-input {
+        margin: 5px 8px;
+        padding-right: 45px;
+      }
+    }
+
+    ion-icon {
+      font-size: 32px;
+      color: #00A0DD;
+      letter-spacing: 0;
+      position: absolute;
+      right: 10px;
+      top: 5px;
+    }
+
+    .ion-md-list-box:before {
+      content: "\f1ac" !important;
+    }
+  }
+
+  .fab {
+    background: white;
+    box-shadow: 1px 2px 4px 1px rgba(0, 0, 0, 0.40);
+    font-size: 32px;
+    color: #00A0DD;
+
+    &[mini] {
+      width: 44px;
+      height: 44px;
+      line-height: 44px;
+    }
+  }
+
+  .filter {
+    bottom: 100px;
+  }
+
+  .navigate {
+    bottom: 20px;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+
+  .ion-ios-navigate:before {
+    content: "\f334"!important;
+  }
+
+  .atm-info {
+    margin: 10px 15px 0 0;
+    text-align: center;
+
+    .info-content {
+      font-family: $pf-montserrat-regular;
+      font-size: 13px;
+      color: #404040;
+      letter-spacing: 0;
+      padding: 10px;
+      margin-left: 30px;
+
+      img {
+        font-size: 15px;
+        color: #A9B7C7;
+        letter-spacing: 0;
+      }
+    }
+
+    #showMoreButton {
+      font-family: $pf-montserrat-medium;
+      font-size: 14px;
+      color: #0F2D52;
+      letter-spacing: 1px;
+      background: none!important;
+      border: none!important;
+      text-transform: uppercase;
+      margin-left: 30px;
+    }
+  }
+
+  ion-app._gmaps_cdv_ .nav-decor {
+    background-color: transparent !important;
+  }
+
+
+  .search-input {
+    color: #444 !important;
+  }
+}
+/* and (orientation : todo: you can add orientation or delete this comment)*/
+@media (device-height : 568px) and (device-width : 320px) and (-webkit-min-device-pixel-ratio: 2) {
+  /*IPhone 5 only CSS here*/
+}

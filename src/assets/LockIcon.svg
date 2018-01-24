@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="15px" height="20px" viewBox="0 0 15 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 45 (43475) - http://www.bohemiancoding.com/sketch -->
+    <title>Lock Icon</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Mobile" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" font-weight="400" font-family="Ionicons" font-size="24" opacity="0.699999988">
+        <g id="00A.-Login_Keyboard" transform="translate(-26.000000, -282.000000)" fill="#0A223F">
+            <g id="Password-Field" transform="translate(16.000000, 270.000000)">
+                <text id="Lock-Icon">
+                    <tspan x="10" y="31"></tspan>
+                </text>
+            </g>
+        </g>
+    </g>
+</svg>

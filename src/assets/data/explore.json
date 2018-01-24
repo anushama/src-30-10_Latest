@@ -1,0 +1,43 @@
+{
+  "checkSaveAccounts": [{
+      "id": 1,
+      "name": "Checking",
+      "description": "The simple you need .The benefits you want",
+      "imageUrl": "../../assets/piggy-bank-icon.svg"
+    },
+    {
+      "id": 2,
+      "name": "Savings",
+      "description": "Build your future. Build it better",
+      "imageUrl": "../../assets/piggy-bank-icon.svg"
+    },
+    {
+      "id": 3,
+      "name": "Certificates",
+      "description": "Security like a savings account",
+      "imageUrl": "../../assets/piggy-bank-icon.svg"
+    },
+    {
+      "id": 4,
+      "name": "IRAs",
+      "description": "Retirement may be years away",
+      "imageUrl": "../../assets/piggy-bank-icon.svg"
+    }
+  ],
+
+  "cards": [{
+    "id": 1,
+    "name": "Credit cards",
+    "description": "Find the card thats right for you.",
+    "imageUrl": "../../assets/piggy-bank-icon.svg"
+  }],
+
+  "Loans": [{
+    "id": 1,
+    "name": "Auto Loans",
+    "description": "New, used or refinance. You choose the car; we put you in the driver's seat, with a low rate and flexible terms.",
+    "imageUrl": "../../assets/piggy-bank-icon.svg"
+  }]
+
+
+}

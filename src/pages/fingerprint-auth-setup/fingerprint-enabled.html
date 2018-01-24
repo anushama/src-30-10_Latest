@@ -1,0 +1,40 @@
+<!--
+  Generated template for the PatternEnabledPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+    <ion-row class="common-header">
+        <button ion-button class="nav-icon">
+            <ion-icon menuToggle ios="md-menu" md="md-menu"></ion-icon>
+        </button>
+        <!-- <ion-title class="textElipse">{{"fingerprint.create.enabled.info" | aemsync : ["fingerprint-login"] | async}}</ion-title> -->
+        <ion-title class="textElipse">FINGERPRINT ENABLED</ion-title>
+        <button ion-button tappable (click)='goToInbox()'>
+            <ion-icon ios="ios-mail" md="ios-mail" icon-right></ion-icon>
+        </button>
+    </ion-row>
+</ion-header>
+<ion-content padding>
+    <div class="fingerprint-enabled-container">
+        <div>
+            <img src="assets/img/Thumbprint.svg" />
+        </div>
+        <!-- <div class="enabledText" [innerHTML]="'fingerprint.create.enabled.text' | aemsync : ['fingerprint-login'] | async"></div> -->
+        <div class="enabledText"><!--FINGERPRINT LOGIN ENABLED -->
+          {{"fingerprint.create.enabled.text" | aemsync : ["fingerprint-login"] | async}}
+
+        </div>
+        <!-- <div class="successText" [innerHTML]="'fingerprint.create.enabled.success' | aemsync : ['fingerprint-login'] | async"></div> -->
+        <div class="successText">
+
+
+          <div [innerHtml]='"fingerprint.create.enabled.success" | aemsync : ["fingerprint-login"] | async'></div>
+
+          <!--<p>Fingerprint Login has been setup successfully.</p><p>You can always change your selection in <b>Settings.</b></p> --></div>
+    </div>
+    <div class="btn-footer">
+        <button class="btn-done" tappable (click)="done()">DONE</button>
+    </div>
+</ion-content>

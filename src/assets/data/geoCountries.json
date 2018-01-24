@@ -1,0 +1,487 @@
+[{
+    "id": "KT         ",
+    "value": " NEVIS"
+}, {
+    "id": "AF         ",
+    "value": "AFGHANISTAN"
+}, {
+    "id": "AL         ",
+    "value": "ALBANIA"
+}, {
+    "id": "AG         ",
+    "value": "ALGERIA"
+}, {
+    "id": "AO         ",
+    "value": "AMERICAN SAMOA"
+}, {
+    "id": "AN         ",
+    "value": "ANGOLA"
+}, {
+    "id": "AI         ",
+    "value": "ANGUILLA"
+}, {
+    "id": "AR         ",
+    "value": "ARGENTINA"
+}, {
+    "id": "AM         ",
+    "value": "ARMENIA"
+}, {
+    "id": "AU         ",
+    "value": "AUSTRALIA"
+}, {
+    "id": "AS         ",
+    "value": "AUSTRIA"
+}, {
+    "id": "AZ         ",
+    "value": "AZERBAIJAN"
+}, {
+    "id": "BH         ",
+    "value": "BAHAMAS"
+}, {
+    "id": "BG         ",
+    "value": "BANGLADESH"
+}, {
+    "id": "BB         ",
+    "value": "BARBADOS"
+}, {
+    "id": "BL         ",
+    "value": "BELGIUM"
+}, {
+    "id": "BZ         ",
+    "value": "BELIZE"
+}, {
+    "id": "BM         ",
+    "value": "BERMUDA"
+}, {
+    "id": "BT         ",
+    "value": "BHUTAN"
+}, {
+    "id": "BV         ",
+    "value": "BOLIVIA"
+}, {
+    "id": "BS         ",
+    "value": "BOSNIA/HERZEGOVINA"
+}, {
+    "id": "BC         ",
+    "value": "BOTSWANA"
+}, {
+    "id": "BR         ",
+    "value": "BRAZIL"
+}, {
+    "id": "VG         ",
+    "value": "BRITISH VIRGIN ISLANDS"
+}, {
+    "id": "BX         ",
+    "value": "BRUNEI"
+}, {
+    "id": "BU         ",
+    "value": "BULGARIA"
+}, {
+    "id": "CB         ",
+    "value": "CAMBODIA"
+}, {
+    "id": "CM         ",
+    "value": "CAMEROON"
+}, {
+    "id": "CA         ",
+    "value": "CANADA"
+}, {
+    "id": "CZ         ",
+    "value": "CANAL ZONE"
+}, {
+    "id": "KY         ",
+    "value": "CAYMAN ISLAND"
+}, {
+    "id": "CD         ",
+    "value": "CHAD"
+}, {
+    "id": "CH         ",
+    "value": "CHILE"
+}, {
+    "id": "CN         ",
+    "value": "CHINA"
+}, {
+    "id": "CO         ",
+    "value": "COLOMBIA"
+}, {
+    "id": "CR         ",
+    "value": "COSTA RICA"
+}, {
+    "id": "CI         ",
+    "value": "COTE D'VOIRE"
+}, {
+    "id": "CT         ",
+    "value": "CROATIA"
+}, {
+    "id": "CY         ",
+    "value": "CYPRUS"
+}, {
+    "id": "CK         ",
+    "value": "CZECH REPUBLIC"
+}, {
+    "id": "DM         ",
+    "value": "DENMARK"
+}, {
+    "id": "DJ         ",
+    "value": "DJIBOUTI"
+}, {
+    "id": "DO         ",
+    "value": "DOMINICAN REPUBLIC"
+}, {
+    "id": "EC         ",
+    "value": "ECUADOR"
+}, {
+    "id": "EG         ",
+    "value": "EGYPT"
+}, {
+    "id": "ES         ",
+    "value": "EL SALVADOR"
+}, {
+    "id": "EN         ",
+    "value": "ENGLAND"
+}, {
+    "id": "GQ         ",
+    "value": "EQUATORIAL GUINEA"
+}, {
+    "id": "ER         ",
+    "value": "ERITREA"
+}, {
+    "id": "EO         ",
+    "value": "ESTONIA"
+}, {
+    "id": "ET         ",
+    "value": "ETHIOPIA"
+}, {
+    "id": "FJ         ",
+    "value": "FIJI"
+}, {
+    "id": "FN         ",
+    "value": "FINLAND"
+}, {
+    "id": "FR         ",
+    "value": "FRANCE"
+}, {
+    "id": "GB         ",
+    "value": "GAMBIA"
+}, {
+    "id": "GM         ",
+    "value": "GERMANY"
+}, {
+    "id": "GH         ",
+    "value": "GHANA"
+}, {
+    "id": "GI         ",
+    "value": "GIBRALTAR"
+}, {
+    "id": "GC         ",
+    "value": "GREECE"
+}, {
+    "id": "GR         ",
+    "value": "GREENLAND"
+}, {
+    "id": "GA         ",
+    "value": "GRENADA"
+}, {
+    "id": "GT         ",
+    "value": "GUATEMALA"
+}, {
+    "id": "GY         ",
+    "value": "GUYANA"
+}, {
+    "id": "HA         ",
+    "value": "HAITI"
+}, {
+    "id": "HD         ",
+    "value": "HONDURAS"
+}, {
+    "id": "HK         ",
+    "value": "HONG KONG"
+}, {
+    "id": "HU         ",
+    "value": "HUNGARY"
+}, {
+    "id": "IC         ",
+    "value": "ICELAND"
+}, {
+    "id": "IN         ",
+    "value": "INDIA"
+}, {
+    "id": "ID         ",
+    "value": "INDONESIA"
+}, {
+    "id": "IZ         ",
+    "value": "IRAQ"
+}, {
+    "id": "IL         ",
+    "value": "IRELAND"
+}, {
+    "id": "IS         ",
+    "value": "ISRAEL"
+}, {
+    "id": "IT         ",
+    "value": "ITALY"
+}, {
+    "id": "JM         ",
+    "value": "JAMAICA"
+}, {
+    "id": "JP         ",
+    "value": "JAPAN"
+}, {
+    "id": "JO         ",
+    "value": "JORDAN"
+}, {
+    "id": "KA         ",
+    "value": "KAZAKHSTAN"
+}, {
+    "id": "KE         ",
+    "value": "KENYA"
+}, {
+    "id": "KO         ",
+    "value": "KOSOVO"
+}, {
+    "id": "KU         ",
+    "value": "KUWAIT"
+}, {
+    "id": "KG         ",
+    "value": "KYRGYZSTAN"
+}, {
+    "id": "LA         ",
+    "value": "LATVIA"
+}, {
+    "id": "LE         ",
+    "value": "LEBANON"
+}, {
+    "id": "LI         ",
+    "value": "LIBERIA"
+}, {
+    "id": "LY         ",
+    "value": "LIBYA"
+}, {
+    "id": "LC         ",
+    "value": "LIECHTENSTEIN"
+}, {
+    "id": "LT         ",
+    "value": "LITHUANIA"
+}, {
+    "id": "LU         ",
+    "value": "LUXEMBOURG"
+}, {
+    "id": "MN         ",
+    "value": "MACEDONIA"
+}, {
+    "id": "MD         ",
+    "value": "MADAGASCAR"
+}, {
+    "id": "MI         ",
+    "value": "MALAWI"
+}, {
+    "id": "ML         ",
+    "value": "MALAYSIA"
+}, {
+    "id": "MY         ",
+    "value": "MALDIVES"
+}, {
+    "id": "MA         ",
+    "value": "MALI"
+}, {
+    "id": "RM         ",
+    "value": "MARSHALL ISLANDS"
+}, {
+    "id": "MX         ",
+    "value": "MEXICO"
+}, {
+    "id": "MV         ",
+    "value": "MOLDOVA"
+}, {
+    "id": "MO         ",
+    "value": "MONACO"
+}, {
+    "id": "ME         ",
+    "value": "MONGOLIA"
+}, {
+    "id": "MG         ",
+    "value": "MONTENEGRO"
+}, {
+    "id": "MS         ",
+    "value": "MONTSERRAT"
+}, {
+    "id": "MR         ",
+    "value": "MOROCCO"
+}, {
+    "id": "MZ         ",
+    "value": "MOZAMBIQUE"
+}, {
+    "id": "NA         ",
+    "value": "NAMIBIA"
+}, {
+    "id": "NP         ",
+    "value": "NEPAL"
+}, {
+    "id": "NT         ",
+    "value": "NETHERLANDS"
+}, {
+    "id": "NH         ",
+    "value": "NETHERLANDS ANTILLES"
+}, {
+    "id": "NE         ",
+    "value": "NEW GUINEA"
+}, {
+    "id": "NZ         ",
+    "value": "NEW ZEALAND"
+}, {
+    "id": "NC         ",
+    "value": "NICARAGUA"
+}, {
+    "id": "NI         ",
+    "value": "NIGER"
+}, {
+    "id": "NG         ",
+    "value": "NIGERIA"
+}, {
+    "id": "IR         ",
+    "value": "NORTHERN IRELAND"
+}, {
+    "id": "NR         ",
+    "value": "NORWAY"
+}, {
+    "id": "OM         ",
+    "value": "OMAN"
+}, {
+    "id": "PK         ",
+    "value": "PAKISTAN"
+}, {
+    "id": "PS         ",
+    "value": "PALAU"
+}, {
+    "id": "PN         ",
+    "value": "PANAMA"
+}, {
+    "id": "PG         ",
+    "value": "PARAGUAY"
+}, {
+    "id": "PE         ",
+    "value": "PERU"
+}, {
+    "id": "PH         ",
+    "value": "PHILIPPINES"
+}, {
+    "id": "PI         ",
+    "value": "POHNPEI FSM"
+}, {
+    "id": "PL         ",
+    "value": "POLAND"
+}, {
+    "id": "PO         ",
+    "value": "PORTUGAL"
+}, {
+    "id": "QA         ",
+    "value": "QATAR"
+}, {
+    "id": "GG         ",
+    "value": "REPUBLIC OF GEORGIA"
+}, {
+    "id": "RO         ",
+    "value": "ROMANIA"
+}, {
+    "id": "RS         ",
+    "value": "RUSSIA"
+}, {
+    "id": "SM         ",
+    "value": "SAMOA"
+}, {
+    "id": "SA         ",
+    "value": "SAUDI ARABIA"
+}, {
+    "id": "SC         ",
+    "value": "SCOTLAND"
+}, {
+    "id": "SE         ",
+    "value": "SENEGAL"
+}, {
+    "id": "SB         ",
+    "value": "SERBIA"
+}, {
+    "id": "SR         ",
+    "value": "SIERRA LEONE"
+}, {
+    "id": "SG         ",
+    "value": "SINGAPORE"
+}, {
+    "id": "SK         ",
+    "value": "SLOVAKIA"
+}, {
+    "id": "SV         ",
+    "value": "SLOVENIA"
+}, {
+    "id": "SO         ",
+    "value": "SOMALIA"
+}, {
+    "id": "SF         ",
+    "value": "SOUTH AFRICA"
+}, {
+    "id": "KR         ",
+    "value": "SOUTH KOREA"
+}, {
+    "id": "SP         ",
+    "value": "SPAIN"
+}, {
+    "id": "SL         ",
+    "value": "SRI LANKA"
+}, {
+    "id": "SW         ",
+    "value": "SWEDEN"
+}, {
+    "id": "ST         ",
+    "value": "SWITZERLAND"
+}, {
+    "id": "TW         ",
+    "value": "TAIWAN"
+}, {
+    "id": "TA         ",
+    "value": "TAJIKISTAN"
+}, {
+    "id": "TZ         ",
+    "value": "TANZANIA"
+}, {
+    "id": "TH         ",
+    "value": "THAILAND"
+}, {
+    "id": "TT         ",
+    "value": "TRINIDAD-TOBAGO"
+}, {
+    "id": "TU         ",
+    "value": "TUNISIA"
+}, {
+    "id": "TR         ",
+    "value": "TURKEY"
+}, {
+    "id": "TN         ",
+    "value": "TURKMENISTAN"
+}, {
+    "id": "TC         ",
+    "value": "TURKS AND CAICOS ISLANDS"
+}, {
+    "id": "UG         ",
+    "value": "UGANDA"
+}, {
+    "id": "UE         ",
+    "value": "UKRAINE"
+}, {
+    "id": "UA         ",
+    "value": "UNITED ARAB EMIRATES"
+}, {
+    "id": "",
+    "value": "UNITED STATES"
+}, {
+    "id": "UY         ",
+    "value": "URAGUAY"
+}, {
+    "id": "UZ         ",
+    "value": "UZBEKISTAN"
+}, {
+    "id": "VC         ",
+    "value": "VATICAN CITY"
+}, {
+    "id": "VN         ",
+    "value": "VENEZUELA"
+}]

@@ -1,0 +1,16 @@
+<ion-header>
+  <pf-header *ngIf="transferFromAcct" leftIcon="back" rightIcon="mail">
+    <pf-header-title>{{headerTitle}}</pf-header-title>
+  </pf-header>
+
+  <pf-header *ngIf="!transferFromAcct" leftIcon="toggleMenu" rightIcon="mail">
+    <pf-header-title>{{headerTitle}}</pf-header-title>
+  </pf-header>
+</ion-header>
+
+<!-- <ion-content> -->
+<ion-tabs tabsPlacement="top" class="tabs-head" #transferTabs>
+  <ion-tab [root]="makeTransfer" tabTitle="{{ methodTitle }}" [rootParams]="{'page': pageFrom, 'transferData':transferData, 'transferFromAcct':transferFromAcct}"></ion-tab>
+  <ion-tab [root]="scheduledTransfers" tabTitle="{{ scheduledTitle }}" [rootParams]="{'page': pageFrom}"></ion-tab>
+</ion-tabs>
+<!-- </ion-content> -->

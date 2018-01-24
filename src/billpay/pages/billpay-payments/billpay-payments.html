@@ -1,0 +1,65 @@
+<ion-content>
+    <ion-grid class="full-height" no-padding>
+        <ion-row>
+            <button class="cta-button long" ion-button block (click)="makePayment()">MAKE PAYMENT</button>
+            <!-- <button class="cta-button long" ion-button block (click)="devUIviews()">Dev UI Views</button> -->
+        </ion-row>
+
+        <ion-list>
+            <ion-list-header>UNPAID E-BILLS</ion-list-header>
+            <ion-row *ngIf="noUnpaidDataFlag" padding>
+                No Unpaid Ebills available.
+            </ion-row>
+            <button ion-item tappable *ngFor="let unPaidEBillsResponse of unPaidTransactions; let i=index">
+                <ion-row>
+                    <ion-col class="margin-none text-16 text-regular" item-left>{{unPaidEBillsResponse.payeeName | truncate : 20}}</ion-col>
+                </ion-row>
+                <ion-row>
+                    <ion-col class="margin-none text-12 text-light" item-left>Due on {{unPaidEBillsResponse.dueDateTime | date: 'MM/dd/yyyy'}}</ion-col>
+                    <ion-col class="margin-none text-16 text-regular" item-right>${{unPaidEBillsResponse.dueAmount | formatPrice}}</ion-col>
+                </ion-row>
+                <ion-row>
+                    <ion-col class="margin-none text-12 text-light" item-left *ngIf="unPaidEBillsResponse.payeeAccountNumber !== 'n/a' && unPaidEBillsResponse.payeeAccountNumber !== '?'">
+                        ({{unPaidEBillsResponse.payeeAccountNumber.substr(unPaidEBillsResponse.payeeAccountNumber.length-4)}})
+                    </ion-col>
+                </ion-row>
+              </button>
+        </ion-list>
+        <ion-row>
+            <button class="cta-button clear" (click)="showAllEBills()">SHOW ALL E-BILLS</button>
+        </ion-row>
+        <ion-list>
+            <ion-list-header>SCHEDULED PAYMENTS</ion-list-header>
+            <ion-row *ngIf="noScheduledDataFlag" padding>
+                No Scheduled Payments available.
+            </ion-row>
+            <button ion-item *ngFor="let schedulePaymentResponse of scheduledTransactions; let i=index" (click)="loadSchedulePayments(schedulePaymentResponse)">
+                <ion-row>
+                <ion-col text-left>
+                  <ion-avatar item-start *ngIf="schedulePaymentResponse.imageDispFlag == true">
+                    <img  src="{{schedulePaymentResponse.paymentTypeIndicator}}">
+                  </ion-avatar>
+                </ion-col>
+                <ion-col col-11>
+                    <ion-row >
+                      <ion-col class="margin-none text-16 text-regular" item-left>{{schedulePaymentResponse.consumerPayeeName | truncate : 20}}</ion-col>
+                    </ion-row>
+                    <ion-row>
+                      <ion-col class="margin-none text-12 text-light" item-left>
+                        Scheduled for {{schedulePaymentResponse.dueDateForScheduled | date: 'MM/dd/yyyy'}}
+                      </ion-col>
+                      <ion-col class="margin-none text-16 text-regular" item-right>
+                        ${{schedulePaymentResponse.paymentAmount.value | formatPrice}}
+                      </ion-col>
+                    </ion-row>
+                    <ion-row>
+                      <ion-col class="margin-none text-12 text-light" item-left *ngIf="schedulePaymentResponse.consumerPayeeAccountNumber !== 'n/a' && schedulePaymentResponse.consumerPayeeAccountNumber !== '?'">
+                        ({{schedulePaymentResponse.consumerPayeeAccountNumber.substr(schedulePaymentResponse.consumerPayeeAccountNumber.length-4)}})
+                      </ion-col>
+                    </ion-row>
+                  </ion-col>
+                </ion-row>
+            </button>
+        </ion-list>
+    </ion-grid>
+</ion-content>

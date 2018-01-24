@@ -1,0 +1,49 @@
+<!-- <ion-content id="ionContent">
+    <ion-grid no-padding>
+        <account-header [pageNameParam]="'INBOX'"></account-header>
+    </ion-grid>
+</ion-content> -->
+<ion-header>
+  <pf-header leftIcon="toggleMenu" rightIcon="trash">
+    <pf-header-title>INBOX</pf-header-title>
+  </pf-header>
+</ion-header>
+<ion-list>
+  <ion-list-header>
+    <span class="list-section-name">INBOX</span>
+  </ion-list-header>
+  <button ion-item *ngFor="let unPaidEBillsResponse of unPaidTransactions; let i=index">
+    <ion-row>
+      <ion-col item-left class="account-name">
+        <span>Status of Signature Loan</span>
+      </ion-col>
+      <ion-col item-right  class="account-date">
+        <span>12/12/12</span>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col item-left class="account-name">
+        <span>Status of American Express</span>
+      </ion-col>
+      <ion-col item-right  class="account-date">
+        <span>12/12/12</span>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col item-left class="account-name">
+        <span>Status of Signature Loan</span>
+      </ion-col>
+      <ion-col item-right  class="account-date">
+        <span>12/12/12</span>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col item-left class="account-name">
+        <span>Status of American Express</span>
+      </ion-col>
+      <ion-col item-right  class="account-date">
+        <span>12/12/12</span>
+      </ion-col>
+    </ion-row>
+    </button>
+</ion-list>

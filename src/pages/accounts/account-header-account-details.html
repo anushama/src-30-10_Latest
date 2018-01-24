@@ -1,0 +1,67 @@
+<!--ACCOUNT DETAILS-->
+<ion-row [ngClass]="{'showAccountDetails':showAccountDetails , 'creditCardDetails':headerParams.payload.parentAcctType === 'CREDITCARD', 'loanDetails':headerParams.payload.parentAcctType === 'LOAN', 'mortgageDetails':headerParams.payload.parentAcctType === 'MORTGAGE', 'iraDetails':headerParams.payload.parentAcctType === 'IRA', 'certificateDetails':headerParams.payload.parentAcctType === 'CERTIFICATE'}" class="accountDetails">
+  <ion-col>
+    <ul class="credit-card-account-ul">
+      <div *ngIf="headerParams.payload.parentAcctType === 'CHECKING_SAVING'">
+        <li><span>Current Balance</span> <span class="balance">{{headerParams.payload.currentBal | formatPrice}}</span></li>
+        <li><span>Account Number</span> <span>{{headerParams.payload.accountNum | formatAccountNumber}}</span></li>
+        <li><span>Routing Number</span> <span>{{headerParams.payload.routingNumber}}</span></li>
+      </div>
+
+      <div *ngIf="headerParams.payload.parentAcctType === 'CREDITCARD'">
+        <li><span>Available Credit</span> <span class="balance">{{headerParams.payload.availableCredit | formatPrice}}</span></li>
+        <li><span>Min. Payment Due</span> <span class="balance">{{headerParams.payload.minAmtDue | formatPrice}}</span></li>
+        <li><span>Due Date</span> <span>{{headerParams.payload.dueDate}}</span></li>
+        <li *ngIf="rewardBalance"><span>Rewards Balance</span> <span>{{rewardBalance}} {{rewardBalanceLabel}}</span></li>
+      </div>
+
+      <div *ngIf="headerParams.payload.parentAcctType === 'LOAN'">
+        <!--If Loan is an installment loan, which will have   -->
+        <li *ngIf="headerParams.payload.availableCredit !== (null && undefined)"><span>Available Credit</span> <span class="balance">{{(headerParams.payload.availableCredit !== 'null' ? (headerParams.payload.availableCredit | formatPrice) : ("0" | formatPrice))}}</span></li>
+        <li><span>Min. Payment Due</span> <span class="balance">{{(headerParams.payload.minAmtDue !== 'null' ? (headerParams.payload.minAmtDue | formatPrice) : ("0" | formatPrice))}}</span></li>
+        <li><span>Due Date</span> <span>{{headerParams.payload.dueDate}}</span></li>
+      </div>
+
+      <div *ngIf="headerParams.payload.parentAcctType === 'MORTGAGE'">
+        <li><span>Payment Due</span> <span class="balance">{{(headerParams.payload.minAmtDue !== 'null' ? (headerParams.payload.minAmtDue | formatPrice) : ("0" | formatPrice))}}</span></li>
+        <li *ngIf="headerParams.payload.dueDate"><span>Due Date</span> <span>{{headerParams.payload.dueDate}}</span></li>
+        <li><span>Monthly Payment Amount</span> <span class="balance">{{((headerParams.payload.monthlyPaymentAmt | formatPrice) || ("0" | formatPrice)) }}</span></li>
+        <li>
+          <span>Escrow Balance</span>
+          <span class="loading-crescent" *ngIf="mortgageDetails.escrowAmt === null && mortgageloading"><img src="assets/load-crescent.svg" alt="Loading..."/></span>
+          <span *ngIf="mortgageDetails.escrowAmt && !mortgageloading" class="balance">{{mortgageDetails.escrowAmt | formatPrice}}</span>
+          <span *ngIf="(mortgageDetails.escrowAmt === undefined || mortgageDetails.escrowAmt === null) && !mortgageloading">Unavailable</span>
+        </li>
+        <li *ngIf="headerParams.payload.interestRate"><span>Interest Rate</span> <span>{{headerParams.payload.interestRate}}%</span></li>
+      </div>
+
+      <div *ngIf="headerParams.payload.parentAcctType === 'IRA'">
+        <li *ngIf="headerParams.payload.term"><span>Term</span> <span>{{headerParams.payload.term}} months</span></li>
+        <li *ngIf="headerParams.payload.initialDeposit"><span>Opening Balance</span> <span class="balance">{{headerParams.payload.initialDeposit | formatPrice}}</span></li>
+
+        <!-- Start: Based on term === null, we determing if it is an IRA Share account. These accounts should show Available Balance. If the Balance is null, show a value of $0, otherwise, show the value -->
+        <li *ngIf="headerParams.payload.term === null && headerParams.payload.availableBal"><span>Available Balance</span> <span class="balance">{{headerParams.payload.availableBal | formatPrice}}</span></li>
+        <li *ngIf="headerParams.payload.term === null && headerParams.payload.availableBal === null"><span>Available Balance</span> <span class="balance">{{ 0 | formatPrice}}</span></li>
+        <!-- End -->
+
+        <li *ngIf="headerParams.payload.openDate"><span>Date Established</span> <span>{{headerParams.payload.openDate}}</span></li>
+        <li *ngIf="headerParams.payload.dividendEarned"><span>Dividend YTD</span> <span class="balance">{{headerParams.payload.dividendEarned | formatPrice}}</span></li>
+        <li *ngIf="headerParams.payload.dividendRate"><span>Dividend Rate</span> <span>{{headerParams.payload.dividendRate | number: '.2-2'}}%</span></li>
+        <li *ngIf="headerParams.payload.apy"><span>APY</span> <span>{{headerParams.payload.apy}}%</span></li>
+        <li *ngIf="headerParams.payload.maturityDate"><span>Maturity Date</span> <span>{{headerParams.payload.maturityDate}}</span></li>
+      </div>
+
+      <div *ngIf="headerParams.payload.parentAcctType === 'CERTIFICATE'">
+        <li *ngIf="headerParams.payload.term"><span>Term</span> <span>{{headerParams.payload.term}} months</span></li>
+        <li *ngIf="headerParams.payload.initialDeposit"><span>Opening Balance</span> <span class="balance">{{headerParams.payload.initialDeposit | formatPrice}}</span></li>
+        <li *ngIf="headerParams.payload.openDate"><span>Date Established</span> <span>{{headerParams.payload.openDate}}</span></li>
+        <li *ngIf="headerParams.payload.dividendEarned"><span>Dividend YTD</span> <span class="balance">{{headerParams.payload.dividendEarned | formatPrice}}</span></li>
+        <li *ngIf="headerParams.payload.dividendRate"><span>Dividend Rate</span> <span>{{headerParams.payload.dividendRate | number: '.2-2'}}%</span></li>
+        <li *ngIf="headerParams.payload.apy"><span>APY</span> <span>{{headerParams.payload.apy}}%</span></li>
+        <li *ngIf="headerParams.payload.maturityDate"><span>Maturity Date</span> <span>{{headerParams.payload.maturityDate}}</span></li>
+      </div>
+
+    </ul>
+  </ion-col>
+  <ion-col *ngIf="headerParams.payload.parentAcctType === 'CREDITCARD'" col-12 text-center class="manageCard" (click)="manageCard()">Manage Card <ion-icon ios="ios-settings" md="ios-settings"></ion-icon></ion-col>
+</ion-row>

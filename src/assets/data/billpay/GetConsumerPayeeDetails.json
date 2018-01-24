@@ -1,0 +1,56 @@
+{
+  "billPayees": {
+    "billPayee": [{
+      "billPayeeId": "6532638",
+      "consumerPayeeId": "102038575",
+      "payeeNickname": "Verizon Wireless",
+      "payeeName": "Verizon Wireless",
+      "payeeAddress": {
+        "contactType": "ADDRESS",
+        "contactAddress": {
+          "line1": "PO BOX 9622",
+          "city": "MISSION HILLS",
+          "stateProvince": "CA",
+          "postalCode": "913469622",
+          "country": "US"
+        }
+      },
+      "payeePhone": {
+        "contactType": "PHONE",
+        "phone": {
+          "type": "WORK",
+          "number": "0000000000"
+        }
+      },
+      "billInfo": {
+        "billerId": "300178",
+        "status": "PENDING_DEACTIVATION",
+        "cycle": "ONCE_A_MONTH"
+      },
+      "payeeAccountNumber": "2082400215",
+      "payeeCategory": "3",
+      "payeeStatus": "ACTIVE",
+      "cutOffTime": {
+        "time": "13:0:0.000",
+        "timeZone": "0"
+      },
+      "deliveryMethodList": {
+        "deliveryMethod": [{
+            "deliveryMethodType": "OVERNIGHT_CHECK",
+            "leadDays": 1
+          },
+          {
+            "deliveryMethodType": "STANDARD_ELECTRONIC",
+            "leadDays": 2,
+            "isDefault": true
+          },
+          {
+            "deliveryMethodType": "DIRECT_CHECK",
+            "leadDays": 4,
+            "hasDeliveryMethodProfile": false
+          }
+        ]
+      }
+    }]
+  }
+}

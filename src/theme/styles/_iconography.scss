@@ -1,0 +1,134 @@
+//ios Header icons for Hamburger style menu
+//Pages used: Settings/Contact/
+
+.header-icon.icon-ios {
+  color: $pf-mobile-white;
+  font-size: 2.4rem;
+  font-weight: 400;
+
+  &.ion-ios-mail {
+    //height: 0.8rem;
+    margin-left: 7px;
+  }
+}
+
+// Account Nickname
+.disable-hover.button.button-ios.button-default.button-default-ios {
+  background-color: $pf-mobile-dark-blue;
+  margin: 0;
+  height: 4.8rem;
+}
+
+.button-cta {
+  background-color: $pf-mobile-dark-blue;
+  margin: 0;
+  // height: 4.8rem;
+  border-radius: 4px;
+  width: 225px;
+  font-family: $pf-montserrat-semi-bold;
+  margin: 20px 0;
+  padding: 2.5rem 1em;
+  font-size: 1.6rem;
+}
+
+.disable-hover.bar-buttons.bar-buttons-ios.button.button-ios.button-default.button-default-ios.button-menutoggle.button-menutoggle-ios {
+  padding-left: 1.2rem;
+  margin: 0;
+  height: 4.8rem;
+  background-color: $pf-mobile-dark-blue;
+
+  .button-inner {
+    color: $pf-mobile-white;
+  }
+}
+
+//Hamburger Menu styles for android
+//Pages used: Settings/Contact/
+
+.header-icon.icon.icon-md {
+  color: $pf-mobile-white;
+  font-weight: 500;
+
+  &.ion-md-menu {
+    font-size: 2.4rem;
+  }
+
+  &.ion-ios-mail {
+    font-size: 2.4rem;
+  }
+}
+
+.disable-hover.bar-buttons.bar-buttons-md.button.button-md.button-default.button-default-md.button-menutoggle.button-menutoggle-md {
+  height: 4.8rem;
+  background-color: $pf-mobile-dark-blue;
+  //background-color: transparent;
+}
+
+ion-content .disable-hover.button.button-md.button-default.button-default-md {
+  height: 4.8rem;
+  background-color: $pf-mobile-dark-blue;
+  //background-color: transparent;
+}
+
+.button-md{
+  box-shadow: none !important;
+  transition: none !important;
+  margin: 0 !important;
+}
+// Search icon
+.search {
+  height: 2.4rem;
+
+  .icon-search.icon {
+    &.icon.ion-md-search,
+    &.ion-ios-search-outline {
+      color: $pf-mobile-white;
+      padding-left: 1.8rem;
+      font-size: 2.4rem;
+    }
+  }
+}
+
+//list icon
+.list-icon {
+  padding: 1.8rem 0 0 2.2rem;
+}
+
+//Back button
+.icon.icon-ios.ion-ios-arrow-back, .icon.icon-ios.ion-ios-close {
+  height: 0.8rem;
+}
+
+.ion-ios-arrow-back, .ion-ios-close{
+  font-size: 2.4rem;
+  //line-height: 2.3rem;
+  // line-height: 3rem;
+}
+
+.alert-md [aria-checked=true] .alert-checkbox-icon {
+    border-color: $pf-mobile-light-blue !important;
+    background-color: $pf-mobile-light-blue !important;
+}
+.over-ride-icon {
+  position: relative;
+  background-color: $pf-mobile-white;
+
+  ion-icon[ios="ios-arrow-down"] {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: $pf-mobile-light-blue;
+  }
+}
+
+.select-icon-inner {
+  display: none;
+}
+.select-text{
+  overflow: visible !important;
+  font-size: 18px !important;
+}
+ion-select {
+  max-width: 80% !important;
+}

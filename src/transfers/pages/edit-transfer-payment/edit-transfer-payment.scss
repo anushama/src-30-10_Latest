@@ -1,0 +1,155 @@
+page-edit-transfer-payment {
+  font-family: $pf-montserrat-regular;
+  .item {
+    // padding-left: 0;
+    .icon {
+      position: absolute;
+      right: 1.6rem;
+      top: calc(50% - .8rem);
+      color: $pf-mobile-light-blue; //#00A0DD; 
+      font-size: 2.4rem;
+    }
+    [ios='ios-arrow-forward'],
+    [ios='ios-calendar'] {
+      width: 1.1rem;
+      letter-spacing: .2rem;
+      line-height: 2.6rem;
+    }
+    [ios='ios-calendar']{
+      top: calc(50% - 1.3rem);
+    }
+    &.account-item {
+      height: 8rem;
+    }
+    &.amount-date-item {
+      height: 5rem;
+      [ios='ios-arrow-forward']{
+        top: calc(50% - 1.4rem);
+      }
+    }
+    .item-inner {
+      margin: 0;
+    }
+    .input-wrapper {
+      // padding-left: 1.6rem;
+    }
+    .account {
+      font-size: 1.8rem;
+      color: $pf-mobile-dark-grey;
+      line-height: 2.2rem;
+      &.name {
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+      &.amt {
+        margin-right: 3rem;
+      }
+    }
+    .frequency {
+      font-family: $pf-montserrat-light;
+      font-size: 1.2rem;
+      color: $pf-mobile-dark-grey;
+      line-height: 1.5rem;
+      &.paydate {
+        margin-right: 3rem;
+      }
+    }
+  }
+
+  .h-header {
+    font-size: 1.2rem;
+    color: $pf-mobile-dark-blue;
+    line-height: 2.4rem;
+  }
+
+  .calender-button {
+    padding: 0;
+    background-color: transparent;
+  }
+
+  .date {
+    font-family: $pf-montserrat-regular;
+    font-size: 1.8rem;
+  }
+
+  .date-row {
+    margin: 0 1.1rem;
+  }
+
+  .segment.segment-background {
+    height: 4.4rem;
+  }
+
+  .segbutton-background.segment-button {
+    height: 100%;
+    line-height: 4.3rem;
+    color: $pf-mobile-light-blue;
+    &.segment-activated {
+      border-color: #00a0dd !important;
+      background-color: #00a0dd !important;
+      color: $pf-mobile-white ;
+    }
+    &.monthly-disabled{
+      opacity: 0.4;
+    }
+  }
+
+  .segment-row {
+    margin: 1.5rem 1.6rem;
+  }
+
+  .disclaimer-row {
+    margin: 1.5rem 1.6rem 0;
+    color: $pf-mobile-dark-blue;
+    font-size: 1.1rem;
+  }
+
+  .description {
+    font-family: $pf-montserrat-regular;
+    font-size: 1.1rem;
+    color: $pf-mobile-dark-blue;
+    margin: 1.6rem;
+  }
+
+  .segment-button {
+    font-family: $pf-montserrat-regular;
+    font-size: 1.5rem;
+  }
+
+  .control-button {
+    text-align: center;
+  }
+
+  .over-ride-icon {
+    position: relative;
+    background-color: $pf-mobile-white;
+    ion-icon[ios="ios-arrow-down"] {
+      position: absolute;
+      right: 15px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: $pf-mobile-light-blue;
+    }
+  }
+
+  .select-icon-inner {
+    display: none;
+  }
+
+  .choose-times {
+    margin: 0 auto;
+  }
+
+  .select.select-option {
+    width: 100%;
+    max-width: 100%;
+    .select-text {
+      font-family: $pf-montserrat-regular;
+      font-size: 1.6rem;
+    }
+    [ion-button] {
+      border-bottom:2px solid $pf-mobile-light-blue;
+    }
+  }
+  
+}

@@ -1,0 +1,51 @@
+<!--
+  Generated template for the BillpayDevUiIndexPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+    <ion-row class="common-header">
+        <button ion-button navPop class="nav-icon">
+            <ion-icon ios="ios-arrow-back" md="ios-arrow-back"></ion-icon>
+        </button>
+        <ion-title class="text-truncate">Dev UI Views</ion-title>
+    </ion-row>
+</ion-header>
+
+
+<ion-content padding>
+    <ion-grid>
+            <ion-row>
+                    Sprint 2.1
+            </ion-row>
+            <ion-row>
+                <button class="cta-button" ion-button block (click)="sortFromHistory()">Sort From History</button>
+                <button class="cta-button" ion-button block (click)="sortFromHistory()">Sort From Payees</button>
+            </ion-row>
+
+            <ion-row>
+                    Sprint 2.2
+            </ion-row>
+            <ion-row>
+                <button class="cta-button" ion-button block (click)="payBill()">Pay Bill</button>
+                <button class="cta-button" ion-button block (click)="reviewPayment()">Review Payment</button>
+                <button class="cta-button" ion-button block (click)="paymentScheduled()">Payment scheduled</button>
+            </ion-row>
+
+            <ion-row>
+                    Sprint 2.3
+            </ion-row>
+            <ion-row>
+                <button class="cta-button" ion-button block (click)="addPayee()">Search Add Payee</button>
+                <button class="cta-button" ion-button block (click)="addEditPayee()">Add Payee</button>
+                <button class="cta-button" ion-button block (click)="editPayee(false)">Edit Payee</button>
+                <button class="cta-button" ion-button block (click)="editPayee(true)">Edit Payee Business</button>
+                <button class="cta-button" ion-button block (click)="payToAccount()">Pay to Account</button>
+                <button class="cta-button" ion-button block (click)="setPaymentAmount(100, 350)">Payment Amnt min=100</button>
+                <button class="cta-button" ion-button block (click)="setPaymentAmount(350, 350)">Payment Amnt min=due</button>
+                <button class="cta-button" ion-button block (click)="setFrequency()">Select Frequency</button>
+            </ion-row>
+    </ion-grid>
+    
+</ion-content>

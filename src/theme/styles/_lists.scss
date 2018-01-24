@@ -1,0 +1,180 @@
+//
+// General
+//
+//List headers
+// Pages found: Contact page
+
+button.item-ios:not([detail-none]) .item-inner, button.item-md:not([detail-none]) .item-inner {
+  //background-image: url('/android_asset/www/assets/chevron-right.svg') !important;
+  background-image: url('../assets/chevron-right.svg') !important;
+  line-height: normal !important;
+  padding: 8px 0;
+  //background: none !important;
+  padding-right: 32px;
+  background-position: right 14px center;
+  background-repeat: no-repeat;
+  background-size: 14px 14px;
+}
+
+.item-ios [item-right] {
+  text-align: right !important;
+  margin: 9px 0px 8px 8px !important;
+}
+.item-md [item-right] {
+  text-align: right !important;
+  margin: 9px 0px 8px 8px !important;
+}
+
+.item-ios ion-avatar img {
+  border-radius: none !important;
+  width:18px !important;
+}
+.item-md ion-avatar img {
+  border-radius: none !important;
+  width:18px !important;
+}
+
+  // ion-list {
+  //   ion-item-group {
+  //     border-bottom: 1px solid $pf-mobile-list-border;
+  //     .item-ios {
+  //       background: none !important;
+  //     }
+  //     .item-md {
+  //       background: none !important;
+  //     }
+  //   }
+  // }
+
+ion-list {
+  .col {
+    padding: 0;
+  }
+  .account-name {
+    font-family: $pf-montserrat-regular !important;
+    font-size: 15px;
+    color: $pf-mobile-dark-grey;
+  }
+
+  .account-date, .account-number {
+    font-family: $pf-montserrat-light !important;
+    font-size: 13px;
+    color: $pf-mobile-dark-grey;
+  }
+
+  .account-amount {
+    font-family: $pf-montserrat-regular !important;
+    font-size: 16px;
+    color: $pf-mobile-dark-grey;
+    margin-right: 0px;
+  }
+  .account-status {
+    font-family: $pf-montserrat-regular !important;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: $pf-mobile-hint-blue;
+    margin-right: 0px;
+  }
+
+  .account-number {
+    font-size: 12px;
+  }
+
+
+  .list-header.item {
+    border-bottom: 2px solid $pf-mobile-mid-grey;
+    background: none;
+    text-transform: uppercase;
+    .label {
+      padding-top: 2rem;
+      font-family: $pf-montserrat-semi-bold !important;
+    }
+  }
+}
+
+// This styling is not required as overriding the default bottom-border for list.
+.list-ios > .item-block:last-child,
+.list-ios .item-block:last-child .item-inner,
+.list-ios > .item-wrapper:last-child .item-block {
+  // border-bottom: none;
+}
+
+.title.title-ios {
+  //margin-left: 1rem;
+}
+
+.list-md .item-block:last-child .item-inner {
+    border-bottom: 1px solid $pf-mobile-list-line !important;
+}
+
+.list-ios > .item-block:first-child {
+  border-top: none;
+}
+//common css (if this common, use utlity class instead)
+.list {
+  margin-top: 2rem;
+}
+
+// Login page list specific for android
+// .list.list-md {
+//   margin-bottom: 0;
+// }
+
+
+// each list bar
+.app-menu-item {
+  color: $pf-mobile-white;
+  font-size: 1.6rem;
+  font-family: $pf-montserrat-regular !important;
+  background: transparent;
+  height: 5.5rem;
+
+  // .item-inner {
+  //   border-bottom: none;
+  // }
+}
+
+.invalid {
+  border-bottom: 1px solid #FF6153 !important;
+}
+
+.sublist {
+  display: inline-block;
+  height: 55px;
+}
+
+.menu-list:last-child {
+  border-bottom: none;
+}
+
+//list title
+.list-content {
+  margin-left: 2.2rem;
+}
+.list-sort{
+  button.item-block {
+    min-height: auto;
+    font-family: $pf-montserrat-medium;
+    color:$pf-mobile-dark-blue;
+    font-size: 1.4rem;
+  }
+  button {
+    .item-inner{
+      padding-right: 0x;
+    }
+    &.item-md:not([detail-none]) .item-inner, &.item-ios:not([detail-none]) .item-inner{
+      background-image: none!important;
+    }
+    ion-label{
+      line-height: 14px;
+    }
+  }
+}
+
+.item-md.item-block .item-inner{
+  margin: 0 !important;
+}
+.item-ios.item-block .item-inner{
+  margin: 0 !important;
+}

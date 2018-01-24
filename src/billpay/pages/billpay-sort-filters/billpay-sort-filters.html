@@ -1,0 +1,76 @@
+<!--
+  Generated template for the BillpaySortFiltersPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+    <ion-row class="common-header">
+        <button navPop class="nav-icon"><ion-icon ios="md-close" md="md-close"></ion-icon></button>
+        <ion-title class="textElipse">SORT BY</ion-title>
+    </ion-row>
+</ion-header>
+
+<ion-content>
+    <ion-grid class="full-height" no-padding>
+        <form [formGroup]="sortForm">
+            <ion-list radio-group [(ngModel)]="sortOrder" formControlName="sortOrder">
+                <ion-item>
+                    <ion-row>
+                        <ion-col item-left class="pad-left-sm"><span [ngClass]="{'after-select':DT}"> Most Recent</span></ion-col>
+                        <ion-col item-right>
+                            <ion-icon *ngIf="DT" ios="ios-radio-button-on" md="md-radio-button-on" text-right></ion-icon>
+                            <ion-icon *ngIf="!DT" ios="ios-radio-button-off" md="md-radio-button-off" (click)="selectSortOption('dueDateTime')" text-right></ion-icon>
+                        </ion-col>
+                    </ion-row>
+                </ion-item>
+                <ion-item>
+                    <ion-row>
+                        <ion-col item-left class="pad-left-sm"><span [ngClass]="{'after-select':Asc}">Payee Name: A to Z</span></ion-col>
+                        <ion-col item-right>
+                            <ion-icon *ngIf="Asc" ios="ios-radio-button-on" md="md-radio-button-on"></ion-icon>
+                            <ion-icon *ngIf="!Asc" ios="ios-radio-button-off" md="md-radio-button-off" (click)="selectSortOption('payeeNameAsc')"></ion-icon>
+                        </ion-col>
+                    </ion-row>
+                </ion-item>
+                <ion-item>
+                    <ion-row>
+                        <ion-col item-left class="pad-left-sm"><span [ngClass]="{'after-select':Desc}">Payee Name: Z to A</span></ion-col>
+                        <ion-col item-right>
+                            <ion-icon *ngIf="Desc" ios="ios-radio-button-on" md="md-radio-button-on"></ion-icon>
+                            <ion-icon *ngIf="!Desc" ios="ios-radio-button-off" md="md-radio-button-off" (click)="selectSortOption('payeeNameDesc')"></ion-icon>
+                        </ion-col>
+                    </ion-row>
+                </ion-item>
+            </ion-list>
+
+
+
+            <div *ngIf="viewOptions.eBills">
+                <ion-row style="height:20px"></ion-row>
+            </div>
+
+            <ion-list *ngIf="viewOptions.eBills">
+                <!-- <ion-item>
+                    <ion-label>Show Hidden Payees</ion-label>
+                    <ion-toggle name="showHiddenPayees"  formControlName="showHiddenPayees" class="button-inner" [(ngModel)]="showHiddenPayees"></ion-toggle>
+                </ion-item> -->
+                <ion-item>
+                    <ion-label class="pad-left-sm">{{eBillCaption}}</ion-label>
+                    <ion-toggle name="showEBills" formControlName="showEBills" class="button-inner" [checked]="showEBills" (ionChange)="selectSortOption('showEbills')"></ion-toggle>
+                </ion-item>
+            </ion-list>
+            <div *ngIf="viewOptions.status">
+                <ion-row style="height:20px"></ion-row>
+            </div>
+            <ion-list *ngIf="viewOptions.status">
+                <ion-item>
+                    <ion-label>Status</ion-label>
+                    <ion-select class="dark-select" multiple="true">
+                        <ion-option *ngFor="let status of statues" value="{{status.value}}">{{status.text}}</ion-option>
+                    </ion-select>
+                </ion-item>
+            </ion-list>
+        </form>
+    </ion-grid>
+</ion-content>

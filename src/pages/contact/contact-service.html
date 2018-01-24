@@ -1,0 +1,35 @@
+<ion-item class="clock-content">
+  <ion-icon class="blueIcon" id="clock-icon" ios="ios-clock" md="ios-clock" item-start></ion-icon>
+  <h2 class="hours">MEMBER SERVICE</h2>
+  <p class="time">Mon - Fri: 7:00am - 11:00pm EST</p>
+  <p class="time">Saturday: 8:00am - 11:00pm EST</p>
+  <p class="time">Sunday: 9:00am - 5:30pm EST</p>
+</ion-item>
+<ion-item *ngIf="showEmail">
+  <a href="mailto:{{email}}">
+    <ion-icon class="blueIcon" id="mail-icon" ios="ios-mail" md="ios-mail" item-start></ion-icon>
+  </a>
+  <div class="click-icon">
+    <h3>Send us an email</h3>
+    <a class="contact-info" href="mailto:{{email}}">{{email}}</a>
+  </div>
+</ion-item>
+
+<ion-item>
+  <a href="tel:{{localNumber}}">
+    <ion-icon class="blueIcon" ios="md-call" md="md-call" item-start></ion-icon>
+  </a>
+  <div class="click-icon">
+    <h2 class="common-h2">Give us a call</h2>
+    <a class="contact-info" href="tel:{{localNumber}}">{{localNumber}}</a>
+  </div>
+</ion-item>
+<ion-item>
+  <a href="tel:{{overseasNumber}}">
+    <ion-icon class="blueIcon" ios="md-call" md="md-call" item-start></ion-icon>
+  </a>
+  <div class="click-icon">
+    <h2 class="common-h2">Overseas direct dial</h2>
+    <a class="contact-info" href="tel:{{overseasNumber}}">{{overseasNumber}}</a>
+  </div>
+</ion-item>

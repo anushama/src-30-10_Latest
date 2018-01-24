@@ -1,0 +1,69 @@
+<ion-list *ngIf="accounts.length >= 1">
+  <ion-list-header>
+    <div class="headingTitle">PENFED ACCOUNTS</div>
+  </ion-list-header>
+  <div *ngFor="let account of accounts">
+    <ion-item class="item-from-account" *ngIf="account.showAccount" tappable (click)="selectaccount(account)">
+
+      <div *ngIf="account.nickname != null; then accountNickName else accountFullName"></div>
+      <ng-template #accountNickName>
+        <p>{{account.nickname}}&nbsp;({{account.numLast4}})</p>
+      </ng-template>
+
+      <ng-template #accountFullName>
+        <p>{{account.fullName}}&nbsp;({{account.numLast4}})</p>
+      </ng-template>
+
+      <div *ngIf="account.parentAcctType == 'CHECKING_SAVING'; then checkSaving else creditAccount"></div>
+      <ng-template #checkSaving>
+        <h2>${{account.availableBal | formatPrice}}</h2>
+        <span>Available Balance</span>
+      </ng-template>
+
+      <ng-template #creditAccount>
+        <div *ngIf="transferType == 'transfer'">
+          <h2>${{account.availableCredit | formatPrice}}</h2>
+          <span>Available Credit</span>
+        </div>
+        <div *ngIf="transferType == 'payment'">
+          <h2>${{account.currentBal | formatPrice}}</h2>
+          <span>Current Balance</span>
+        </div>
+      </ng-template>
+      <ion-icon *ngIf="numLast4 != null && account.numLast4 == numLast4; else radioButtonOff" ios="ios-radio-button-on" md="md-radio-button-on"></ion-icon>
+      <ng-template #radioButtonOff>
+        <ion-icon ios="ios-radio-button-off" md="md-radio-button-off"></ion-icon>
+      </ng-template>
+    </ion-item>
+  </div>
+</ion-list>
+<ion-list *ngIf="externalAccounts.length >= 1">
+  <ion-list-header>
+    <div class="headingTitle">EXTERNAL ACCOUNTS</div>
+  </ion-list-header>
+  <div *ngFor="let externalAccount of externalAccounts">
+    <ion-item *ngIf="externalAccount.showAccount" tappable (click)="selectaccount(externalAccount)">
+      <div *ngIf="externalAccount.nickname != null; then accountNickName else accountFullName"></div>
+      <ng-template #accountNickName>
+        <p>{{externalAccount.nickname}}&nbsp;({{externalAccount.numLast4}})</p>
+      </ng-template>
+
+      <ng-template #accountFullName>
+        <p>{{externalAccount.fullName}}&nbsp;({{externalAccount.numLast4}})</p>
+      </ng-template>
+      <ion-icon *ngIf="numLast4 != null && externalAccount.numLast4 == numLast4; else radioButtonOff" ios="ios-radio-button-on"
+        md="md-radio-button-on"></ion-icon>
+      <ng-template #radioButtonOff>
+        <ion-icon ios="ios-radio-button-off" md="md-radio-button-off"></ion-icon>
+      </ng-template>
+    </ion-item>
+  </div>
+</ion-list>
+<ion-list>
+  <div *ngIf="accounts.length == 0 && externalAccounts.length == 0">
+    <ion-list-header>
+      <div class="headingTitle">PENFED ACCOUNTS</div>
+    </ion-list-header>
+    <p class="disc-msg">Are you missing accounts on this list? They may be hidden. You can change their hidden status in Account Show/Hide Settings.</p>
+  </div>
+</ion-list>

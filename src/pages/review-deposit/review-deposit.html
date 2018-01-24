@@ -1,0 +1,71 @@
+<ion-header>
+  <ion-row class="contact-header">
+    <ion-col col-2>
+      <button (click)="popView()" class="backButton">
+        <ion-icon ios="ios-arrow-back" md="ios-arrow-back"></ion-icon>
+      </button>
+    </ion-col>
+    <ion-col col-10>
+      <ion-title text-left class="deposit-title">REVIEW DEPOSIT (2 OF 2)</ion-title>
+    </ion-col>
+  </ion-row>
+</ion-header>
+
+<ion-content no-padding>
+  <ion-list>
+    <ion-item class="review-item">
+      <h6 class="h-header">DEPOSIT TO</h6>
+      <ion-row col-12 no-padding>
+        <ion-col *ngIf = "!depositAccount.nickname" col-6 no-padding text-left class="accountName">{{ (depositAccount.fullName) | titleCase}}</ion-col>
+        <ion-col *ngIf = "depositAccount.nickname" col-6 no-padding text-left class="accountName">{{ (depositAccount.nickname) | titleCase}}</ion-col>
+        <ion-col no-padding text-right class="accountName">${{depositAccount.availableBal | formatPrice}}</ion-col>
+      </ion-row>
+      <ion-row col-12 no-padding>
+        <ion-col no-padding text-left class="accountNum">({{depositAccount.numLast4}})</ion-col>
+        <ion-col no-padding text-right class="accountNum availableBal">Available Balance</ion-col>
+      </ion-row>
+    </ion-item>
+    <ion-item class="review-item">
+      <ion-row no-padding>
+        <ion-col no-padding class="h-header">DEPOSIT AMOUNT</ion-col>
+        <ion-col no-padding text-right class="accountName">${{depositAmount | formatPrice}}</ion-col>
+      </ion-row>
+    </ion-item>
+  </ion-list>
+  <div class="check-container">
+    <div class="check-header">
+      FRONT OF CHECK
+      <div class="check-img" [ngClass]="{'img-ready':picture.front !== null}">
+        <div class="front-back photo-ready">
+          <img [src]="picture.front"/>
+        </div>
+      </div>
+    </div>
+    <div class="check-header">
+      BACK OF CHECK
+      <div class="check-img" [ngClass]="{'img-ready':picture.back !== null}">
+        <div class="front-back photo-ready">
+          <img [src]="picture.back"/>
+        </div>
+      </div>
+    </div>
+    <div class="deposit-terms">
+      <a (click)="goToTermsPage()"><b>Mobile Deposit Terms</b></a>
+    </div>
+    <div class="check-box-div">
+      <ion-list>
+        <ion-item class="review-item check-box">
+          <ion-label class="aggreement">
+            {{"review.deposit.mobiledeposit.terms.accept" | aemsync : ["move-money"] | async}}
+
+            <!-- I acknowledge that I read and accept the terms for PenFed Mobile Check Deposits --></ion-label>
+          <ion-checkbox color="light-blue" [(ngModel)]="flag"></ion-checkbox>
+        </ion-item>
+      </ion-list>
+    </div>
+    <div class="control-button">
+      <button ion-button class="cta-button green" [disabled]="!flag" (click)="confirm()">DEPOSIT CHECK</button>
+    </div>
+  </div>
+  <accounts-footer></accounts-footer>
+</ion-content>

@@ -1,0 +1,36 @@
+<ion-header>
+  <pf-header leftIcon="patternLogin">
+    <pf-header-title>PATTERN LOGIN</pf-header-title>
+  </pf-header>
+</ion-header>
+<ion-content>
+    <ion-row padding-left>
+        <ion-col [innerHTML]="'pattern.create.login.info' | aemsync : ['pattern-login'] | async"></ion-col>
+    </ion-row>
+    <ion-row>
+        <ion-col *ngIf="isPatternEnabled" class=" text-16 text-bold">PATTERN LOGIN IS ENABLED FOR USER: {{userName}}</ion-col>
+    </ion-row>
+    <!-- <div id='lockPattern' class='pattern-holder patt-holder'></div> -->
+
+    <ion-row *ngIf="!isPatternEnabled">
+        <ion-col>
+            <button class="cta-button long outline" ion-button block tappable (click)="goToAboutPatternLogin()">LEARN MORE</button>
+        </ion-col>
+    </ion-row>
+    <ion-row *ngIf="!isPatternEnabled">
+        <ion-col>
+            <button class="cta-button long" ion-button block tappable (click)="setupPattern()">ENABLE PATTERN LOGIN</button>
+        </ion-col>
+    </ion-row>
+    <ion-row *ngIf="isPatternEnabled">
+        <ion-col>
+            <button class="cta-button long" ion-button block tappable (click)="changePattern()">CHANGE YOUR PATTERN</button>
+        </ion-col>
+    </ion-row>
+    <ion-row *ngIf="isPatternEnabled">
+        <ion-col>
+            <button class="cta-button long red" ion-button block tappable (click)="goToDisablePatternLogin()">DISABLE PATTERN LOGIN</button>
+        </ion-col>
+    </ion-row>
+
+</ion-content>

@@ -1,0 +1,41 @@
+page-fingerprint-enabled {
+    font-family: $pf-montserrat-regular;
+
+    .content {
+        text-align: center;
+        background-color: $pf-mobile-light-grey;
+    }
+
+    .fingerprint-enabled-container {
+        margin-top: 5rem;
+        line-height: 1.9rem;
+        .enabledText {
+            font-family: $pf-montserrat-semi-bold;
+            font-size: 1.6rem;
+            color: $pf-mobile-green;
+            margin-top: 1rem;
+        }
+        .successText {
+            font-size: 1.5rem;
+            color: #484848;
+        }
+    }
+
+    .btn-footer {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 100%;
+        .btn-done {
+            font-family: $pf-montserrat-medium;
+            background-color: $pf-mobile-dark-blue;
+            border-radius: .4rem;
+            font-size: 1.6rem;
+            color: $pf-mobile-white;
+            letter-spacing: .1rem;
+            margin-bottom: 2rem;
+            min-width: 22.5rem;
+            height: 5rem;
+        }
+    }
+}

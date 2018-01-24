@@ -1,0 +1,11 @@
+<ion-header>
+  <pf-header class="common-header" leftIcon="toggleMenu" rightIcon="mail">
+    <pf-header-title>BILL PAY</pf-header-title>
+  </pf-header>
+</ion-header>
+
+<ion-tabs tabsPlacement="top" class="tabs-head" selectedIndex="0" *ngIf="!disableBillPayUser">
+  <ion-tab [root]="paymentsRoot" tabTitle="PAYMENTS"></ion-tab>
+  <ion-tab [root]="payeesRoot" tabTitle="PAYEES"></ion-tab>
+  <ion-tab [root]="historyRoot" tabTitle="HISTORY"></ion-tab>
+</ion-tabs>

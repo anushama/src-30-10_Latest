@@ -1,0 +1,24 @@
+<ion-row>
+  <ion-col>
+    <ion-grid>
+      <form #f="ngForm">
+        <ion-list>
+          <h1>
+            {{accountTypeLabel}}
+          </h1>
+          <ng-container *ngFor="let account of accountType,let i = index ">
+            <ion-label stacked class="input-label">
+              <span>{{account.fullName | uppercase}}</span>
+              <span>({{account.numLast4 | uppercase}})</span>
+            </ion-label>
+            <ion-item *ngIf="account.showAccount">
+              <!-- <ion-input type="text" maxlength="20" [attr.maxlength]="20" [(ngModel)]="account.nickname" placeholder = "Nickname" [formControlName]="account.numLast4"></ion-input> -->
+              <ion-input type="text" name="{{'nickname'+ i}}" [(ngModel)]="account.nickname" placeholder="Nickname" inputMaxLength="20"
+                clearInput="true" nickname-format></ion-input>
+            </ion-item>
+          </ng-container>
+        </ion-list>
+      </form>
+     </ion-grid>
+  </ion-col>
+</ion-row>

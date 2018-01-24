@@ -1,0 +1,26 @@
+{
+   "message": {
+      "type": "INFORMATIONAL_MESSAGE",
+      "code": "MER020",
+      "text": "A single managed payee was found.",
+      "locale": "en-US",
+      "internalCode": "MER020"
+   },
+   "merchantList": [
+      {
+         "merchantId": "300004",
+         "merchantName": "VERIZON WIRELESS",
+         "categoryId": "1020",
+         "billPayee": {
+            "billPayeeId": "6532638",
+            "payeeAddress": {
+               "line1": "PO BOX 9622",
+               "city": "MISSION HILLS",
+               "stateProvince": "CA",
+               "postalCode": "913469622"
+            }
+         },
+         "global": true
+      }
+   ]
+}

@@ -1,0 +1,82 @@
+page-settings-notifications {
+
+    .scroll-content {
+        background: #f4f4f4 !important;
+        padding: 0 !important;
+        p {
+            font-size: 13px;
+        }
+    }
+    ion-item{
+          border-bottom: 1px solid #002856;
+    }
+
+     ion-icon {
+        color: #FFFFFF;
+        font-size: 2.4rem;
+        font-weight: 600;
+        line-height: 2.2rem;
+        text-align: center;
+      }
+
+  .legal{
+    font-family: 'monserratRegular', sans-serif;
+    font-size: 12px;
+    color:$pf-mobile-legal-blue;
+    p{
+      margin: 0 0 1rem 0;
+      line-height: auto;
+    }
+    right: 0;
+    bottom: 16px !important;
+    left: 16px !important;
+    //padding: 0 16px !important; 
+  }
+  .legal p{
+    text-decoration: underline;
+  }
+
+  .insured{
+    font-family: 'monserratRegular', sans-serif;
+    font-size: 12px;
+    text-decoration: underline;
+    color:$pf-mobile-legal-blue;
+  }
+
+  .notify{
+    color: #000 !important;
+    white-space: normal;
+    font-size: 1.5rem;
+    font-family: 'monserratRegular', sans-serif !important;
+    p{
+      margin-top: 20px !important;
+      margin-bottom: 20px !important;
+      color: #282828 !important;
+    }
+  }
+
+  .specific-accounts{
+      clear: both;
+  }
+
+  .notify-data, .list-item{
+    background-color: #f4f4f4;
+  }
+
+  .headingTitle{
+				font-family: 'monserrat600', sans-serif;
+				font-size: 14px;
+				text-transform: uppercase;
+				display: inline-block;
+				padding-bottom:4px;
+				color:$pf-mobile-mid-grey;
+				letter-spacing: 1px;
+		}
+  .topLabel{
+    color: #59606E;
+  }
+
+  .button-ios.activated {
+    background-color: #0F2D52 !important;
+  }
+}

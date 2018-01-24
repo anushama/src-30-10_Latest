@@ -1,0 +1,8 @@
+<header leftIcon="toggleMenu" rightIcon="mail">
+  <header-title>PAYMENTS</header-title>
+</header>
+
+<ion-tabs tabsPlacement="top" #paymentTabs class="page-title">
+    <ion-tab [root]="makePaymentRoot" tabTitle="MAKE PAYMENTS" class="tabsDecoration"></ion-tab>
+    <ion-tab [root]="scheduledPaymentRoot" tabTitle="SCHEDULED PAYMENTS"></ion-tab>
+  </ion-tabs>

@@ -1,0 +1,133 @@
+<ion-header>
+    <ion-row class="common-header">
+      <button ion-button class="nav-icon" (click)="popView()">
+        <ion-icon ios="md-close" md="md-close"></ion-icon>
+      </button>
+      <ion-title>{{"alerts.notifications.title" | aemsync : ["alerts-notifications"] | async}}</ion-title>
+      <button ion-button text-uppercase (click)="saveAlertSettings()">save</button>
+    </ion-row>
+  </ion-header>
+  <!--<pf-header leftIcon="cross" rightIcon="save">
+      <pf-header-title>NOTIFICATIONS</pf-header-title>
+  </pf-header>-->
+  <ion-content no-padding>
+    <ion-grid no-padding>
+      <ion-row class="notify-data">
+        <ion-list>
+          <ion-item class="list-item">
+            <ion-row class="notify">
+              <p>{{"alerts.notifications.content.info" | aemsync : ["alerts-notifications"] | async}}</p>
+            </ion-row>
+          </ion-item>
+          <ion-item class="list-item toggle-button-item">
+            <ion-label class="item-name">{{"alerts.notifications.doNotDisturb" | aemsync : ["alerts-notifications"] | async}}</ion-label>
+            <ion-toggle class="toggle-md" [(ngModel)]="doNotDisturb" (ionChange)="toggleDonotDisturb($event)"></ion-toggle>
+          </ion-item>
+  
+          <ion-row>
+            <ion-col>
+              <ion-item class="list-item toggle-button-item" *ngIf="doNotDisturb">
+                <div item-content class="startTime">
+                  <ion-label class="item-name start-time-label" for="startTimeText">FROM</ion-label>
+                   <ion-datetime class="timePicker" type="text" id="startTimeText" pickerFormat="hh:mm A" minuteValues="0,30" [(ngModel)]="startTimeText"></ion-datetime>
+                </div>
+              </ion-item>
+            </ion-col>
+            <ion-col>
+              <ion-item class="list-item toggle-button-item" *ngIf="doNotDisturb">
+                <div item-content class="endTime">
+                  <ion-label class="item-name end-time-label" for="endTimeText">TO</ion-label>
+                   <ion-datetime class="timePicker" id="endTimeText" type="text" pickerFormat="hh:mm A" minuteValues="0,30" [(ngModel)]="endTimeText">
+  
+                  </ion-datetime>
+                </div>
+              </ion-item>
+            </ion-col>
+          </ion-row>
+          <ion-row item-content *ngIf="doNotDisturb">
+            <div text-wrap class="notifications-label">{{"alerts.notifications.time.text" | aemsync : ["alerts-notifications"] | async}}</div>
+          </ion-row>
+  
+          <ion-item-divider class="dividerHeading">
+            <div class="headingTitle" text-uppercase>{{"alerts.notifications.heading.title" | aemsync : ["alerts-notifications"] | async}}</div>
+          </ion-item-divider>
+  
+          <div *ngIf="alertConfigAccountsList">
+  
+            <!--Accounts-->
+            <div *ngIf="alertConfigAccountsList.length">
+              <ion-item class="account-content account-accordion" *ngFor="let account of alertConfigAccountsList; let idx = index " text-wrap>
+                <ion-row item-content class="account-accord">
+                  <ion-col col-12 (click)="toggleDetails(idx,account)" class="alert-header">
+                    <ion-label *ngIf="account.actName">
+                      <div ion-row *ngIf="!account.showDetails" class="topLabel labelLight">
+                        <div col-11>{{account.actName}}
+                          <span>({{account.numLast4}})</span>
+                        </div>
+                        <div col-1>
+                          <span *ngIf="account.isSelected" class="filled-circle"></span>
+                        </div>
+                      </div>
+                      <div ion-row *ngIf="account.showDetails" class="topLabel labelMedium">
+                        <div col-11>{{account.actName}}
+                        <span>({{account.numLast4}})</span>
+                        </div>
+                        <div col-1>
+                          <span *ngIf="account.isSelected" class="filled-circle"></span>
+                        </div>
+                      </div>
+                    </ion-label>
+                
+                  </ion-col>
+                  
+                  <ion-col class="alert-content">
+       
+                    <ul *ngIf="account.showDetails">
+                      <ion-list class="listItems" *ngFor="let item of account.accountAlertList;let i =index">
+                        <ion-row>
+                          <ion-col col-9>
+                            <ion-label class="ionLabel">{{item.label}}</ion-label>
+  
+                          </ion-col>
+                          <ion-col col-3>
+                             
+                            <ion-toggle id = "{{account.numLast4}}+ i" class="toggle-md" checked="{{item.iToggle}}" (ionChange)="toggleSettings($event,i,account,item)"></ion-toggle>
+                          </ion-col>
+                        </ion-row>
+                        <ion-row>
+                          <ion-col col-12 *ngIf='item.type =="amount"'>
+                            <ion-input class="ionInput" id = "{{account.numLast4}}+ i" currencymask type="tel" [disabled]="!item.iToggle" [(ngModel)]="item.fldValue" >
+                            </ion-input>
+                          
+                          </ion-col>
+                          <ion-col col-12 *ngIf='item.type == "radio"'>
+                            <ion-row class="segment-row">
+                            <ion-segment color="light-blue" class="segment-background" id = "{{account.numLast4}}+ i" [disabled]="!item.iToggle" (ionChange)="frequencyToggle($event,item)" [(ngModel)]="item.fldValue">
+                              <ion-segment-button value="daily" class="segbutton-background">
+                                Daily
+                              </ion-segment-button>
+                              <ion-segment-button value="Weekly" class="segbutton-background">
+                                Weekly
+                              </ion-segment-button>
+                            </ion-segment>
+                            </ion-row>
+                          </ion-col>
+
+                           
+                        </ion-row>
+  
+                      </ion-list>
+  
+                    </ul>
+                  </ion-col>
+                </ion-row>
+              </ion-item>
+            </div>
+  
+          </div>
+  
+        </ion-list>
+      </ion-row>
+    </ion-grid>
+  </ion-content>
+  

@@ -1,0 +1,61 @@
+page-account-unlocked {
+  .scroll-content {
+    background-color: $pf-mobile-light-grey;
+    height: 100%;
+  }
+
+  .account-unlock-title{
+    margin-top: 48px;
+    margin-left:10px;
+    display: block;
+  }
+  
+  //only for ios
+  .title.title-ios {
+    margin-left: 2rem;
+  }
+  //=============
+  /*.backButton {
+    background-color: $pf-mobile-dark-blue;
+    margin: 1.1rem 1.1rem 1.1rem 0.5rem;
+  }*/
+
+  .icon.ion-md-close {
+    font-size: 2.4rem;
+    font-weight: 500;
+    color: $pf-mobile-white;
+    line-height: 1.3rem;
+  }
+
+  .unlock-description {
+    font-family: $pf-montserrat-regular;
+    font-size: 1.5rem;
+    color: $pf-mobile-dark-grey;
+    margin: 2.6rem 1.6rem 1rem;
+  }
+
+  .buttons-position {
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    text-align: center;
+    position: absolute;
+    bottom: 8rem;
+  }
+
+  .account-unlocked-button {
+    margin-top: 2.1rem;
+    width: 22.5rem;
+    height: 5rem;
+    &.newpassword{
+      background-color: $pf-mobile-green !important;
+    }
+
+    .button-inner {
+      font-family: $pf-montserrat-medium;
+      letter-spacing: 1px;
+      color: $pf-mobile-white;
+    }
+  }
+}

@@ -1,0 +1,55 @@
+<ion-content>
+  <ion-grid no-padding class="scheduled-transfers-content">
+    <div class="scheduled-transfers-status" *ngIf="!noScheduledTransfers; else transfersList">
+      You have no scheduled transfers.
+    </div>
+    <ng-template #transfersList>
+        <!-- <ion-list [virtualScroll]="scheduledTransfers" [virtualTrackBy]="transferTrackBy"> -->
+        <ion-list>
+        <!-- [approxItemHeight]="'80px'"-->
+        <ng-container *ngFor="let scheduledTransfer of scheduledTransfers;let i = index">
+        <!-- *virtualItem="let scheduledTransfer" -->
+          <ion-item-sliding > 
+            <ion-item class="item-scheduled-transfers" tappable (click)="selectTransfer(scheduledTransfer, i)">
+              <h6 class="h-header">{{transactType}} TO</h6>
+              <ion-row col-12 no-padding>
+                <ion-col col-4 col-md-auto no-padding class="account name">{{scheduledTransfer.toAccountName}}&nbsp;</ion-col>
+                <ion-col no-padding class="account">({{scheduledTransfer.toAccountNumberLast4}})</ion-col>
+                <ion-col no-padding text-right class="account amt">${{scheduledTransfer.amount | formatPrice}}</ion-col>
+              </ion-row>
+              <ion-row col-12 no-padding>
+                <ion-col no-padding text-left class="frequency">{{scheduledTransfer.frequency | titleCase}}</ion-col>
+                <ion-col no-padding text-right class="frequency paydate">{{scheduledTransfer.nextPaymentDate | date: 'MM/dd/yyyy'}}</ion-col>
+                <!-- <ion-col no-padding text-right class="frequency paydate">{{scheduledTransfer.transferDate | date: 'MM/dd/yyyy'}}</ion-col> -->
+                <!-- <ion-col no-padding text-right class="frequency paydate">{{scheduledTransfer.nextPaymentDateDisplay}}</ion-col> -->
+              </ion-row>
+              <ion-icon *ngIf="scheduledTransfer.notEditable; else arrowForward" ios="ios-help-circle" md="md-help-circle" class="inline-block"></ion-icon>
+              <ng-template #arrowForward>
+                <ion-icon text-right ios="ios-arrow-forward" md="ios-arrow-forward" class="inline-block"></ion-icon>
+              </ng-template>
+            </ion-item>
+            <ion-item-options side="right">
+              <button ion-button color="danger" tappable (click)="deleteTransfer(scheduledTransfer, i)"><ion-icon expandable ios="ios-trash" md="md-trash"></ion-icon>Delete</button>
+            </ion-item-options>
+          </ion-item-sliding>
+          <!-- <ng-template #arrowForward>
+            <ion-item class="item-scheduled-transfers" tappable (click)="selectTransfer(scheduledTransfer)">
+              <h6 class="h-header">TRANSFER TO</h6>
+              <ion-row col-12 no-padding>
+                <ion-col col-4 col-md-auto no-padding class="account name">{{scheduledTransfer.toAccountName}}&nbsp;</ion-col>
+                <ion-col no-padding class="account">({{scheduledTransfer.toAccountNumberLast4}})</ion-col>
+                <ion-col no-padding text-right class="account amt">${{scheduledTransfer.ammount | formatPrice}}</ion-col>
+              </ion-row>
+              <ion-row col-12 no-padding>
+                <ion-col no-padding text-left class="frequency">{{scheduledTransfer.frequency | titleCase}}</ion-col>
+                <ion-col no-padding text-right class="frequency paydate">{{scheduledTransfer.nextPaymentDateDisplay}}</ion-col>
+              </ion-row>
+              <ion-icon text-right ios="ios-arrow-forward" md="ios-arrow-forward" class="inline-block"></ion-icon>
+            </ion-item>
+          </ng-template> -->
+        </ng-container>
+      </ion-list>
+    </ng-template>
+  </ion-grid>
+  <p class="insured" tappable (click)='util.displayNCUACert()'>Federally insured by NCUA</p>
+</ion-content>

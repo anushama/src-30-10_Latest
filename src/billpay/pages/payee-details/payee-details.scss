@@ -1,0 +1,57 @@
+page-payee-details {
+    .buttonWrap {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        justify-content: flex-end;
+        margin-top: 3px;
+        letter-spacing: 0.05rem;
+        button {
+            padding: 0;
+            text-transform: uppercase;
+            font-family: $pf-montserrat-medium;
+            color: $pf-mobile-light-blue;
+            border: 1px solid #bdbdbd;
+            background: $pf-mobile-white;
+            border-radius: 15px;
+            font-size: 10px;
+            margin: 0;
+            @media (max-width: 344px) {
+                min-height: 50px;
+            }
+        }
+    }
+    .item-md [item-right] {
+        margin: 0px !important;
+    }
+    .item-ios [item-right] {
+        margin: 0px !important;
+    }
+    /* Some of the billpay pages not required chevron symbol.
+  Hence we have added the below styles to remove chevron. Don't comment as part of refactoring work*/
+    button.item-md:not([detail-none]) .item-inner {
+        background-image: none !important;
+        padding: 8px;
+    }
+    button.item-ios:not([detail-none]) .item-inner {
+        background-image: none !important;
+        padding: 8px;
+    }
+    .bottom_bar {
+        position: fixed;
+        bottom: 5px;
+        padding-left: 16px;
+        padding-top: 16px;
+        text-decoration: underline;
+        text-align: left;
+        width: 100%;
+        color: $pf-mobile-dark-blue;
+        background: none !important;
+    }
+    .ion-list-viewport {
+        max-height: 345px;
+        width: 100%;
+        display: block !important;
+        overflow: scroll !important;
+    }
+}

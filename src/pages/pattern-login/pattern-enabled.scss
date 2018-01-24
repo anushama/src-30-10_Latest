@@ -1,0 +1,79 @@
+page-pattern-enabled {
+    .scroll-content {
+        background: $pf-mobile-light-grey;
+        font-family: $pf-montserrat-regular;
+        padding: 16px 0!important;
+    }
+    /* product header styles */
+    .pageHeader {
+        background-color: $pf-mobile-dark-blue;
+        color: $pf-mobile-white !important;
+        font-size: 150%;
+        font-weight: bold;
+        height: 40px;
+        align-items: center;
+        min-height: 46px;
+        // padding: 11px 16px;
+        ion-title {
+            .toolbar-title {
+                color: $pf-mobile-white;
+                font-weight: 600;
+                font-size: 16px;
+                letter-spacing: 2px;
+                padding-left: 0;
+                text-align: left;
+            }
+        }
+        .ion-md-menu,
+        .ion-ios-mail {
+            font-size: 2.4rem;
+        }
+        .button {
+            background-color: transparent !important;
+            height: 3.3rem;
+        }
+    }
+    .pattern-enabled-container {
+        min-height: 60vh;
+        text-align: center;
+        padding-top: 15%;
+        h2 {
+            font-family: $pf-montserrat-regular;
+            font-size: 16px;
+            color: $pf-mobile-green;
+            letter-spacing: 1px;
+            font-weight: 600;
+            margin-top: 20px;
+        }
+        p{
+            font-family: $pf-montserrat-regular;
+            font-size: 16px;
+            letter-spacing: 1px;
+            // font-weight: 600;
+            margin-top: 20px;
+        }
+    }
+    .btn-footer {
+        vertical-align: bottom;
+        position: fixed;
+        width: 100%;
+        bottom: 0;
+        text-align: center!important;
+        .btn-pattern {
+            font-family: $pf-montserrat-medium, sans-serif;
+            padding: 1.5em;
+            border-radius: 4px;
+            font-size: 15px;
+            color: $pf-mobile-white;
+            letter-spacing: 2px;
+            margin-bottom: 20px;
+            min-width: 225px;
+            line-height: 0;
+            background-color: $pf-mobile-dark-blue;
+            &.change-pattern {
+                background: $pf-mobile-light-blue;
+                color: $pf-mobile-white;
+            }
+        }
+    }
+}

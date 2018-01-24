@@ -1,0 +1,8 @@
+{
+  "alerts.notifications.title":"notifications",
+  "alerts.notifications.content.info":"Alerts you elect to receive may be sent at any time, 24/7. The notifications preferences you set here apply to all of your devices.",
+  "alerts.notifications.time.text":"No notifications will be sent between these times.",
+  "alerts.notifications.doNotDisturb":"Do Not Disturb",
+  "alerts.notifications.heading.title":"Account-specific notifications"
+  
+}

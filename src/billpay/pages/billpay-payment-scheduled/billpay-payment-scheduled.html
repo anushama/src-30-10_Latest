@@ -1,0 +1,107 @@
+<!-- <ion-header>
+   <page-billpay-header></page-billpay-header>
+</ion-header> -->
+
+<ion-header>
+    <ion-row class="common-header">
+        <button ion-button class="nav-icon">
+            <ion-icon menuToggle ios="md-menu" md="md-menu"></ion-icon>
+        </button>
+        <ion-title class="text-truncate">Payment Scheduled</ion-title>
+        <button ion-button><ion-icon ios="ios-mail" md="ios-mail" icon-right></ion-icon></button>
+    </ion-row>
+</ion-header>
+
+
+<ion-content>
+    <div class="text-center custom-green top-container">
+        <div>
+            <!-- <ion-icon ios="ios-checkmark-circle-outline" md="md-checkmark-circle-outline" class="check-mark-green"></ion-icon> -->
+            <img src="assets/img/CHECK.svg">
+        </div>
+        <div class="account-name text-16bold">
+            PAYMENT SCHEDULED                
+        </div>
+        <div class="account-name text-14dark-grey">
+                Confirmation # 1234-567-000           
+        </div>
+    </div>
+        
+    <ion-list>
+        <ion-item detail-none no-lines>
+            <ion-row>
+                <ion-col item-left class="account-date dark-blue text-12">
+                    <span>PAYMENT FROM</span>
+                </ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col class="account-name text-truncate text-18">
+                    <span>Complete Access Checking</span>
+                </ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col class="account-date text-12">
+                    <span>(9969)</span>
+                </ion-col>
+            </ion-row>
+        </ion-item>
+
+        <ion-item detail-none no-lines>
+            <ion-row>
+                <ion-col item-left class="account-date dark-blue text-12">
+                    <span>PAYMENT TO</span>
+                </ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col class="account-name text-truncate text-18">
+                    <span>State Farms Insurance</span>
+                </ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col class="account-date text-12">
+                    <span>(9969)</span>
+                </ion-col>
+            </ion-row>
+        </ion-item>
+
+        <ion-item detail-none no-lines>
+            <ion-row>
+                <ion-col item-left class="account-date text-12 dark-blue">
+                    <span>PAYMENT AMOUNT</span>
+                </ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col class="account-amount text-18">
+                    <span>$325.00</span>
+                </ion-col>
+            </ion-row>
+        </ion-item >
+
+        <ion-item detail-none no-lines>
+            <ion-row>
+                <ion-col item-left class="account-date text-12 dark-blue">
+                    <span>PAYMENT DELIVERY DATE</span>
+                </ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col class="account-date text-18">
+                    <span>07/22/2017</span>
+                </ion-col>
+            </ion-row>
+        </ion-item >
+    
+    </ion-list>
+        
+
+    <ion-row>
+        <button class="cta-button" ion-button block (click)="doneScheduled()">DONE</button>
+    </ion-row>
+</ion-content>
+
+<ion-footer no-border>
+    <ion-row>
+        <ion-col col-12 class="legal">
+            <p class="insured" (click)='displayNCUACert()'>Federally insured by NCUA</p>
+        </ion-col>
+    </ion-row>
+</ion-footer>

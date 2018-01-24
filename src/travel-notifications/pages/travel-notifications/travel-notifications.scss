@@ -1,0 +1,108 @@
+page-travel-notifications {
+    font-family: $pf-montserrat-regular;
+    ion-header {
+        .toolbar-background {
+            background-color: $pf-mobile-dark-blue;
+            letter-spacing: 0.2rem;
+        }
+        ion-navbar {
+            .bar-buttons {
+                color: $pf-mobile-white;
+            }
+            ion-title {
+                &.title {
+                    text-align: left!important;
+                    .toolbar-title-ios {
+                        padding-top: 2rem !important;
+                    }
+                    .toolbar-title-md {
+                        padding-top: 0 !important;
+                    }
+                    .toolbar-title {
+                        line-height: 1.9rem;
+                        color: $pf-mobile-white;
+                        font-size: 1.6rem;
+                        letter-spacing: 0.2rem;
+                    }
+                    &.title-ios {
+                        margin-left: 0rem;
+                        padding: 0rem;
+                    }
+                }
+            }
+            button.back-button {
+                &.back-button-ios {
+                    margin-left: 1rem;
+                }
+                .ion-md-arrow-back:before {
+                    content: "\f3cf";
+                    font-size: 2.3rem;
+                }
+                .ion-ios-arrow-back {
+                    height: auto !important;
+                    line-height: 1rem;
+                    font-size: 2.6rem;
+                }
+            }
+            &.toolbar {
+                padding: 4px;
+                border-bottom: 1px solid $pf-mobile-light-blue;                
+            }
+            &.toolbar-md {
+                // min-height:5rem !important;
+            }
+            &.toolbar-ios {
+                // min-height: 7rem !important;
+            }
+        } 
+    }
+    .content {
+        background-color: $pf-mobile-light-grey;
+        font-size: 1.5rem;
+        line-height: 1.9rem;
+        color: $pf-mobile-dark-grey;
+        div {
+            &.tv-notification-status {
+                margin-bottom: 2rem;
+                padding: 1.6rem 1.6rem 0 1.6rem;
+            }
+            &.tv-notification-disclaimer {
+                margin-top: 2rem;
+                font-size: 1.3rem;
+                line-height: 1.6rem;
+                padding: 0 1.6rem 0;
+            }
+        }
+        ion-item-divider {
+            &.dividerHeading {
+                padding-top: 1.5rem;
+                font-family: $pf-montserrat-semi-bold;
+                font-size: 1.4rem;
+                line-height: 1.8rem;
+                letter-spacing: .2rem;
+                color: $pf-mobile-mid-grey;
+            }
+        }
+        button {
+            &.button-control {
+                height: 5rem !important;
+                min-width: 32.6rem !important;
+                // max-width: 34.4rem !important;
+                border-radius: .4rem;
+                margin: 0 0 2rem !important;
+                background-color: $pf-mobile-dark-blue;
+                .button-inner {
+                    color: $pf-mobile-white;
+                    font-family: $pf-montserrat-medium;
+                    letter-spacing: .1rem;
+                    font-size: 1.6rem;
+                    line-height: 3.5rem;
+                }
+            }
+        }
+    }   
+    /*.scroll-content{
+        margin-top: 48px !important;
+    }*/
+}
+  

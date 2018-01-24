@@ -1,0 +1,33 @@
+<ion-header>
+  <pf-header leftIcon="cross">
+    <pf-header-title class="textElipse">ADD EXTERNAL ACCOUNT</pf-header-title>
+  </pf-header>
+</ion-header>
+
+<ion-content no-padding>
+  <div class="confirm-page">
+    <ion-list class="confirm-list">
+      <ion-item class="review-item">
+        <h6 class="h-header">FINANCIAL INSTITUTE</h6>
+        <div class="accountName">
+          {{instituteName}}
+        </div>
+        <div class="accountNum">
+          <span *ngIf="acctType == 'CHECKING'">Checking/Money Market</span>
+          <span *ngIf="acctType == 'SAVING'">Savings</span> Account # {{acctNum}}
+        </div>
+      </ion-item>
+
+      <ion-item class="review-item check-box">
+        <ion-label class="aggreement">
+          I acknowledge that I own the specified account, and authorize PenFed to initiate the electronic transfer or funds.
+        </ion-label>
+        <ion-checkbox color="light-blue" [(ngModel)]="flag"></ion-checkbox>
+      </ion-item>
+    </ion-list>
+    <div class="control-button">
+      <button ion-button class="cta-button" tappable [disabled]="!flag" (click)="confirm()">SUBMIT ACCOUNT INFO</button>
+    </div>
+    <p class="insured" tappable (click)='util.displayNCUACert()'>Federally insured by NCUA</p>
+  </div>
+</ion-content>

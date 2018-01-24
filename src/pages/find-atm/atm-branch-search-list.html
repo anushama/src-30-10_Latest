@@ -1,0 +1,43 @@
+<!--<ion-header>
+  <ion-row class="common-header">
+      <button ion-button class="nav-icon">
+          <ion-icon menuToggle ios="md-menu" md="md-menu"></ion-icon>
+        </button>
+    <ion-title>FIND AN ATM/BRANCH</ion-title>
+    <button ion-button>
+      <ion-icon ios="ios-mail" md="ios-mail" icon-right></ion-icon>
+    </button>
+  </ion-row>
+</ion-header>-->
+<ion-header>
+  <pf-header leftIcon="toggleMenu" rightIcon="mail">
+    <pf-header-title>FIND AN ATM/BRANCH</pf-header-title>
+  </pf-header>
+</ion-header>
+<ion-content no-padding>
+  <ion-grid>
+    <form>
+      <ion-row class="search">
+        <ion-input type="search" placeholder="Search Address or Zip" class="search-input" [(ngModel)]="searchInput" name="searchInput"
+          (keyup.enter)="goToInputSearchAddress($event.target.value)" (keyup)="focus($event.target.value)"></ion-input>
+        <div *ngIf="!searchInputLength" class="map">
+          <ion-icon ios="ios-map-outline" md="md-map" (click)="goToMap()"></ion-icon>
+        </div>
+        <div *ngIf="searchInputLength" class="map">
+          <ion-icon ios="ios-close" md="md-close" (click)="clear()"></ion-icon>
+        </div>
+      </ion-row>
+    </form>
+
+    <ion-row *ngFor="let item of atmBranchList" class="atm-list" (click)="goToATMDetails(item)">
+      <ion-col col-10>
+        <p class="location-text">{{item.LocationType}} - {{item.LocationName}}</p>
+        <p class="sub-text">Distance: {{item.Distance}} {{item.DistanceUnit}}</p>
+      </ion-col>
+      <ion-col col-2>
+        <ion-icon text-right ios="ios-arrow-forward" md="ios-arrow-forward"></ion-icon>
+      </ion-col>
+    </ion-row>
+
+  </ion-grid>
+</ion-content>

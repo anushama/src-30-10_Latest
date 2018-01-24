@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title >Home </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-item-group class="my-item-group">
+    <ion-item-divider class="my-item-group"  text-wrap color="light">PenFed  Web Service Call Demo</ion-item-divider>
+    <ion-item class="my-item-group"  text-wrap>This is a simple demonstration of calling a web service from wthin an Ionic 2 / Angular 2 Mobile App.</ion-item>
+    <ion-item class="my-item-group"  text-wrap>The service endpoint being called is:</ion-item>
+    <ion-item class="my-item-group" class="endpoint" text-wrap><i>{{serviceCallEndPoint }}</i></ion-item>
+    <ion-item class="my-item-group" class="endpoint" text-wrap>For the member id : {{memberID }}</ion-item>
+    <button  ion-button block color="secondary"  (click)='callSvc();'>Call Service</button>
+  </ion-item-group>
+  <ion-item-group>
+    <ion-item  class="my-item-group" text-wrap>And the data returned by the call is:</ion-item>
+    <pre class="my-pre" [innerHTML]="resultJson | json"></pre>
+  </ion-item-group>
+</ion-content>

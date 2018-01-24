@@ -1,0 +1,108 @@
+<!--
+  Generated template for the BillpayAddEditPayeePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+    <ion-row class="common-header">
+        <button ion-button navPop class="nav-icon"><ion-icon ios="md-close" md="md-close"></ion-icon></button>
+        <ion-title class="text-truncate text-upper">{{title}} Payee</ion-title>
+    </ion-row>
+</ion-header>
+
+<ion-content padding>
+    <form [formGroup]="payeeForm" name="payeeForm">
+        <ion-row>
+            <ion-col>
+                <ion-label color="primary" class="text-upper">Name</ion-label>
+                <ion-item>
+                    <ion-input type="text" [disabled]="disabledFld" formControlName="payeeName" name="payeeName" [(ngModel)]="payee.name" minlength="2" maxlength="32" inputMaxLength="32" required></ion-input>
+                </ion-item>
+            </ion-col>
+        </ion-row>
+
+        <ion-row>
+            <ion-col>
+                <ion-label color="primary" class="text-upper">Nickname</ion-label>
+                <ion-item>
+                    <ion-input type="text" formControlName="nickname" name="nickname" [(ngModel)]="payee.nickname" minlength="2" maxlength="32" inputMaxLength="32" required></ion-input>
+                </ion-item>
+            </ion-col>
+        </ion-row>
+
+        <ion-row>
+            <ion-col>
+                <ion-label color="primary" class="text-upper">account number (optional)</ion-label>
+                <ion-item>
+                    <ion-input type="text" [disabled]="disabledFld" formControlName="accountnumber" name="accountnumber" [(ngModel)]="payee.accountnumber" maxlength="25" inputMaxLength="25" required></ion-input>
+                </ion-item>
+            </ion-col>
+        </ion-row>
+
+        <ion-row>
+            <ion-col>
+                <ion-label color="primary" class="text-upper">Address Line 1</ion-label>
+                <ion-item>
+                    <ion-input type="text" [disabled]="disabledFld" formControlName="addressline1" name="addressline1" [(ngModel)]="payee.addressLine1" maxlength="23" inputMaxLength="23" required></ion-input>
+                </ion-item>
+            </ion-col>
+        </ion-row>
+
+        <ion-row>
+            <ion-col>
+                <ion-label color="primary" class="text-upper">Address Line 2</ion-label>
+                <ion-item>
+                    <ion-input type="text" [disabled]="disabledFld" formControlName="addressline2" name="addressline2" [(ngModel)]="payee.addressLine2" maxlength="32" inputMaxLength="23" required></ion-input>
+                </ion-item>
+            </ion-col>
+        </ion-row>
+
+        <ion-row>
+            <ion-col>
+                <ion-label color="primary" class="text-upper">City</ion-label>
+                <ion-item>
+                    <ion-input type="text" [disabled]="disabledFld" formControlName="city" name="city" [(ngModel)]="payee.city" maxlength="32" inputMaxLength="32" required></ion-input>
+                </ion-item>
+            </ion-col>
+        </ion-row>
+
+        <ion-row>
+            <ion-col>
+                <ion-label color="primary" class="text-upper">state</ion-label>
+                <ion-item>
+                    <ion-input type="text" [disabled]="disabledFld" formControlName="state" name="state" [(ngModel)]="payee.state" minlength="2" maxlength="60" inputMaxLength="60" required></ion-input>
+                </ion-item>
+            </ion-col>
+        </ion-row>
+
+        <ion-row>
+            <ion-col col4 no-padding>
+                <ion-row>
+                    <ion-col>
+                        <ion-label color="primary" class="text-upper">Zip Code</ion-label>
+                        <ion-item>
+                            <ion-input type="text" [disabled]="disabledFld" placeholder="00000" formControlName="zipcode" name="zipcode" [(ngModel)]="payee.zipCode" minlength="5" maxlength="10" inputMaxLength="10" required></ion-input>
+                        </ion-item>
+                    </ion-col>
+                </ion-row>
+            </ion-col>
+
+            <ion-col no-padding>
+                <ion-row>
+                    <ion-col>
+                        <ion-label color="primary" class="text-upper">phone number (optional)</ion-label>
+                        <ion-item>
+                            <ion-input type="tel" placeholder="(000) 000-0000" phonemask formControlName="phonenumber" name="phonenumber" [(ngModel)]="payee.phoneNumber" maxlength="16" inputMaxLength="16" required></ion-input>
+                        </ion-item>
+                    </ion-col>
+                </ion-row>
+            </ion-col>
+        </ion-row>
+
+        <ion-row>
+            <button class="cta-button text-upper" ion-button block (click)="savePayee()">save {{caption}}payee</button>
+        </ion-row>
+
+    </form>
+</ion-content>

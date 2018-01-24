@@ -1,0 +1,58 @@
+<ion-header>
+  <ion-row class="common-header">
+    <button ion-button tappable navPop class="nav-icon">
+        <ion-icon ios="md-close" md="md-close"></ion-icon>
+      </button>
+    <ion-title class="textElipse">{{title}}</ion-title>
+  </ion-row>
+</ion-header>
+
+<ion-content padding>
+  <ion-grid class="branch-details" *ngIf="ATMDetails">
+    <ion-row>
+      <ion-col col-12>
+        <h2>{{locationName}}</h2>
+        <p>{{ATMDetails.distance}} {{ATMDetails.distanceUnit}}</p>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-2>
+        <ion-icon ios="ios-pin" md="md-pin"></ion-icon>
+      </ion-col>
+      <ion-col col-8>
+        <p>{{ATMDetails.address.street}} {{ATMDetails.address.city}}, {{ATMDetails.address.state}} {{ATMDetails.address.zip}}</p>
+      </ion-col>
+    </ion-row>
+    <ion-row class="direction">
+      <button ion-button block color="penfed" class="clear" outline (click)="getDirection()">Get Directions</button>
+    </ion-row>
+    <ion-row *ngIf="ATMDetails.hours.hour">
+      <ion-col col-2>
+        <ion-icon ios="ios-time" md="md-time"></ion-icon>
+      </ion-col>
+      <ion-col col-10>
+        <ul>
+          <li *ngFor="let day of ATMDetails.hours.hour">
+            {{day}}
+          </li>
+        </ul>
+      </ion-col>
+    </ion-row>
+    <ion-row *ngIf="ATMDetails.services.service">
+      <ion-col col-2>
+        <ion-icon ios="ios-information-circle" md="md-information-circle"></ion-icon>
+      </ion-col>
+      <ion-col col-10>
+        <ul *ngIf="serviceString == null">
+          <li *ngFor="let item of serviceStringArr">
+            {{item}}</li>
+        </ul>
+          <ul *ngIf="serviceString != null">
+          <li>
+            {{serviceString}}</li>
+        </ul>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>

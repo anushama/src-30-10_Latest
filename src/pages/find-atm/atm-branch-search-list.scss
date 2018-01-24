@@ -1,0 +1,130 @@
+page-atm-branch-search-list {
+  .scroll-content {
+    padding: 0 !important;
+  }
+.grid {
+  padding: 0px;
+  background-color: #FFFFFF;
+}
+  .ion-ios-arrow-forward {
+    color: $pf-mobile-light-blue;
+    font-size: 24px;
+    float: right;
+
+    &:after {
+      content: "";
+      display: block;
+      clear: both;
+    }
+  }
+
+  .icon.ion-ios-arrow-forward {
+    margin-right: 1.6rem;
+  }
+
+  .location-text {
+    font-size: 16px !important;
+    color: #282828 !important;
+    letter-spacing: 0;
+  }
+
+  .sub-text {
+    float: left !important;
+    font-size: 12px !important;
+    color: #282828 !important;
+    margin-top: 0;
+  }
+
+  .list-item {
+    &.item-block {
+      padding-left: 0;
+
+      .item-inner {
+        margin-top: 0.2rem;
+        padding-right: 0;
+        padding-left: 1.6rem;
+      }
+    }
+
+    .item-group {
+      padding: 0 !important;
+    }
+
+    .label {
+      margin: 0;
+    }
+  }
+
+  .item-name {
+    float: left;
+  }
+
+  .item-block {
+    border-top: 0 !important;
+    width: 95%;
+  }
+
+  .search {
+    border-radius: 2px;
+    border-bottom: 2px solid #282828;
+    font-family: $pf-montserrat-regular;
+    font-size: 16px;
+    color: #A9B7C7;
+    letter-spacing: 0.44px;
+    line-height: 24px;
+    height: 60px;
+    padding-top: 5px;
+    background: #FFFFFF;
+
+    &-input {
+      border-right-width: 1px;
+      border-right-color: #D1D1D1;
+      border-right-style: solid;
+      height: 40px;
+      margin-top: 10px;
+      margin-left: 10px;
+
+      .text-input {
+        margin: 5px 8px;
+        padding-right: 45px;
+      }
+    }
+
+      .map {
+            padding-right: 10px;
+            padding-left: 10px;
+            margin-right: 0px;
+            margin-left: 0px;
+            float: right;
+      }
+    
+
+    ion-icon {
+      font-size: 32px;
+      color: #00A0DD;
+      letter-spacing: 0;
+      margin-top: 10px;
+      margin-right: 5px;
+    }
+
+    .ion-md-map:before {
+      content: "\f1bc";
+    }
+  }
+
+  .atm-list {
+    font-family: $pf-montserrat-light;
+    border-bottom: 1px solid #d1d1d1;
+    width: 90%;
+    margin: auto;
+
+    p {
+      margin: 5px 0 !important;
+    }
+
+    ion-icon {
+      line-height: 60px;
+      margin-right: 0 !important;
+    }
+  }
+}

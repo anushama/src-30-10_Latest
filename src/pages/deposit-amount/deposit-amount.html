@@ -1,0 +1,32 @@
+<ion-header>
+  <pf-header leftIcon="cross">
+    <pf-header-title class="textElipse">{{pageTitle}}</pf-header-title>
+  </pf-header>
+</ion-header>
+<ion-content no-bounce>
+  <ion-grid>
+    <form #f="ngForm" [formGroup]="amountForm" novalidate>
+      <ion-row>
+        <ion-col>
+          <ion-label stacked class="input-label">{{pageTitle}}</ion-label>
+          <ion-item>
+            <ion-input type="tel" formControlName="depositAmount" [(ngModel)]="this.amount" required name="depositAmount" currencymask maxlength="15"></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+      <!-- <ion-row>
+        <ion-col> -->
+          <ion-footer>
+          <button class="cta-button" type="submit" ion-button block tappable [disabled]="amountForm.get('depositAmount').hasError('required')" (click)="openModalWithParams()">DONE</button>
+        </ion-footer>
+        <!-- </ion-col>
+      </ion-row> -->
+    </form>
+    <!--<ion-footer class="footer-legal push-bottom-md" padding-left (click)='util.displayNCUACert()'>
+      <a>Federally insured by NCUA</a>
+    </ion-footer>-->
+    <footer (click)='util.displayNCUACert()' class="footer-legal">
+      Federally insured by NCUA
+    </footer>
+  </ion-grid>
+</ion-content>

@@ -1,0 +1,38 @@
+<ion-header>
+  <pf-header leftIcon="terms">
+    <pf-header-title>SECURITY CODE</pf-header-title>
+  </pf-header>
+</ion-header>
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <p class="text-16 text-bold">PLEASE ENTER YOUR SECURITY CODE</p>
+      </ion-col>
+    </ion-row>
+    <form [formGroup]="user" (ngSubmit)="onSubmit()">
+      <ion-row class="label-row">
+        <ion-col>
+          <ion-label stacked class="input-label">SECURITY CODE</ion-label>
+          <ion-item>
+            <ion-input type="number" [(ngModel)]="securityNumber" formControlName="securityNumber" name="securitynumber" clearInput="true"
+              autofocus></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <span tappable (click)="popUpMethod()" class="text-14 text-regular pad-top-sm text-dark-blue">What is My Security Code?</span>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <span tappable (click)="goToHelpLogin()" class="text-14 text-regular pad-top-sm text-dark-blue">I Forgot My Security Code</span>
+        </ion-col>
+      </ion-row>
+      <ion-footer>
+        <button class="cta-button" type="submit" ion-button block [disabled]="user.controls.securityNumber.invalid">CONTINUE</button>
+      </ion-footer>
+    </form>
+  </ion-grid>
+</ion-content>

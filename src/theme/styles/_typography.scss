@@ -1,0 +1,28 @@
+// Typography
+// -------------------------------------------------
+$pf-montserrat-light: 'montserrat300',sans-serif;
+$pf-montserrat-regular: 'montserrat400',sans-serif;
+$pf-montserrat-medium: 'montserrat500',sans-serif;
+$pf-montserrat-semi-bold: 'montserrat600',sans-serif;
+
+
+// Fonts
+@import "roboto";
+@import "noto-sans";
+
+@font-face{
+  font-family:"montserrat300";
+  src: url($font-path+"/Montserrat/Montserrat-Light.ttf")
+}
+@font-face{
+  font-family:"montserrat400";
+  src: url($font-path+"/Montserrat/Montserrat-Regular.ttf")
+}
+@font-face{
+  font-family:"montserrat500";
+  src: url($font-path+"/Montserrat/Montserrat-Medium.ttf")
+}
+@font-face{
+  font-family:"montserrat600";
+  src: url($font-path+"/Montserrat/Montserrat-SemiBold.ttf")
+}

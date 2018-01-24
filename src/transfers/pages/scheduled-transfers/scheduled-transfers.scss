@@ -1,0 +1,80 @@
+page-scheduled-transfers {
+  font-family: $pf-montserrat-regular;
+  .content {
+    background-color: $pf-mobile-light-grey;
+    div {
+      &.scheduled-transfers-status {
+        font-size: 1.8rem;
+        line-height: 2.2rem;
+        color: $pf-mobile-dark-grey;
+        padding: 1.6rem 1.6rem 0 1.6rem;
+      }
+    }
+    .item-scheduled-transfers {
+      height: 8rem;
+    }
+    p.insured {
+      height: 9vh;
+    }
+    ion-grid {
+      .item {
+        // padding-left: 0;
+        .item-inner {
+          margin: 0;
+        }
+        .input-wrapper {
+          // padding-left: 1.6rem;
+        }
+        .h-header {
+          font-size: 1.2rem; // font-family: $pf-montserrat-regular;
+          color: $pf-mobile-dark-blue;
+          line-height: 2.4rem;
+        }
+        .account {
+          // font-family: $pf-montserrat-regular;
+          font-size: 1.8rem;
+          color: $pf-mobile-dark-grey;
+          line-height: 2.2rem;
+          &.name {
+            overflow: hidden;
+            text-overflow: ellipsis;
+          }
+          &.amt {
+            margin-right: 3rem;
+          }
+        }
+        .frequency {
+          font-family: $pf-montserrat-light;
+          font-size: 1.2rem;
+          color: $pf-mobile-dark-grey;
+          line-height: 1.5rem;
+          &.paydate {
+            margin-right: 3rem;
+          }
+        }
+        .icon {
+          position: absolute;
+          right: 1.6rem;
+          top: calc(50% - .8rem);
+          color: $pf-mobile-light-blue; //#00A0DD; 
+          font-weight: 500;
+        }
+        [ios='ios-arrow-forward'] {
+          font-size: 2.4rem;
+          width: 1.1rem;
+          letter-spacing: .2rem;
+          line-height: 2.6rem;
+        }
+        [ios='ios-help-circle'] {
+          width: 1.5rem;
+          font-size: 2.2rem;
+          line-height: 2.4rem;
+        }
+      }
+      [ion-button][color='danger']{
+        background-color: $pf-mobile-swipe-red !important;
+        text-transform: capitalize;
+      }
+    }
+  }
+}

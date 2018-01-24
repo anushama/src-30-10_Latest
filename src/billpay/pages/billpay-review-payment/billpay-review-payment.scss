@@ -1,0 +1,21 @@
+page-billpay-review-payment {
+    ion-item {
+        background-color: $pf-mobile-light-grey !important;
+        .adj-down {
+            padding-top: 5px;
+        }
+
+        .dark-blue {
+            color: $pf-mobile-dark-blue;
+        }
+    }
+    
+    .adj-down-item {
+        margin-top: 10px;
+    }
+
+    .right {
+        text-align: right;        
+    }
+
+}

@@ -1,0 +1,53 @@
+<ion-header>
+  <pf-header leftIcon="toggleMenu">
+    <pf-header-title>APPLICATION STATUS</pf-header-title>
+  </pf-header>
+</ion-header>
+<ion-content>
+  <div *ngIf="appStatusAvailble">
+    <ion-list>
+      <div *ngIf="activeApplicationStatus">
+        <ion-list-header>
+          ACTIVE APPLICATIONS
+          <div class="as-of-date" float-right><span>As of</span> {{activeApplication[0].lastUpdateDate}}</div>
+        </ion-list-header>
+        <button ion-item *ngFor="let item of activeApplication" (click)="goToApplicationDetails(item)">
+            <ion-row>
+              <ion-col class="text-16" text-left>{{item.productName}}</ion-col>
+              <ion-col class="text-14 push-right-xs" text-right push-right-sm>{{item.currentStatus}}</ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col class="text-12 text-light" text-left>Application #{{item.appNumber}}</ion-col>
+              <ion-col class="text-12 text-light push-right-xs" text-right>{{item.applicationDate}}</ion-col>
+            </ion-row>
+          </button>
+      </div>
+    </ion-list>
+    <ion-list>
+      <div *ngIf="inActiveApplicationStatus">
+        <ion-list-header>
+          INACTIVE APPLICATIONS
+          <div class="as-of-date" float-right><span>As of</span> {{inActiveApplication[0].lastUpdateDate}}</div>
+        </ion-list-header>
+        <button ion-item *ngFor="let item of inActiveApplication" (click)="goToApplicationDetails(item)">
+            <ion-row>
+              <ion-col class="text-16" text-left>{{item.productName}}</ion-col>
+              <ion-col class="text-14" text-right>{{item.currentStatus}}</ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col class="text-12 text-light" text-left>Application #{{item.appNumber}}</ion-col>
+              <ion-col class="text-12 text-light" text-right>{{item.applicationDate}}</ion-col>
+            </ion-row>
+          </button>
+      </div>
+    </ion-list>
+  </div>
+  <div *ngIf="!appStatusAvailble">
+    {{"application-status.description" | aemsync : ["application"] | async}}
+    <ion-row>
+      <ion-col>
+        <button class="cta-button long" color="main-text-color" ion-button block (click)="goToProducts()">VIEW ALL PENFED PRODUCTS</button>
+      </ion-col>
+    </ion-row>
+  </div>
+</ion-content>

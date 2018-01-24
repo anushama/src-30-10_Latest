@@ -1,0 +1,154 @@
+page-contact {
+  a {
+    text-decoration: underline;
+  }
+
+  //Adding the margin-top to show the hidden content below the header. 
+  .scroll-content{
+    margin-top:46px !important;
+  }
+
+  .hours {
+    font-family: $pf-montserrat-medium !important;
+    font-size: 1.5rem !important;
+    color: $pf-mobile-dark-grey;
+    margin: 9px 0;
+
+    b {
+      font-weight: 500;
+    }
+  }
+  .content {
+    background-color: $pf-mobile-light-grey;
+  }
+
+  .header-ios .hamburger-menu-header .toolbar-title {
+    line-height: 3.6rem;
+  }
+
+  #mail-icon {
+    margin-top: 0;
+    margin-left: 0;
+  }
+
+  #clock-icon {
+    margin-top: -4.4rem;
+  }
+
+  .common-h2 {
+    font-family: "montserrat300", sans-serif !important;
+    color: $pf-mobile-black;
+  }
+
+  .blueIcon {
+    color: rgba(26, 161, 218, 1) !important;
+    margin-top: 0;
+  }
+
+  .time {
+    font-family: $pf-montserrat-regular !important;
+    font-size: 1.5rem;
+    color: $pf-mobile-dark-grey;
+  }
+
+  .item ion-icon[item-start] + .item-inner {
+    margin-left: 0.5rem;
+  }
+
+  .contact-info {
+    text-decoration: none;
+    color: $pf-mobile-dark-blue;
+    font-size: 1.2rem;
+    font-family: $pf-montserrat-light !important;
+  }
+
+  .click-icon {
+    display: inline-block;
+  }
+  .click-icon-active{
+    font-size: 2.6rem;
+    text-decoration: none;
+  }
+
+  .clock-content {
+    .item-inner {
+      .input-wrapper {
+        border-bottom: none;
+      }
+    }
+  }
+
+.find-agent-field.push-top-sm{
+  ion-label{
+    text-overflow:inherit;
+  }
+}
+  .realityDesc {
+    color: $pf-mobile-dark-blue;
+    white-space: normal;
+    font-size: 1.5rem;
+    font-family: $pf-montserrat-regular !important;
+
+    a {
+      color: $pf-mobile-dark-blue;
+    }
+  }
+
+  .affiliated {
+    font-family: $pf-montserrat-regular;
+    text-decoration: underline;
+  }
+
+  .item.item-block {
+    padding-left: 1.5rem;
+    font-size: 1.2rem;
+    color: $pf-mobile-dark-blue;
+    background-color: $pf-mobile-light-grey;
+  }
+
+  .company-description {
+    margin: 0 1.5rem;
+    color: $pf-mobile-dark-grey;
+    //$pf-mobile-white-space: normal;
+    white-space: normal;
+    font-size: 1.5rem;
+    font-family: $pf-montserrat-regular !important;
+
+    a {
+      color: $pf-mobile-dark-blue;
+    }
+  }
+  //delete border
+  .item.item-block .item-inner,
+  .list .item-block .item-inner {
+    border-bottom: none;
+  }
+
+  .terms-conditions-a {
+    height: 15px;
+    width: 330px;
+    color: $pf-mobile-dark-blue;
+    font-size: 12px;
+    line-height: 15px;
+    text-decoration: underline;
+    padding-left: 12px;
+  }
+
+  .about-penfed-field,
+  .find-agent-field {
+    &.item.item-block {
+      & > .item-inner {
+        & > .input-wrapper {
+          border-bottom: none;
+          background-color: $pf-mobile-light-grey;
+          font-size: 1.5rem;
+        }
+      }
+    }
+  }
+
+  .list > .item-block:last-child,
+  .list > .item-wrapper:last-child .item-block {
+    border-bottom: none;
+  }
+}

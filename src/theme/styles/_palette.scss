@@ -1,0 +1,148 @@
+//
+// Color Palette
+// --------------------------------------------------
+$pf-mobile-dark-blue:#0F2D52;
+$pf-mobile-light-blue:#00a0dd;
+$pf-mobile-white:#ffffff;
+$pf-mobile-light-grey:#F4F4F4;
+$pf-mobile-mid-grey:#59606E;
+$pf-mobile-dark-grey:#282828;
+$pf-mobile-green:#558B2F;
+$pf-mobile-red:#C7001A;
+$pf-mobile-swipe-red:#F33C35;
+$pf-mobile-black:#000000;
+$black-87-opacity: #333333;
+
+$pf-mobile-list-line: #dedede;
+$pf-mobile-line-break:#002856;
+$pf-mobile-line-break-light:#E5E4E4;
+$pf-mobile-legal-blue:#103D65;
+$pf-mobile-hint-blue:#A9B7C7;
+$pf-mobile-list-border:#C8C7CC;
+$pf-mobile-blue-gradient:linear-gradient(180deg, $pf-mobile-dark-blue 0%, #2AA1E1 100%);
+
+
+$pf-light-blue: (
+  50: #e5f5fb,
+  100: #ccecf8,
+  200: #b2e2f4,
+  300: #99d9f1,
+  400: #7fcfee,
+  500: #66c6ea,
+  600: #4cbce7,
+  700: #32b3e3,
+  800: #19a9e0,
+  900: #00a0dd,
+  contrast: (
+    50: $black-87-opacity,
+    100: $black-87-opacity,
+    200: $black-87-opacity,
+    300: $black-87-opacity,
+    400: $black-87-opacity,
+    500: white,
+    600: white,
+    700: white,
+    800: white,
+    900: $pf-mobile-white,
+  )
+);
+
+$pf-dark-blue: (
+  50:  #e7eaed,
+  100: #cfd5dc,
+  200: #b7c0cb,
+  300: #9fabb9,
+  400: #8796a8,
+  500: #6f8197,
+  600: #576c85,
+  700: #3e5674,
+  800: #264263,
+  900: #0f2d52,
+  contrast: (
+    50: $black-87-opacity,
+    100: $black-87-opacity,
+    200: $black-87-opacity,
+    300: $black-87-opacity,
+    400: $black-87-opacity,
+    500: white,
+    600: white,
+    700: white,
+    800: white,
+    900: $pf-mobile-white,
+  )
+);
+
+$pf-light-grey: (
+  50:  #fbfbfb,
+  100: #fcfcfc,
+  200: #fdfdfd,
+  300: #fafafa,
+  400: #f9f9f9,
+  500: #f8f8f8,
+  600: #f7f7f7,
+  700: #f6f6f6,
+  800: #f5f5f5,
+  900: #f4f4f4,
+  contrast: (
+    50: $black-87-opacity,
+    100: $black-87-opacity,
+    200: $black-87-opacity,
+    300: $black-87-opacity,
+    400: $black-87-opacity,
+    500: white,
+    600: white,
+    700: white,
+    800: white,
+    900: $pf-mobile-white,
+  )
+);
+
+$pf-mid-grey: (
+  50:  #eeeff0,
+  100: #dddfe2,
+  200: #cdcfd3,
+  300: #bcbfc5,
+  400: #acafb6,
+  500: #9b9fa8,
+  600: #8a8f99,
+  700: #7a7f8b,
+  800: #696f7c,
+  900: #59606e,
+  contrast: (
+    50: $black-87-opacity,
+    100: $black-87-opacity,
+    200: $black-87-opacity,
+    300: $black-87-opacity,
+    400: $black-87-opacity,
+    500: white,
+    600: white,
+    700: white,
+    800: white,
+    900: $pf-mobile-white,
+  )
+);
+
+$pf-green: (
+  50:  #eef3ea,
+  100: #dde7d5,
+  200: #ccdcc0,
+  300: #bbd0ab,
+  400: #aac597,
+  500: #99b982,
+  600: #88ad6d,
+  700: #76a258,
+  800: #669643,
+  900: #558b2f,
+  contrast: (
+    50: $black-87-opacity,
+    100: $black-87-opacity,
+    200: $black-87-opacity,
+    300: $black-87-opacity,
+    400: $black-87-opacity,
+    500: white,
+    600: white,
+    700: white,
+    800: white,
+    900: $pf-mobile-white,
+  )
+);

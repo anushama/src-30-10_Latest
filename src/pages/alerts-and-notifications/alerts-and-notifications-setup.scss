@@ -1,0 +1,279 @@
+page-alerts-and-notifications-setup {
+  .scroll-content {
+    background: #f4f4f4 !important;
+    padding: 0 !important;
+    p {
+      font-size: 13px;
+    }
+  }
+  .grid[no-padding] {
+    overflow: hidden;
+  }
+  ion-item {
+    border-bottom: 1px solid #002856;
+  }
+  ion-icon {
+    color: #FFFFFF;
+    font-size: 2.4rem;
+    font-weight: 600;
+    line-height: 2.2rem;
+    text-align: center;
+  }
+  .legal {
+    font-family: 'monserratRegular', sans-serif;
+    font-size: 12px;
+    color: $pf-mobile-legal-blue;
+    p {
+      margin: 0 0 1rem;
+      line-height: auto;
+    }
+    right: 0;
+    bottom: 16px !important;
+    left: 16px !important; //padding: 0 16px !important;
+  }
+  .legal p {
+    text-decoration: underline;
+  }
+  .insured {
+    font-family: 'monserratRegular', sans-serif;
+    font-size: 12px;
+    text-decoration: underline;
+    color: $pf-mobile-legal-blue;
+  }
+  .notify {
+    color: $pf-mobile-black !important;
+    white-space: normal;
+    font-family: 'monserratRegular', sans-serif !important;
+    p {
+      font-size: 13px !important;
+      margin-top: 15px !important;
+      margin-bottom: 15px !important;
+      color: $pf-mobile-dark-grey !important;
+      padding-left: 0 !important;
+    }
+  }
+  .specific-accounts {
+    clear: both;
+  }
+  .list-item,
+  .notify-data {
+    background-color: #f4f4f4;
+  }
+  .topLabel {
+    color: $pf-mobile-mid-grey;
+  }
+  .button-ios.activated {
+    background-color: #0F2D52 !important;
+  }
+  ion-item {
+    border-top: 0 !important;
+    border-bottom: 0.55px solid $pf-mobile-list-border !important;
+  }
+  .item-inner,
+  .toggle-button-item {
+    border-bottom: 0 !important;
+     box-shadow: none !important;
+  }
+  
+  .end-time-label,
+  .start-time-label {
+    font-size: 12px !important;
+    color: $pf-mobile-dark-blue !important;
+  }
+  .notifications-label {
+    padding-left: 16px;
+    font-size: 13px;
+    color: $pf-mobile-dark-grey;
+  }
+  .endTime,
+  .startTime {
+    width: 100%;
+  }
+  .timePicker {
+    background-color: $pf-mobile-white;
+    margin-top: 3px;
+    margin-bottom: 10px;
+  }
+  .picker-button.button-ios,
+  .picker-button.button-md {
+    background-color: transparent !important;
+  }
+  .account-accordion {
+    padding: 0!important;
+    .item-inner {
+      padding: 0!important;
+      margin: 0;
+      .row {
+        width: 100%;
+        .alert-header {
+          //height: 50px;
+        }
+        .alert-content {
+          //border-bottom: 1px solid $pf-mobile-dark-grey;
+          //padding-right: 10px;
+        }
+        .topLabel {
+          font-size: 16px;
+          color: $pf-mobile-dark-grey;
+          letter-spacing: 0.62px;
+          padding-top: 10px;
+          padding-left: 15px;
+          padding-bottom: 10px;
+          position: relative;
+          .filled-circle {
+            position: absolute;
+            right: 0;
+            top: 20px;
+            padding: 7px 7px;
+            border-radius: 100%;
+            background-color: #2B9FDE;
+            float: right !important;
+            margin-right: 15px;
+          }
+        }
+        .labelLight {
+          font-family: $pf-montserrat-light !important;
+          text-transform: capitalize;
+        }
+        .labelMedium {
+          font-family: $pf-montserrat-medium !important;
+          text-transform: capitalize;
+        }
+        ul {
+          margin: 0px;
+          list-style: none;
+          font-size: 13px;
+          color: $pf-mobile-dark-grey;
+          letter-spacing: 0.5px;
+          background: #E7E7E7 !important;
+          padding-left: 35px;
+          ion-list {
+            display: block;
+            padding: 10px 0;
+            font-family: $pf-montserrat-regular;
+            border-bottom: 1px solid #AFAFAF;
+            &:last-child {
+              border-bottom: none !important;
+              margin-bottom: 0 !important;
+            }
+            ion-label {
+              padding-top: 12px;
+              font-size: 12px;
+            }
+            .daily {
+              input {
+                position: absolute; //padding: 10px;
+                width: 112px;
+                height: 30px;
+                opacity: 0;
+              }
+              span {
+                font-family: $pf-montserrat-regular;
+                padding: 3px 15px;
+                font-size: 16px;
+                color: #282828;
+                letter-spacing: 0;
+                border: 2px solid #00A0DD;
+                border-radius: 4px;
+                display: table;
+                text-transform: capitalize;
+                width: 112px;
+                height: 30px;
+                text-align: center;
+              }
+              input[type=checkbox]:checked+span {
+                background: #00A0DD;
+                color: white;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .item-divider {
+    background: none;
+    margin-top: 20px;
+    border-bottom: 2px solid $pf-mobile-line-break;
+    .headingTitle {
+      font-family: 'monserrat600', sans-serif;
+      font-size: 14px;
+      text-transform: uppercase !important;
+      display: inline-block;
+      padding-bottom: 4px;
+      color: $pf-mobile-mid-grey;
+      letter-spacing: 2px;
+      font-weight: bold;
+    }
+  }
+  .item-input ion-label {
+    max-width: none !important;
+  }
+  
+  .listItems {
+    ion-row {
+      [col-3] {
+        display: flex;
+        justify-content: flex-end;
+      }
+      [col-9] {
+        text-transform: uppercase;
+      }
+      .ionInput {
+        max-width: 40%;
+        width: 165px;
+        height: 50px;
+        align-self: center;
+        .text-input {
+          width: 100%;
+          height: 100%;
+          text-align: center !important;
+          margin-top: 0px;
+          background: $pf-mobile-white;
+          // &:placeholder-shown {
+          //   background: $pf-mobile-light-grey;
+          //   /* backgroun color grey only if the input is empty */
+          // }
+        }
+        &:empty {
+          background: red;
+        }
+      }
+    }
+  }
+  .segment.segment-background {
+    height: 4.4rem;
+    border: 1px solid #00a0dd;
+    border-radius: 4px;
+  }
+
+  .segbutton-background.segment-button {
+    height: 100%;
+    line-height: 4.3rem;
+    color: $pf-mobile-light-blue;
+    font-family: $pf-montserrat-regular;
+    font-size: 15px;
+    letter-spacing: -0.07px;
+
+    &.segment-activated {
+      border-color: #00a0dd !important;
+      background-color: #00a0dd !important;
+      color: $pf-mobile-white ;
+    }
+  }
+  .segment-row {
+    margin: 0.4rem 0rem;
+    width: 97% !important;
+  }
+}
+.picker-wrapper {
+  .button-ios, .button-md {
+    background-color: $pf-mobile-white !important;
+  }
+  .picker-opt {
+   overflow: visible;
+  }
+  .picker-opt.picker-opt-selected {
+   // color: #00a0dd;
+  }
+}

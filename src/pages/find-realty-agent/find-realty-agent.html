@@ -1,0 +1,144 @@
+<ion-header>
+  <pf-header leftIcon="cross">
+    <pf-header-title class="textElipse">FIND REALTY AGENT</pf-header-title>
+  </pf-header>
+</ion-header>
+<ion-content no-bounce>
+  <ion-grid>
+    <!-- Realty Agent Form-->
+    <form (submit)="submitRealtorInfo()" [formGroup]="realtyAgentForm" novalidate>
+      <!-- <div > -->
+      <ion-row>
+        <ion-col col-10>
+          <span>I AM ALREADY WORKING WITH AN AGENT</span>
+        </ion-col>
+        <ion-col col-2>
+          <ion-toggle name="agentToggle" (ionChange)="notify($event)" class="button-inner" [checked]="isToggled" float-end></ion-toggle>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col>
+          <ion-label stacked class="input-label">FIRST NAME</ion-label>
+          <ion-item>
+            <ion-input type="text" formControlName="firstName" maxlength="26" [class.invalid]="!realtyAgentForm.controls.firstName.valid && realtyAgentForm.controls.firstName.dirty"></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col>
+          <ion-label stacked class="input-label">LAST NAME</ion-label>
+          <ion-item>
+            <ion-input type="text" [class.invalid]="!realtyAgentForm.controls.lastName.valid && realtyAgentForm.controls.lastName.dirty"
+              maxlength="26" formControlName="lastName"></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col>
+          <ion-label stacked class="input-label">CITY</ion-label>
+          <ion-item>
+            <ion-input type="text" [class.invalid]="!realtyAgentForm.controls.city.valid && realtyAgentForm.controls.city.dirty" [attr.maxlength]="26"
+              maxlength="26" formControlName="city"></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-label stacked class="input-label">STATE</ion-label>
+          <div class="over-ride-icon">
+            <ion-icon ios="ios-arrow-down" md="ios-arrow-down"></ion-icon>
+            <ion-select [selectOptions]="selectStateOptions" name="state" [(ngModel)]="realtyAgent.state" [class.invalid]="!realtyAgentForm.controls.state.valid && realtyAgentForm.controls.state.dirty"
+              formControlName="state">
+              <ion-option *ngFor="let state of states" [value]="state.id">{{state.value}}</ion-option>
+            </ion-select>
+          </div>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col style="position: initial">
+          <ion-label stacked class="input-label">PHONE NUMBER</ion-label>
+          <ion-item>
+            <ion-input type="tel" placeholder="(000) 000 - 0000" [class.invalid]="!realtyAgentForm.controls.phoneNumber.valid && realtyAgentForm.controls.phoneNumber.dirty"
+              maxlength="16" phonemask formControlName="phoneNumber"></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col style="position: initial">
+          <ion-label stacked class="input-label">EMAIL</ion-label>
+          <ion-item>
+            <ion-input type="email" placeholder="email@example.com" [class.invalid]="!realtyAgentForm.controls.email.valid && realtyAgentForm.controls.email.dirty"
+              formControlName="email"></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col style="position: initial">
+          <ion-label stacked class="input-label">PROPERTY LOCATION</ion-label>
+          <ion-item>
+            <ion-input type="text" [class.invalid]="!realtyAgentForm.controls.location.valid && realtyAgentForm.controls.location.dirty"
+              [(ngModel)]="realtyAgent.location" formControlName="location" (keyup)=filter(2)></ion-input>
+          </ion-item>
+          <div *ngIf="token !=1">
+            <div class="suggestions" *ngIf="filteredPropertyLocationsList?.length > 0">
+              <ion-item *ngFor="let item of filteredPropertyLocationsList">
+                <ion-list class="list-item-color" (click)="select(item,2)" tappable>{{item}}</ion-list>
+              </ion-item>
+            </div>
+          </div>
+        </ion-col>
+      </ion-row>
+
+      <!-- <ion-row> -->
+      <!-- <ion-col col-12> -->
+      <ion-row>
+        <ion-col>
+          <ion-label stacked class="input-label">I AM INTERESTED IN</ion-label>
+        </ion-col>
+      </ion-row>
+      <ion-row class="agentToggle">
+        <ion-col>
+          <div class="buying push-right-md"> <input name="buying" type="checkbox" formControlName="buying" /><span>Buying</span></div>
+          <div class="selling"> <input name="selling" type="checkbox" formControlName="selling" /><span>Selling</span></div>
+        </ion-col>
+      </ion-row>
+      <!-- </ion-col> -->
+      <!-- </ion-row> -->
+      <!-- </div> -->
+      <!-- <div> -->
+      <ion-row>
+        <!-- <ion-col col-2> </ion-col> -->
+        <ion-col>
+          <!-- <div> -->
+          <!-- <button [disabled]="!realtyAgentForm.valid" class="agentButton" ion-button block>SUBMIT FORM</button> -->
+          <button ion-button block class="cta-button" [disabled]="!realtyAgentForm.valid">SUBMIT FORM</button>
+          <!-- </div> -->
+        </ion-col>
+        <!-- <ion-col col-2></ion-col> -->
+      </ion-row>
+      <!-- </div> -->
+    </form>
+    <!--Footer-->
+    <ion-row>
+
+      <ion-col col-12 footer class="disclaimer">
+        <p>
+          <!--  © 2017 BRER Affiliates LLC. An independently owned and operated broker member of BRER Affiliates, LLC. Prudential,
+          the Prudential logo and the Rock symbol are registered service marks of Prudential Financial, Inc. and its related
+          entities, registered in many jurisdictions worldwide. Used under license with no other affiliation with Prudential.
+          PenFed Membership is not required to conduct business with Prudential-PenFed Realty.-->
+          {{"realty-agent.form.footer.text" | aemsync : ["realty-agent"] | async}}
+        </p>
+      </ion-col>
+    </ion-row>
+    <ion-row class="footer-img">
+      <ion-col><img src="assets/img/legacy-svg/equalhousing.svg.png" block (click)="goToAfbd()" /></ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

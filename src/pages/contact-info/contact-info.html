@@ -1,0 +1,67 @@
+<!-- <ion-row class="contact-info-header">
+  <ion-col col-2>
+    <button (click)="popView()" class="backButton">
+      <ion-icon ios="ios-arrow-back" md="ios-arrow-back"></ion-icon>
+    </button>
+  </ion-col>
+  <ion-col col-10>
+    <ion-title class="information-title" text-left>CONTACT INFORMATION</ion-title>
+  </ion-col>
+</ion-row> -->
+<ion-header>
+  <pf-header leftIcon="back">
+    <pf-header-title class="textElipse">CONTACT INFORMATION</pf-header-title>
+  </pf-header>
+</ion-header>
+<ion-content>
+  <!-- <ion-grid> -->
+    <ion-row>
+      <ion-col>
+        <h2>{{ userName }}</h2>
+      </ion-col>
+    </ion-row>
+
+    <ion-list>
+        <ion-list-header>
+            <span class="list-section-name">MAILING ADDRESS</span>
+        </ion-list-header>
+      <button ion-item tappable (click)="goToUpdateMailingAddress()">
+            <span class= "text-light">{{streetAddress1}} {{streetAddress2}}<br>
+              {{cityAddress}} <span *ngIf="!isMailingCountry; else MC">{{stateAddress}} {{zip}}</span>
+                <ng-template #MC><span>{{mailingCountry}}</span></ng-template></span>
+        </button>
+    </ion-list>
+
+    <ion-list *ngIf="isTherePhysicalAddress">
+        <ion-list-header>
+            <span class="list-section-name">PHYSICAL ADDRESS</span>
+        </ion-list-header>
+      <button ion-item tappable (click)="goToUpdateMailingAddress()">
+          {{physicalstreetAddress1}} {{physicalstreetAddress2}}<br>
+              {{physicalcityAddress}} <span *ngIf="!isPhysicalCountry; else PC">{{physicalstateAddress}} {{physicalzip}}</span>
+                <ng-template #PC><span>{{physicalCountry}}</span></ng-template>
+        </button>
+    </ion-list>
+
+    <ion-list>
+      <ion-list-header>
+          <span class="list-section-name">PHONE NUMBERS</span>
+      </ion-list-header>
+      <button ion-item tappable (click)="goToEditPhoneNumPage()">
+              <span *ngIf="showDayTimePhoneNumber"> Daytime: <span class= "text-light">{{ dayTimeNum }}</span> <br></span>
+              <span *ngIf="showEveningNumber">Evening: <span class= "text-light"> {{ eveningNum }}</span><br></span>
+              <span *ngIf="showCellNumber">Cell: <span class= "text-light">{{ cellNum }}</span></span>
+        </button>
+    </ion-list>
+
+    <ion-list>
+      <ion-list-header>
+          <span class="list-section-name">Email</span>
+      </ion-list-header>
+      <button ion-item class="list-item-last" (click)="goToEditEmailPage()">
+              <span>Primary: </span><span class= "text-light">{{primaryEmailAddress}}</span><br>
+              <span *ngIf="showEmail">Secondary: </span><span class= "text-light">{{ secondaryEmail }}</span>
+        </button>
+    </ion-list>
+  <!-- </ion-grid> -->
+</ion-content>

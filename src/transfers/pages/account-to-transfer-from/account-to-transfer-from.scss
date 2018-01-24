@@ -1,0 +1,19 @@
+page-account-to-transfer-from {
+  .disc-msg {
+      font-family: Montserrat;
+      margin-left: 16px;
+      color: $pf-mobile-dark-blue;
+  }
+  .description {
+    font-family: $pf-montserrat-regular;
+    font-size: 1.1rem;
+    color: $pf-mobile-dark-blue;
+    margin: 1.6rem;
+  }
+  
+  .control-button {
+    text-align: center;
+    margin-top: 1.5rem;
+    margin-bottom: 2rem;
+  }
+}

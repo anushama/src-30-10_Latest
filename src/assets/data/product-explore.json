@@ -1,0 +1,74 @@
+[{
+        "id": 1,
+        "categoryId": 1,
+        "name": "Checking",
+        "descText1": "The simplicty you need.",
+        "descText2": "The simplicty you need.",
+        "icon": "globalnav_icon_checking_58x46.svg"
+    },
+    {
+        "id": 2,
+        "categoryId": 1,
+        "name": "Savings",
+        "descText1": "Build Your Future.",
+        "descText2": "Build it Better.",
+        "icon": "globalnav_icon_savings_54x46.svg"
+    },
+    {
+        "id": 3,
+        "categoryId": 1,
+        "name": "Certificates",
+        "descText1": "Security Like a Savings Account.",
+        "descText2": "Returns Like an Investment.",
+        "icon": "globalnav_icon_certificates_46x46.svg"
+    },
+    {
+        "id": 4,
+        "categoryId": 1,
+        "name": "IRAs",
+        "descText1": "Retirement May Be Years Away.",
+        "descText2": "Preparing For It Starts Today.",
+        "icon": "globalnav_icon_IRA_53x52.svg"
+    },
+    {
+        "id": 1,
+        "categoryId": 2,
+        "name": "Credit Card",
+        "descText1": "Find the Card That’s Right",
+        "descText2": "For You.",
+        "icon": "globalnav_icon_cards_48x34.svg"
+    },
+    {
+        "id": 1,
+        "categoryId": 3,
+        "name": "Mortgages",
+        "descText1": "Life Can Get Complicated.",
+        "descText2": "It’s Time to Find a Mortgabge That Isn’t.",
+        "icon": "globalnav_icon_mortgages_48x39.svg"
+    },
+    {
+        "id": 2,
+        "categoryId": 3,
+        "name": "Auto Loans",
+        "descText1": "Make Your Next Car",
+        "descText2": "Your Dream Car",
+        "icon": "globalnav_icon_auto_39x35.svg"
+    },
+    {
+        "id": 3,
+        "categoryId": 3,
+        "name": "Personal Loans",
+        "descText1": "Life Happens.",
+        "descText2": "Prepared for it.",
+        "icon": "globalnav_icon_personal-loans_43x57.svg"
+    },
+
+    {
+        "id": 4,
+        "categoryId": 3,
+        "name": "Adventure Loans",
+        "descText1": "You Can’t See the World",
+        "descText2": "When You’re Standing Still.",
+        "icon": "globalnav_icon_adventure_52x51.svg"
+    }
+]

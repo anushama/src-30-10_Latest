@@ -1,0 +1,65 @@
+<ion-header>
+  <ion-row class="common-header">
+    <button ion-button navPop class="nav-icon">
+      <ion-icon ios="ios-arrow-back" md="ios-arrow-back"></ion-icon>
+    </button>
+    <ion-title>ADD EXTERNAL ACCOUNT</ion-title>
+  </ion-row>
+</ion-header>
+
+<ion-content padding>
+  <div class="description">
+    Complete the following to add an external account to transfer money from. To add an external account to transfer money to, please contact PenFed.
+  </div>
+  <div class="radio-group">
+    <ion-list radio-group [(ngModel)]="type">
+      <ion-label color="primary" stacked class="common-label">
+        <span>ACCOUNT TYPE</span>
+      </ion-label>
+      <ion-item class="radio-border">
+        <ion-label>Checking/Money Market</ion-label>
+        <ion-radio value="CHECKING" class="radio-md" [checked]="CHECKING"></ion-radio>
+      </ion-item>
+      <ion-item class="radio-border">
+        <ion-label>Savings</ion-label>
+        <ion-radio value="SAVING" class="radio-md"></ion-radio>
+      </ion-item>
+    </ion-list>
+  </div>
+
+  <form [formGroup]="addExtAcctForm">
+    <ion-item class="input-item">
+      <ion-label color="primary" stacked>
+        <span>ACCOUNT NICKNAME</span>
+      </ion-label>
+      <ion-input type="text" name='acctnickname' formControlName="nickname" placeholder="Enter Nickname" maxlength="20" clearInput="true" nickname-format></ion-input>
+      <!-- <ion-input type="text" name='acctnickname' [(ngModel)]="acctnickname" placeholder="Enter Nickname" maxlength="20" required clearInput="true" nickname-format></ion-input> -->
+    </ion-item>
+    <ion-item class="input-item">
+      <ion-label color="primary" stacked>
+        <span>ACCOUNT NUMBER</span>
+      </ion-label>
+      <!-- <ion-input type="text" name='acctnumber' [(ngModel)]="acctnumber" placeholder="i.e. 123-45-7890" maxlength="17" required clearInput="true" nickname-format></ion-input> -->
+      <ion-input type="text" name='acctnumber' formControlName="acctnumber" placeholder="i.e. 123-45-7890" maxlength="17" clearInput="true" nickname-format></ion-input>
+    </ion-item>
+    <ion-row col-12>
+      <ion-col col-8>
+        <ion-item class="input-item">
+          <ion-label color="primary" stacked>
+            <span>BANK ROUTING NUMBER (9 DIGITS)</span>
+          </ion-label>
+          <!-- <ion-input type="tel" patten="[0-9]*" name='routnumber' [(ngModel)]="routnumber" placeholder="###-###-###" maxlength="9" required clearInput="true"></ion-input> -->
+          <ion-input type="tel" patten="[0-9]*" name='routnumber' formControlName="routnumber" placeholder="###-###-###" minlength="8" maxlength="9" clearInput="true"></ion-input>
+        </ion-item>
+      </ion-col>
+      <ion-col>
+        <ion-icon ios="ios-help-circle" md="ios-help-circle" class="help-icon" (click)="helpDirection()"></ion-icon>
+      </ion-col>
+    </ion-row>
+  </form>
+  <div class="control-button">
+    <!-- <button ion-button class="cta-button" tappable (click)="confirm()" [disabled]="!addForm.valid">CONTINUE</button> -->
+    <button ion-button class="cta-button" tappable (click)="confirm()" [disabled]="!addExtAcctForm.get('nickname').valid || !addExtAcctForm.get('acctnumber').valid || !addExtAcctForm.get('routnumber').valid">CONTINUE</button>
+  </div>
+  <p class="insured" tappable (click)='util.displayNCUACert()'>Federally insured by NCUA</p>
+</ion-content>

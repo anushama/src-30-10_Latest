@@ -1,0 +1,13 @@
+<ion-row>
+  <ion-col col-12 footer class="abbreviations push-left-sm">
+    <div *ngIf="footerParams.data.payload !== undefined && footerParams.data.pageType === 'ACCOUNT_PAGE'">
+      <p *ngIf="footerParams.data.payload.parentAcctType === 'IRA' || footerParams.data.payload.parentAcctType === 'CERTIFICATE'" class="notes">APY = Annual Percentage Yield</p>
+      <p *ngIf="footerParams.data.payload.parentAcctType === 'IRA' || footerParams.data.payload.parentAcctType === 'CERTIFICATE'" class="notes">APR = Annual Percentage Rate</p>
+    </div>
+  </ion-col>
+  <!-- <ion-footer> -->
+  <ion-col col-12 footer class="legal push-left-sm">
+    <p class="insured" (click)='displayNCUACert()'>Federally insured by NCUA</p>
+  </ion-col>
+<!-- </ion-footer> -->
+</ion-row>

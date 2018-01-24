@@ -1,0 +1,130 @@
+<ion-header>
+  <pf-header tappable leftIcon="cross">
+    <pf-header-title>ACCOUNT SHOW/HIDE</pf-header-title>
+  </pf-header>
+</ion-header>
+<ion-content>
+  <p padding-left>
+    <!-- Set the accounts you can view and access on your mobile device.  -->
+    {{"account.showhide.description" | aemsync : ["account"] | async}}
+  </p>
+  <!--AccountsList-->
+  <!-- <ion-list> -->
+  <div *ngIf="accountsList">
+
+    <!--checkSaveAccounts-->
+    <div class="push-top-sm" *ngIf="accountsList.checkSaveAccounts.length">
+      <ion-list>
+        <ion-list-header>CHECKING/SAVINGS</ion-list-header>
+        <ion-item *ngFor="let account of accountsList.checkSaveAccounts; let i = index ">
+          <ion-label *ngIf="account.nickname">
+            <div>{{account.nickname}}</div>
+            <span class="text-12 text-light">({{account.numLast4}})</span>
+          </ion-label>
+          <ion-label *ngIf="!account.nickname">
+            <div>{{account.fullName}}</div>
+            <span class="text-12 text-light">({{account.numLast4}})</span>
+          </ion-label>
+          <ion-toggle *ngIf="account.nickname" name="account.nickname" checked="checkSaveAccountsToggleStatus[i]" [(ngModel)]="checkSaveAccountsToggleStatus[i]" float-end></ion-toggle>
+          <ion-toggle *ngIf="!account.nickname" name="account.fullName" checked="checkSaveAccountsToggleStatus[i]" [(ngModel)]="checkSaveAccountsToggleStatus[i]" float-end></ion-toggle>
+        </ion-item>
+      </ion-list>
+    </div>
+
+    <!--creditCardAccounts-->
+    <div class="push-top-sm" *ngIf="accountsList.creditCardAccounts.length">
+      <ion-list>
+        <ion-list-header>CREDIT CARDS</ion-list-header>
+        <ion-item *ngFor="let account of accountsList.creditCardAccounts; let i = index">
+          <ion-label *ngIf="account.nickname">
+            <div>{{account.nickname}} </div>
+            <span class="text-12 text-light">({{account.numLast4}})</span>
+          </ion-label>
+          <ion-label *ngIf="!account.nickname">
+            <div>{{account.fullName}}</div>
+            <span class="text-12 text-light">({{account.numLast4}})</span>
+          </ion-label>
+          <ion-toggle *ngIf="account.nickname" name="account.nickname" checked="creditCardAccountsToggleStatus[i]" [(ngModel)]="creditCardAccountsToggleStatus[i]" float-end></ion-toggle>
+          <ion-toggle *ngIf="!account.nickname" name="account.fullName" checked="creditCardAccountsToggleStatus[i]" [(ngModel)]="creditCardAccountsToggleStatus[i]" float-end></ion-toggle>
+        </ion-item>
+      </ion-list>
+    </div>
+
+    <!--loanAccounts-->
+    <div class="push-top-sm" *ngIf="accountsList.loanAccounts.length">
+      <ion-list>
+        <ion-list-header>LOANS</ion-list-header>
+        <ion-item *ngFor="let account of accountsList.loanAccounts; let i = index">
+          <ion-label *ngIf="account.nickname">
+            <div>{{account.nickname}} </div>
+            <span class="text-12 text-light">({{account.numLast4}})</span>
+          </ion-label>
+          <ion-label *ngIf="!account.nickname">
+            <div>{{account.fullName}} </div>
+            <span class="text-12 text-light">({{account.numLast4}})</span>
+          </ion-label>
+          <ion-toggle *ngIf="account.nickname" name="account.nickname" checked="loanAccountsToggleStatus[i]" [(ngModel)]="loanAccountsToggleStatus[i]" float-end></ion-toggle>
+          <ion-toggle *ngIf="!account.nickname" name="account.fullName" checked="loanAccountsToggleStatus[i]" [(ngModel)]="loanAccountsToggleStatus[i]" float-end></ion-toggle>
+        </ion-item>
+      </ion-list>
+    </div>
+
+    <!--mortgageAccounts-->
+    <div class=" push-top-sm" *ngIf="accountsList.mortgageAccounts.length">
+      <ion-list>
+        <ion-list-header>MORTGAGES</ion-list-header>
+        <ion-item *ngFor="let account of accountsList.mortgageAccounts; let i = index">
+          <ion-label *ngIf="account.nickname">
+            <div>{{account.nickname}}</div>
+            <span class="text-12 text-light"> ({{account.numLast4}})</span>
+          </ion-label>
+          <ion-label *ngIf="!account.nickname">
+            <div>{{account.fullName}}</div>
+            <span class="text-12 text-light">({{account.numLast4}})</span>
+          </ion-label>
+          <ion-toggle *ngIf="account.nickname" name="account.nickname" checked="mortgageAccountsToggleStatus[i]" [(ngModel)]="mortgageAccountsToggleStatus[i]" float-end></ion-toggle>
+          <ion-toggle *ngIf="!account.nickname" name="account.fullName" checked="mortgageAccountsToggleStatus[i]" [(ngModel)]="mortgageAccountsToggleStatus[i]" float-end></ion-toggle>
+        </ion-item>
+      </ion-list>
+    </div>
+
+  </div>
+  <!-- IRAAccountsList-->
+  <div *ngIf="iraAccountsList.iraAccounts.length || iraAccountsList.certificateAccounts.length">
+
+    <div class="push-top-sm">
+      <ion-list>
+        <ion-list-header>IRAS</ion-list-header>
+        <ng-container *ngIf="iraAccountsList.iraAccounts.length">
+          <ion-item>
+            <ion-label>
+              <div>IRA Certificates</div>
+            </ion-label>
+            <ion-toggle checked="IRAAccountsToggleStatus" [(ngModel)]="IRAAccountsToggleStatus" float-end></ion-toggle>
+          </ion-item>
+        </ng-container>
+      </ion-list>
+    </div>
+  </div>
+
+  <div *ngIf="iraAccountsList.iraAccounts.length || iraAccountsList.certificateAccounts.length">
+    <div class="push-top-sm">
+      <ion-list>
+        <ion-list-header>CERTIFICATES</ion-list-header>
+        <ng-container *ngIf="iraAccountsList.certificateAccounts.length">
+          <ion-item>
+            <ion-label>
+              <div>Money Market Certificates</div>
+            </ion-label>
+            <ion-toggle checked="certificateAccountsToggleStatus" [(ngModel)]="certificateAccountsToggleStatus" float-end></ion-toggle>
+          </ion-item>
+        </ng-container>
+      </ion-list>
+    </div>
+  </div>
+
+  <ion-row>
+    <button ion-button type="submit" class="cta-button" (click)="updateShowHideStaus()">SAVE SETTINGS</button>
+  </ion-row>
+
+</ion-content>

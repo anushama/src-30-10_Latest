@@ -1,0 +1,177 @@
+page-review-deposit {
+  // for ios
+  .header-ios {
+    .contact-header {
+      font-family: $pf-montserrat-semi-bold !important;
+      font-size: 1.4rem;
+      background-color: #0F2D52;
+      height: 4.6rem;
+      border-bottom: 1px solid $pf-mobile-light-blue;
+
+      .contact-toolbar {
+        .toolbar-background {
+          background-color: $pf-mobile-dark-blue;
+        }
+      }
+    }
+
+    .toolbar-title {
+      &.toolbar-title-ios {
+        font-size: 1.6rem;
+        color: $pf-mobile-white;
+        text-align: left;
+        margin-left: -2rem;
+        line-height: 3.3rem;
+      }
+    }
+  }
+
+  .icon-ios {
+    color: #FFFFFF;
+    font-size: 2.4rem;
+    font-weight: 400;
+  }
+  //for android
+  .icon.icon-md {
+    color: #FFFFFF;
+    font-weight: 500;
+  }
+
+  .deposit-title.title-md {
+    .toolbar-title {
+      line-height: 3.7rem;
+      margin-left: -2rem;
+    }
+  }
+  // common css
+  .contact-header {
+    font-family: $pf-montserrat-semi-bold !important;
+    font-size: 1.4rem;
+    background-color: rgba(17,46,81,1);
+    height: 4.7rem;
+    border-bottom: 1px solid $pf-mobile-light-blue;
+
+    .contact-toolbar {
+      .toolbar-background {
+        background-color: $pf-mobile-dark-blue;
+      }
+    }
+  }
+
+  .content {
+    background-color: $pf-mobile-light-grey;
+  }
+
+  .review-item {
+    background-color: $pf-mobile-light-grey;
+
+    &.check-box {
+      padding: 0;
+
+      .checkbox {
+        margin: 0 1rem 0 0;
+      }
+    }
+  }
+
+  .deposit-terms {
+    text-decoration: underline;
+    margin: 1.7rem 0 0 2.6rem;
+    font-size: 1.2rem;
+    font-family: $pf-montserrat-semi-bold;
+
+    a {
+      color: $pf-mobile-dark-blue;
+    }
+  }
+
+  .aggreement {
+    white-space: normal;
+    padding-top: 1rem;
+    font-size: 1.3rem;
+    font-family: $pf-montserrat-regular;
+    color: $pf-mobile-dark-grey;
+  }
+  //delete the border bottom
+  .list-md .item-block .item-inner {
+    border-bottom: none;
+  }
+  //content======
+  .h-header {
+    font-size: 1.2rem;
+    font-family: $pf-montserrat-regular;
+    color: $pf-mobile-dark-blue;
+    line-height: 2rem;
+  }
+
+  .accountName {
+    font-family: $pf-montserrat-regular;
+    font-size: 1.8rem;
+    color: $pf-mobile-dark-blue;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .accountNum {
+    font-family: $pf-montserrat-light;
+    font-size: 1.2rem;
+    color: $pf-mobile-dark-blue;
+  }
+
+  .check-container {
+    margin: 0 1.6rem;
+  }
+
+  .check-img {
+    text-align: center;
+    color: $pf-mobile-dark-blue;
+    font-family: $pf-montserrat-medium,sans-serif;
+    opacity: 0.5;
+    border: 3px solid $pf-mobile-dark-blue;
+    border-radius: 5px;
+    &.img-ready{
+      opacity: 1;
+      border-color: rgba(15, 45, 82, 0.5)
+    }
+    .camera.icon.ion-md-camera {
+      font-size: 7.2rem;
+      color: $pf-mobile-dark-blue;
+    }
+
+    .front-back {
+      font-size: 1.6rem;
+      margin-bottom: 0.8rem;
+    }
+    .front-back.photo-ready{
+      margin-bottom:0;
+      line-height: 0;
+    }
+  }
+
+  .check-header {
+    font-size: 1.2rem;
+    font-family: $pf-montserrat-regular;
+    color: $pf-mobile-dark-blue;
+    line-height: 2rem;
+    margin: 0.8rem 0;
+  }
+
+  .control-button {
+    text-align: center;
+    margin-top: 1.5rem;
+    margin-bottom: 3rem;
+
+    .continue-button {
+      background-color: $pf-mobile-green !important;
+      border-radius: 4px;
+      width: 22.5rem;
+      height: 5rem;
+
+      .button-inner {
+        font-family: $pf-montserrat-medium,sans-serif;
+        letter-spacing: 1px;
+        color: white;
+      }
+    }
+  }
+}

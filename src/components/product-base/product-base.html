@@ -1,0 +1,68 @@
+<!-- Generated template for the ProductBaseComponent component -->
+
+<ion-grid class="cardScrollContainer">
+  <ion-row>
+    <ion-col col-12 text-center>
+      <img src="{{item.imageUrl}}" />
+    </ion-col>
+  </ion-row>
+</ion-grid>
+
+<ion-grid class="cardScrollContainer">
+  <ion-row>
+    <!-- Scroll content for Checkings -->
+    <ion-col col-12 *ngIf="item.categoryId === 3">
+      <div class="cardDetails">
+        <h5>{{item.tagline}}</h5>
+        <h3>{{item.offerRateInterest}}</h3>
+        <p>{{item.offerForAnnual}}</p>
+        <p>{{item.OfferRateTest}}</p>
+
+        <h3>{{item.standardRateInterest}}</h3>
+        <p>{{item.standardForAnnual}}</p>
+        <p>{{item.standardRateText}}</p>
+
+        <div class="gridBtns">
+          <button ion-button class="card-outline-primary learnMore" outline>Learn More</button>
+          <button ion-button color="secondary" class="applyBtn">Apply now</button>
+        </div>
+      </div>
+    </ion-col>
+
+    <!-- Scroll content for IRAs -->
+
+    <ion-col col-12 *ngIf="item.categoryId === 4">
+      <div class="cardDetails">
+        <p text-uppercase text-center class="tagline">{{item.tagline}}</p>
+        <p class="rate">
+          <strong text-uppercase>
+        {{item.rateType}} <span>{{item.rateOfInterest}}</span></strong><br>{{item.considerationsText}}</p>
+        <p text-uppercase class="features"><strong>{{item.features}}</strong></p>
+        <ul class="featureUL">
+          <li class="featuresText" *ngFor=" let text of item.featuresText">{{text}}</li>
+        </ul>
+        <div class="gridBtns">
+          <button col-5 ion-button color="penfed" outline class="learnMore">Learn More</button>
+          <button col-5 ion-button class="applyNow">Apply now</button>
+        </div>
+      </div>
+    </ion-col>
+
+    <!-- Scroll content for Savings -->
+
+    <ion-col col-12 *ngIf="item.categoryId === 5">
+      <div class="cardDetails">
+        <p class="text">{{item.text}}</p>
+        <p text-uppercase class="features"><strong>{{item.features}}</strong></p>
+        <ul class="featureUL">
+          <li class="featuresText" *ngFor=" let text of item.featuresText">{{text}}</li>
+        </ul>
+        <div class="gridBtns">
+          <button col-5 ion-button color="penfed" outline class="learnMore">Learn More</button>
+          <button col-5 ion-button class="applyNow">Apply now</button>
+        </div>
+      </div>
+    </ion-col>
+
+  </ion-row>
+</ion-grid>

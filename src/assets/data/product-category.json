@@ -1,0 +1,22 @@
+[  
+   {  
+      "id":1,
+      "name":"Auto Loans",
+      "description":"New, used or refinance. You choose the car; we put you in the driver's seat, with a low rate and flexible terms."
+   },
+   {  
+      "id":2,
+      "name":"Credit Cards",
+      "description":"There's a PenFed credit card for everyone: shoppers, travelers, members of the military and more."
+   },
+   {  
+      "id":3,
+      "name":"Checking &amp; Savings",
+      "description":"See how hard your money can work for you with checking and savings accounts that earn you more money every day."
+   },
+   {  
+      "id":4,
+      "name":"IRAs",
+      "description":"An easy way to start saving for retirement."
+   }
+]

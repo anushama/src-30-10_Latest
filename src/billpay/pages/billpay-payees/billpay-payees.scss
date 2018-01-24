@@ -1,0 +1,46 @@
+page-billpay-payees {
+    .editing {
+        background-color: $pf-mobile-light-blue !important;
+    }
+    .trashing {
+        background-color: $pf-mobile-red !important;
+    }
+    .delete {
+        color: $pf-mobile-red;
+    }
+    @-webkit-keyframes slidingAnimation {
+        0% {
+            transform: translate3d(0, 0, 0);
+            -webkit-transform: translate3d(0, 0, 0);
+        }
+        50% {
+            transform: translate3d(-70px, 0, 0);
+            -webkit-transform: translate3d(-70px, 0, 0);
+        }
+        100% {
+            transform: translate3d(0, 0, 0);
+            -webkit-transform: translate3d(0, 0, 0);
+        }
+    }
+    .itemSlidingAnimation {
+        -webkit-animation: slidingAnimation;
+        animation: slidingAnimation;
+        -webkit-animation-duration: 1000ms;
+        animation-duraton: 1000ms;
+    }
+    .item-md ion-avatar img {
+        width: 18px;
+    }
+    .item-ios ion-avatar img {
+        width: 18px;
+    }
+    .item-md [item-right] {
+        margin: 0px !important;
+    }
+    .item-ios [item-right] {
+        margin: 0px !important;
+    }
+    .item-ios [item-start] {
+        margin: 0px !important;
+    }
+}

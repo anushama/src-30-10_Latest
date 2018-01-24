@@ -1,0 +1,64 @@
+<ion-header>
+  <pf-header *ngIf="!this.fromLogin" leftIcon="toggleMenu" rightIcon="mail">
+    <pf-header-title>CONTACT US</pf-header-title>
+  </pf-header>
+  <pf-header *ngIf="this.fromLogin" leftIcon="back" rightIcon="mail">
+    <pf-header-title>CONTACT US</pf-header-title>
+  </pf-header>
+</ion-header>
+
+<ion-content no-bounce>
+  <ion-list *ngIf="this.rxContent">
+    <ion-list-header>{{this.contactInfo.page.title}}</ion-list-header>
+    <ion-item class="clock-content">
+      <ion-icon class="blueIcon" id="clock-icon" ios="ios-clock" md="ios-clock" item-start></ion-icon>
+      <h2 class="hours"><b>{{this.contactInfo.options[0].label}}</b></h2>
+      <p class="time" *ngFor="let item of this.contactInfo.options[0].info">{{item}}</p>
+    </ion-item>
+
+<div class="push-top-md">
+    <ion-item *ngFor="let item of this.contactInfo.options | slice:1; let i = index;">
+      <a href="{{item.href + item.info}}" class="click-icon-active">
+        <ion-icon class="blueIcon" ios="{{item.icon}}" md="{{item.icon}}" item-start></ion-icon>
+      </a>
+      <div class="click-icon">
+        <h2 class="common-h2">{{item.label}}</h2>
+        <a class="contact-info" href="{{item.href + item.info}}">{{item.info}}</a>
+      </div>
+    </ion-item>
+</div>
+
+    <ion-list-header>{{this.contactInfo.realtyagent.title}}</ion-list-header>
+    <ion-item class="find-agent-field push-top-sm">
+      <p class="realityDesc" [innerHtml]="this.contactInfo.realtyagent.desc"></p>
+      <a tappable (click)="gotoAFBADisclosure()"><span><b>{{this.contactInfo.realtyagent.hotspotA}}</b></span></a>
+    </ion-item>
+
+    <ion-row>
+      <ion-col col-2></ion-col>
+      <ion-col col-8>
+        <div>
+          <button class="cta-button" ion-button block tappable (click)="findRealAgent()">FIND AN AGENT</button>
+        </div>
+      </ion-col>
+      <ion-col col-2></ion-col>
+    </ion-row>
+
+    <ion-list-header class="list-header">{{this.contactInfo.aboutpenfed.title}}</ion-list-header>
+    <!-- <ion-item class="about-penfed-field">
+      <ion-row> -->
+    <div class="company-description">
+      <p [innerHTML]="this.contactInfo.aboutpenfed.info"></p>
+    </div>
+
+    <!-- </ion-row>
+    </ion-item> -->
+  </ion-list>
+
+  <ion-row>
+    <ion-col col-12 class="terms-conditions-footer" (click)=goToTermsAndConditions()>
+      <div class="terms-conditions-a" [innerHTML]="'terms.condition.link.title' | aemsync : ['terms-conditions'] | async"></div>
+      <!--<p class="terms-conditions-a">{{"terms.condition.link.title" | aemsync : ["termsandcondition"]}}</p>-->
+    </ion-col>
+  </ion-row>
+</ion-content>

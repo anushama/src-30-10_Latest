@@ -1,0 +1,18 @@
+{
+  "fingerprint.create.login.info":"Securely access your accounts using your fingerprint instead of an alpha numeric password (no online ID or password). You always have the option to log in with your Username and Password.",
+  "fingerprint.create.login.options":"Add security and convenience with Fingerprint Login or Pattern Login. You can always change your selection in",
+  "fingerprint.create.login.bold.options":"Settings.",
+  "fingerprint.create.login.options.unameandPwdLogin":"<p>NO THANKS</p>\r\n\r\n",
+  "fingerprint.create.login.options.fingerprintLogin":"USE FINGERPRINT LOGIN",
+  "fingerprint.create.login.options.patternLogin":"USE PATTERN LOGIN",
+  "fingerprint.create.modal.disable.info":"Are you sure you want to disable fingerprint login? This connot be undone.",
+  "fingerprint.create.agreement.info":"<p>To enable Fingerprint Login for sign in, you are required to save your Online ID for this device. Once Fingerprint Login is enabled, you understand and agree that any fingerprint stored on this device can be used to access your accounts in Mobile Banking.</p><p>PenFed neither controls the functionality of Fingerprint Login nor has access to your fingerprint information.</p><p>There may be circumstances where Fingerprint Login will not function as expected and we may ask you to sign in using you password and username.</p>",
+  "fingerprint.create.agreement.info.highlight":"By tapping the Agree button, I certify that I have read and agree to these terms and conditions.",
+  "fingerprint.create.agreement.heading":"FINGERPRINT LOGIN AGREEEMENT",
+  "fingerprint.create.enabled.info":"FINGERPRINT ENABLED",
+  "fingerprint.create.enabled.text":"FINGERPRINT LOGIN ENABLED",
+  "fingerprint.create.enabled.success":"<p>Fingerprint Login has been setup successfully.</p> \r\n\r\n <p>You can always change your selection in <b>Settings.</b></p> \r\n\r\n",
+  "fingerprint.enable.disable.pattern.popup.msg": "Enabling Fingerprint Login will disable Pattern Login. Are you sure you want to continue?"
+
+
+}

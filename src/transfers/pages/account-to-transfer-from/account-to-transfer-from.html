@@ -1,0 +1,25 @@
+<!--<ion-header>
+  <ion-row class="common-header">
+    <button ion-button navPop class="nav-icon"><ion-icon ios="md-close" md="md-close"></ion-icon></button>
+    <ion-title class="textElipse">{{pageTitle}}</ion-title>
+  </ion-row>
+</ion-header>-->
+<ion-header>
+  <pf-header leftIcon="cross">
+    <pf-header-title class="textElipse">{{pageTitle}}</pf-header-title>
+  </pf-header>
+</ion-header>
+
+<ion-content>
+  <select-account [accounts]="fromAccounts" [transferType]="transferType" [externalAccounts]="externalFromAccounts" [numLast4]="numLast4" (selectedAccount)="getSelectedAccount($event)"></select-account>
+  <div class="control-button" *ngIf="transferType == 'payment'">
+    <!-- <button ion-button class="cta-button" tappable [navPush]="pushPage">ADD EXTERNAL ACCOUNT</button> -->
+    <button ion-button class="cta-button long" tappable (click)="confirm()">ADD EXTERNAL ACCOUNT</button>
+  </div>
+
+  <div *ngIf="transferType == 'transfer'">
+    <p class="disc-msg">Only your verified accounts are shown here</p>
+    <p class="disc-msg">Credit Card not shown? It may take up to 24 hours to initiate another transfer from a Credit Card.</p>
+  </div>
+  <p class="insured" tappable (click)='util.displayNCUACert()'>Federally insured by NCUA</p>
+</ion-content>

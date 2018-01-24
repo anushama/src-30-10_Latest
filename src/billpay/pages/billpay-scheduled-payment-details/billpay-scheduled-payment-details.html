@@ -1,0 +1,86 @@
+<ion-header>
+    <ion-row class="common-header">
+        <button navPop class="nav-icon"><ion-icon ios="ios-arrow-back" md="ios-arrow-back"></ion-icon></button>
+        <ion-title class="text-truncate">{{scheduledPaymentsDetails.consumerPayeeName}} <span class="text-micro" *ngIf="scheduledPaymentsDetails.consumerPayeeAccountNumber !== 'n/a' && scheduledPaymentsDetails.consumerPayeeAccountNumber !== '?'">{{scheduledPaymentsDetails.consumerPayeeAccountNumber.substr(scheduledPaymentsDetails.consumerPayeeAccountNumber.length-4)}}</span></ion-title>
+    </ion-row>
+    <ion-row class="amountDueDecor">
+        <ion-col class="accountBal">
+            <span class="dueAmount">Total Due</span><br/>
+            <span class="dollarSignDisplay">$</span>
+            <span class="amountDisplay">{{scheduledPaymentsDetails.paymentAmount.value | formatPrice}}</span>
+        </ion-col>
+    </ion-row>
+</ion-header>
+
+<ion-content>
+
+    <ion-list>
+        <ion-item-group>
+            <ion-item item-left class="bill-due-date-decor">Bill Due Date
+                <ion-note item-end>
+                    {{scheduledPaymentsDetails.deliverByDate | date: 'MM/dd/yyyy'}}
+                </ion-note>
+            </ion-item>
+            <ion-item item-right class="bill-due-date-decor">Scheduled Payment Date
+                <ion-note item-end>
+                    {{scheduledPaymentsDetails.dueDateForScheduled | date: 'MM/dd/yyyy'}}
+                </ion-note>
+            </ion-item>
+        </ion-item-group>
+    </ion-list>
+
+    <ion-row class="gap-for-buttons">
+        <ion-col col-4 text-center>
+            <div class="buttonWrap"><button><p>EDIT PAYMENT</p></button></div>
+        </ion-col>
+        <ion-col col-4 text-center>
+            <div class="buttonWrap"><button (click)="modifyAutoPay()"><p>MODIFY AUTO-PAY</p></button></div>
+        </ion-col>
+        <ion-col col-4 text-center>
+            <div class="buttonWrap"><button><p>DELETE PAYMENT</p></button></div>
+        </ion-col>
+    </ion-row>
+
+
+    <!-- <div *ngIf="!showButtons">
+      <ion-row class="infoText">
+        <ion-col col-1>
+          <ion-icon ios="ios-information-circle" md="md-information-circle" class="help-icon" color="primary"></ion-icon>
+        </ion-col>
+        <ion-col col-11>
+          <span>This payment has been sent to the payee. It can not be edited at this time.</span>
+        </ion-col>
+      </ion-row>
+    </div> -->
+
+    <ion-list class="ion-list-viewport">
+        <ion-list-header>
+            PAYMENT HISTORY
+            <div class="as-of-date" float-right><span>As of</span><span>&nbsp;{{currentDate}}</span></div>
+        </ion-list-header>
+        <ion-row *ngIf="noHistoryDataFlag" padding>
+            No payment history is available.
+        </ion-row>
+        <button ion-item class="disable-chevron" *ngFor="let detailsHistoryResponse of detailsHistoryResponse; let i=index">
+        <ion-row>
+          <ion-col class="margin-none text-12 text-light" item-left>{{detailsHistoryResponse.dueDateTime | date: 'MM/dd/yyyy'}}</ion-col>
+          <ion-col class="text-12 text-light" item-right>{{detailsHistoryResponse.paymentStatus}}</ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col class="margin-none text-16 text-regular" item-left>{{detailsHistoryResponse.payeeName | truncate : 20}}<span *ngIf="detailsHistoryResponse.payeeAccountNumber !== 'n/a' && detailsHistoryResponse.payeeAccountNumber !== '?'">({{detailsHistoryResponse.payeeAccountNumber.substr(detailsHistoryResponse.payeeAccountNumber.length-4)}})</span>
+          </ion-col>
+          <ion-col class="margin-none text-16 text-regular" item-right>${{detailsHistoryResponse.paymentAmount | formatPrice}}</ion-col>
+        </ion-row>
+      </button>
+    </ion-list>
+</ion-content>
+<!-- <ion-footer>
+  <div class="bottom_bar" (click)='util.displayNCUACert()'>
+    Federally insured by NCUA
+  </div>
+</ion-footer> -->
+<ion-footer>
+    <button class="bottom_bar" fab fab-bottom fab-right fab-fixed (click)='util.displayNCUACert()'>
+    Federally insured by NCUA
+  </button>
+</ion-footer>

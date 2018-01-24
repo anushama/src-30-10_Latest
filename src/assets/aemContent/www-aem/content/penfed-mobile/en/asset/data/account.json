@@ -1,0 +1,3 @@
+{"account.nickname.description":"Using nicknames for your accounts provides an added layer of security. Nicknames are limited to <b>20 characters</b>.If no nickname is given, the account will default to its original PenFed name.",
+ "account.showhide.description":"Set the accounts you can view and access on your mobile device.",
+ "account.balance.note":"Balances may reflect transactions that have not yet posted to your account."}

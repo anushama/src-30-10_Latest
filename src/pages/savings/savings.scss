@@ -1,0 +1,39 @@
+page-savings {
+  .scroll-content {
+    background: $pf-mobile-light-grey;
+    font-family: Montserrat;
+    padding: 16px 13px !important;
+  }
+  /* product header styles */
+  ion-header {
+    .toolbar-background-md {
+      background-color: $pf-mobile-dark-blue;
+      letter-spacing: 0.2rem;
+    }
+
+    ion-title {
+      .toolbar-title-md {
+        color: $pf-mobile-white;
+        font-weight: 600;
+        font-size: 16px;
+        letter-spacing: 2px;
+      }
+    }
+
+    ion-icon {
+      font-size: 28px;
+      color: $pf-mobile-white;
+      letter-spacing: 0;
+    }
+  }
+  /* product footer styles*/
+  .productFooter {
+    .btnContainer button {
+      padding: 0 18px 0 0;
+      font-size: 14px;
+      color: $pf-mobile-light-blue;
+      letter-spacing: 0;
+      line-height: 17px;
+    }
+  }
+}

@@ -1,0 +1,92 @@
+<!--Navigation arrows-->
+<ion-grid>
+  <ion-row class="navArrow">
+    <ion-col text-left text-uppercase class="arrowPrev" col-6>
+      <ion-row>
+        <ion-col col-1>
+          <ion-icon name="arrow-back" (click)="slidePrev()"></ion-icon>
+        </ion-col>
+        <ion-col col-11 class="arrowText">{{prevSlide}}</ion-col>
+      </ion-row>
+    </ion-col>
+
+    <ion-col text-right text-uppercase class="arrowNext" col-6>
+      <ion-row>
+
+        <ion-col col-11 class="arrowText">{{nextSlide}}</ion-col>
+        <ion-col col-1>
+          <ion-icon name="arrow-forward" (click)="slideNext()"></ion-icon>
+        </ion-col>
+      </ion-row>
+
+    </ion-col>
+  </ion-row>
+</ion-grid>
+<!--Caurosel starts-->
+
+<ion-slides #mySlider pager="true" loop="true" class="image-slider" (ionSlideDidChange)="getCurrentSlide(mySlider)" slidesPerView=2>
+  <ion-slide *ngFor="let slide of item;let i=index" data-id="{{i}}">
+    <img [src]="slide.imageUrl" class="thumb-img">
+
+  </ion-slide>
+</ion-slides>
+
+<!--Data Rendering-->
+<ion-grid class="cardScrollContainer">
+  <ion-row>
+    <!-- Carousel content for Checkings -->
+    <ion-col col-12 *ngIf="item?.length && item[theClickedIndex].categoryId === 3">
+      <div class="cardDetails">
+        <h5>{{item[theClickedIndex].tagline}}</h5>
+        <h3>{{item[theClickedIndex].offerRateInterest}}</h3>
+        <p>{{item[theClickedIndex].offerForAnnual}}</p>
+        <p>{{item[theClickedIndex].OfferRateTest}}</p>
+
+        <h3>{{item[theClickedIndex].standardRateInterest}}</h3>
+        <p>{{item[theClickedIndex].standardForAnnual}}</p>
+        <p>{{item[theClickedIndex].standardRateText}}</p>
+
+        <div class="gridBtns">
+          <button ion-button class="card-outline-primary learnMore" outline>Learn More</button>
+          <button ion-button color="secondary" class="applyNow">Apply now</button>
+        </div>
+      </div>
+    </ion-col>
+
+    <!-- Carousel content for IRAs -->
+
+    <ion-col col-12 *ngIf="item?.length && item[theClickedIndex].categoryId === 4">
+      <div class="cardDetails">
+        <p text-uppercase text-center class="tagline">{{item[theClickedIndex].tagline}}</p>
+        <p class="rate">
+          <strong text-uppercase>
+        {{item[theClickedIndex].rateType}} <span>{{item[theClickedIndex].rateOfInterest}}</span></strong><br>{{item[theClickedIndex].considerationsText}}</p>
+        <p text-uppercase class="features"><strong>{{item[theClickedIndex].features}}</strong></p>
+        <ul class="featureUL">
+          <li class="featuresText" *ngFor=" let text of item[theClickedIndex].featuresText">{{text}}</li>
+        </ul>
+        <div class="gridBtns">
+          <button ion-button color="penfed" outline class="learnMore">Learn More</button>
+          <button ion-button class="applyNow">Apply now</button>
+        </div>
+      </div>
+    </ion-col>
+
+    <!-- Carousel content for Savings -->
+
+    <ion-col col-12 *ngIf="item?.length && item[theClickedIndex].categoryId === 5">
+      <div class="cardDetails">
+        <p class="text">{{item[theClickedIndex].text}}</p>
+        <p text-uppercase class="features"><strong>{{item[theClickedIndex].features}}</strong></p>
+        <ul class="featureUL">
+          <li class="featuresText" *ngFor=" let text of item[theClickedIndex].featuresText">{{text}}</li>
+        </ul>
+        <div class="gridBtns">
+          <button col-5 ion-button color="penfed" outline class="learnMore">Learn More</button>
+          <button col-5 ion-button class="applyNow">Apply now</button>
+        </div>
+      </div>
+    </ion-col>
+
+  </ion-row>
+</ion-grid>

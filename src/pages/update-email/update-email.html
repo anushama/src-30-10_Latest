@@ -1,0 +1,39 @@
+<ion-header>
+  <pf-header leftIcon="cross">
+    <pf-header-title class="textElipse">UPDATE EMAIL ADDRESSES</pf-header-title>
+  </pf-header>
+</ion-header>
+<ion-content>
+  <form [formGroup]="emailValidateForm" (ngSubmit)="onSubmit(emailValidateForm)">
+    <ion-row>
+      <ion-col>
+        <ion-label stacked class="input-label">PRIMARY EMAIL</ion-label>
+        <ion-item>
+          <ion-input type="email" [(ngModel)]="primaryEmail" placeholder="{{primaryEmail}}" formControlName="primaryemail" name="primaryemail"
+            clearInput="true"></ion-input>
+        </ion-item>
+        <div class="pf-form-field-error" *ngIf="emailValidateForm.get('primaryemail').hasError('required') && emailValidateForm.get('primaryemail').dirty">
+          Please enter a valid email address
+        </div>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-label stacked class="input-label">SECONDARY EMAIL (OPTIONAL)</ion-label>
+        <ion-item>
+          <ion-input type="email" [(ngModel)]="secondaryEmail" placeholder="{{secondaryEmail}}" formControlName="secondaryemail" name="secondaryemail"
+            clearInput="true" [disabled]="!emailValidateForm.controls.primaryemail.valid" (blur)="onBlurMethod()"></ion-input>
+        </ion-item>
+        <div class="pf-form-field-error" *ngIf="display && emailValidateForm.controls.secondaryemail.dirty && emailValidateForm.get('secondaryemail').hasError('pattern')">
+          Email is invalid!
+        </div>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <button class="cta-button long" ion-button block [disabled]="!emailValidateForm.controls.primaryemail.valid && emailValidateForm.controls.primaryemail.dirty || !emailValidateForm.controls.secondaryemail.valid"
+          tappable (click)="goContactInfoPage()">UPDATE EMAIL ADDRESSES</button>
+      </ion-col>
+    </ion-row>
+  </form>
+</ion-content>

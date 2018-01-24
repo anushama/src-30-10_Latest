@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="51px" viewBox="0 0 32 51" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46.2 (44496) - http://www.bohemiancoding.com/sketch -->
+    <title>ATM Icon</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="128---Map" transform="translate(-270.000000, -255.000000)" stroke="#235793" fill-rule="nonzero" fill="#00A0DD">
+            <path d="M286,256 C277.714166,256 271,262.992188 271,271.625 C271,286.546875 286,306 286,306 C286,306 301,286.546875 301,271.625 C301,262.992188 294.285834,256 286,256 Z M286,279 C282.12766,279 279,275.643172 279,271.506608 C279,267.370044 282.140071,264 286,264 C289.87234,264 293,267.356828 293,271.506608 C293,275.643172 289.87234,279 286,279 Z" id="ATM-Icon"></path>
+        </g>
+    </g>
+</svg>

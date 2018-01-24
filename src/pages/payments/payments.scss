@@ -1,0 +1,51 @@
+page-payments {
+    
+    ion-tabs .button-effect {
+        display: none !important;
+      }
+    
+      .page-title {
+        background: linear-gradient(180deg, $pf-mobile-dark-blue 0%, #2AA1E1 100%);
+        border-top: 1px solid $pf-mobile-light-blue;
+        top: 45px;
+      }
+    
+      .tabs-md.tab-button {
+        min-height: 4.6rem;
+      }
+    
+      .tabs-ios.tab-button {
+        min-height: 4.6rem;
+      }
+    
+      .tabs-ios .tabbar {
+        background: linear-gradient(180deg, $pf-mobile-dark-blue 0%, #2AA1E1 100%);
+      }
+    
+      .tabs-md .tabbar {
+        background: linear-gradient(180deg, $pf-mobile-dark-blue 0%, #2AA1E1 100%);
+      }
+    
+      .tab-button-text {
+        color: $pf-mobile-white;
+        font-family: $pf-montserrat-semi-bold !important;
+        font-size:1.4rem;
+      }
+    
+      .tabsDecoration {
+        text-decoration: underline;
+        border-bottom: 2px solid #FFF;
+      }
+    
+      //.tabs-md .tab-button-text {
+    
+      .tab-button-text {
+        transition: none !important;
+        transform: none !important;
+      }
+      .tabbar a[aria-selected=true] {
+        span {
+          border-bottom: 2px solid #fff;
+        }
+      }
+}

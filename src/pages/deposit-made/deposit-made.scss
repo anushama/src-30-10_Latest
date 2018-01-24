@@ -1,0 +1,101 @@
+page-deposit-made {
+  .pattern-enabled-container {
+    margin-top: 3rem;
+    text-align: center;
+
+    h2 {
+      font-family: $pf-montserrat-semi-bold;
+      font-size: 1.6rem;
+      color: $pf-mobile-green;
+      letter-spacing: 1px;
+      margin-top: 1rem;
+    }
+  }
+
+  .account-list-height {
+    height: 8rem;
+    background-color: $pf-mobile-light-grey;
+
+    &.amount-height {
+      height: 5rem;
+    }
+  }
+  //content======
+  .item {
+    padding-left: 0;
+
+    .input-wrapper {
+      padding-left: 1.6rem;
+    }
+  }
+
+  .h-header {
+    font-size: 1.2rem;
+    font-family: $pf-montserrat-regular;
+    color: $pf-mobile-dark-blue;
+    line-height: 2rem;
+  }
+
+  .accountPara {
+    font-family: $pf-montserrat-regular;
+    font-size: 1.8rem;
+    color: #A9B7C7;
+  }
+
+  .accountName {
+    font-family: $pf-montserrat-regular;
+    font-size: 1.8rem;
+    color: $pf-mobile-dark-grey;
+    // overflow: hidden;
+    // text-overflow: ellipsis;
+
+    &.accountVal {
+      top: 50%;
+      transform: translateY(-25%);
+    }
+  }
+
+  .accountNum {
+    font-family: $pf-montserrat-light;
+    font-size: 1.2rem;
+    color: $pf-mobile-dark-grey;
+
+    &.availableBal {
+      top: 50%;
+      transform: translateY(-25%);
+    }
+  }
+  //delete the border bottom
+  .list-md .item-block .item-inner {
+    border-bottom: none;
+  }
+
+  .list-ios {
+    .item-block .item-inner {
+      border-bottom: none;
+    }
+
+    &.item-block .item-inner {
+      border-bottom: none;
+    }
+
+    & > .item-block:last-child {
+      border-bottom: none;
+    }
+
+    & > .item-block:first-child {
+      border-top: none;
+    }
+  }
+
+  .description {
+    font-family: $pf-montserrat-regular;
+    font-size: 1.1rem;
+    color: $pf-mobile-dark-blue;
+    margin: 1.6rem;
+  }
+
+  .buttons-position {
+    text-align: center;
+  }
+}

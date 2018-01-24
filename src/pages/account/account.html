@@ -1,0 +1,68 @@
+<ion-header>
+  <account-header></account-header>
+</ion-header>
+<ion-content no-padding>
+  <!--IF LOAN, IRA or CERTIFICATE-->
+<ion-row *ngIf="navParams.data.payload.parentAcctType === 'LOAN' || navParams.data.payload.parentAcctType === 'IRA' || navParams.data.payload.parentAcctType === 'CERTIFICATE'" class="pageTitle" [ngClass]="{'account':navParams.pageType}">
+    <ion-col col-12 text-center class="ion-title">
+      <div class="availableBalLabel"></div>
+      <div class="availableBal">
+        <div>Current Balance</div>
+        <div class="balance">{{ navParams.data.payload.currentBal | formatPrice }}
+        </div>
+      </div>
+    </ion-col>
+  </ion-row>
+  <!--ENDIF-->
+  <!--IF CHECKING_SAVINGS-->
+  <ion-row *ngIf="navParams.data.payload.parentAcctType === 'CHECKING_SAVING'" class="pageTitle" [ngClass]="{'account':navParams.pageType}">
+    <ion-col col-12 text-center class="ion-title">
+      <div class="availableBalLabel"></div>
+      <div class="availableBal">
+        <div>Available Balance</div>
+        <div class="balance">{{ navParams.data.payload.availableBal | formatPrice }}
+          <span *ngIf="showAccountDetails"><ion-icon ios="ios-remove-circle" md="ios-remove-circle" (click)="showAccountDetails = !showAccountDetails"></ion-icon></span>
+          <span *ngIf="!showAccountDetails"><ion-icon ios="ios-add-circle" md="ios-add-circle" (click)="showAccountDetails = !showAccountDetails"></ion-icon></span>
+        </div>
+      </div>
+    </ion-col>
+  </ion-row>
+  <!--ENDIF-->
+
+  <!--IF MORTGAGE-->
+  <ion-row *ngIf="navParams.data.payload.parentAcctType === 'MORTGAGE'" class="pageTitle" [ngClass]="{'account':navParams.pageType}">
+    <ion-col col-12 text-center class="ion-title">
+      <div class="availableBalLabel"></div>
+      <div class="availableBal">
+        <div>Principal Balance</div>
+        <div class="balance">{{ navParams.data.payload.currentBal | formatPrice }}
+        </div>
+      </div>
+    </ion-col>
+  </ion-row>
+  <!--ENDIF-->
+
+  <!--IF CREDITCARD-->
+  <ion-row *ngIf="navParams.data.payload.parentAcctType === 'CREDITCARD'" class="pageTitle credit-card" [ngClass]="{'account':navParams.pageType, 'active':showAccountDetails}">
+    <div class="accountIcon" text-right>
+      <span *ngIf="showAccountDetails"><ion-icon ios="ios-remove-circle" md="ios-remove-circle" (click)="showAccountDetails = !showAccountDetails"></ion-icon></span>
+      <span *ngIf="!showAccountDetails"><ion-icon ios="ios-add-circle" md="ios-add-circle" (click)="showAccountDetails = !showAccountDetails"></ion-icon></span>
+    </div>
+    <ion-col col-12 text-center class="ion-title">
+      <div class="availableBalLabel"></div>
+      <div class="availableBal">
+        <div class="current-balance">Current Balance</div>
+        <div class="balance">{{ navParams.data.payload.currentBal | formatPrice }}
+        </div>
+      </div>
+    </ion-col>
+    <account-header-credit-card-display [showAccountDetailsToggle]='showAccountDetails'></account-header-credit-card-display>
+  </ion-row>
+  <!--ENDIF-->
+  <account-header-account-details [showAccountDetailsToggle]='showAccountDetails'></account-header-account-details>
+  <ion-grid no-padding>
+    <account-header-actions></account-header-actions>
+    <account-recent-transactions></account-recent-transactions>
+    <accounts-footer></accounts-footer>
+  </ion-grid>
+</ion-content>

@@ -1,0 +1,44 @@
+page-transfer-money {
+  .content {
+    background-color: $pf-mobile-light-grey;
+  }
+
+  .tabbar.show-tabbar {
+    background: linear-gradient(180deg, $pf-mobile-dark-blue 0%, #2AA1E1 100%);
+  }
+
+  .tabs-ios,
+  .tabs-md {
+    .tab-button[aria-selected=true] {
+      .tab-button-text {
+        transform: none;
+      }
+    }
+
+    .tab-button.has-title-only {
+      .tab-button-text {
+        font-size: 1.2rem;
+      }
+    }
+
+    .tab-button-text {
+      color: $pf-mobile-white;
+      font-family: $pf-montserrat-semi-bold;
+      font-size: 1.2rem;
+    }
+  }
+
+  .tabbar a[aria-selected=true] {
+    span {
+      border-bottom: 2px solid #fff;
+    }
+  }
+
+  .segment-ios .segment-button {
+    border-color: #00a0dd;
+
+    &.segment-activated {
+      background-color: $pf-mobile-white;
+    }
+  }
+}

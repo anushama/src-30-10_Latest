@@ -1,0 +1,16 @@
+page-show-all-ebills {
+    button.item-ios:not([detail-none]) .item-inner {
+        background-image: none !important;
+        padding: 8px;
+    }
+    button.item-md:not([detail-none]) .item-inner {
+        background-image: none !important;
+        padding: 8px;
+    }
+    .item-md [item-right] {
+        margin: 0px !important;
+    }
+    .item-ios [item-right] {
+        margin: 0px !important;
+    }
+}

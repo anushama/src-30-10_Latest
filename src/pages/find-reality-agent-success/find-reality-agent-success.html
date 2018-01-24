@@ -1,0 +1,36 @@
+
+<pf-header leftIcon="toggleMenu" rightIcon="mail">
+  <pf-header-title>FORM SUBMITTED</pf-header-title>
+</pf-header>
+
+<ion-content padding>
+  <div class="pattern-enabled-container">
+    <div><img src="assets/img/CHECK.svg" /></div>
+    <h2> {{"realty-agent.form.success.title" | aemsync : ["realty-agent"] | async}} </h2>
+  </div>
+  <!-- <div class="successMsg"> -->
+  <ion-row>
+    <ion-col>{{"realty-agent.form.success.msg" | aemsync : ["realty-agent"] | async}}</ion-col>
+  </ion-row>
+    <!-- <p></p> -->
+  <!-- </div> -->
+  <!-- <div class="buttons-position">
+    <div class="control-button"> -->
+  <ion-footer>
+    <ion-row>
+      <ion-col>
+        <button ion-button block class="cta-button" (click)="navBackToContactUS()">DONE</button>
+      </ion-col>
+    </ion-row>
+  </ion-footer>
+
+    <!-- </div>
+  </div> -->
+  <!-- <ion-footer>
+    <ion-row>
+      <ion-col col-12 class="legal">
+        <p class="insured" tappable (click)='util.displayNCUACert()'>Federally insured by NCUA</p>
+      </ion-col>
+    </ion-row>
+  </ion-footer> -->
+</ion-content>
